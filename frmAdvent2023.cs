@@ -13,80 +13,7 @@ namespace Advent23
         #region Initialization
         private void frm_Advent2023_Load(object sender, EventArgs e)
         {
-            txt_output01P1.Text = Advent23.Properties.Settings.Default.Puzzle01_Output_Part1;
-            txt_output01P2.Text = Advent23.Properties.Settings.Default.Puzzle01_Output_Part2;
-
-            txt_output02P1.Text = Advent23.Properties.Settings.Default.Puzzle02_Output_Part1;
-            txt_output02P2.Text = Advent23.Properties.Settings.Default.Puzzle02_Output_Part2;
-
-            txt_output03P1.Text = Advent23.Properties.Settings.Default.Puzzle03_Output_Part1;
-            txt_output03P2.Text = Advent23.Properties.Settings.Default.Puzzle03_Output_Part2;
-
-            txt_output04P1.Text = Advent23.Properties.Settings.Default.Puzzle04_Output_Part1;
-            txt_output04P2.Text = Advent23.Properties.Settings.Default.Puzzle04_Output_Part2;
-
-            txt_output05P1.Text = Advent23.Properties.Settings.Default.Puzzle05_Output_Part1;
-            txt_output05P2.Text = Advent23.Properties.Settings.Default.Puzzle05_Output_Part2;
-
-            txt_output06P1.Text = Advent23.Properties.Settings.Default.Puzzle06_Output_Part1;
-            txt_output06P2.Text = Advent23.Properties.Settings.Default.Puzzle06_Output_Part2;
-
-            txt_output07P1.Text = Advent23.Properties.Settings.Default.Puzzle07_Output_Part1;
-            txt_output07P2.Text = Advent23.Properties.Settings.Default.Puzzle07_Output_Part2;
-
-            txt_output08P1.Text = Advent23.Properties.Settings.Default.Puzzle08_Output_Part1;
-            txt_output08P2.Text = Advent23.Properties.Settings.Default.Puzzle08_Output_Part2;
-
-            txt_output09P1.Text = Advent23.Properties.Settings.Default.Puzzle09_Output_Part1;
-            txt_output09P2.Text = Advent23.Properties.Settings.Default.Puzzle09_Output_Part2;
-
-            txt_output10P1.Text = Advent23.Properties.Settings.Default.Puzzle10_Output_Part1;
-            txt_output10P2.Text = Advent23.Properties.Settings.Default.Puzzle10_Output_Part2;
-
-            txt_output11P1.Text = Advent23.Properties.Settings.Default.Puzzle11_Output_Part1;
-            txt_output11P2.Text = Advent23.Properties.Settings.Default.Puzzle11_Output_Part2;
-
-            txt_output12P1.Text = Advent23.Properties.Settings.Default.Puzzle12_Output_Part1;
-            txt_output12P2.Text = Advent23.Properties.Settings.Default.Puzzle12_Output_Part2;
-
-            txt_output13P1.Text = Advent23.Properties.Settings.Default.Puzzle13_Output_Part1;
-            txt_output13P2.Text = Advent23.Properties.Settings.Default.Puzzle13_Output_Part2;
-
-            txt_output14P1.Text = Advent23.Properties.Settings.Default.Puzzle14_Output_Part1;
-            txt_output14P2.Text = Advent23.Properties.Settings.Default.Puzzle14_Output_Part2;
-
-            txt_output15P1.Text = Advent23.Properties.Settings.Default.Puzzle15_Output_Part1;
-            txt_output15P2.Text = Advent23.Properties.Settings.Default.Puzzle15_Output_Part2;
-
-            txt_output16P1.Text = Advent23.Properties.Settings.Default.Puzzle16_Output_Part1;
-            txt_output16P2.Text = Advent23.Properties.Settings.Default.Puzzle16_Output_Part2;
-
-            txt_output17P1.Text = Advent23.Properties.Settings.Default.Puzzle17_Output_Part1;
-            txt_output17P2.Text = Advent23.Properties.Settings.Default.Puzzle17_Output_Part2;
-
-            txt_output18P1.Text = Advent23.Properties.Settings.Default.Puzzle18_Output_Part1;
-            txt_output18P2.Text = Advent23.Properties.Settings.Default.Puzzle18_Output_Part2;
-
-            txt_output19P1.Text = Advent23.Properties.Settings.Default.Puzzle19_Output_Part1;
-            txt_output19P2.Text = Advent23.Properties.Settings.Default.Puzzle19_Output_Part2;
-
-            txt_output20P1.Text = Advent23.Properties.Settings.Default.Puzzle20_Output_Part1;
-            txt_output20P2.Text = Advent23.Properties.Settings.Default.Puzzle20_Output_Part2;
-
-            txt_output21P1.Text = Advent23.Properties.Settings.Default.Puzzle21_Output_Part1;
-            txt_output21P2.Text = Advent23.Properties.Settings.Default.Puzzle21_Output_Part2;
-
-            txt_output22P1.Text = Advent23.Properties.Settings.Default.Puzzle22_Output_Part1;
-            txt_output22P2.Text = Advent23.Properties.Settings.Default.Puzzle22_Output_Part2;
-
-            txt_output23P1.Text = Advent23.Properties.Settings.Default.Puzzle23_Output_Part1;
-            txt_output23P2.Text = Advent23.Properties.Settings.Default.Puzzle23_Output_Part2;
-
-            txt_output24P1.Text = Advent23.Properties.Settings.Default.Puzzle24_Output_Part1;
-            txt_output24P2.Text = Advent23.Properties.Settings.Default.Puzzle24_Output_Part2;
-
-            txt_output25P1.Text = Advent23.Properties.Settings.Default.Puzzle25_Output_Part1;
-            txt_output25P2.Text = Advent23.Properties.Settings.Default.Puzzle25_Output_Part2;
+            
         }
         private void frm_Advent2023_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -211,12 +138,10 @@ namespace Advent23
         private void bntRun01_Click(object sender, EventArgs e)
         {
             int intSolution01P1 = Puzzle01_PartOne();
-            Advent23.Properties.Settings.Default.Puzzle01_Output_Part1 = intSolution01P1.ToString();
             txt_output01P1.Text = intSolution01P1.ToString();
 
             Puzzle01_PartTwo();
             int intSolution01P2 = Puzzle01_PartTwo();
-            Advent23.Properties.Settings.Default.Puzzle01_Output_Part2 = intSolution01P2.ToString();
             txt_output01P2.Text = intSolution01P2.ToString();
         }
         #endregion
@@ -342,11 +267,9 @@ namespace Advent23
         private void bntRun02_Click(object sender, EventArgs e)
         {
             int intSolution02P1 = Puzzle02_PartOne(12, 13, 14);
-            Advent23.Properties.Settings.Default.Puzzle02_Output_Part1 = intSolution02P1.ToString();
             txt_output02P1.Text = intSolution02P1.ToString();
 
             long lngSolution02P2 = Puzzle02_PartTwo();
-            Advent23.Properties.Settings.Default.Puzzle02_Output_Part2 = lngSolution02P2.ToString();
             txt_output02P2.Text = lngSolution02P2.ToString();
         }
 
@@ -534,35 +457,130 @@ namespace Advent23
         private void bntRun03_Click(object sender, EventArgs e)
         {
             long intSolution03P1 = Puzzle03_PartOne();
-            Advent23.Properties.Settings.Default.Puzzle03_Output_Part1 = intSolution03P1.ToString();
             txt_output03P1.Text = intSolution03P1.ToString();
 
             long intSolution03P2 = Puzzle03_PartTwo();
-            Advent23.Properties.Settings.Default.Puzzle03_Output_Part2 = intSolution03P2.ToString();
             txt_output03P2.Text = intSolution03P2.ToString();
         }
 
         #endregion
 
         #region Puzzle 04
-        private int Puzzle04_PartOne()
+        private long Puzzle04_PartOne()
         {
-            return 0;
+
+            string strInput04 = Advent23.Properties.Settings.Default.Puzzle04_Input;
+            long lnmgTotalPoint = 0;
+            string[] allString = strInput04.Split("\r\n");
+
+            foreach (string strGames in allString)
+            {
+                //hold the max shown in that game
+                int[] pointValue = new int[11] { 0, 1, 2, 4, 8, 16, 32, 64, 128, 256, 512};
+                int intMatchCount = 0;
+                List<int> intMyNumber;
+                //First we get Games #
+                int intGameNum = int.Parse(strGames.Substring(4, strGames.IndexOf(":") - 4).Trim());
+                Dictionary<int,int> dictGamesResults = new Dictionary<int, int>();
+                    
+
+                //then clean/take the rest
+                string strStatements = strGames.Substring(strGames.IndexOf(":") + 1).Trim();
+                string[] allNumber = strStatements.Split("|");
+
+                string[] myNumber = allNumber[0].Trim().Split(" ");
+                string[] cardsNumber = allNumber[1].Trim().Split(" ");
+
+                //let put the winning one
+                intMyNumber = new List<int>();
+                foreach (string aNumber in myNumber)
+                {
+                    if (aNumber.Trim().Length > 0)
+                    {
+                        intMyNumber.Add(int.Parse(aNumber.Trim()));
+                    }
+                }
+
+                foreach (string aNumber in cardsNumber)
+                {
+                    if (aNumber.Trim().Length > 0)
+                    {
+                        if (intMyNumber.Contains(int.Parse(aNumber.Trim()))) intMatchCount++;
+                    }
+                }
+                lnmgTotalPoint += pointValue[intMatchCount];
+
+            }
+
+            return lnmgTotalPoint;
         }
-        private int Puzzle04_PartTwo()
+        private long Puzzle04_PartTwo()
         {
-            return 0;
+
+            string strInput04 = Advent23.Properties.Settings.Default.Puzzle04_Input;
+            long lngTotalScratched = 0;
+
+            string[] allString = strInput04.Split("\r\n");
+            int[] intScratchGames = new int[250];
+            List<int> intCardScratch = new List<int>(); 
+
+
+            foreach (string strGames in allString)
+            {
+                //hold the max shown in that game
+                int intMatchCount = 0;
+
+                List<int> intMyNumber;
+
+                //First we get Games #
+                int intGameNum = int.Parse(strGames.Substring(4, strGames.IndexOf(":") - 4).Trim());
+                intScratchGames[intGameNum]++; //the one we scratch now
+                Dictionary<int, int> dictGamesResults = new Dictionary<int, int>();
+
+                //then clean/take the rest
+                string strStatements = strGames.Substring(strGames.IndexOf(":") + 1).Trim();
+                string[] allNumber = strStatements.Split("|");
+
+                string[] myNumber = allNumber[0].Trim().Split(" ");
+                string[] cardsNumber = allNumber[1].Trim().Split(" ");
+
+                //let put the winning one
+                intMyNumber = new List<int>();
+                foreach (string aNumber in myNumber)
+                {
+                    if (aNumber.Trim().Length > 0)
+                    {
+                        intMyNumber.Add(int.Parse(aNumber.Trim()));
+                    }
+                }
+
+                foreach (string aNumber in cardsNumber)
+                {
+                    if (aNumber.Trim().Length > 0)
+                    {
+                        if (intMyNumber.Contains(int.Parse(aNumber.Trim()))) intMatchCount++;
+                    }
+                }
+                if (intMatchCount < 2) { int i = 3; }
+
+                //Now for each intMatchCount we add 1 future scratchpad
+                for (int i = 1; i <= intMatchCount; i++)
+                {
+                    intScratchGames[intGameNum + i] += intScratchGames[intGameNum];
+                }
+            }
+
+            lngTotalScratched = intScratchGames.Sum();
+            return lngTotalScratched;
         }
 
         private void bntRun04_Click(object sender, EventArgs e)
         {
-            int intSolution04P1 = Puzzle04_PartOne();
-            Advent23.Properties.Settings.Default.Puzzle04_Output_Part1 = intSolution04P1.ToString();
-            txt_output04P1.Text = intSolution04P1.ToString();
+            long lngSolution04P1 = Puzzle04_PartOne();
+            txt_output04P1.Text = lngSolution04P1.ToString();
 
-            int intSolution04P2 = Puzzle04_PartTwo();
-            Advent23.Properties.Settings.Default.Puzzle04_Output_Part2 = intSolution04P2.ToString();
-            txt_output04P2.Text = intSolution04P2.ToString();
+            long lngSolution04P2 = Puzzle04_PartTwo();
+            txt_output04P2.Text = lngSolution04P2.ToString();
         }
 
         #endregion
@@ -580,11 +598,9 @@ namespace Advent23
         private void bntRun05_Click(object sender, EventArgs e)
         {
             int intSolution05P1 = Puzzle05_PartOne();
-            Advent23.Properties.Settings.Default.Puzzle05_Output_Part1 = intSolution05P1.ToString();
             txt_output05P1.Text = intSolution05P1.ToString();
 
             int intSolution05P2 = Puzzle05_PartTwo();
-            Advent23.Properties.Settings.Default.Puzzle05_Output_Part2 = intSolution05P2.ToString();
             txt_output05P2.Text = intSolution05P2.ToString();
         }
 
@@ -603,11 +619,9 @@ namespace Advent23
         private void bntRun06_Click(object sender, EventArgs e)
         {
             int intSolution06P1 = Puzzle06_PartOne();
-            Advent23.Properties.Settings.Default.Puzzle06_Output_Part1 = intSolution06P1.ToString();
             txt_output06P1.Text = intSolution06P1.ToString();
 
             int intSolution06P2 = Puzzle06_PartTwo();
-            Advent23.Properties.Settings.Default.Puzzle06_Output_Part2 = intSolution06P2.ToString();
             txt_output06P2.Text = intSolution06P2.ToString();
         }
 
@@ -626,11 +640,9 @@ namespace Advent23
         private void bntRun07_Click(object sender, EventArgs e)
         {
             int intSolution07P1 = Puzzle07_PartOne();
-            Advent23.Properties.Settings.Default.Puzzle07_Output_Part1 = intSolution07P1.ToString();
             txt_output07P1.Text = intSolution07P1.ToString();
 
             int intSolution07P2 = Puzzle07_PartTwo();
-            Advent23.Properties.Settings.Default.Puzzle07_Output_Part2 = intSolution07P2.ToString();
             txt_output07P2.Text = intSolution07P2.ToString();
         }
 
@@ -649,11 +661,9 @@ namespace Advent23
         private void bntRun08_Click(object sender, EventArgs e)
         {
             int intSolution08P1 = Puzzle08_PartOne();
-            Advent23.Properties.Settings.Default.Puzzle08_Output_Part1 = intSolution08P1.ToString();
             txt_output08P1.Text = intSolution08P1.ToString();
 
             int intSolution08P2 = Puzzle08_PartTwo();
-            Advent23.Properties.Settings.Default.Puzzle08_Output_Part2 = intSolution08P2.ToString();
             txt_output08P2.Text = intSolution08P2.ToString();
         }
 
@@ -672,11 +682,9 @@ namespace Advent23
         private void bntRun09_Click(object sender, EventArgs e)
         {
             int intSolution09P1 = Puzzle09_PartOne();
-            Advent23.Properties.Settings.Default.Puzzle09_Output_Part1 = intSolution09P1.ToString();
             txt_output09P1.Text = intSolution09P1.ToString();
 
             int intSolution09P2 = Puzzle09_PartTwo();
-            Advent23.Properties.Settings.Default.Puzzle09_Output_Part2 = intSolution09P2.ToString();
             txt_output09P2.Text = intSolution09P2.ToString();
         }
 
@@ -695,11 +703,9 @@ namespace Advent23
         private void bntRun10_Click(object sender, EventArgs e)
         {
             int intSolution10P1 = Puzzle10_PartOne();
-            Advent23.Properties.Settings.Default.Puzzle10_Output_Part1 = intSolution10P1.ToString();
             txt_output10P1.Text = intSolution10P1.ToString();
 
             int intSolution10P2 = Puzzle10_PartTwo();
-            Advent23.Properties.Settings.Default.Puzzle10_Output_Part2 = intSolution10P2.ToString();
             txt_output10P2.Text = intSolution10P2.ToString();
         }
 
@@ -718,11 +724,9 @@ namespace Advent23
         private void bntRun11_Click(object sender, EventArgs e)
         {
             int intSolution11P1 = Puzzle11_PartOne();
-            Advent23.Properties.Settings.Default.Puzzle11_Output_Part1 = intSolution11P1.ToString();
             txt_output11P1.Text = intSolution11P1.ToString();
 
             int intSolution11P2 = Puzzle11_PartTwo();
-            Advent23.Properties.Settings.Default.Puzzle11_Output_Part2 = intSolution11P2.ToString();
             txt_output11P2.Text = intSolution11P2.ToString();
         }
 
@@ -741,11 +745,9 @@ namespace Advent23
         private void bntRun12_Click(object sender, EventArgs e)
         {
             int intSolution12P1 = Puzzle12_PartOne();
-            Advent23.Properties.Settings.Default.Puzzle12_Output_Part1 = intSolution12P1.ToString();
             txt_output12P1.Text = intSolution12P1.ToString();
 
             int intSolution12P2 = Puzzle12_PartTwo();
-            Advent23.Properties.Settings.Default.Puzzle12_Output_Part2 = intSolution12P2.ToString();
             txt_output12P2.Text = intSolution12P2.ToString();
         }
 
@@ -764,11 +766,9 @@ namespace Advent23
         private void bntRun13_Click(object sender, EventArgs e)
         {
             int intSolution13P1 = Puzzle13_PartOne();
-            Advent23.Properties.Settings.Default.Puzzle13_Output_Part1 = intSolution13P1.ToString();
             txt_output13P1.Text = intSolution13P1.ToString();
 
             int intSolution13P2 = Puzzle13_PartTwo();
-            Advent23.Properties.Settings.Default.Puzzle13_Output_Part2 = intSolution13P2.ToString();
             txt_output13P2.Text = intSolution13P2.ToString();
         }
 
@@ -787,11 +787,9 @@ namespace Advent23
         private void bntRun14_Click(object sender, EventArgs e)
         {
             int intSolution14P1 = Puzzle14_PartOne();
-            Advent23.Properties.Settings.Default.Puzzle14_Output_Part1 = intSolution14P1.ToString();
             txt_output14P1.Text = intSolution14P1.ToString();
 
             int intSolution14P2 = Puzzle14_PartTwo();
-            Advent23.Properties.Settings.Default.Puzzle14_Output_Part2 = intSolution14P2.ToString();
             txt_output14P2.Text = intSolution14P2.ToString();
         }
 
@@ -810,11 +808,9 @@ namespace Advent23
         private void bntRun15_Click(object sender, EventArgs e)
         {
             int intSolution15P1 = Puzzle15_PartOne();
-            Advent23.Properties.Settings.Default.Puzzle15_Output_Part1 = intSolution15P1.ToString();
             txt_output15P1.Text = intSolution15P1.ToString();
 
             int intSolution15P2 = Puzzle15_PartTwo();
-            Advent23.Properties.Settings.Default.Puzzle15_Output_Part2 = intSolution15P2.ToString();
             txt_output15P2.Text = intSolution15P2.ToString();
         }
 
@@ -833,11 +829,9 @@ namespace Advent23
         private void bntRun16_Click(object sender, EventArgs e)
         {
             int intSolution16P1 = Puzzle16_PartOne();
-            Advent23.Properties.Settings.Default.Puzzle16_Output_Part1 = intSolution16P1.ToString();
             txt_output16P1.Text = intSolution16P1.ToString();
 
             int intSolution16P2 = Puzzle16_PartTwo();
-            Advent23.Properties.Settings.Default.Puzzle16_Output_Part2 = intSolution16P2.ToString();
             txt_output16P2.Text = intSolution16P2.ToString();
         }
 
@@ -856,11 +850,9 @@ namespace Advent23
         private void bntRun17_Click(object sender, EventArgs e)
         {
             int intSolution17P1 = Puzzle17_PartOne();
-            Advent23.Properties.Settings.Default.Puzzle17_Output_Part1 = intSolution17P1.ToString();
             txt_output17P1.Text = intSolution17P1.ToString();
 
             int intSolution17P2 = Puzzle17_PartTwo();
-            Advent23.Properties.Settings.Default.Puzzle17_Output_Part2 = intSolution17P2.ToString();
             txt_output17P2.Text = intSolution17P2.ToString();
         }
 
@@ -879,11 +871,9 @@ namespace Advent23
         private void bntRun18_Click(object sender, EventArgs e)
         {
             int intSolution18P1 = Puzzle18_PartOne();
-            Advent23.Properties.Settings.Default.Puzzle18_Output_Part1 = intSolution18P1.ToString();
             txt_output18P1.Text = intSolution18P1.ToString();
 
             int intSolution18P2 = Puzzle18_PartTwo();
-            Advent23.Properties.Settings.Default.Puzzle18_Output_Part2 = intSolution18P2.ToString();
             txt_output18P2.Text = intSolution18P2.ToString();
         }
 
@@ -902,11 +892,9 @@ namespace Advent23
         private void bntRun19_Click(object sender, EventArgs e)
         {
             int intSolution19P1 = Puzzle19_PartOne();
-            Advent23.Properties.Settings.Default.Puzzle19_Output_Part1 = intSolution19P1.ToString();
             txt_output19P1.Text = intSolution19P1.ToString();
 
             int intSolution19P2 = Puzzle19_PartTwo();
-            Advent23.Properties.Settings.Default.Puzzle19_Output_Part2 = intSolution19P2.ToString();
             txt_output19P2.Text = intSolution19P2.ToString();
         }
 
@@ -925,11 +913,9 @@ namespace Advent23
         private void bntRun20_Click(object sender, EventArgs e)
         {
             int intSolution20P1 = Puzzle20_PartOne();
-            Advent23.Properties.Settings.Default.Puzzle20_Output_Part1 = intSolution20P1.ToString();
             txt_output20P1.Text = intSolution20P1.ToString();
 
             int intSolution20P2 = Puzzle20_PartTwo();
-            Advent23.Properties.Settings.Default.Puzzle20_Output_Part2 = intSolution20P2.ToString();
             txt_output20P2.Text = intSolution20P2.ToString();
         }
 
@@ -948,11 +934,9 @@ namespace Advent23
         private void bntRun21_Click(object sender, EventArgs e)
         {
             int intSolution21P1 = Puzzle21_PartOne();
-            Advent23.Properties.Settings.Default.Puzzle21_Output_Part1 = intSolution21P1.ToString();
             txt_output21P1.Text = intSolution21P1.ToString();
 
             int intSolution21P2 = Puzzle21_PartTwo();
-            Advent23.Properties.Settings.Default.Puzzle21_Output_Part2 = intSolution21P2.ToString();
             txt_output21P2.Text = intSolution21P2.ToString();
         }
 
@@ -971,11 +955,9 @@ namespace Advent23
         private void bntRun22_Click(object sender, EventArgs e)
         {
             int intSolution22P1 = Puzzle22_PartOne();
-            Advent23.Properties.Settings.Default.Puzzle22_Output_Part1 = intSolution22P1.ToString();
             txt_output22P1.Text = intSolution22P1.ToString();
 
             int intSolution22P2 = Puzzle22_PartTwo();
-            Advent23.Properties.Settings.Default.Puzzle22_Output_Part2 = intSolution22P2.ToString();
             txt_output22P2.Text = intSolution22P2.ToString();
         }
 
@@ -994,11 +976,9 @@ namespace Advent23
         private void bntRun23_Click(object sender, EventArgs e)
         {
             int intSolution23P1 = Puzzle23_PartOne();
-            Advent23.Properties.Settings.Default.Puzzle23_Output_Part1 = intSolution23P1.ToString();
             txt_output23P1.Text = intSolution23P1.ToString();
 
             int intSolution23P2 = Puzzle23_PartTwo();
-            Advent23.Properties.Settings.Default.Puzzle23_Output_Part2 = intSolution23P2.ToString();
             txt_output23P2.Text = intSolution23P2.ToString();
         }
 
@@ -1017,11 +997,9 @@ namespace Advent23
         private void bntRun24_Click(object sender, EventArgs e)
         {
             int intSolution24P1 = Puzzle24_PartOne();
-            Advent23.Properties.Settings.Default.Puzzle24_Output_Part1 = intSolution24P1.ToString();
             txt_output24P1.Text = intSolution24P1.ToString();
 
             int intSolution24P2 = Puzzle24_PartTwo();
-            Advent23.Properties.Settings.Default.Puzzle24_Output_Part2 = intSolution24P2.ToString();
             txt_output24P2.Text = intSolution24P2.ToString();
         }
 
@@ -1040,11 +1018,9 @@ namespace Advent23
         private void bntRun25_Click(object sender, EventArgs e)
         {
             int intSolution25P1 = Puzzle25_PartOne();
-            Advent23.Properties.Settings.Default.Puzzle25_Output_Part1 = intSolution25P1.ToString();
             txt_output25P1.Text = intSolution25P1.ToString();
 
             int intSolution25P2 = Puzzle25_PartTwo();
-            Advent23.Properties.Settings.Default.Puzzle25_Output_Part2 = intSolution25P2.ToString();
             txt_output25P2.Text = intSolution25P2.ToString();
         }
 
