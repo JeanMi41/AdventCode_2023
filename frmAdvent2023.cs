@@ -468,7 +468,6 @@ namespace Advent23
         #region Puzzle 04
         private long Puzzle04_PartOne()
         {
-
             string strInput04 = Advent23.Properties.Settings.Default.Puzzle04_Input;
             long lnmgTotalPoint = 0;
             string[] allString = strInput04.Split("\r\n");
@@ -561,8 +560,6 @@ namespace Advent23
                         if (intMyNumber.Contains(int.Parse(aNumber.Trim()))) intMatchCount++;
                     }
                 }
-                if (intMatchCount < 2) { int i = 3; }
-
                 //Now for each intMatchCount we add 1 future scratchpad
                 for (int i = 1; i <= intMatchCount; i++)
                 {
@@ -586,8 +583,50 @@ namespace Advent23
         #endregion
 
         #region Puzzle 05
-        private int Puzzle05_PartOne()
+        private long Puzzle05_PartOne()
         {
+            string strInput04 = Advent23.Properties.Settings.Default.Puzzle04_Input;
+            long lnmgTotalPoint = 0;
+            string[] allString = strInput04.Split("\r\n");
+
+            foreach (string strGames in allString)
+            {
+                //hold the max shown in that game
+                int[] pointValue = new int[11] { 0, 1, 2, 4, 8, 16, 32, 64, 128, 256, 512 };
+                int intMatchCount = 0;
+                List<int> intMyNumber;
+                //First we get Games #
+                int intGameNum = int.Parse(strGames.Substring(4, strGames.IndexOf(":") - 4).Trim());
+                Dictionary<int, int> dictGamesResults = new Dictionary<int, int>();
+
+
+                //then clean/take the rest
+                string strStatements = strGames.Substring(strGames.IndexOf(":") + 1).Trim();
+                string[] allNumber = strStatements.Split("|");
+
+                string[] myNumber = allNumber[0].Trim().Split(" ");
+                string[] cardsNumber = allNumber[1].Trim().Split(" ");
+
+                //let put the winning one
+                intMyNumber = new List<int>();
+                foreach (string aNumber in myNumber)
+                {
+                    if (aNumber.Trim().Length > 0)
+                    {
+                        intMyNumber.Add(int.Parse(aNumber.Trim()));
+                    }
+                }
+
+                foreach (string aNumber in cardsNumber)
+                {
+                    if (aNumber.Trim().Length > 0)
+                    {
+                        if (intMyNumber.Contains(int.Parse(aNumber.Trim()))) intMatchCount++;
+                    }
+                }
+                lnmgTotalPoint += pointValue[intMatchCount];
+
+            }
             return 0;
         }
         private int Puzzle05_PartTwo()
@@ -597,7 +636,7 @@ namespace Advent23
 
         private void bntRun05_Click(object sender, EventArgs e)
         {
-            int intSolution05P1 = Puzzle05_PartOne();
+            long intSolution05P1 = Puzzle05_PartOne();
             txt_output05P1.Text = intSolution05P1.ToString();
 
             int intSolution05P2 = Puzzle05_PartTwo();
