@@ -702,7 +702,7 @@ namespace Advent23
 
             foreach (string strConvertion in allString)
             {
-                //for each of the convertion we 
+                //for each of the convertion line, we determine the cX1 and cX2 range, and the value of convertion from cX1 to tX1
                 intConvertStepCount++;
                 int intLineNum = -1;
 
@@ -718,13 +718,13 @@ namespace Advent23
                     lngConverter[intLineNum, 1, intConvertStepCount] = long.Parse(str_convert_Value[1]) + long.Parse(str_convert_Value[2]) - 1;// <- I forgot the -1 before it is what all my problem came from
                     lngConverter[intLineNum, 2, intConvertStepCount] = long.Parse(str_convert_Value[0]);
                 }
-                intConverterMax[intConvertStepCount] = intLineNum;
+
+                intConverterMax[intConvertStepCount] = intLineNum; //we read each line, we keep the iteration max in the array
             }
 
             //now we got all the information
-            //We got the seeds lines in dictSeeds, and all convertion in lngConverter
-
-            
+            //We got the seeds lines in dictSeeds, and all convertion lines in lngConverter
+            //we now compare seed to each convertion and convert until its all processed.
             for (int a = 0; a < 7; a++) //we will do more than 7 loop as we will play with a
             {
                 List<string> lstKeys = new List<string>();
