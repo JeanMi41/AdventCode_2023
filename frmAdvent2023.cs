@@ -730,7 +730,7 @@ namespace Advent23
                 List<string> lstKeys = new List<string>();
                 foreach (string strKey in dictSeeds.Keys)
                 {
-                    if (int.Parse(strKey.Substring(0,1)) == a) //is that dict entry for the step we are doing (we do multi-pass)
+                    if (int.Parse(strKey.Substring(0,1)) == a) //is that dict entry for the step we are doing (the dictionary may have multiple steps entries, we only do the one we are currently on.
                     {
                         lstKeys.Add(strKey);
                     } 
