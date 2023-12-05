@@ -671,8 +671,9 @@ namespace Advent23
             Dictionary<string, Tuple<long, long>> dictSeeds = new Dictionary<string, Tuple<long, long>>();
             string[] strArrSeed = str_Seeds.Split("\r\n");
             Tuple<long, long> aSeed;
+            int intIncrementUID = 0; // to have a unique key for each convertion step as number can collide
 
-            //let create the lines for each seeds with a tuple of X1,X2
+            //let go through each line and create Tuple of sX1 to sX2 which are kept in dictionary
             foreach (string aSeedArr in strArrSeed)
             {
                 string[] strSeedRange = aSeedArr.Split(" ");
@@ -681,11 +682,11 @@ namespace Advent23
                 long lngSeedRange = long.Parse(strSeedRange[0]) + long.Parse(strSeedRange[1]) -1; // <- I forgot the -1 before it is what all my problem came from
 
                 aSeed = new Tuple<long, long>(lngSeedInit, lngSeedRange);
-                dictSeeds.Add("0_" + strSeedRange[0], aSeed);
+                dictSeeds.Add("0_" + intIncrementUID++.ToString(), aSeed);
             }
             
             //now we got the array of seed that we will convert 7 time
-            long[,,] lngConverter = new long[100, 3, 7]; //array is oversized, but we will have limited when determined
+            long[,,] lngConverter = new long[100, 3, 7]; //array is oversized, but we will have limiter (intConverterMax) when read
             //[A,B,C]
             //A = iteration of convertion (aka different line entries),
             //B = the line B[0] = X1 of the line, B[1] = X2 of the line, B[2] = new converted value of X1
@@ -723,7 +724,7 @@ namespace Advent23
             //now we got all the information
             //We got the seeds lines in dictSeeds, and all convertion in lngConverter
 
-            int intIncrementUID = 0; // to have a unique key for each convertion step as number can collide
+            
             for (int a = 0; a < 7; a++) //we will do more than 7 loop as we will play with a
             {
                 List<string> lstKeys = new List<string>();
