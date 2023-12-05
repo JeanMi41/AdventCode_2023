@@ -690,13 +690,13 @@ namespace Advent23
             //[A,B,C]
             //A = iteration of convertion (aka different line entries),
             //B = the line B[0] = X1 of the line, B[1] = X2 of the line, B[2] = new converted value of X1
-            //C = Step of the convertion, as this is a 7 steps conversion mapping. seed->soil , soil->fertilizer ......
+            //C = Step of the convertion, as this is a 7 steps conversion mapping. [0]= seed->soil , [1]= soil->fertilizer ......
 
             string strInputTransfo = Advent23.Properties.Settings.Default.Puzzle05_Input; //let get the simplified input of convertion (I just removed the text and made them in 7 block
 
             string[] allString = strInputTransfo.Split("\r\n\r\n");
-            
-            //As the array above is oversized to 100 piossible line per convertion, we keep an array of where its truly end.
+
+            //As the array above is oversized to 100 possible line per convertion, we keep an array(intConverterMax) of where its truly end.
             int[] intConverterMax = new int[7];
             int intConvertStepCount = -1;
 
