@@ -585,53 +585,309 @@ namespace Advent23
         #region Puzzle 05
         private long Puzzle05_PartOne()
         {
-            string strInput04 = Advent23.Properties.Settings.Default.Puzzle04_Input;
-            long lnmgTotalPoint = 0;
-            string[] allString = strInput04.Split("\r\n");
+            //I did modify the input to be easier to parse
 
-            foreach (string strGames in allString)
+            string str_Seeds = @"950527520 85181200 546703948 123777711 63627802 279111951 1141059215 246466925 1655973293 98210926 3948361820 92804510 2424412143 247735408 4140139679 82572647 2009732824 325159757 3575518161 370114248";
+
+            long lngReturmNumber = 0;
+
+            long[] lngSeed = new long[20]; //there is 20 seeds
+
+            string[] strArrSeed = str_Seeds.Split(" ");
+            int x = 0;
+            foreach (string aSeed in strArrSeed)
             {
-                //hold the max shown in that game
-                int[] pointValue = new int[11] { 0, 1, 2, 4, 8, 16, 32, 64, 128, 256, 512 };
-                int intMatchCount = 0;
-                List<int> intMyNumber;
-                //First we get Games #
-                int intGameNum = int.Parse(strGames.Substring(4, strGames.IndexOf(":") - 4).Trim());
-                Dictionary<int, int> dictGamesResults = new Dictionary<int, int>();
-
-
-                //then clean/take the rest
-                string strStatements = strGames.Substring(strGames.IndexOf(":") + 1).Trim();
-                string[] allNumber = strStatements.Split("|");
-
-                string[] myNumber = allNumber[0].Trim().Split(" ");
-                string[] cardsNumber = allNumber[1].Trim().Split(" ");
-
-                //let put the winning one
-                intMyNumber = new List<int>();
-                foreach (string aNumber in myNumber)
-                {
-                    if (aNumber.Trim().Length > 0)
-                    {
-                        intMyNumber.Add(int.Parse(aNumber.Trim()));
-                    }
-                }
-
-                foreach (string aNumber in cardsNumber)
-                {
-                    if (aNumber.Trim().Length > 0)
-                    {
-                        if (intMyNumber.Contains(int.Parse(aNumber.Trim()))) intMatchCount++;
-                    }
-                }
-                lnmgTotalPoint += pointValue[intMatchCount];
-
+                lngSeed[x++] = long.Parse(aSeed);
             }
-            return 0;
+
+            //now we got the array of seed that we will convert 7 time
+            long[,,] lngConverter = new long[33, 3, 7]; //array is oversized, but we will have limited when determined
+
+            string strInputTransfo = Advent23.Properties.Settings.Default.Puzzle05_Input;
+
+
+            string[] allString = strInputTransfo.Split("\r\n\r\n");
+            //Now we shoudl have the 7 tranformation array
+
+            int[] intConverterMax = new int[7];
+
+            int intConvertCount = -1;
+
+            foreach (string strConvertion in allString)
+            {
+                //for each of the convertion we 
+                intConvertCount++;
+                int intLineNum = -1;
+
+                string[] aCommand = strConvertion.Split("\r\n");
+                foreach (string aLine in aCommand)
+                {
+                    intLineNum++;
+
+                    string[] str_convert_Value = aLine.Split(" ");
+                    //this should now be an array of 3
+                    lngConverter[intLineNum, 0, intConvertCount] = long.Parse(str_convert_Value[1]);
+                    lngConverter[intLineNum, 1, intConvertCount] = long.Parse(str_convert_Value[1]) + long.Parse(str_convert_Value[2]) - 1;
+                    lngConverter[intLineNum, 2, intConvertCount] = long.Parse(str_convert_Value[0]);
+                }
+                intConverterMax[intConvertCount] = intLineNum;
+            }
+
+            //now we convert in 7 steps
+            for (int a = 0; a < 7; a++)
+            {
+                for (int b = 0; b < 20; b++) //for the 20 seeds
+                {
+                    for (int c = 0; c <= intConverterMax[a]; c++)  //for all the possible convertion we got
+                    {
+                        if (lngSeed[b] >= lngConverter[c, 0, a] && lngSeed[b] <= lngConverter[c, 1, a])
+                        {
+                            if (lngConverter[c, 2, a] == 0) { int i = 3; }
+                            lngSeed[b] = (lngConverter[c, 2, a] + lngSeed[b] - lngConverter[c, 0, a]);
+                            break;
+                        }
+                    }
+                }
+            }
+
+
+            return lngSeed.Min();
         }
-        private int Puzzle05_PartTwo()
+        private long Puzzle05_PartTwo()
         {
-            return 0;
+            //I did modify the input to be easier to parse, all convertion are just in the setting, and seed is below.
+
+            string str_Seeds = @"950527520 85181200
+546703948 123777711
+63627802 279111951
+1141059215 246466925
+1655973293 98210926
+3948361820 92804510
+2424412143 247735408
+4140139679 82572647
+2009732824 325159757
+3575518161 370114248";
+
+            Dictionary<string, Tuple<long, long>> dictSeeds = new Dictionary<string, Tuple<long, long>>();
+            string[] strArrSeed = str_Seeds.Split("\r\n");
+            Tuple<long, long> aSeed;
+
+            //let create the lines for each seeds with a tuple of X1,X2
+            foreach (string aSeedArr in strArrSeed)
+            {
+                string[] strSeedRange = aSeedArr.Split(" ");
+
+                long lngSeedInit = long.Parse(strSeedRange[0]);
+                long lngSeedRange = long.Parse(strSeedRange[0]) + long.Parse(strSeedRange[1]) -1; // <- I forgot the -1 before it is what all my problem came from
+
+                aSeed = new Tuple<long, long>(lngSeedInit, lngSeedRange);
+                dictSeeds.Add("0_" + strSeedRange[0], aSeed);
+            }
+            
+            //now we got the array of seed that we will convert 7 time
+            long[,,] lngConverter = new long[100, 3, 7]; //array is oversized, but we will have limited when determined
+            //[A,B,C]
+            //A = iteration of convertion (aka different line entries),
+            //B = the line B[0] = X1 of the line, B[1] = X2 of the line, B[2] = new converted value of X1
+            //C = Step of the convertion, as this is a 7 steps conversion mapping. seed->soil , soil->fertilizer ......
+
+            string strInputTransfo = Advent23.Properties.Settings.Default.Puzzle05_Input; //let get the simplified input of convertion (I just removed the text and made them in 7 block
+
+            string[] allString = strInputTransfo.Split("\r\n\r\n");
+            
+            //As the array above is oversized to 100 piossible line per convertion, we keep an array of where its truly end.
+            int[] intConverterMax = new int[7];
+            int intConvertStepCount = -1;
+
+            foreach (string strConvertion in allString)
+            {
+                //for each of the convertion we 
+                intConvertStepCount++;
+                int intLineNum = -1;
+
+                string[] aCommand = strConvertion.Split("\r\n");
+                foreach (string aLine in aCommand)
+                {
+                    intLineNum++;
+
+                    string[] str_convert_Value = aLine.Split(" ");
+                    //this should now be an array of 3
+                    //as mentionned before B = the line B[0] = X1 of the line, B[1] = X2 of the line, B[2] = new converted value of X1
+                    lngConverter[intLineNum, 0, intConvertStepCount] = long.Parse(str_convert_Value[1]);
+                    lngConverter[intLineNum, 1, intConvertStepCount] = long.Parse(str_convert_Value[1]) + long.Parse(str_convert_Value[2]) - 1;// <- I forgot the -1 before it is what all my problem came from
+                    lngConverter[intLineNum, 2, intConvertStepCount] = long.Parse(str_convert_Value[0]);
+                }
+                intConverterMax[intConvertStepCount] = intLineNum;
+            }
+
+            //now we got all the information
+            //We got the seeds lines in dictSeeds, and all convertion in lngConverter
+
+            int intIncrementUID = 0; // to have a unique key for each convertion step as number can collide
+            for (int a = 0; a < 7; a++) //we will do more than 7 loop as we will play with a
+            {
+                List<string> lstKeys = new List<string>();
+                foreach (string strKey in dictSeeds.Keys)
+                {
+                    if (int.Parse(strKey.Substring(0,1)) == a) //is that dict entry for the step we are doing (we do multi-pass)
+                    {
+                        lstKeys.Add(strKey);
+                    } 
+                } 
+
+                if (lstKeys.Count > 0) //if there is some seed on the currents steps, we will do them all (some cut might stay in current step, we do multi-pass)
+                {
+                    foreach (string strKey in lstKeys)
+                    {
+                        //we read the Tuple, we apply the for each and re-add any updated
+                        //we then delete the key
+                        Tuple<long, long> tpData = dictSeeds[strKey];
+                        long seedX1 = tpData.Item1; //easier to read
+                        long seedX2 = tpData.Item2; //easier to read
+
+                        //initilisation of variable we will use
+                        long convX1;
+                        long convX2;
+                        long convBaseValue;
+                        Tuple<long, long> tpNewEnty;
+                        long lngDifferencial_Min;
+                        long lngDifferencial_Max;
+                        bool boolConvertRest = true; //if we have a left-over we convert as is
+                        dictSeeds.Remove(strKey); //we processed this seed, we remove it, we will add them back as process or leftover.
+
+
+                        //we compare with each conversion
+                        for (int c = 0; c <= intConverterMax[a]; c++)  //for all the possible convertion we got
+                        {
+                            convX1 = lngConverter[c, 0, a]; //easier to read
+                            convX2 = lngConverter[c, 1, a]; //easier to read
+                            convBaseValue = lngConverter[c, 2, a]; //easier to read
+
+                            //Concept is a bit different, we have linear map
+                            //in general we can continu if a full edge was removed, if the convertion is in between min/max, then we will need to split it and do another loop
+
+                            if (seedX1 >= convX1 && seedX1 <= convX2)
+                            {
+                                //seed X1 is inside
+                                if (seedX2 >= convX1 && seedX2 <= convX2)
+                                {
+                                    //Both sX1 and sX2 is inside
+
+                                    /*
+                                     * This is a scenario like this
+                                     * ----->
+                                     * cX1---sX1-------sX2----cX2
+                                     * sX1 and sX2 is inside
+                                     * We need to convert the whole see to the converted value that's it.
+                                     */
+                                    lngDifferencial_Min = seedX1 - convX1 + convBaseValue; //sX1 converted is the difference it have with cX1
+                                    lngDifferencial_Max = seedX2 - convX1 + convBaseValue; //sX2 converted is the difference it have with cX1
+
+                                    tpNewEnty = new Tuple<long, long>(lngDifferencial_Min, lngDifferencial_Max);
+                                    dictSeeds.Add((a + 1).ToString() + "_" + (intIncrementUID++).ToString(), tpNewEnty);
+                                    
+                                    boolConvertRest = false; //no left over to convert, we flag it to skip it
+                                    break; //we can stop that WHOLE seed was converted
+                                }
+                                else
+                                {
+                                    //Only sX1 inside
+
+                                    /*
+                                     * This is a scenario like this
+                                     * ----->
+                                     * cX1---sX1-----cX2----sX2
+                                     * only sX1 and sX2 is further than cX2
+                                     * We need to slice and convert sX1 to cX2, then slice the current seed as there is cX2+1 to sX2 left to convert
+                                     */
+
+                                    lngDifferencial_Min = seedX1 - convX1 + convBaseValue; //sX1 converted is the difference it have with cX1
+                                    lngDifferencial_Max = convX2 - convX1 + convBaseValue; //sX2 it too far, we only convert up to cX2
+
+                                    tpNewEnty = new Tuple<long, long>(lngDifferencial_Min, lngDifferencial_Max);
+                                    dictSeeds.Add((a + 1).ToString() + "_" + (intIncrementUID++).ToString(), tpNewEnty);
+
+
+                                    //Now we slice what is left to convert (we need re/write both the tuple and the seed
+                                    seedX1 = convX2 + 1;
+                                    tpData = new Tuple<long, long>(seedX1, seedX2);
+                                }
+                            }
+                            else
+                            {
+                                //sX1 was not inside, let check sX2
+                                if (seedX2 >= convX1 && seedX2 <= convX2)
+                                {
+                                    //only sX2 is inside
+                                    /*
+                                    * This is a scenario like this
+                                    * ----->
+                                    * sX1----cX1--sX2---cX2
+                                    * sX1 was before and part of the range is inside 
+                                    * We need to slice and convert cX1 to sX2, then slice the current seed as there is csX1 to cX1-1 left to convert
+                                    */
+                                    lngDifferencial_Min = 0 + convBaseValue; //cX1 converted base
+                                    lngDifferencial_Max = seedX2 - convX1 + convBaseValue; //sX2 converted is the difference it have with cX1
+
+                                    tpNewEnty = new Tuple<long, long>(lngDifferencial_Min, lngDifferencial_Max);
+                                    dictSeeds.Add((a + 1).ToString() + "_" + (intIncrementUID++).ToString(), tpNewEnty);
+
+                                    //Now we slice what is left to convert (we need re/write both the tuple and the seed
+                                    seedX2 = convX1 - 1;
+                                    tpData = new Tuple<long, long>(seedX1, seedX2);
+                                }
+                                else if (seedX1 < convX1 && seedX2 > convX2)
+                                {
+                                    //last possible scenario
+                                    // the convertion is fully inside the seed range
+                                    /*
+                                    * This is a scenario like this
+                                    * ----->
+                                    * sX1----cX1--cX2---sX2
+                                    * in this case we need to create to sub slice to reprocess
+                                    * and we convert the full cX1 and cX2
+                                    */
+                                    lngDifferencial_Min = 0 + convBaseValue; //cX1 converted base
+                                    lngDifferencial_Max = convX2 - convX1 + convBaseValue; //cX2 converted is the difference it have with cX1
+
+                                    tpNewEnty = new Tuple<long, long>(lngDifferencial_Min, lngDifferencial_Max);
+                                    dictSeeds.Add((a + 1).ToString() + "_" + (intIncrementUID++).ToString(), tpNewEnty);
+
+                                    //we won't keep processing as we now split the current seed in 2
+                                    //we will add them back to the stack for a repass
+                                    tpNewEnty = new Tuple<long, long>(seedX1, convX1 - 1); //first bunch, sX1 to cX1-1
+                                    dictSeeds.Add((a).ToString() + "_" + (intIncrementUID++).ToString(), tpNewEnty);
+
+                                    
+                                    tpNewEnty = new Tuple<long, long>(convX2+1, seedX2); //second bunch cX2+1 to sX2
+                                    dictSeeds.Add((a).ToString() + "_" + (intIncrementUID++).ToString(), tpNewEnty);
+                                    boolConvertRest = false; // we don't want to convert the left over
+                                    break; //we can stop as we splitted, will go back in a repass
+                                }
+                            }
+                        }
+                        if (boolConvertRest)
+                        {
+                            //if we had a left over range that didn'T fit in any convertion range convert as is.
+                            dictSeeds.Add((a + 1).ToString() + "_" + (intIncrementUID++).ToString(), tpData);
+                        }
+                    }
+
+                    //we had keys to convert, in the scenario that we splitted in two, we might still have
+                    //things to process, we reset the pass (a--), until we didn't get any seeds still on this pass.
+                    a--;
+                }
+            }
+
+
+            long lngLowest = 99999999999999999; //easier to start with random super high :P then fetch the first entry in the dict.
+            //now we converted everything we get the lowest
+            foreach (Tuple<long, long> tpLocation in dictSeeds.Values)
+            {
+                if (lngLowest > tpLocation.Item1) { lngLowest = tpLocation.Item1; }
+            }
+
+            return lngLowest;
         }
 
         private void bntRun05_Click(object sender, EventArgs e)
@@ -639,7 +895,7 @@ namespace Advent23
             long intSolution05P1 = Puzzle05_PartOne();
             txt_output05P1.Text = intSolution05P1.ToString();
 
-            int intSolution05P2 = Puzzle05_PartTwo();
+            long intSolution05P2 = Puzzle05_PartTwo();
             txt_output05P2.Text = intSolution05P2.ToString();
         }
 
