@@ -905,36 +905,47 @@ namespace Advent23
         #region Puzzle 06
         private long Puzzle06_PartOne()
         {
+            //updating for quadratic
+            //ax^2 +bx + c = 0
+            //then use -b +- square(b^2-4ac) / 2a
+            //in this case its 
+            //a = 1
+            //b = -Time
+            //c = +Distance
+            //we trust it will compute and we are not checking if the quadratic is valid b^2 -4ac > 0
+
             long lnmgTotalPoint = 1;
             long[] lngTime = new long[4] { 55 ,99, 97, 93 };
             long[] lngDistance = new long[4] { 401, 1485, 2274, 1405 };
-            int intNumWin = 0;
+            long lngNumWin = 0;
 
-            for (int a = 0; a < lngTime.Length; a++)
+            for (int i = 0; i < lngTime.Length; i++)
             {
-                intNumWin = 0;
-                for (int i = 0; i < lngTime[a]; i++)
-                {
-                    if (((lngTime[a] - i) * i) > lngDistance[a]) intNumWin++;
-                }
-                if (intNumWin > 0) lnmgTotalPoint = lnmgTotalPoint * intNumWin;
-            }
+                //to find x1 and x2 its 
+                //x1 = -b + square(b^2-4ac) / 2a
+                //x2 = -b - square(b^2-4ac) / 2a
+                long b = lngTime[i];
+                long c = lngDistance[i];
 
+                double X2 = (b + Math.Sqrt((b*b - (4 * c)))) / 2;
+                double X1 = (b - Math.Sqrt((b*b - (4 * c)))) / 2;
+                lngNumWin = (long)(Math.Floor(X2) - Math.Ceiling(X1))+1;
+                if (lngNumWin > 0) lnmgTotalPoint = lnmgTotalPoint * lngNumWin;
+            }
+            
             return lnmgTotalPoint;
         }
         private long Puzzle06_PartTwo()
         {
-            long lngTime = 55999793 ;
-            long lngDistance =  401148522741405 ;
-            long intNumWin = 0;
+            long lngNumWin = 0;
+            long b = 55999793;
+            long c = 401148522741405;
 
-            intNumWin = 0;
-            for (int i = 0; i < lngTime; i++)
-            {
-                if (((lngTime - i) * i) > lngDistance) intNumWin++;
-            }
+            double X2 = (b + Math.Sqrt((b * b - (4 * c)))) / 2;
+            double X1 = (b - Math.Sqrt((b * b - (4 * c)))) / 2;
+            lngNumWin = (long)(Math.Floor(X2) - Math.Ceiling(X1)) + 1;
 
-            return intNumWin;
+            return lngNumWin;
         }
 
         private void bntRun06_Click(object sender, EventArgs e)
