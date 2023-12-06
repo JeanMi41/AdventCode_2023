@@ -903,21 +903,46 @@ namespace Advent23
         #endregion
 
         #region Puzzle 06
-        private int Puzzle06_PartOne()
+        private long Puzzle06_PartOne()
         {
-            return 0;
+            long lnmgTotalPoint = 1;
+            long[] lngTime = new long[4] { 55 ,99, 97, 93 };
+            long[] lngDistance = new long[4] { 401, 1485, 2274, 1405 };
+            int intNumWin = 0;
+
+            for (int a = 0; a < lngTime.Length; a++)
+            {
+                intNumWin = 0;
+                for (int i = 0; i < lngTime[a]; i++)
+                {
+                    if (((lngTime[a] - i) * i) > lngDistance[a]) intNumWin++;
+                }
+                if (intNumWin > 0) lnmgTotalPoint = lnmgTotalPoint * intNumWin;
+            }
+
+            return lnmgTotalPoint;
         }
-        private int Puzzle06_PartTwo()
+        private long Puzzle06_PartTwo()
         {
-            return 0;
+            long lngTime = 55999793 ;
+            long lngDistance =  401148522741405 ;
+            long intNumWin = 0;
+
+            intNumWin = 0;
+            for (int i = 0; i < lngTime; i++)
+            {
+                if (((lngTime - i) * i) > lngDistance) intNumWin++;
+            }
+
+            return intNumWin;
         }
 
         private void bntRun06_Click(object sender, EventArgs e)
         {
-            int intSolution06P1 = Puzzle06_PartOne();
+            long intSolution06P1 = Puzzle06_PartOne();
             txt_output06P1.Text = intSolution06P1.ToString();
 
-            int intSolution06P2 = Puzzle06_PartTwo();
+            long intSolution06P2 = Puzzle06_PartTwo();
             txt_output06P2.Text = intSolution06P2.ToString();
         }
 

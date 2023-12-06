@@ -1625,30 +1625,8 @@ Card 216: 43 38 30 79 14 47 64  5  8 50 | 70 26 63 98 86 20 59 74  3 41 34 49 78
 904584232 1176055960 117301258</Value>
     </Setting>
     <Setting Name="Puzzle06_Input" Type="System.String" Scope="User">
-      <Value Profile="(Default)">50 98 2
-52 50 48
-
-0 15 37
-37 52 2
-39 0 15
-
-49 53 8
-0 11 42
-42 0 7
-57 7 4
-
-88 18 7
-18 25 70
-
-45 77 23
-81 45 19
-68 64 13
-
-0 69 1
-1 0 69
-
-60 56 37
-56 93 4</Value>
+      <Value Profile="(Default)">Time:        55     99     97     93
+Distance:   401   1485   2274   1405</Value>
     </Setting>
     <Setting Name="Puzzle07_Input" Type="System.String" Scope="User">
       <Value Profile="(Default)" />

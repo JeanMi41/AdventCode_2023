@@ -1129,9 +1129,7 @@ namespace Advent23.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("50 98 2\r\n52 50 48\r\n\r\n0 15 37\r\n37 52 2\r\n39 0 15\r\n\r\n49 53 8\r\n0 11 42\r\n42 0 7\r\n57 7 " +
-            "4\r\n\r\n88 18 7\r\n18 25 70\r\n\r\n45 77 23\r\n81 45 19\r\n68 64 13\r\n\r\n0 69 1\r\n1 0 69\r\n\r\n60 5" +
-            "6 37\r\n56 93 4")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Time:        55     99     97     93\r\nDistance:   401   1485   2274   1405")]
         public string Puzzle06_Input {
             get {
                 return ((string)(this["Puzzle06_Input"]));
