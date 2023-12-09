@@ -1141,7 +1141,143 @@ namespace Advent23.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("8444T 864\r\n6TK4Q 440\r\nA5555 197\r\n53353 712\r\n6K68A 216\r\nJ6A33 975\r\nJ753Q 772\r\n2277" +
+            "6 977\r\nJ4494 215\r\nA25JJ 101\r\nAAA3A 637\r\nTT3KK 1000\r\nT7T67 895\r\n8A88J 928\r\nTTKKT " +
+            "29\r\nTJJQ4 719\r\n333JT 489\r\nQ9AQQ 492\r\nTK384 543\r\n55J33 897\r\nQ26QQ 549\r\nTTKK5 254\r" +
+            "\nT99T9 530\r\n87888 851\r\n27828 896\r\nJ9J99 680\r\nK7KA2 843\r\nJ3749 432\r\n7TA49 839\r\nT4" +
+            "466 266\r\n77QQ7 534\r\n44AAA 540\r\nQ4Q44 330\r\n7TK88 736\r\nT7479 705\r\n22JQ2 522\r\n77227" +
+            " 597\r\n5555T 296\r\n33348 203\r\nA2624 767\r\n8TK88 41\r\n4TK7A 869\r\n6J76K 581\r\n7T47T 629" +
+            "\r\n9QA49 302\r\nKK7K7 588\r\n8Q93J 872\r\nA97Q4 235\r\nA4A45 343\r\nJ3347 755\r\n4T444 909\r\n9" +
+            "A999 125\r\nK88QJ 707\r\n74474 953\r\nATQQT 155\r\n32242 569\r\n44888 634\r\n22429 882\r\n2QA8" +
+            "4 602\r\nTQTQ4 974\r\nJ9996 392\r\n5852Q 601\r\nK5444 833\r\n85J35 763\r\nT8282 504\r\n4KAKK 5" +
+            "39\r\n2233T 68\r\nAA8AQ 223\r\n326A3 208\r\nT955T 319\r\nA3Q3A 776\r\n56QKA 230\r\nT63T6 566\r\n" +
+            "QA36Q 923\r\n8J88J 686\r\n9K5T7 93\r\nJ344J 321\r\nAA8AA 559\r\n88777 448\r\n7667K 487\r\nT4T7" +
+            "J 476\r\n8Q4Q5 542\r\nKK555 699\r\n7J777 888\r\n335A3 284\r\nKQJA9 764\r\n5684J 956\r\n288K8 8" +
+            "66\r\nTAJ49 697\r\nT57T7 727\r\n47477 980\r\n78T33 682\r\n688J9 344\r\nQKKKK 418\r\n93KA3 55\r\n" +
+            "9T58Q 493\r\n2J22J 39\r\nJ7234 917\r\nJJ225 100\r\n4TTTK 854\r\n93965 676\r\nA97K3 891\r\n66TK" +
+            "6 423\r\n42KTT 457\r\n79957 983\r\n3Q3K3 904\r\nKKK7J 382\r\n8T8JT 290\r\n29292 596\r\nJ77JT 2" +
+            "19\r\n27292 25\r\n3TT36 533\r\nTTTTA 962\r\n3QQQ4 38\r\nT962K 210\r\n5TK28 571\r\n555K5 303\r\n8" +
+            "QKKQ 426\r\nTJ3TT 865\r\n5579A 373\r\n35AA5 954\r\n444J4 908\r\n39939 437\r\n722J2 582\r\n4442" +
+            "Q 969\r\n89888 470\r\nKKTTK 70\r\nK38AJ 659\r\n47AA9 314\r\nA3A3A 307\r\nTTT72 605\r\n29JQ7 36" +
+            "6\r\n558J8 580\r\n684T6 523\r\n6JTTT 951\r\n8Q4JT 44\r\nKKQKJ 903\r\nK96QQ 374\r\n4TT5T 165\r\nA" +
+            "T4J2 300\r\n93A54 621\r\nJJ6QQ 214\r\n79797 349\r\nQQA88 23\r\nKKJ8J 679\r\nAK8K3 479\r\n6K7Q6" +
+            " 384\r\nK6KK9 644\r\nK64J6 297\r\n36J95 502\r\n8AJTA 498\r\n5Q54T 9\r\n77T37 436\r\n222KK 363\r" +
+            "\nKTAT5 989\r\n2AAJJ 496\r\n55TT4 170\r\n2T9JQ 113\r\n37333 972\r\n5A8J3 40\r\n89T98 428\r\n6KA" +
+            "2J 748\r\n23733 445\r\n27QAJ 616\r\n4TT44 280\r\n54K4K 814\r\n59335 472\r\n86888 354\r\n558T4 " +
+            "407\r\n35683 347\r\nAA4A5 431\r\n943Q5 671\r\nJTTJ2 808\r\n6J6J6 76\r\nAKKKK 557\r\nJQJ3Q 610\r" +
+            "\nTK392 435\r\n5455Q 973\r\n4JKKK 714\r\n2T284 561\r\nA6A24 332\r\n4332J 514\r\n69873 859\r\n45" +
+            "488 441\r\n39285 648\r\nAQ333 753\r\nAA3Q5 433\r\n2AJT2 355\r\n84K4J 890\r\nA8T26 312\r\n55955" +
+            " 704\r\n33233 813\r\n9J959 984\r\n52KK5 998\r\nJ88KK 906\r\n9TAK5 352\r\nT8TTA 464\r\nA47AJ 88" +
+            "0\r\n2Q22Q 205\r\nJ228J 817\r\nAA77A 790\r\nQQ99Q 701\r\n44244 477\r\nJ6T2K 841\r\nK492J 408\r\n" +
+            "82288 873\r\n97623 996\r\n6633A 613\r\n6AAAA 668\r\n535K3 110\r\n6KK8T 279\r\n54KKA 721\r\n662" +
+            "68 528\r\n8J3J5 829\r\n88983 239\r\nJ5775 78\r\nKKK3K 402\r\n8Q656 74\r\n66T68 612\r\n8J572 12" +
+            "1\r\n23T85 83\r\n76877 757\r\nJT88J 661\r\n83383 722\r\n4J4T4 116\r\n598K5 791\r\n33J56 249\r\n3" +
+            "33Q9 603\r\n5KK2K 177\r\n66667 565\r\n88Q88 225\r\n79T99 1\r\n592Q4 823\r\nTQT9T 131\r\n24874 " +
+            "628\r\n22732 99\r\n7T847 328\r\nA4T96 128\r\nJ6954 2\r\n6JT66 642\r\n7JJ44 840\r\n2379T 372\r\n8" +
+            "8QJQ 509\r\n39K9J 406\r\n33363 212\r\n8A86A 473\r\nJ9QQQ 109\r\n64K6K 684\r\nK2Q45 510\r\n826J" +
+            "T 172\r\n98968 560\r\nQQ97Q 905\r\nK93JK 669\r\nJ5AA4 844\r\n24258 780\r\n64796 45\r\n22TK5 64" +
+            "7\r\n23223 825\r\n7Q77J 822\r\n4A4AJ 229\r\nA9699 845\r\nQTKQ6 796\r\n5K47T 591\r\nTKJQ7 48\r\n4" +
+            "9499 282\r\nT5JTK 17\r\n4JQ22 54\r\n8QT88 221\r\nTAAAT 273\r\n26Q97 527\r\n44J84 313\r\nT38A6 " +
+            "988\r\n7272Q 734\r\nAJ22A 512\r\nT8AJT 959\r\nKTKKJ 315\r\n7A787 461\r\nAA55Q 189\r\nQAT4A 625" +
+            "\r\nQJ55T 122\r\n8K696 463\r\nT6966 422\r\nKKK9K 262\r\n828KT 778\r\n2KK73 608\r\n9KK9K 333\r\n2" +
+            "42K4 242\r\nQJ7AQ 47\r\nTT7AA 690\r\n8688J 94\r\nQJQQA 305\r\n35T35 795\r\n344A5 186\r\nQ8444 " +
+            "385\r\n34K24 270\r\nQK888 227\r\n2J757 286\r\nTA28Q 218\r\n2TTQQ 104\r\n64J4A 209\r\n39933 877" +
+            "\r\n265Q5 449\r\n9K939 142\r\nKKJKJ 86\r\nA77A9 304\r\nJKAAK 876\r\n8989Q 857\r\nT5556 234\r\n7K" +
+            "7JK 886\r\nJ8828 507\r\n436Q3 192\r\n9J4KK 72\r\n32954 563\r\n22AAA 12\r\n9TT96 703\r\n62928 2" +
+            "33\r\nJ4A4J 98\r\n4244A 164\r\n88J88 84\r\nJQQJ5 511\r\n4556J 169\r\nQQQJQ 781\r\n422J2 696\r\n7" +
+            "6K74 815\r\nAAJ7A 276\r\n56666 213\r\nQA22J 585\r\nJAJAA 746\r\nTJ562 245\r\nT556Q 999\r\n566J" +
+            "5 853\r\n26KK6 801\r\n2735J 167\r\n5QJ55 782\r\n77473 646\r\n2T37T 694\r\nQ4Q45 641\r\nK66KK 6" +
+            "15\r\n3AQ2K 151\r\nKKKKT 154\r\n98788 90\r\n44669 708\r\n88A8A 188\r\n76864 345\r\nJ7767 379\r\n" +
+            "JJJJJ 739\r\n75J7A 377\r\nTJ72J 939\r\n72KKK 471\r\n7Q7Q2 394\r\n9665J 194\r\n77977 526\r\n75A" +
+            "A2 92\r\n535K5 459\r\nQ8KKT 430\r\n9TK39 981\r\n26555 350\r\nAKK97 417\r\n44J47 46\r\n89777 59" +
+            "3\r\nJ525T 657\r\nKKJ23 847\r\n44492 96\r\n88A86 922\r\nT989A 462\r\n7KKKK 298\r\n9J9Q9 89\r\nK7" +
+            "JA7 486\r\nQ5384 322\r\n74TQ2 335\r\nKQQQK 670\r\n5Q8A6 396\r\nQQ4QQ 263\r\n336J3 340\r\nQQ2QQ" +
+            " 190\r\n2TT22 285\r\n5T5QT 294\r\n9979J 805\r\n7227T 255\r\nJ49AA 132\r\n454J4 201\r\nK29J5 75" +
+            "2\r\n58555 553\r\n666J6 447\r\nQ9999 176\r\n3377J 152\r\n229A7 334\r\n2K322 698\r\n37764 460\r\n" +
+            "T73JA 633\r\n2Q9J6 568\r\nTQJQQ 737\r\n44555 809\r\nK42K2 232\r\n42A47 420\r\n3A8T9 124\r\n565" +
+            "56 301\r\nJQQQJ 243\r\n6KKKK 537\r\n98243 832\r\n6266J 769\r\nK5J74 339\r\n7JQJ7 362\r\nKAK46 " +
+            "666\r\nK23TK 144\r\n2T2KQ 645\r\n69QT4 811\r\nA9J55 994\r\n78QT8 424\r\nQJQQ8 860\r\n9QTJT 619" +
+            "\r\n2TTKJ 105\r\nJAQ2A 91\r\n4Q334 22\r\n34444 631\r\n77477 685\r\n67777 383\r\nQ6QQ6 914\r\n8J6" +
+            "99 184\r\n44484 965\r\n67667 623\r\n448T9 598\r\n35T98 453\r\n22246 389\r\n9KA57 723\r\n5Q2A3 " +
+            "20\r\nJAA35 740\r\n56384 728\r\n3Q4KA 398\r\n3KK33 756\r\n8TTJ7 849\r\nT4J34 59\r\n22Q27 111\r\n" +
+            "J7J7J 709\r\n7772J 742\r\nJ3666 43\r\nQQ367 28\r\n653K6 797\r\n55J65 158\r\nAA43A 88\r\nJ4QA2 " +
+            "49\r\n99TK9 554\r\n4J244 367\r\n3Q4J8 518\r\nJ5495 624\r\n6AK88 819\r\n5T999 609\r\n85585 415\r" +
+            "\n57K5K 874\r\n33Q37 870\r\n6A6JA 541\r\n685J6 913\r\nJKK25 195\r\nAKAKK 693\r\n54525 516\r\n44" +
+            "64K 231\r\n726K8 244\r\nJ3393 544\r\n88638 35\r\n55553 380\r\nK5K37 875\r\n5558T 688\r\n9A975 " +
+            "821\r\nAAA6T 586\r\n25AAA 689\r\n44744 863\r\n6AKJ9 178\r\n78868 848\r\n748J8 816\r\nA79QQ 900" +
+            "\r\nK4927 968\r\n6KKT6 336\r\nQQ555 525\r\n24J42 546\r\n4T982 58\r\nJ367J 114\r\n62K39 341\r\nTQ" +
+            "382 120\r\nK3Q3Q 491\r\nK33JQ 485\r\n8323Q 627\r\nJ3353 838\r\n2K8TA 283\r\nJQTQ3 198\r\n3AAJJ" +
+            " 425\r\n5AJ3J 159\r\nTQ3JJ 361\r\n84TA3 444\r\n88KJ8 108\r\n772T5 480\r\n532A2 11\r\n55T59 331" +
+            "\r\n8JA4T 481\r\nTTAAT 427\r\n6J57Q 157\r\nJAAA5 21\r\n58355 730\r\n8AA67 145\r\n2TJT2 548\r\n55" +
+            "22A 238\r\nA5AAA 468\r\nQ252K 660\r\nK6A49 807\r\n32432 16\r\n22239 375\r\nT8J48 30\r\nQ98K4 3" +
+            "25\r\n8J76Q 308\r\n55525 324\r\nQ4KT4 61\r\nJK6AA 861\r\n78448 148\r\n665AT 798\r\n77999 403\r\n" +
+            "JJ8JJ 378\r\n24642 395\r\nKJ6J8 978\r\nK6KK8 438\r\n422J7 717\r\nA4K86 990\r\nQJQ9T 715\r\nK4K" +
+            "KK 318\r\n87867 777\r\n42857 80\r\nAT727 576\r\n88KK8 376\r\n33JJ3 31\r\nK554K 920\r\nT2Q4A 45" +
+            "4\r\n5J527 620\r\n784A5 248\r\n5KKK5 855\r\nAAAJ6 293\r\nJATAQ 291\r\n2J239 885\r\n555AA 271\r\n" +
+            "AJAKA 532\r\nQAQQQ 211\r\nK473A 649\r\n82AA9 306\r\nA6666 639\r\nK3K66 578\r\nT5557 931\r\nA44" +
+            "44 187\r\n865J5 881\r\n79669 123\r\n6AJQQ 173\r\n83878 277\r\nKK559 521\r\n3KKK8 37\r\n33A88 5" +
+            "47\r\nT678Q 731\r\n33994 919\r\nTT33T 185\r\nJ9999 397\r\n6J58Q 687\r\n7782J 183\r\n2Q3KJ 929\r" +
+            "\n8AQ88 81\r\n698T4 370\r\nAAAQQ 337\r\n46665 478\r\n2A299 733\r\n4J44A 945\r\nAJ725 60\r\nA6K4" +
+            "3 749\r\nQQAA6 775\r\nQ8738 515\r\nKK999 944\r\nJ8899 946\r\n347AQ 103\r\n94999 729\r\nKKKKJ 3" +
+            "57\r\n62JQ8 474\r\n2422A 834\r\n66263 741\r\nQKQKK 937\r\n9JK3Q 412\r\nTTJT2 943\r\n22263 960\r" +
+            "\nA4372 329\r\n833QQ 735\r\n2JA6J 577\r\n86452 744\r\nQ8884 204\r\nAAAQA 656\r\n742Q4 259\r\nT6" +
+            "666 53\r\nA7733 930\r\nK4K4K 51\r\n64TT2 827\r\nJ4472 950\r\n55K56 381\r\n8QQQQ 799\r\n979T6 1" +
+            "34\r\nAJATT 52\r\n8KQJ4 241\r\n82AK7 338\r\n23222 268\r\nQQ77Q 73\r\n6665A 136\r\nA9282 587\r\n8" +
+            "62T2 558\r\nK444J 434\r\n66565 747\r\n2K2QA 153\r\n89889 14\r\nJ9933 309\r\n523T9 323\r\n7A87J" +
+            " 106\r\n7K6K6 614\r\n38T97 119\r\nJ45J6 787\r\n9AJ69 199\r\n78Q5J 818\r\n3T3KK 8\r\nTT9TT 710\r" +
+            "\n77736 771\r\nA2TQJ 64\r\n95559 278\r\n844QQ 246\r\n666K6 508\r\nTT6T6 779\r\nTT7T7 692\r\n6AA" +
+            "A6 970\r\nKJ8K7 933\r\n76J66 966\r\n7K57K 986\r\n2T9J6 364\r\nTT88T 912\r\n9K4A5 488\r\nA65A5 " +
+            "206\r\nA5TKQ 497\r\n3422Q 971\r\n38888 770\r\n25J85 174\r\n79775 429\r\n72T38 260\r\n874TK 257" +
+            "\r\n477J4 50\r\n3Q8QK 137\r\n999QK 146\r\n6JAQ2 955\r\n2T333 658\r\n892Q4 893\r\n4Q635 726\r\n7Q" +
+            "685 410\r\nJ9386 852\r\nKK7KA 247\r\n77Q57 327\r\n88K88 898\r\nQA366 651\r\n2879J 483\r\n68886" +
+            " 269\r\nK7J78 702\r\n84K5T 831\r\n8KKKK 964\r\n4A774 720\r\n2KK62 400\r\n69J7Q 57\r\nJ9JQA 264" +
+            "\r\n2K22T 513\r\nJK5T4 564\r\n23T6J 575\r\n43334 987\r\n3T596 570\r\n343J4 4\r\n63T4K 138\r\nQT5" +
+            "7K 941\r\nJ4792 992\r\n35339 892\r\n35KJ3 75\r\n3A74T 997\r\n8A8J7 643\r\nJQ55Q 884\r\nT3TT9 7" +
+            "73\r\nTQTTT 716\r\n83AAA 935\r\nJT38J 957\r\n258AT 901\r\n73334 934\r\n7765J 732\r\n6KK96 222\r" +
+            "\n87KTA 942\r\nKJKT3 251\r\nA777J 925\r\n56862 63\r\n333Q8 590\r\nAA5A5 272\r\nQ6AQQ 979\r\nAK3" +
+            "33 626\r\n84937 675\r\nJ8555 236\r\n22522 789\r\n38JQ3 503\r\n45444 388\r\nTJK9A 168\r\nQTTKT " +
+            "66\r\n88QQ8 405\r\n56223 141\r\n9K6KQ 638\r\nAA252 758\r\n77TTJ 995\r\n542A7 419\r\nKQ369 33\r\n" +
+            "87KKK 924\r\n3JJ88 390\r\nQ7777 475\r\nT9AJ6 360\r\nJTA9T 346\r\nJ5555 126\r\n279JJ 691\r\n42T" +
+            "J8 82\r\n79Q99 317\r\n595J8 538\r\nTAAAJ 802\r\n5T7J3 482\r\n563A5 156\r\nT3933 311\r\n22Q26 8" +
+            "12\r\n55775 524\r\n33TJ4 77\r\n7K555 149\r\n5Q428 665\r\n59QQ9 556\r\n345T8 824\r\nJA9K5 535\r\n" +
+            "TK9T8 220\r\n94J68 79\r\n8K942 458\r\nT39QJ 281\r\n63633 13\r\n7JJJ5 494\r\nQJ24Q 115\r\nQQ5QJ" +
+            " 724\r\n38JK8 725\r\nQKJKJ 743\r\nJQQ6Q 500\r\n54Q49 800\r\nJK987 292\r\nT33JA 224\r\n833J3 35" +
+            "1\r\n3333J 711\r\n73T3T 583\r\n7TQ6T 171\r\nJ665T 766\r\n3K77K 850\r\nQT4K7 501\r\nKK939 915\r\n" +
+            "99QJ8 754\r\n3K333 288\r\n3KT5Q 759\r\n634TA 804\r\n86T8T 369\r\n48777 820\r\nQ3792 5\r\nJ7425" +
+            " 948\r\n66J2K 295\r\nT269T 794\r\n8948Q 828\r\nQ452J 450\r\n46T65 42\r\n23JTT 695\r\nKK7Q3 469" +
+            "\r\nT4433 112\r\n5JJ76 611\r\nKK3Q3 520\r\n32A85 750\r\n87887 921\r\nA27A2 760\r\nQ96A9 358\r\nT" +
+            "T82T 196\r\n8A4A8 252\r\nT8887 365\r\n66644 862\r\n7538J 630\r\n25JJ5 636\r\nA9889 664\r\n45T2" +
+            "Q 287\r\nK8227 368\r\n9AAAA 26\r\n82K23 250\r\n5KJ8A 842\r\n333Q3 143\r\n66287 443\r\n87K94 89" +
+            "4\r\n8KJJ7 536\r\n88882 253\r\n33AA3 768\r\nT8K5T 466\r\nT9944 256\r\n43944 150\r\n66622 745\r\n" +
+            "3337J 918\r\nJTT83 936\r\n3A379 421\r\n58A55 926\r\nAJT47 713\r\n7JT78 738\r\n3Q58T 677\r\nT33" +
+            "JJ 275\r\n66TT8 572\r\n66636 765\r\nTJT55 751\r\n33666 289\r\n66222 632\r\nAA5A7 706\r\n7T2KK " +
+            "202\r\nA979J 7\r\n88KKK 127\r\nQQQ33 495\r\n93996 837\r\n8882Q 856\r\n93T86 452\r\n8A8AA 27\r\n5" +
+            "975J 835\r\n789KA 947\r\nJ47Q8 413\r\nAJ758 506\r\n62966 567\r\nA664J 409\r\nJ2222 993\r\nQ555" +
+            "7 455\r\n99T99 10\r\n62825 207\r\nK98JJ 786\r\n8JAT9 442\r\nQTQTQ 887\r\nK7747 889\r\n57577 43" +
+            "9\r\nKJK44 228\r\n7T7J7 574\r\n9TKT4 310\r\nKQK8K 97\r\n2J283 24\r\nQTTQT 465\r\n22822 604\r\nTT" +
+            "488 36\r\n25K59 662\r\n8Q8QQ 65\r\nQQQ55 193\r\n59A28 401\r\nKA9A9 69\r\nTATTJ 902\r\n4Q4QQ 35" +
+            "6\r\nKKK3Q 552\r\n375KA 490\r\n6KK6J 161\r\nQ666J 672\r\n25A55 683\r\nAJAAA 180\r\nA9494 391\r\n" +
+            "JAAJT 387\r\nJJ229 62\r\n22835 595\r\nJT534 160\r\n73854 868\r\nTT7TT 217\r\nKK587 607\r\n7KQJ" +
+            "3 451\r\n97J77 985\r\n24924 118\r\nQ6TKA 899\r\n77877 667\r\nKA5J5 326\r\n9939T 640\r\n3Q522 6" +
+            "53\r\n4429T 846\r\nQ3AQA 56\r\nT76JA 761\r\n57474 237\r\nQQJ44 878\r\nJ5599 166\r\n429QK 414\r\n" +
+            "4J2JT 499\r\n66669 961\r\n77TK7 200\r\n6TQ27 635\r\n86A68 718\r\n39TJ2 261\r\nKTJJK 393\r\n66J" +
+            "K6 584\r\n2J7K8 618\r\nTTTQ7 107\r\nA59A8 274\r\n92J49 579\r\nQ7Q78 938\r\n33933 320\r\nQ7TJ4 " +
+            "594\r\n5QK23 163\r\n6QQQQ 952\r\n86666 674\r\n74554 793\r\n337JT 911\r\n3TAT7 19\r\nKQ22J 267\r" +
+            "\n2222A 681\r\nTKTKJ 102\r\n64622 663\r\n2J2A7 932\r\nJ8836 545\r\nTTJJT 617\r\n232J6 87\r\nQ24" +
+            "4J 967\r\nAJQ8Q 258\r\n74799 785\r\nQ9339 529\r\n7TJ73 95\r\n47K3J 139\r\nQ6767 810\r\nTTTT6 3" +
+            "53\r\n66TKJ 226\r\n99995 673\r\n859T8 655\r\n23J2A 34\r\nQ9Q99 600\r\n9T98J 133\r\n444A6 573\r\n" +
+            "A7TA5 803\r\n7A275 416\r\n799T7 963\r\n222J9 879\r\nK2KAK 467\r\nAKA66 505\r\n6ATJJ 916\r\n233" +
+            "93 140\r\n22QQ7 927\r\nQTTJT 179\r\n954TJ 135\r\n42698 606\r\nKT625 342\r\n7K77J 3\r\n4A898 78" +
+            "8\r\n6A6A2 147\r\n44AA4 871\r\n6K6K6 907\r\n9J696 991\r\n4Q5TA 240\r\nQJQ99 958\r\n72934 700\r\n" +
+            "Q696T 949\r\n77QQ4 806\r\nTTT22 652\r\nKK5T5 910\r\nQ333Q 181\r\n9J6AJ 883\r\n63433 858\r\nTK8" +
+            "Q7 792\r\n99T2J 867\r\nQQ7KK 359\r\nA7A77 130\r\nJKJ5J 411\r\n53455 826\r\n69A2Q 774\r\n56948 " +
+            "784\r\n95TA4 650\r\n299T2 599\r\n68884 399\r\n46Q4Q 836\r\nJ828T 622\r\nJ77J7 175\r\n293A8 762" +
+            "\r\n8JJ62 940\r\n4J44J 85\r\n83333 551\r\n6A78J 562\r\n885JJ 456\r\n83866 592\r\nTT4T2 191\r\nKJ" +
+            "66A 117\r\nTTTTK 162\r\n7598T 982\r\nTQT2T 654\r\n53K82 348\r\nA9979 386\r\nK442K 783\r\n47A4A" +
+            " 517\r\nJ544K 550\r\nJTAA2 371\r\n7336A 182\r\n9QKT8 6\r\nK5KQQ 299\r\nJKKJA 15\r\n555TT 484\r\n" +
+            "5J5J5 265\r\n5555Q 519\r\n22QQQ 555\r\nJ3QQ3 589\r\nTJTTT 67\r\n7A777 32\r\nQQQQ7 446\r\n64446" +
+            " 830\r\n7T973 531\r\n22428 404\r\n8Q928 678\r\nAK8A9 316\r\n99992 129\r\n48744 976\r\n9A9KK 18" +
+            "\r\nTT9T9 71")]
         public string Puzzle07_Input {
             get {
                 return ((string)(this["Puzzle07_Input"]));
@@ -1153,7 +1289,169 @@ namespace Advent23.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("TJS = (LFP, HKT)\nSMT = (LDV, MMH)\nQQQ = (VKG, FVB)\nPQD = (NRV, JGD)\nPDP = (XVG, H" +
+            "BQ)\nGRB = (XVB, VVL)\nJVX = (VPQ, QFT)\nXCM = (MTN, HKF)\nGSM = (HXM, CRX)\nGXD = (S" +
+            "CJ, STQ)\nBTF = (VPT, VVT)\nJLK = (BFJ, FPT)\nJCG = (RNF, RHS)\nQMJ = (GPG, XGP)\nHGL" +
+            " = (VNM, FVP)\nQNF = (XCH, MJX)\nPTL = (DQS, QQS)\nJNH = (DGV, FFT)\nCKG = (RQB, TPT" +
+            ")\nPKJ = (SHG, BFQ)\nHDF = (TKK, DTS)\nBQQ = (DPJ, GPM)\nTQH = (CJL, DXL)\nKLR = (MHH" +
+            ", LQF)\nSFH = (FXC, KTN)\nHKT = (PCH, GRV)\nBXL = (KDD, SCC)\nCDV = (RVK, KGL)\nXDS =" +
+            " (BTD, BVR)\nCCG = (PLD, CVF)\nBBN = (XLF, CPP)\nGHC = (VPF, NMK)\nPRK = (BFJ, FPT)\n" +
+            "HPT = (JNH, HKK)\nDXL = (NHC, VFP)\nVHX = (JVF, JGN)\nSLC = (DQF, LLH)\nKGL = (LQL, " +
+            "KHJ)\nTBM = (XGJ, KGH)\nXCA = (BCC, DKB)\nRMV = (QVT, QVT)\nHNC = (GXS, JJX)\nZZZ = (" +
+            "KBC, KQK)\nNFD = (PQD, PXP)\nBTN = (SVJ, MMF)\nFJH = (KDB, LXF)\nPXJ = (KPK, QNL)\nGP" +
+            "G = (LHP, JLB)\nBNM = (MXP, RLX)\nLQG = (CLK, CCG)\nLJX = (PKR, XMV)\nPVB = (SMH, LD" +
+            "G)\nSHT = (TBM, GRL)\nJLB = (FGV, XPX)\nNJC = (LBK, XVK)\nHGD = (CRX, HXM)\nFGR = (SS" +
+            "D, KMB)\nPTS = (DQC, FDJ)\nNSJ = (TSC, BVS)\nXQP = (NHL, RPK)\nBFH = (JCN, DLH)\nXVB " +
+            "= (JLD, DVB)\nXDK = (XSV, GKV)\nMKV = (TXV, CCT)\nKGD = (FMS, HNC)\nBLQ = (PQD, PXP)" +
+            "\nHGP = (VQX, GTT)\nSSD = (GCT, NVB)\nDNH = (KFD, QXV)\nLKB = (STH, GMM)\nQTP = (DFH," +
+            " BKX)\nTMQ = (CDV, PFB)\nQGC = (PFP, DVV)\nGGH = (THH, THH)\nGRJ = (GBH, MDN)\nDBX = " +
+            "(JKL, DVC)\nDTS = (XJP, NMB)\nPFT = (TGM, RQX)\nDRS = (JCG, PTB)\nCVQ = (VQG, CGN)\nR" +
+            "KF = (VRT, NLJ)\nVPQ = (JGT, CKG)\nLDJ = (KNS, DQH)\nJKL = (XJL, CVQ)\nLPH = (LBV, D" +
+            "NB)\nHGH = (RFM, RFM)\nQVT = (KDD, KDD)\nKNS = (MDJ, LLG)\nGPA = (PLN, RTM)\nCLM = (K" +
+            "PK, QNL)\nRJM = (LFP, HKT)\nBFM = (TQC, SQR)\nXBM = (JJH, PLR)\nPGD = (SNL, GGJ)\nSVQ" +
+            " = (DPP, LQP)\nBRR = (GHT, MGZ)\nPQH = (PRX, GGL)\nKRJ = (HDR, VRM)\nSXT = (GTH, PGQ" +
+            ")\nBHP = (XQD, VQJ)\nKPK = (JTF, LJS)\nJCN = (DLJ, GBM)\nKBC = (DTR, KNF)\nNMB = (HMF" +
+            ", LBL)\nHJB = (XMV, PKR)\nMDJ = (PFT, XHP)\nXKC = (KTK, RQP)\nQTB = (HGH, TLL)\nMSK =" +
+            " (VQX, GTT)\nHJK = (FGN, DHB)\nFDG = (PCJ, DXD)\nJDT = (BHL, BFM)\nCBK = (FMS, HNC)\n" +
+            "VPP = (NKP, MBD)\nRTL = (RFK, TBP)\nRNR = (KQK, KBC)\nRNF = (PBB, CXH)\nJCB = (JCQ, " +
+            "NMV)\nKHJ = (THC, BBN)\nPFF = (LQF, MHH)\nJJN = (JCT, RRM)\nPMQ = (JBB, XTH)\nVRK = (" +
+            "PKJ, DCB)\nDST = (XVV, XJK)\nKGH = (DBL, CDP)\nPTB = (RNF, RHS)\nFNS = (RCN, VLQ)\nDB" +
+            "L = (TSG, JSR)\nJGT = (TPT, RQB)\nSQH = (JNX, DDC)\nVQZ = (QDR, XXK)\nNLF = (KDB, LX" +
+            "F)\nBHF = (HGD, GSM)\nRND = (FFP, XLH)\nJDQ = (VVT, VPT)\nNRV = (PQH, FJM)\nBPG = (XS" +
+            "V, GKV)\nGHS = (NFD, BLQ)\nRGT = (SVQ, VNB)\nDHV = (SJG, TCC)\nGPM = (PTS, RGS)\nVSJ " +
+            "= (QPV, DFP)\nDRC = (DPJ, GPM)\nPVF = (XVV, XJK)\nVJD = (LPG, VXQ)\nTGD = (FKB, PVB)" +
+            "\nTVS = (XHX, SRN)\nGTT = (CJX, BGB)\nXLB = (KFD, QXV)\nSGH = (GSM, HGD)\nXLH = (RJX," +
+            " LPH)\nJLD = (TMQ, LGG)\nGPH = (LKB, JMX)\nPTD = (VVP, SKG)\nMCD = (HPV, RGM)\nCQV = " +
+            "(JJV, FNQ)\nSJG = (TNG, LFN)\nDSX = (PLB, JTS)\nDQS = (JSK, FRM)\nJSX = (XFP, QLC)\nR" +
+            "FM = (KTK, KTK)\nGXS = (JBN, QNF)\nQNM = (VCC, NPL)\nBHH = (XJT, KTH)\nXSV = (JPT, F" +
+            "TP)\nQDQ = (GGH, GGH)\nJKQ = (RML, SXT)\nJKN = (MCK, BLL)\nXTH = (TCX, HJK)\nBFF = (P" +
+            "RN, MSF)\nVPM = (RKF, MMV)\nJTC = (BGC, GDX)\nXBL = (FXC, KTN)\nCCT = (JVX, QTF)\nVPT" +
+            " = (JHX, TDN)\nDGK = (SNL, GGJ)\nCRX = (XQM, TKJ)\nDMC = (PCF, KDP)\nJGD = (FJM, PQH" +
+            ")\nPJJ = (TQH, JDF)\nRGM = (FNS, MSX)\nBRD = (BHL, BFM)\nGNG = (FLP, BLV)\nFHV = (PLH" +
+            ", KFB)\nVPF = (SCH, HMM)\nXJT = (BJB, DPK)\nPJD = (CDQ, PDQ)\nDXD = (MVP, XHB)\nCXX =" +
+            " (PRK, JLK)\nKFD = (LHH, GHC)\nKFT = (HDR, VRM)\nLXT = (LGD, NNQ)\nNVB = (LQB, BBC)\n" +
+            "LBX = (XDX, PDP)\nRLX = (BFH, KRS)\nPDN = (BCT, HXD)\nVFS = (BPN, PJJ)\nJPM = (VBB, " +
+            "GHS)\nTRL = (SNB, FHV)\nJGN = (RMV, KCP)\nJFS = (PXS, QVL)\nTGM = (FJS, BFG)\nTCC = (" +
+            "TNG, LFN)\nJLL = (PTB, JCG)\nKCP = (QVT, BXL)\nQLC = (SNJ, JJN)\nHHC = (PRK, JLK)\nRQ" +
+            "P = (THJ, QGZ)\nBGR = (CCG, CLK)\nCJL = (VFP, NHC)\nBVK = (XQS, CSN)\nDFJ = (HPV, RG" +
+            "M)\nBBK = (PLJ, DVF)\nXGJ = (CDP, DBL)\nXMT = (DHV, MFF)\nMRG = (JJD, XFG)\nDPP = (VX" +
+            "V, STX)\nJTF = (TJS, RJM)\nXMH = (CSN, XQS)\nFFT = (SJN, RTX)\nJJD = (SLC, JBK)\nKMB " +
+            "= (GCT, NVB)\nKNF = (SHT, KFP)\nMVF = (PXJ, CLM)\nCPN = (HKF, MTN)\nKTK = (THJ, THJ)" +
+            "\nSRS = (GVM, GVT)\nGSH = (NHV, KTQ)\nLXB = (PVB, FKB)\nVQX = (BGB, CJX)\nBFJ = (XSD," +
+            " DJP)\nBPN = (JDF, TQH)\nCPP = (RKR, BPD)\nGVM = (MTX, MTX)\nVDN = (VBB, GHS)\nGGL = " +
+            "(BRG, MPJ)\nNVN = (VJP, QGC)\nTRP = (RRF, TKB)\nKNG = (VRG, KRN)\nMFF = (SJG, TCC)\nT" +
+            "XB = (LRG, JTC)\nDXK = (JTC, LRG)\nRVK = (LQL, KHJ)\nQFT = (CKG, JGT)\nXQS = (JKN, L" +
+            "HN)\nTRM = (NRB, XHQ)\nAAA = (KQK, KBC)\nDJN = (XVB, VVL)\nTHH = (GPX, LHF)\nNCN = (V" +
+            "MV, PBG)\nJVF = (RMV, KCP)\nHMF = (LDJ, RDK)\nTDS = (JLQ, TQJ)\nJNX = (LQG, BGR)\nLQB" +
+            " = (XKR, CMN)\nQXV = (LHH, GHC)\nDRM = (PTX, TLH)\nHJL = (QVL, PXS)\nDLH = (DLJ, GBM" +
+            ")\nFQB = (XLH, FFP)\nPCJ = (MVP, XHB)\nXHP = (RQX, TGM)\nFGX = (RTL, GGV)\nGGJ = (SFH" +
+            ", XBL)\nQDF = (GTK, GTK)\nXJK = (GPH, HGR)\nBCT = (JCS, VHX)\nMVP = (KCN, XQP)\nQFL =" +
+            " (HXL, DHK)\nKCM = (KBX, SHR)\nGVT = (MTX, MFT)\nVRT = (PMK, VFS)\nNSM = (GVM, GVT)\n" +
+            "FMS = (GXS, JJX)\nXHX = (SQG, HDF)\nSQG = (DTS, TKK)\nVRM = (BRX, KJX)\nTHK = (VNM, " +
+            "FVP)\nLQP = (STX, VXV)\nFJS = (BDH, QTB)\nRPV = (QCX, MSR)\nQQS = (FRM, JSK)\nHKK = (" +
+            "FFT, DGV)\nPGQ = (GLT, MXG)\nDHK = (RLN, XNP)\nXVV = (GPH, HGR)\nCJJ = (MFF, DHV)\nSB" +
+            "G = (VBX, GKD)\nRPX = (VRK, MRJ)\nXQM = (QTP, LRQ)\nKLJ = (GHL, BQC)\nTTC = (PBG, VM" +
+            "V)\nRKR = (BHH, KNQ)\nFJM = (PRX, GGL)\nSQR = (JPM, VDN)\nLBL = (RDK, LDJ)\nXNP = (BT" +
+            "F, JDQ)\nVRG = (THG, LLN)\nBVN = (TTK, NSJ)\nHCL = (JNH, HKK)\nFPH = (JKQ, LVX)\nCDQ " +
+            "= (FHT, XLJ)\nPLH = (KLR, PFF)\nPBB = (GRB, DJN)\nFRM = (JFX, DNC)\nTHC = (XLF, CPP)" +
+            "\nBLV = (FSL, TVS)\nQLX = (HFC, VRC)\nBHL = (TQC, SQR)\nJLV = (PXQ, JSX)\nSHG = (HDN," +
+            " HDN)\nLLN = (GBR, MRG)\nHFC = (SGV, GSH)\nJCQ = (DFM, DPB)\nHBX = (XNV, NJN)\nRVM = " +
+            "(DCX, KFK)\nKFK = (JRV, TCK)\nVLQ = (JXJ, KKB)\nNHV = (RXG, HMP)\nDFM = (KKK, DHR)\nM" +
+            "MV = (VRT, NLJ)\nTKK = (NMB, XJP)\nHBQ = (KLS, GJR)\nPMK = (BPN, PJJ)\nPLB = (RJN, J" +
+            "TR)\nMPJ = (SMN, CPG)\nXNV = (KLJ, VRJ)\nLRG = (BGC, GDX)\nJFX = (TXB, DXK)\nXMK = (M" +
+            "BK, JTP)\nSTH = (XDK, BPG)\nMCR = (FPH, FXM)\nXLR = (BMR, FDG)\nNHC = (QDM, JLV)\nMRJ" +
+            " = (PKJ, DCB)\nVBB = (NFD, BLQ)\nKMN = (PRF, QNM)\nQMG = (JCQ, NMV)\nRMN = (XTH, JBB" +
+            ")\nHPV = (FNS, MSX)\nTCX = (FGN, DHB)\nBRG = (SMN, CPG)\nBJB = (BVK, XMH)\nNLJ = (PMK" +
+            ", VFS)\nRHS = (CXH, PBB)\nPLK = (LQX, SBG)\nNGS = (LDV, MMH)\nNRM = (MDN, GBH)\nBKN =" +
+            " (TKB, RRF)\nFVP = (SXM, DGX)\nVLF = (GTK, VQZ)\nMBD = (CQV, SND)\nMTN = (FCT, KNC)\n" +
+            "FKB = (SMH, LDG)\nXPX = (QSM, QJK)\nXGP = (JLB, LHP)\nQKN = (QCX, MSR)\nCLL = (JCB, " +
+            "QMG)\nPLD = (BFF, CHX)\nTXV = (JVX, QTF)\nKJX = (SQH, DCF)\nBPD = (BHH, KNQ)\nGKD = (" +
+            "NFQ, BVN)\nHSM = (VSJ, GHP)\nBKX = (LDX, KMN)\nFTP = (DRS, JLL)\nMVB = (NNQ, LGD)\nHG" +
+            "R = (LKB, JMX)\nFPL = (KFS, BHP)\nMSX = (VLQ, RCN)\nFLP = (FSL, TVS)\nJJH = (BKN, TR" +
+            "P)\nRJX = (LBV, DNB)\nBVS = (HGP, MSK)\nJXJ = (LBB, JXK)\nTSC = (MSK, HGP)\nRXG = (TD" +
+            "S, BNG)\nTPT = (PTC, PHQ)\nDHB = (CXX, HHC)\nXVK = (FVF, NVN)\nMMQ = (KRN, VRG)\nGCT " +
+            "= (BBC, LQB)\nMTX = (QDF, QDF)\nPBP = (LBK, XVK)\nKTP = (NJN, XNV)\nTNG = (VLC, VLC)" +
+            "\nLXF = (XCM, CPN)\nFVB = (FRV, FPL)\nPCH = (DRC, BQQ)\nDQH = (LLG, MDJ)\nRRH = (MMF," +
+            " SVJ)\nPFG = (JTS, PLB)\nKRK = (DDM, FGX)\nSGV = (NHV, KTQ)\nPJL = (MQH, SXF)\nXMJ = " +
+            "(CCT, TXV)\nRFT = (RKF, MMV)\nQMR = (BTN, RRH)\nSXP = (NCN, TTC)\nGHL = (SXP, DDX)\nR" +
+            "RM = (HCL, HPT)\nJLQ = (KJV, BMG)\nPHQ = (GLS, GBX)\nFXM = (LVX, JKQ)\nBLL = (XMT, C" +
+            "JJ)\nMXP = (KRS, BFH)\nPQB = (GNV, BNM)\nTHG = (GBR, MRG)\nXQD = (MHF, KRK)\nSNL = (X" +
+            "BL, SFH)\nQGZ = (DKB, BCC)\nRPK = (VRS, QSX)\nTKB = (JRN, QMC)\nNPL = (LXD, QBM)\nMJX" +
+            " = (DST, PVF)\nPFB = (KGL, RVK)\nRGV = (DHK, HXL)\nDQF = (DFD, MVF)\nSNM = (HXD, BCT" +
+            ")\nGLT = (QXL, SVX)\nXLF = (RKR, BPD)\nBGQ = (GGH, NNJ)\nQPV = (DLB, DMC)\nQCX = (SNM" +
+            ", PDN)\nPBG = (SRV, QLX)\nLQX = (VBX, GKD)\nKLX = (XLB, DNH)\nJVR = (XGP, GPG)\nDPK =" +
+            " (XMH, BVK)\nPRX = (MPJ, BRG)\nJBB = (HJK, TCX)\nHHK = (SNB, FHV)\nKTQ = (HMP, RXG)\n" +
+            "JCS = (JVF, JGN)\nVNM = (DGX, SXM)\nQNL = (JTF, LJS)\nCTM = (DBM, KCM)\nCVF = (BFF, " +
+            "CHX)\nTQC = (VDN, JPM)\nFRV = (BHP, KFS)\nGJR = (JFS, HJL)\nJQV = (KTP, HBX)\nXVG = (" +
+            "KLS, GJR)\nFGN = (CXX, HHC)\nJTR = (QFL, RGV)\nQNH = (PMQ, RMN)\nXHQ = (SSC, JVZ)\nXT" +
+            "T = (SBG, LQX)\nVLR = (XDX, PDP)\nGBH = (TXM, PJL)\nLFA = (XXK, QDR)\nSNJ = (RRM, JC" +
+            "T)\nKDD = (RNR, RNR)\nDLJ = (FGR, DSS)\nXKR = (LXB, TGD)\nPLF = (STQ, SCJ)\nTSG = (FR" +
+            "H, DRF)\nNHL = (VRS, QSX)\nLBB = (PGD, DGK)\nMQH = (QKN, RPV)\nKTH = (DPK, BJB)\nNJN " +
+            "= (VRJ, KLJ)\nFDJ = (KGK, CGL)\nMMF = (SMT, NGS)\nDCB = (SHG, BFQ)\nSXM = (GNB, BBK)" +
+            "\nQBM = (TQB, DHN)\nQXL = (DRM, TLM)\nMVL = (JTP, MBK)\nPTX = (HSM, BJS)\nGKV = (FTP," +
+            " JPT)\nTKG = (XLB, DNH)\nPTC = (GLS, GBX)\nFNQ = (PTD, XNS)\nVXQ = (NRM, GRJ)\nPXP = " +
+            "(NRV, JGD)\nSTQ = (VLR, LBX)\nVVL = (DVB, JLD)\nXJL = (CGN, VQG)\nFCT = (TCG, JPC)\nM" +
+            "XG = (QXL, SVX)\nBFQ = (HDN, TRM)\nJTP = (GDF, VPP)\nNGP = (FLP, BLV)\nVKG = (FRV, F" +
+            "PL)\nCXH = (GRB, DJN)\nNMK = (SCH, HMM)\nVRC = (SGV, GSH)\nLLH = (MVF, DFD)\nLLG = (X" +
+            "HP, PFT)\nTLH = (BJS, HSM)\nRTM = (MKV, XMJ)\nTLL = (RFM, XKC)\nRKK = (TRL, HHK)\nJMM" +
+            " = (MTQ, BRR)\nPDQ = (FHT, XLJ)\nXCL = (BTD, BVR)\nSPL = (CDQ, PDQ)\nTFT = (QQS, DQS" +
+            ")\nVVP = (GQD, XDH)\nCMN = (TGD, LXB)\nJSK = (JFX, DNC)\nKLS = (JFS, HJL)\nGDF = (NKP" +
+            ", MBD)\nKJV = (DQP, RKK)\nJBN = (XCH, MJX)\nPQA = (GPX, LHF)\nSMN = (RVM, SMQ)\nSND =" +
+            " (FNQ, JJV)\nXSD = (KFT, KRJ)\nBNG = (JLQ, TQJ)\nTDN = (BBG, PPR)\nVRS = (TTL, CFG)\n" +
+            "GDX = (NTJ, MCR)\nCJX = (PQB, HPJ)\nXNS = (VVP, SKG)\nGHT = (VTN, XBM)\nGNV = (RLX, " +
+            "MXP)\nLBK = (FVF, NVN)\nCFG = (MVL, XMK)\nGPX = (RFT, VPM)\nVXV = (KLX, TKG)\nJSR = (" +
+            "DRF, FRH)\nLRQ = (BKX, DFH)\nGTK = (XXK, QDR)\nGBM = (FGR, DSS)\nSNB = (PLH, KFB)\nJJ" +
+            "V = (XNS, PTD)\nBVV = (RND, FQB)\nDDC = (BGR, LQG)\nLPG = (NRM, GRJ)\nFVF = (VJP, QG" +
+            "C)\nDFD = (PXJ, CLM)\nHMP = (BNG, TDS)\nBTD = (HGL, THK)\nVCC = (LXD, QBM)\nGBR = (JJ" +
+            "D, XFG)\nNKP = (SND, CQV)\nCHX = (PRN, MSF)\nTCB = (JKL, DVC)\nDVF = (JVR, QMJ)\nVBX " +
+            "= (BVN, NFQ)\nRFK = (PLK, XTT)\nXHB = (KCN, XQP)\nBBG = (SPG, QMR)\nRJN = (RGV, QFL)" +
+            "\nDQP = (TRL, HHK)\nRRF = (QMC, JRN)\nBBC = (XKR, CMN)\nBFG = (BDH, QTB)\nDGX = (BBK," +
+            " GNB)\nGGV = (RFK, TBP)\nKDP = (CTM, JQT)\nDJP = (KRJ, KFT)\nXJP = (HMF, LBL)\nJMX = " +
+            "(GMM, STH)\nKFM = (JCB, QMG)\nSPG = (RRH, BTN)\nBCC = (CLL, KFM)\nGQD = (SRS, NSM)\nF" +
+            "RH = (CSJ, QNH)\nJPC = (XVP, VJD)\nKTN = (TCB, DBX)\nPGG = (MRJ, VRK)\nKKK = (QQQ, R" +
+            "XR)\nMDN = (TXM, PJL)\nJBK = (LLH, DQF)\nNTJ = (FXM, FPH)\nLBV = (PBJ, XLR)\nCSJ = (P" +
+            "MQ, RMN)\nTTK = (TSC, BVS)\nPKR = (RGT, SLM)\nXMV = (SLM, RGT)\nKNC = (TCG, JPC)\nRTX" +
+            " = (MCD, DFJ)\nRQB = (PHQ, PTC)\nVNJ = (RND, FQB)\nDCX = (TCK, JRV)\nXVP = (VXQ, LPG" +
+            ")\nBJS = (VSJ, GHP)\nQSX = (TTL, CFG)\nVQJ = (MHF, KRK)\nJPT = (DRS, JLL)\nBDH = (HGH" +
+            ", TLL)\nDLB = (KDP, PCF)\nGBX = (TFT, PTL)\nFFP = (LPH, RJX)\nNFQ = (TTK, NSJ)\nHDR =" +
+            " (BRX, KJX)\nDBM = (SHR, KBX)\nJTS = (RJN, JTR)\nBMG = (RKK, DQP)\nBRX = (SQH, DCF)\n" +
+            "QDM = (PXQ, JSX)\nRDK = (KNS, DQH)\nMMH = (CBK, KGD)\nDPJ = (RGS, PTS)\nPLN = (XMJ, " +
+            "MKV)\nLQL = (THC, BBN)\nHXD = (JCS, VHX)\nQVL = (NJC, PBP)\nHPJ = (BNM, GNV)\nNMV = (" +
+            "DFM, DPB)\nJJX = (JBN, QNF)\nXFG = (SLC, JBK)\nRML = (PGQ, GTH)\nCLK = (CVF, PLD)\nMH" +
+            "F = (DDM, FGX)\nJVZ = (RTM, PLN)\nKDB = (CPN, XCM)\nCGL = (LJX, HJB)\nLXD = (DHN, TQ" +
+            "B)\nLGG = (CDV, PFB)\nQJK = (PJD, SPL)\nHXM = (TKJ, XQM)\nPLJ = (JVR, QMJ)\nVNB = (DP" +
+            "P, LQP)\nKFS = (XQD, VQJ)\nKNQ = (KTH, XJT)\nGRL = (KGH, XGJ)\nTLM = (TLH, PTX)\nDRF " +
+            "= (QNH, CSJ)\nDQC = (KGK, CGL)\nGTH = (GLT, MXG)\nDVV = (MMQ, KNG)\nSKG = (GQD, XDH)" +
+            "\nQDR = (BRD, JDT)\nSCJ = (VLR, LBX)\nPLR = (TRP, BKN)\nDFP = (DMC, DLB)\nJCT = (HCL," +
+            " HPT)\nMFT = (QDF, VLF)\nHMM = (QDQ, BGQ)\nJRN = (PFG, DSX)\nQMC = (PFG, DSX)\nQSM = " +
+            "(PJD, SPL)\nPFP = (KNG, MMQ)\nXDH = (SRS, NSM)\nVQG = (PLF, GXD)\nQTF = (VPQ, QFT)\nD" +
+            "DX = (TTC, NCN)\nTCK = (BVV, VNJ)\nSMQ = (KFK, DCX)\nLHN = (MCK, BLL)\nTCG = (VJD, X" +
+            "VP)\nDNC = (TXB, DXK)\nDTR = (SHT, KFP)\nVFP = (QDM, JLV)\nJHX = (PPR, BBG)\nSTX = (T" +
+            "KG, KLX)\nKFP = (GRL, TBM)\nRGS = (DQC, FDJ)\nLDV = (CBK, KGD)\nRCN = (JXJ, KKB)\nBQC" +
+            " = (DDX, SXP)\nNRB = (SSC, SSC)\nMBK = (VPP, GDF)\nXDX = (HBQ, XVG)\nJXK = (DGK, PGD" +
+            ")\nJRV = (BVV, VNJ)\nHMA = (VTN, XBM)\nBGC = (MCR, NTJ)\nTQJ = (KJV, BMG)\nSRN = (HDF" +
+            ", SQG)\nLFP = (GRV, PCH)\nLGD = (GNG, NGP)\nMTQ = (GHT, GHT)\nGMM = (XDK, BPG)\nMHH =" +
+            " (FJH, NLF)\nKGK = (LJX, HJB)\nCGN = (PLF, GXD)\nLQF = (NLF, FJH)\nLFN = (VLC, JMM)\n" +
+            "CPG = (RVM, SMQ)\nPBJ = (FDG, BMR)\nVLC = (MTQ, MTQ)\nJQT = (DBM, KCM)\nDGV = (RTX, " +
+            "SJN)\nXXK = (BRD, JDT)\nDPB = (KKK, DHR)\nVRJ = (GHL, BQC)\nVMV = (QLX, SRV)\nKRN = (" +
+            "THG, LLN)\nSSC = (PLN, RTM)\nMGZ = (XBM, VTN)\nNNJ = (THH, JNZ)\nGNB = (PLJ, DVF)\nCS" +
+            "N = (LHN, JKN)\nDSS = (SSD, KMB)\nBMR = (DXD, PCJ)\nKRS = (JCN, DLH)\nSMH = (LXT, MV" +
+            "B)\nDFH = (LDX, KMN)\nLDG = (MVB, LXT)\nDCF = (DDC, JNX)\nDVC = (CVQ, XJL)\nLHF = (RF" +
+            "T, VPM)\nSHR = (NND, MPM)\nSRV = (VRC, HFC)\nRQX = (BFG, FJS)\nDNB = (XLR, PBJ)\nKKB " +
+            "= (LBB, JXK)\nJNZ = (LHF, GPX)\nMSR = (SNM, PDN)\nSXF = (QKN, RPV)\nXLJ = (BHF, SGH)" +
+            "\nDDM = (RTL, GGV)\nFPT = (DJP, XSD)\nDQQ = (HBX, KTP)\nGHP = (QPV, DFP)\nFSL = (XHX," +
+            " SRN)\nPXQ = (XFP, QLC)\nKCN = (NHL, RPK)\nHXL = (RLN, XNP)\nDHR = (RXR, QQQ)\nPRF = " +
+            "(VCC, NPL)\nTBP = (PLK, XTT)\nPRN = (JQV, DQQ)\nTHJ = (BCC, DKB)\nFGV = (QJK, QSM)\nL" +
+            "DX = (QNM, PRF)\nSVX = (DRM, TLM)\nDKB = (CLL, KFM)\nDHN = (PGG, RPX)\nTTL = (MVL, X" +
+            "MK)\nSCH = (QDQ, QDQ)\nMSF = (DQQ, JQV)\nNNQ = (NGP, GNG)\nHKF = (KNC, FCT)\nVVT = (J" +
+            "HX, TDN)\nGRV = (BQQ, DRC)\nBGB = (HPJ, PQB)\nPPR = (QMR, SPG)\nFHT = (BHF, SGH)\nKBX" +
+            " = (MPM, NND)\nTKJ = (QTP, LRQ)\nGLS = (PTL, TFT)\nTQB = (PGG, RPX)\nLHP = (XPX, FGV" +
+            ")\nSLM = (VNB, SVQ)\nSCC = (RNR, ZZZ)\nKQK = (KNF, DTR)\nRXR = (VKG, FVB)\nCDP = (JSR" +
+            ", TSG)\nNND = (XDS, XCL)\nLHH = (VPF, NMK)\nVJP = (PFP, DVV)\nSVJ = (NGS, SMT)\nTXM =" +
+            " (SXF, MQH)\nKFB = (PFF, KLR)\nBVR = (THK, HGL)\nDVB = (TMQ, LGG)\nSJN = (MCD, DFJ)\n" +
+            "PCF = (CTM, JQT)\nHDN = (NRB, NRB)\nRLN = (JDQ, BTF)\nXFP = (SNJ, JJN)\nFXC = (DBX, " +
+            "TCB)\nVTN = (JJH, PLR)\nMPM = (XCL, XDS)\nJDF = (DXL, CJL)\nMCK = (CJJ, XMT)\nLJS = (" +
+            "TJS, RJM)\nXCH = (PVF, DST)\nLVX = (SXT, RML)\nPXS = (PBP, NJC)")]
         public string Puzzle08_Input {
             get {
                 return ((string)(this["Puzzle08_Input"]));
@@ -1165,7 +1463,278 @@ namespace Advent23.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("-1 0 1 10 53 187 518 1233 2660 5388 10524 20246 38935 75343 146509 284568 548473 " +
+            "1044637 1965205 3663693 6812697\r\n12 30 67 142 300 622 1234 2331 4254 7687 14080 " +
+            "26460 50876 98851 191403 365471 683968 1251212 2236193 3907058 6681380\r\n6 21 49 " +
+            "109 241 526 1116 2268 4372 7959 13671 22171 33967 49120 66802 84666 97986 98521 " +
+            "73053 1545 -145139\r\n14 30 61 123 254 535 1128 2334 4674 8996 16611 29461 50322 8" +
+            "3045 132838 206592 313254 464250 673961 960255 1345078\r\n7 25 59 119 215 357 555 " +
+            "819 1159 1585 2107 2735 3479 4349 5355 6507 7815 9289 10939 12775 14807\r\n-3 5 23" +
+            " 61 156 402 996 2298 4896 9665 17821 31006 51507 82820 130928 206879 331535 5437" +
+            "25 913483 1562595 2695326\r\n29 52 96 185 369 754 1552 3169 6368 12582 24517 47280" +
+            " 90390 171174 320203 589568 1064911 1882184 3250078 5478907 9016407\r\n9 32 79 177" +
+            " 376 767 1525 2990 5803 11119 20923 38487 69054 120982 207967 353915 604314 1053" +
+            "295 1907636 3635070 7298141\r\n5 19 44 77 110 129 113 33 -149 -481 -1022 -1843 -30" +
+            "28 -4675 -6897 -9823 -13599 -18389 -24376 -31763 -40774\r\n17 35 61 99 164 303 630" +
+            " 1375 2947 6011 11579 21115 36654 60935 97548 151095 227365 333523 478313 672275" +
+            " 927976\r\n19 42 74 115 165 224 292 369 455 550 654 767 889 1020 1160 1309 1467 16" +
+            "34 1810 1995 2189\r\n-4 9 32 65 117 226 498 1183 2818 6479 14196 29597 58859 11205" +
+            "6 205006 361731 617656 1023685 1651304 2598873 3999281\r\n11 30 76 163 305 516 810" +
+            " 1201 1703 2330 3096 4015 5101 6368 7830 9501 11395 13526 15908 18555 21481\r\n11 " +
+            "38 85 161 282 475 783 1280 2123 3711 7103 14982 33654 76854 172509 374095 778835" +
+            " 1555732 2987329 5530151 9900026\r\n3 14 35 66 107 158 219 290 371 462 563 674 795" +
+            " 926 1067 1218 1379 1550 1731 1922 2123\r\n0 12 30 52 76 100 122 140 152 156 150 1" +
+            "32 100 52 -14 -100 -208 -340 -498 -684 -900\r\n1 7 24 70 180 421 916 1875 3624 662" +
+            "3 11496 19212 31843 54908 103352 214896 477035 1077563 2393352 5138342 10599366\r" +
+            "\n6 7 8 3 -6 -2 49 195 490 981 1690 2591 3582 4452 4843 4207 1758 -3581 -13236 -2" +
+            "9045 -53326\r\n20 29 36 41 44 45 44 41 36 29 20 9 -4 -19 -36 -55 -76 -99 -124 -151" +
+            " -180\r\n11 17 27 42 68 132 317 832 2136 5134 11452 23779 46268 85117 149956 25807" +
+            "9 446901 807103 1562793 3250512 7093496\r\n-1 -5 -5 16 86 251 593 1278 2683 5694 1" +
+            "2325 26885 58015 122009 247869 484450 909804 1642672 2857012 4805365 7872645\r\n14" +
+            " 21 49 116 250 504 984 1909 3747 7503 15270 31188 62985 124294 237947 440437 787" +
+            "708 1362377 2282407 3711132 5868380\r\n17 38 73 120 180 274 482 1021 2387 5607 127" +
+            "00 27567 57782 118236 238437 476716 947029 1868232 3653083 7067466 13514168\r\n7 1" +
+            "6 24 39 73 139 247 399 583 766 886 843 489 -383 -2051 -4877 -9321 -15956 -25484 " +
+            "-38753 -56775\r\n-2 0 12 38 80 153 325 793 2000 4793 10633 21924 42691 80239 14933" +
+            "6 282420 553382 1130634 2391186 5158118 11181006\r\n8 15 47 117 238 425 695 1069 1" +
+            "591 2398 3917 7368 15984 37821 91856 220419 513054 1149837 2476167 5126227 10218" +
+            "766\r\n-8 -6 -2 2 3 -2 4 125 711 2679 8104 21244 50242 109855 225700 440685 824514" +
+            " 1487424 2599634 4418366 7324741\r\n23 34 43 64 133 320 749 1628 3293 6277 11437 2" +
+            "0244 35536 63480 118395 233784 485919 1041392 2248335 4804192 10053371\r\n18 37 81" +
+            " 170 340 654 1210 2152 3699 6212 10328 17219 29114 50418 90204 167776 324777 650" +
+            "472 1332004 2749185 5643949\r\n29 42 52 59 68 93 176 434 1157 3009 7440 17508 3944" +
+            "4 85478 178688 360945 705413 1335532 2452972 4377705 7604108\r\n1 11 26 56 125 271" +
+            " 546 1016 1761 2875 4466 6656 9581 13391 18250 24336 31841 40971 51946 65000 803" +
+            "81\r\n5 2 13 65 200 470 927 1618 2611 4098 6643 11665 22266 44530 89429 175474 332" +
+            "241 604882 1059697 1790793 2927788\r\n10 26 62 131 259 496 941 1806 3557 7182 1465" +
+            "7 29733 59284 115692 221208 416176 775068 1438887 2682669 5058399 9697151\r\n5 10 " +
+            "12 1 -39 -121 -236 -324 -235 320 1828 5043 11065 21429 38204 64102 102597 158054" +
+            " 235868 342613 486201\r\n17 35 59 93 145 244 486 1138 2844 6993 16326 35877 74362 " +
+            "146150 273971 492538 853283 1430431 2328661 3692629 5718655\r\n2 10 19 31 66 172 4" +
+            "25 925 1818 3425 6657 14066 32158 76013 177863 402122 870498 1802308 3577031 682" +
+            "8545 12583482\r\n8 7 3 -4 -14 -27 -43 -62 -84 -109 -137 -168 -202 -239 -279 -322 -" +
+            "368 -417 -469 -524 -582\r\n17 30 59 130 290 616 1228 2322 4250 7685 13920 25361 46" +
+            "285 83945 150115 263179 450879 753848 1230065 1960380 3055268\r\n10 20 40 77 141 2" +
+            "42 394 642 1146 2389 5633 13844 33483 77914 173951 374794 786430 1622761 3321496" +
+            " 6785708 13877601\r\n4 9 25 62 139 293 599 1213 2452 4940 9890 19676 38999 77204 1" +
+            "52736 301499 592366 1156021 2239113 4306924 8238789\r\n1 10 32 73 139 236 370 547 " +
+            "773 1054 1396 1805 2287 2848 3494 4231 5065 6002 7048 8209 9491\r\n-1 9 28 51 78 1" +
+            "29 264 608 1381 2933 5784 10669 18588 30861 49188 75714 113099 164593 234116 326" +
+            "343 446794\r\n7 16 25 34 43 52 61 70 79 88 97 106 115 124 133 142 151 160 169 178 " +
+            "187\r\n18 39 67 102 144 193 249 312 382 459 543 634 732 837 949 1068 1194 1327 146" +
+            "7 1614 1768\r\n19 33 58 94 136 176 213 289 586 1652 4884 13494 34331 81139 180109 " +
+            "378943 761101 1467459 2728278 4909182 8575778\r\n18 33 63 124 235 426 766 1433 286" +
+            "6 6067 13159 28354 59543 120788 236074 444767 809322 1425893 2438615 4058456 658" +
+            "7675\r\n20 44 92 175 306 510 843 1434 2571 4868 9588 19270 38929 78280 155693 3049" +
+            "29 586150 1103252 2030252 3650281 6411708\r\n5 29 69 124 189 248 275 265 326 872 2" +
+            "966 8871 22876 52473 109970 214634 395467 694727 1172315 1911158 3023727\r\n-4 -8 " +
+            "-12 -16 -20 -24 -28 -32 -36 -40 -44 -48 -52 -56 -60 -64 -68 -72 -76 -80 -84\r\n15 " +
+            "34 57 94 173 345 690 1327 2435 4301 7428 12767 22191 39418 71729 133034 249135 4" +
+            "66444 865963 1585052 2850433\r\n8 22 37 57 92 150 224 274 204 -166 -1133 -3149 -68" +
+            "64 -13174 -23274 -38716 -61472 -94002 -139327 -201107 -283724\r\n-1 -5 1 42 159 42" +
+            "3 961 1994 3887 7211 12817 21922 36207 57927 90033 136306 201503 291515 413537 5" +
+            "76250 790015\r\n20 42 86 159 268 420 622 881 1204 1598 2070 2627 3276 4024 4878 58" +
+            "45 6932 8146 9494 10983 12620\r\n26 44 71 120 221 427 820 1517 2676 4502 7253 1124" +
+            "6 16863 24557 34858 48379 65822 87984 115763 150164 192305\r\n10 18 20 15 2 -6 58 " +
+            "390 1435 4064 9833 21403 43352 83965 159355 302878 586124 1164442 2372946 492327" +
+            "1 10295130\r\n20 45 95 180 302 451 601 706 696 473 -93 -1168 -2958 -5713 -9731 -15" +
+            "362 -23012 -33147 -46297 -63060 -84106\r\n-2 -7 -11 2 76 301 834 1921 3918 7309 12" +
+            "719 20920 32828 49489 72052 101727 139726 187185 245065 314030 394300\r\n14 36 77 " +
+            "152 301 606 1210 2338 4320 7616 12843 20804 32519 49258 72576 104350 146818 2026" +
+            "20 274841 367056 483377\r\n2 8 27 77 181 366 662 1101 1716 2540 3605 4941 6575 853" +
+            "0 10824 13469 16470 19824 23519 27533 31833\r\n10 28 60 118 215 363 573 859 1248 1" +
+            "798 2626 3948 6133 9773 15771 25449 40678 64032 98968 150034 223107\r\n0 14 38 82 " +
+            "169 335 629 1113 1862 2964 4520 6644 9463 13117 17759 23555 30684 39338 49722 62" +
+            "054 76565\r\n-1 6 22 42 70 143 362 921 2125 4388 8206 14130 22871 35954 57996 1030" +
+            "88 210615 481422 1155734 2773334 6490064\r\n7 1 2 27 108 298 680 1387 2644 4846 86" +
+            "91 15396 27039 47093 81251 138686 233949 389783 641224 1041473 1670158\r\n-4 4 22 " +
+            "50 94 189 444 1126 2815 6685 15010 32090 66003 132044 259673 506768 988886 19386" +
+            "42 3823746 7575562 15018972\r\n4 9 20 30 31 11 -52 -202 -532 -1240 -2718 -5619 -10" +
+            "667 -17536 -21176 -2062 96807 420142 1304283 3483711 8488810\r\n10 9 5 -6 -33 -90 " +
+            "-196 -375 -656 -1073 -1665 -2476 -3555 -4956 -6738 -8965 -11706 -15035 -19031 -2" +
+            "3778 -29365\r\n9 21 48 107 233 490 982 1864 3353 5739 9396 14793 22505 33224 47770" +
+            " 67102 92329 124721 165720 216951 280233\r\n11 23 45 99 230 516 1078 2104 3914 711" +
+            "6 12946 23958 45343 87319 169257 326501 621213 1159037 2113939 3764253 6543756\r\n" +
+            "15 43 97 191 355 658 1254 2463 4901 9680 18712 35169 64172 113816 196741 332797 " +
+            "554303 917709 1530451 2611603 4622933\r\n23 44 70 101 153 285 654 1626 3994 9391 2" +
+            "1042 45079 92752 184012 353124 657194 1188769 2093998 3598230 6041377 9925891\r\n1" +
+            "1 22 41 64 79 77 92 299 1216 4075 11448 28237 63162 130908 255121 472474 838057 " +
+            "1432380 2370315 3812342 5978505\r\n12 20 39 69 110 162 225 299 384 480 587 705 834" +
+            " 974 1125 1287 1460 1644 1839 2045 2262\r\n-4 -7 -7 11 85 292 770 1756 3669 7307 1" +
+            "4305 28153 56377 115093 238307 496430 1032034 2126660 4321812 8632855 16922647\r\n" +
+            "14 33 63 119 241 519 1137 2460 5205 10760 21747 42978 83066 157220 292371 537135" +
+            " 981979 1800811 3337066 6281357 12036590\r\n11 9 6 5 22 100 323 830 1829 3611 6564" +
+            " 11187 18104 28078 42025 61028 86351 119453 162002 215889 283242\r\n-6 7 38 89 157" +
+            " 238 352 616 1403 3647 9406 22910 52561 114825 241831 496024 997830 1976808 3864" +
+            "994 7467070 14274023\r\n11 27 46 69 113 224 490 1054 2127 4001 7062 11803 18837 28" +
+            "910 42914 61900 87091 119895 161918 214977 281113\r\n8 21 60 140 282 519 912 1595 " +
+            "2890 5571 11429 24432 53034 114629 243849 507463 1030156 2037577 3925882 7370716" +
+            " 13493346\r\n19 37 64 110 197 359 642 1104 1815 2857 4324 6322 8969 12395 16742 22" +
+            "164 28827 36909 46600 58102 71629\r\n8 25 56 112 218 425 831 1618 3109 5841 10650 " +
+            "18813 32481 56135 100884 195528 412046 919385 2089240 4692362 10245604\r\n24 30 41" +
+            " 63 98 149 232 403 823 1913 4711 11658 28236 66181 149413 324365 677038 1359820 " +
+            "2631817 4917053 8885266\r\n-1 1 11 36 91 205 428 843 1587 2885 5101 8810 14895 246" +
+            "73 40054 63737 99447 152217 228719 337648 490163\r\n22 33 54 105 219 441 835 1515 " +
+            "2728 5034 9650 19052 37961 74876 144359 270324 490634 863367 1475174 2452219 397" +
+            "4263\r\n12 24 52 116 259 557 1133 2187 4072 7473 13785 25847 49288 94899 182687 34" +
+            "8621 655576 1210650 2191902 3888666 6760965\r\n10 20 39 87 195 405 770 1354 2232 3" +
+            "490 5225 7545 10569 14427 19260 25220 32470 41184 51547 63755 78015\r\n9 4 -1 -6 -" +
+            "11 -16 -21 -26 -31 -36 -41 -46 -51 -56 -61 -66 -71 -76 -81 -86 -91\r\n14 28 69 165" +
+            " 368 770 1524 2870 5166 8924 14851 23895 37296 56642 83930 121632 172766 240972 " +
+            "330593 446761 595488\r\n-3 -5 -4 19 93 254 542 998 1661 2565 3736 5189 6925 8928 1" +
+            "1162 13568 16061 18527 20820 22759 24125\r\n22 35 56 99 198 416 854 1660 3038 5257" +
+            " 8660 13673 20814 30702 44066 61754 84742 114143 151216 197375 254198\r\n19 40 66 " +
+            "95 125 170 290 647 1612 3971 9324 20856 44814 93323 189797 379566 751353 1481722" +
+            " 2928018 5821733 11663931\r\n4 9 12 5 -13 -18 61 375 1224 3213 7580 16823 35803 73" +
+            "558 146129 280773 522020 940121 1642532 2789185 4612411\r\n-4 6 21 50 111 231 449 " +
+            "817 1405 2351 4064 7792 16909 39451 92631 210270 454270 931392 1816643 3384466 6" +
+            "048599\r\n0 12 45 115 257 531 1032 1920 3489 6294 11354 20449 36532 64285 110863 1" +
+            "86894 307838 495856 782403 1211839 1846451\r\n25 49 97 186 338 574 916 1417 2247 3" +
+            "881 7473 15571 33454 71593 150126 306925 612082 1193986 2286702 4317281 8069083\r" +
+            "\n2 -3 -7 2 50 187 509 1207 2676 5745 12129 25265 51794 104114 204677 393043 7371" +
+            "10 1350329 2416921 4226856 7221194\r\n26 53 104 203 395 760 1439 2679 4922 9006 16" +
+            "625 31320 60454 118890 235539 464828 906996 1744958 3312949 6225851 11621821\r\n8 " +
+            "29 73 162 327 616 1125 2063 3866 7388 14221 27230 51430 95378 173308 308326 5372" +
+            "03 917975 1543562 2570100 4282344\r\n7 9 23 67 179 430 942 1915 3670 6718 11868 20" +
+            "390 34252 56453 91477 145896 229153 354559 540541 812181 1203089\r\n15 28 52 89 13" +
+            "7 190 238 267 259 192 40 -227 -643 -1246 -2078 -3185 -4617 -6428 -8676 -11423 -1" +
+            "4735\r\n11 32 67 126 235 458 931 1914 3879 7670 14803 28030 52388 97142 179466 331" +
+            "825 617918 1169203 2270654 4560657 9484528\r\n7 14 30 63 125 232 404 665 1043 1570" +
+            " 2282 3219 4425 5948 7840 10157 12959 16310 20278 24935 30357\r\n1 -2 9 60 205 550" +
+            " 1289 2751 5455 10180 18085 30959 51745 85594 141957 238817 411473 730950 134216" +
+            "5 2541118 4926337\r\n26 43 79 149 276 500 893 1598 2926 5558 10904 21665 42628 817" +
+            "05 151220 269478 462754 768069 1237541 1945797 3003012\r\n15 28 45 66 96 159 331 8" +
+            "00 1961 4554 9853 19914 37890 68421 118107 196072 314627 490040 743421 1101730 1" +
+            "598916\r\n10 30 65 136 278 540 985 1690 2746 4258 6345 9140 12790 17456 23313 3055" +
+            "0 39370 49990 62641 77568 95030\r\n2 0 -4 5 59 206 516 1118 2314 4862 10607 23795 " +
+            "53689 119642 260821 554822 1153485 2352343 4726289 9395692 18547838\r\n-2 1 17 64 " +
+            "170 372 721 1296 2238 3828 6650 11911 22063 42040 81771 161282 320826 640303 127" +
+            "5035 2519094 4913268\r\n-1 -4 -7 -10 -13 -16 -19 -22 -25 -28 -31 -34 -37 -40 -43 -" +
+            "46 -49 -52 -55 -58 -61\r\n7 19 39 67 103 147 199 259 327 403 487 579 679 787 903 1" +
+            "027 1159 1299 1447 1603 1767\r\n3 11 19 27 35 43 51 59 67 75 83 91 99 107 115 123 " +
+            "131 139 147 155 163\r\n22 45 72 95 111 145 299 838 2324 5809 13098 27093 52229 950" +
+            "13 164677 273956 440002 685445 1039612 1539915 2233419\r\n18 44 94 191 368 666 113" +
+            "2 1817 2774 4056 5714 7795 10340 13382 16944 21037 25658 30788 36390 42407 48760" +
+            "\r\n14 35 73 149 302 601 1158 2154 3916 7133 13384 26289 53819 112677 236320 48942" +
+            "1 994006 1977471 3862775 7441041 14204720\r\n14 15 29 71 156 299 515 819 1226 1751" +
+            " 2409 3215 4184 5331 6671 8219 9990 11999 14261 16791 19604\r\n12 23 31 47 102 268" +
+            " 694 1665 3700 7713 15269 28975 53054 94158 162484 273265 448716 720523 1132971 " +
+            "1746815 2644006\r\n10 30 70 158 340 695 1362 2577 4717 8352 14322 23911 39354 6533" +
+            "8 113153 211334 431251 945601 2156837 4969935 11355019\r\n23 38 71 139 261 458 753" +
+            " 1171 1739 2486 3443 4643 6121 7914 10061 12603 15583 19046 23039 27611 32813\r\n1" +
+            "9 35 63 103 155 219 295 383 483 595 719 855 1003 1163 1335 1519 1715 1923 2143 2" +
+            "375 2619\r\n6 17 54 137 295 566 997 1644 2572 3855 5576 7827 10709 14332 18815 242" +
+            "86 30882 38749 48042 58925 71571\r\n12 22 32 42 52 62 72 82 92 102 112 122 132 142" +
+            " 152 162 172 182 192 202 212\r\n13 17 30 69 165 372 780 1537 2902 5386 10103 19565" +
+            " 39335 81225 169122 349081 706087 1390919 2661928 4948373 8944381\r\n5 0 -8 -10 10" +
+            " 86 309 921 2516 6433 15461 35015 75005 152755 297622 558550 1016863 1808414 316" +
+            "2102 5466172 9380148\r\n27 43 75 138 261 503 977 1891 3625 6887 13034 24708 47028 " +
+            "89719 170803 322935 604331 1117811 2044225 3701094 6644571\r\n12 12 13 27 75 185 3" +
+            "90 726 1230 1938 2883 4093 5589 7383 9476 11856 14496 17352 20361 23439 26479\r\n4" +
+            " 10 15 23 43 89 177 315 477 548 231 -1072 -4344 -10851 -21557 -35540 -46582 -366" +
+            "82 35319 252533 769681\r\n19 33 68 134 238 394 658 1209 2518 5694 13182 30138 6706" +
+            "7 144763 303377 618841 1232525 2405394 4619522 8775207 16586824\r\n10 30 64 132 26" +
+            "0 488 891 1613 2927 5370 10071 19502 39047 80012 165000 336959 673688 1310166 24" +
+            "71762 4522200 8031102\r\n9 22 51 107 215 433 893 1886 4030 8589 18054 37153 74522 " +
+            "145336 275258 506102 903607 1567664 2645205 4345727 6959057\r\n24 36 63 127 260 51" +
+            "6 987 1821 3245 5607 9483 15973 27469 49473 94578 190710 397574 838702 1762851 3" +
+            "659823 7475282\r\n17 25 24 6 -29 -57 3 353 1441 4213 10635 24787 55140 119198 2527" +
+            "16 527563 1085727 2203455 4412052 8726090 17076047\r\n-2 10 33 77 159 305 574 1122" +
+            " 2327 4999 10702 22218 44186 83952 152669 266689 449292 732800 1161127 1792819 2" +
+            "704641\r\n16 16 7 -1 22 138 469 1251 2929 6315 12847 25034 47291 87632 161247 2981" +
+            "89 560079 1076855 2128429 4326525 9016295\r\n4 19 46 90 155 246 378 592 985 1776 3" +
+            "450 7040 14612 29995 59728 114056 207570 358721 586910 905126 1305129\r\n13 25 37 " +
+            "49 61 73 85 97 109 121 133 145 157 169 181 193 205 217 229 241 253\r\n21 29 47 94 " +
+            "200 402 738 1245 1968 2985 4452 6680 10285 16518 28005 50331 95215 186477 370629" +
+            " 734770 1435574\r\n5 3 4 28 115 338 822 1770 3493 6433 11157 18294 28418 42041 603" +
+            "88 88923 148512 305135 740775 1909866 4864592\r\n19 26 45 85 151 249 409 743 1555 " +
+            "3524 7997 17468 36407 72801 141201 268958 509043 965942 1846413 3555527 6871927\r" +
+            "\n14 35 68 114 185 319 595 1153 2226 4185 7581 13145 21702 34023 50882 74184 1113" +
+            "18 187508 376143 867288 2114317\r\n7 18 37 71 149 343 796 1757 3623 6988 12699 219" +
+            "19 36197 57545 88522 132325 192887 274982 384337 527751 713221\r\n3 0 -3 3 46 193 " +
+            "579 1448 3211 6528 12423 22443 38874 65029 105625 167268 259067 393400 586857 86" +
+            "1387 1245678\r\n-7 -12 -11 11 84 260 620 1281 2403 4196 6927 10927 16598 24420 349" +
+            "58 48869 66909 89940 118937 154995 199336\r\n8 12 35 93 215 446 856 1561 2764 4844" +
+            " 8569 15592 29505 57854 115604 230482 450240 850892 1542983 2669375 4382115\r\n22 " +
+            "34 56 95 164 286 507 932 1814 3751 8080 17599 37792 78779 158327 306707 575727 1" +
+            "058706 1939267 3612055 6971685\r\n21 29 54 108 215 427 848 1669 3210 5950 10503 17" +
+            "469 27070 38538 49546 57012 63284 97800 277073 951199 3033702\r\n2 7 14 18 11 -11 " +
+            "-24 74 551 1983 5471 12960 27694 54849 102395 182248 311784 515799 829012 129922" +
+            "2 1991245\r\n7 8 14 37 109 290 683 1462 2916 5509 9953 17288 28960 46885 73484 111" +
+            "671 164773 236358 329944 448559 594119\r\n16 31 45 70 133 276 556 1045 1830 3013 4" +
+            "711 7056 10195 14290 19518 26071 34156 43995 55825 69898 86481\r\n1 14 47 102 183 " +
+            "310 546 1052 2205 4850 10815 23904 51703 108694 221378 436366 832713 1540150 276" +
+            "5319 4828642 8215063\r\n11 20 32 51 76 110 194 481 1370 3731 9280 21231 45498 9301" +
+            "3 184316 358805 693665 1343062 2619584 5162235 10277044\r\n14 22 34 63 145 353 811" +
+            " 1708 3312 5984 10192 16525 25707 38611 56273 79906 110914 150906 201710 265387 " +
+            "344245\r\n0 15 40 77 148 315 710 1580 3361 6811 13249 24956 45791 82090 144077 248" +
+            "662 426358 739483 1328174 2518811 5062014\r\n13 24 45 82 152 302 631 1324 2717 542" +
+            "2 10551 20088 37468 68432 122237 213310 363445 604652 982777 1562022 2430504\r\n19" +
+            " 35 60 106 190 334 565 915 1421 2125 3074 4320 5920 7936 10435 13489 17175 21575" +
+            " 26776 32870 39954\r\n-5 -3 10 48 133 308 665 1391 2834 5584 10548 18969 32292 517" +
+            "09 77113 105050 125069 113623 24358 -226770 -783601\r\n6 20 57 127 243 434 773 142" +
+            "8 2760 5528 11333 23577 49500 104426 220466 464098 971182 2015628 4141645 841318" +
+            "7 16873749\r\n7 21 39 70 131 249 473 917 1876 4085 9224 20808 45638 96025 193032 3" +
+            "71007 683701 1212277 2075517 3442522 5548173\r\n13 18 42 98 210 431 867 1700 3196 " +
+            "5673 9385 14259 19439 22737 20581 10357 151 37736 284768 1189736 3864504\r\n7 25 6" +
+            "4 144 306 634 1298 2626 5217 10120 19135 35356 64194 115317 206257 368900 660739" +
+            " 1183683 2114434 3752032 6590194\r\n7 14 21 28 35 42 49 56 63 70 77 84 91 98 105 1" +
+            "12 119 126 133 140 147\r\n-4 0 9 27 77 222 599 1472 3314 6940 13744 26162 48617 89" +
+            "436 164606 304807 567984 1060864 1974363 3639845 6615781\r\n11 36 73 119 171 226 2" +
+            "81 333 379 416 441 451 443 414 361 281 171 28 -151 -369 -629\r\n10 16 23 31 40 50 " +
+            "61 73 86 100 115 131 148 166 185 205 226 248 271 295 320\r\n21 30 53 115 257 543 1" +
+            "070 1981 3481 5856 9495 14915 22789 33977 49560 70877 99565 137602 187353 251619" +
+            " 333689\r\n19 28 45 78 139 250 458 867 1712 3530 7527 16299 35140 74262 152362 302" +
+            "100 578201 1069064 1912953 3320060 5601969\r\n-1 14 43 102 220 432 780 1340 2295 4" +
+            "077 7620 14837 29624 60111 123683 257703 541175 1136160 2363065 4831528 9659196\r" +
+            "\n-1 -5 -9 -13 -17 -21 -25 -29 -33 -37 -41 -45 -49 -53 -57 -61 -65 -69 -73 -77 -8" +
+            "1\r\n11 28 63 118 201 335 563 959 1666 2991 5602 10917 21906 44869 93573 198969 43" +
+            "1604 951705 2117140 4707907 10377258\r\n14 25 48 87 144 223 341 545 940 1750 3462 " +
+            "7142 15062 31838 66351 134806 265378 504999 928956 1654097 2856580\r\n14 24 46 85 " +
+            "143 226 365 658 1340 2885 6145 12563 24622 47029 89899 176796 363638 780518 1719" +
+            "812 3814625 8388429\r\n4 19 47 104 217 424 774 1327 2154 3337 4969 7154 10007 1365" +
+            "4 18232 23889 30784 39087 48979 60652 74309\r\n-5 -8 0 43 170 465 1057 2139 4010 7" +
+            "153 12366 21003 35514 60783 107372 198848 387105 782250 1607512 3295127 6646686\r" +
+            "\n21 45 95 184 318 486 645 708 562 174 -111 1094 7549 27958 80971 205196 479799 1" +
+            "067457 2303625 4879164 10205648\r\n15 21 43 89 174 340 702 1543 3489 7803 16845 34" +
+            "753 68408 128754 232552 404655 680899 1111713 1766559 2739321 4154770\r\n18 32 58 " +
+            "115 227 417 710 1172 2032 3960 8606 19543 43801 94229 192978 376460 702206 12581" +
+            "20 2174706 3640931 5924479\r\n7 28 54 84 133 243 494 1017 2026 3921 7573 14987 306" +
+            "50 64006 133655 274042 545577 1049298 1947344 3490630 6055195\r\n24 42 81 152 274 " +
+            "485 867 1606 3115 6253 12672 25309 49010 91262 163146 281256 473274 794968 13785" +
+            "21 2559628 5190918\r\n27 45 66 91 134 234 467 958 1893 3531 6216 10389 16600 25520" +
+            " 37953 54848 77311 106617 144222 191775 251130\r\n7 18 33 62 139 331 747 1547 2951" +
+            " 5248 8805 14076 21611 32065 46207 64929 89255 120350 159529 208266 268203\r\n0 -4" +
+            " -3 13 72 231 585 1274 2488 4470 7517 11979 18256 26793 38073 52608 70928 93568 " +
+            "121053 153881 192504\r\n0 2 10 44 141 360 781 1505 2679 4587 7871 13991 26125 5088" +
+            "2 101493 203603 405462 795260 1529628 2878994 5297601\r\n7 22 59 127 235 391 605 9" +
+            "05 1375 2224 3895 7223 13651 25513 46393 81569 138551 227722 363091 563167 85196" +
+            "3\r\n14 25 35 44 52 59 65 70 74 77 79 80 80 79 77 74 70 65 59 52 44\r\n3 13 38 100 2" +
+            "35 492 943 1733 3217 6250 12715 26403 54434 109616 214659 410338 772197 1445522 " +
+            "2718764 5176819 10018447\r\n17 41 87 172 327 601 1077 1921 3493 6564 12718 25103 4" +
+            "9886 99152 196689 389278 767949 1506387 2927509 5614422 10588741\r\n6 18 38 86 195" +
+            " 411 793 1413 2356 3720 5616 8168 11513 15801 21195 27871 36018 45838 57546 7137" +
+            "0 87551\r\n16 28 40 52 64 76 88 100 112 124 136 148 160 172 184 196 208 220 232 24" +
+            "4 256\r\n14 26 45 76 133 239 426 735 1216 1928 2939 4326 6175 8581 11648 15489 202" +
+            "26 25990 32921 41168 50889\r\n23 52 110 207 361 609 1016 1696 2873 5024 9160 17315" +
+            " 33327 64009 120822 222176 396499 686228 1152890 1883455 2998157\r\n24 47 86 147 2" +
+            "36 359 522 731 992 1311 1694 2147 2676 3287 3986 4779 5672 6671 7782 9011 10364\r" +
+            "\n9 6 -5 -17 -11 44 191 485 993 1794 2979 4651 6925 9928 13799 18689 24761 32190 " +
+            "41163 51879 64549\r\n7 24 52 109 234 502 1045 2077 3921 7034 12019 19594 30453 449" +
+            "18 62303 80128 93991 100460 108450 170171 452224\r\n12 24 51 103 198 376 728 1454 " +
+            "2973 6124 12520 25147 49337 94288 175355 317394 559506 961600 1613273 2645591 42" +
+            "46448\r\n-4 -4 6 31 81 172 336 667 1438 3335 7885 18247 40765 88185 186457 389026 " +
+            "806276 1664738 3423116 6993687 14153381\r\n7 21 49 103 213 442 904 1788 3410 6344 " +
+            "11732 21974 42209 83403 168586 345017 707101 1438207 2884887 5685529 10988937\r\n9" +
+            " 31 64 108 162 224 297 419 750 1764 4609 11713 27729 60927 125156 242514 446879 " +
+            "788469 1339614 2201938 3515164\r\n19 45 90 166 301 551 1022 1914 3615 6915 13504 2" +
+            "7104 55917 117617 248956 523288 1081051 2180609 4279982 8164034 15136813\r\n8 27 7" +
+            "2 156 292 493 772 1142 1616 2207 2928 3792 4812 6001 7372 8938 10712 12707 14936" +
+            " 17412 20148\r\n18 41 93 203 409 756 1297 2097 3240 4839 7049 10083 14231 19882 27" +
+            "549 37897 51774 70245 94629 126539 167925\r\n7 16 39 75 122 192 349 791 2020 5181 " +
+            "12702 29432 64553 134635 268310 513162 945565 1684350 2909345 4886009 7997572\r\n2" +
+            " 17 50 122 277 595 1210 2349 4421 8195 15123 27909 51530 95123 175517 323776 597" +
+            "004 1098933 2014568 3666508 6603619")]
         public string Puzzle09_Input {
             get {
                 return ((string)(this["Puzzle09_Input"]));
@@ -1177,7 +1746,7 @@ namespace Advent23.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("0 3 6 9 12 15\r\n1 3 6 10 15 21\r\n10 13 16 21 30 45")]
         public string Puzzle10_Input {
             get {
                 return ((string)(this["Puzzle10_Input"]));

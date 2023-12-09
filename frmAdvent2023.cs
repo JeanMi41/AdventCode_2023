@@ -13,7 +13,7 @@ namespace Advent23
         #region Initialization
         private void frm_Advent2023_Load(object sender, EventArgs e)
         {
-            
+
         }
         private void frm_Advent2023_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -22,7 +22,7 @@ namespace Advent23
         #endregion
 
         #region Puzzle 01
-        private int Puzzle01_PartOne()
+        private long Puzzle01_PartOne()
         {
             string strInput01 = Advent23.Properties.Settings.Default.Puzzle01_Input;
             string intDigit = "";
@@ -34,7 +34,7 @@ namespace Advent23
             {
                 bool boolFirst = false;
                 char chTemp = '0';
-    
+
                 foreach (char chChar in strCalibration)
                 {
                     if (char.IsDigit(chChar))
@@ -50,7 +50,7 @@ namespace Advent23
 
             return intSum;
         }
-        private int Puzzle01_PartTwo()
+        private long Puzzle01_PartTwo()
         {
             string strInput01 = Advent23.Properties.Settings.Default.Puzzle01_Input;
             string intDigit = "";
@@ -137,17 +137,17 @@ namespace Advent23
 
         private void bntRun01_Click(object sender, EventArgs e)
         {
-            int intSolution01P1 = Puzzle01_PartOne();
-            txt_output01P1.Text = intSolution01P1.ToString();
+            long lngSolution01P1 = Puzzle01_PartOne();
+            txt_output01P1.Text = lngSolution01P1.ToString();
 
             Puzzle01_PartTwo();
-            int intSolution01P2 = Puzzle01_PartTwo();
-            txt_output01P2.Text = intSolution01P2.ToString();
+            long lngSolution01P2 = Puzzle01_PartTwo();
+            txt_output01P2.Text = lngSolution01P2.ToString();
         }
         #endregion
 
         #region Puzzle 02
-        private int Puzzle02_PartOne(int intMaxRed, int intMaxGreen, int intMaxBlue)
+        private long Puzzle02_PartOne(int intMaxRed, int intMaxGreen, int intMaxBlue)
         {
             string strInput02 = Advent23.Properties.Settings.Default.Puzzle02_Input;
             int intSum = 0;
@@ -169,7 +169,7 @@ namespace Advent23
                     //then clean/take the rest
                     string strStatements = strGames.Substring(strGames.IndexOf(":") + 1).Trim();
                     string[] strArrStatement = strStatements.Split(";");
-                    foreach (string aStatement in strArrStatement) 
+                    foreach (string aStatement in strArrStatement)
                     {
                         //This is that they took in 1 set, we split again.
                         //now for each of them we split again if there is a ,
@@ -179,7 +179,7 @@ namespace Advent23
                             //for that set, we check how many stone and of which color and records if that beat the max on that game.
                             int intCount = int.Parse(aStoneValue.Trim().Substring(0, aStoneValue.Trim().IndexOf(" ")).Trim());
 
-                            switch (aStoneValue.Trim().Substring(aStoneValue.Trim().IndexOf(" ")+1).Trim())
+                            switch (aStoneValue.Trim().Substring(aStoneValue.Trim().IndexOf(" ") + 1).Trim())
                             {
                                 case "green":
                                     if (intTopGreen < intCount) intTopGreen = intCount;
@@ -192,11 +192,11 @@ namespace Advent23
                                     break;
                             }
                         }
-                    } 
+                    }
 
                     //now we have the max stone of each color on that game statements.
                     //we compare with that is the max given and if valid we add it to aggregated sum.
-                    if (intTopGreen <= intMaxGreen &&  intTopRed <= intMaxRed && intTopBlue <= intMaxBlue) { intSum += intGameNum; }
+                    if (intTopGreen <= intMaxGreen && intTopRed <= intMaxRed && intTopBlue <= intMaxBlue) { intSum += intGameNum; }
                 }
                 catch (Exception ex)
                 {
@@ -266,8 +266,8 @@ namespace Advent23
 
         private void bntRun02_Click(object sender, EventArgs e)
         {
-            int intSolution02P1 = Puzzle02_PartOne(12, 13, 14);
-            txt_output02P1.Text = intSolution02P1.ToString();
+            long lngSolution02P1 = Puzzle02_PartOne(12, 13, 14);
+            txt_output02P1.Text = lngSolution02P1.ToString();
 
             long lngSolution02P2 = Puzzle02_PartTwo();
             txt_output02P2.Text = lngSolution02P2.ToString();
@@ -305,7 +305,8 @@ namespace Advent23
                     intY++;
                     if (char.IsDigit(aChar))
                     {
-                        if (boolNumberFound == false) {
+                        if (boolNumberFound == false)
+                        {
                             //we found a new number
                             //we reset the string and start the reference
                             strNumberFound = "";
@@ -343,11 +344,11 @@ namespace Advent23
                 //we check around, if not empty then its a reference, which we add only if it wasn't the one we have in memory
                 string strLastReference = "";
 
-                for (int x = intGridValue[0]-1 ; x <= intGridValue[0] + 1; x++) 
+                for (int x = intGridValue[0] - 1; x <= intGridValue[0] + 1; x++)
                 {
                     for (int y = intGridValue[1] - 1; y <= intGridValue[1] + 1; y++)
                     {
-                        if (strArray[x,y] != null && strArray[x,y] != strLastReference)
+                        if (strArray[x, y] != null && strArray[x, y] != strLastReference)
                         {
                             //we got a number
                             strLastReference = strArray[x, y];
@@ -456,11 +457,11 @@ namespace Advent23
 
         private void bntRun03_Click(object sender, EventArgs e)
         {
-            long intSolution03P1 = Puzzle03_PartOne();
-            txt_output03P1.Text = intSolution03P1.ToString();
+            long lngSolution03P1 = Puzzle03_PartOne();
+            txt_output03P1.Text = lngSolution03P1.ToString();
 
-            long intSolution03P2 = Puzzle03_PartTwo();
-            txt_output03P2.Text = intSolution03P2.ToString();
+            long lngSolution03P2 = Puzzle03_PartTwo();
+            txt_output03P2.Text = lngSolution03P2.ToString();
         }
 
         #endregion
@@ -475,13 +476,13 @@ namespace Advent23
             foreach (string strGames in allString)
             {
                 //hold the max shown in that game
-                int[] pointValue = new int[11] { 0, 1, 2, 4, 8, 16, 32, 64, 128, 256, 512};
+                int[] pointValue = new int[11] { 0, 1, 2, 4, 8, 16, 32, 64, 128, 256, 512 };
                 int intMatchCount = 0;
                 List<int> intMyNumber;
                 //First we get Games #
                 int intGameNum = int.Parse(strGames.Substring(4, strGames.IndexOf(":") - 4).Trim());
-                Dictionary<int,int> dictGamesResults = new Dictionary<int, int>();
-                    
+                Dictionary<int, int> dictGamesResults = new Dictionary<int, int>();
+
 
                 //then clean/take the rest
                 string strStatements = strGames.Substring(strGames.IndexOf(":") + 1).Trim();
@@ -521,7 +522,7 @@ namespace Advent23
 
             string[] allString = strInput04.Split("\r\n");
             int[] intScratchGames = new int[250];
-            List<int> intCardScratch = new List<int>(); 
+            List<int> intCardScratch = new List<int>();
 
 
             foreach (string strGames in allString)
@@ -679,12 +680,12 @@ namespace Advent23
                 string[] strSeedRange = aSeedArr.Split(" ");
 
                 long lngSeedInit = long.Parse(strSeedRange[0]);
-                long lngSeedRange = long.Parse(strSeedRange[0]) + long.Parse(strSeedRange[1]) -1; // <- I forgot the -1 before it is what all my problem came from
+                long lngSeedRange = long.Parse(strSeedRange[0]) + long.Parse(strSeedRange[1]) - 1; // <- I forgot the -1 before it is what all my problem came from
 
                 aSeed = new Tuple<long, long>(lngSeedInit, lngSeedRange);
                 dictSeeds.Add("0_" + intIncrementUID++.ToString(), aSeed);
             }
-            
+
             //now we got the array of seed that we will convert 7 time
             long[,,] lngConverter = new long[100, 3, 7]; //array is oversized, but we will have limiter (intConverterMax) when read
             //[A,B,C]
@@ -730,11 +731,11 @@ namespace Advent23
                 List<string> lstKeys = new List<string>();
                 foreach (string strKey in dictSeeds.Keys)
                 {
-                    if (int.Parse(strKey.Substring(0,1)) == a) //is that dict entry for the step we are doing (the dictionary may have multiple steps entries, we only do the one we are currently on.
+                    if (int.Parse(strKey.Substring(0, 1)) == a) //is that dict entry for the step we are doing (the dictionary may have multiple steps entries, we only do the one we are currently on.
                     {
                         lstKeys.Add(strKey);
-                    } 
-                } 
+                    }
+                }
 
                 if (lstKeys.Count > 0) //if there is some seed on the currents steps, we will do them all (some cut might stay in current step, we do multi-pass)
                 {
@@ -786,7 +787,7 @@ namespace Advent23
 
                                     tpNewEnty = new Tuple<long, long>(lngDifferencial_Min, lngDifferencial_Max);
                                     dictSeeds.Add((a + 1).ToString() + "_" + (intIncrementUID++).ToString(), tpNewEnty);
-                                    
+
                                     boolConvertRest = false; //no left over to convert, we flag it to skip it
                                     break; //we can stop that WHOLE seed was converted
                                 }
@@ -859,8 +860,8 @@ namespace Advent23
                                     tpNewEnty = new Tuple<long, long>(seedX1, convX1 - 1); //first bunch, sX1 to cX1-1
                                     dictSeeds.Add((a).ToString() + "_" + (intIncrementUID++).ToString(), tpNewEnty);
 
-                                    
-                                    tpNewEnty = new Tuple<long, long>(convX2+1, seedX2); //second bunch cX2+1 to sX2
+
+                                    tpNewEnty = new Tuple<long, long>(convX2 + 1, seedX2); //second bunch cX2+1 to sX2
                                     dictSeeds.Add((a).ToString() + "_" + (intIncrementUID++).ToString(), tpNewEnty);
                                     boolConvertRest = false; // we don't want to convert the left over
                                     break; //we can stop as we splitted, will go back in a repass
@@ -893,11 +894,11 @@ namespace Advent23
 
         private void bntRun05_Click(object sender, EventArgs e)
         {
-            long intSolution05P1 = Puzzle05_PartOne();
-            txt_output05P1.Text = intSolution05P1.ToString();
+            long lngSolution05P1 = Puzzle05_PartOne();
+            txt_output05P1.Text = lngSolution05P1.ToString();
 
-            long intSolution05P2 = Puzzle05_PartTwo();
-            txt_output05P2.Text = intSolution05P2.ToString();
+            long lngSolution05P2 = Puzzle05_PartTwo();
+            txt_output05P2.Text = lngSolution05P2.ToString();
         }
 
         #endregion
@@ -915,7 +916,7 @@ namespace Advent23
             //we trust it will compute and we are not checking if the quadratic is valid b^2 -4ac > 0
 
             long lnmgTotalPoint = 1;
-            long[] lngTime = new long[4] { 55 ,99, 97, 93 };
+            long[] lngTime = new long[4] { 55, 99, 97, 93 };
             long[] lngDistance = new long[4] { 401, 1485, 2274, 1405 };
             long lngNumWin = 0;
 
@@ -927,12 +928,12 @@ namespace Advent23
                 long b = lngTime[i];
                 long c = lngDistance[i];
 
-                double X2 = (b + Math.Sqrt((b*b - (4 * c)))) / 2;
-                double X1 = (b - Math.Sqrt((b*b - (4 * c)))) / 2;
-                lngNumWin = (long)(Math.Floor(X2) - Math.Ceiling(X1))+1;
+                double X2 = (b + Math.Sqrt((b * b - (4 * c)))) / 2;
+                double X1 = (b - Math.Sqrt((b * b - (4 * c)))) / 2;
+                lngNumWin = (long)(Math.Floor(X2) - Math.Ceiling(X1)) + 1;
                 if (lngNumWin > 0) lnmgTotalPoint = lnmgTotalPoint * lngNumWin;
             }
-            
+
             return lnmgTotalPoint;
         }
         private long Puzzle06_PartTwo()
@@ -950,410 +951,1011 @@ namespace Advent23
 
         private void bntRun06_Click(object sender, EventArgs e)
         {
-            long intSolution06P1 = Puzzle06_PartOne();
-            txt_output06P1.Text = intSolution06P1.ToString();
+            long lngSolution06P1 = Puzzle06_PartOne();
+            txt_output06P1.Text = lngSolution06P1.ToString();
 
-            long intSolution06P2 = Puzzle06_PartTwo();
-            txt_output06P2.Text = intSolution06P2.ToString();
+            long lngSolution06P2 = Puzzle06_PartTwo();
+            txt_output06P2.Text = lngSolution06P2.ToString();
         }
 
         #endregion
 
         #region Puzzle 07
-        private int Puzzle07_PartOne()
+        private long Puzzle07_PartOne()
         {
-            return 0;
+            string strInput07 = Advent23.Properties.Settings.Default.Puzzle07_Input;
+
+            long lngGameCount = 0;
+            long lnmgTotalPoint = 0;
+            string[] allString = strInput07.Split("\r\n");
+            Dictionary<string, int> dictGamesValue = new Dictionary<string, int>();
+            List<string> lstGamesRank = new List<string>();
+
+            foreach (string strGames in allString)
+            {
+                //we read all and add on top
+                string[] strGameInfo = strGames.Split(" ");
+
+                dictGamesValue.Add(strGameInfo[0].Trim(), int.Parse(strGameInfo[1].Trim()));
+                lstGamesRank.Add(strGameInfo[0].Trim());
+            }
+            //now we got all the data, we du a quick easy bubble sort but with caveats
+            for (int a = 0; a < lstGamesRank.Count(); a++)
+            {
+                for (int b = a + 1; b < lstGamesRank.Count(); b++)
+                {
+                    if (CalcWeakestHand(lstGamesRank[a], lstGamesRank[b]) == lstGamesRank[b])
+                    {
+                        //we swap
+                        string strTempHand = lstGamesRank[a];
+                        lstGamesRank[a] = lstGamesRank[b];
+                        lstGamesRank[b] = strTempHand;
+                    }
+                }
+
+                //now we got the weakest in position a, we can calculate that score right away
+                lnmgTotalPoint += dictGamesValue[lstGamesRank[a]] * (a + 1);
+            }
+
+            return lnmgTotalPoint;
         }
-        private int Puzzle07_PartTwo()
+
+        private string CalcWeakestHand(string strHand1, string strHand2)
         {
-            return 0;
+            // We do amoun
+            Dictionary<char, int> dictHand1 = new Dictionary<char, int>();
+            Dictionary<char, int> dictHand2 = new Dictionary<char, int>();
+            int intHighestHand1 = 1;
+            int intHighestHand2 = 1;
+            string strReturn = "";
+
+
+            for (int i = 0; i < 5; i++)
+            {
+                if (dictHand1.ContainsKey(strHand1[i]))
+                {
+                    dictHand1[strHand1[i]] = dictHand1[strHand1[i]] + 1;
+                    if (intHighestHand1 < dictHand1[strHand1[i]]) intHighestHand1 = dictHand1[strHand1[i]];
+                }
+                else
+                {
+                    dictHand1.Add(strHand1[i], 1);
+                }
+
+                if (dictHand2.ContainsKey(strHand2[i]))
+                {
+                    dictHand2[strHand2[i]] = dictHand2[strHand2[i]] + 1;
+                    if (intHighestHand2 < dictHand2[strHand2[i]]) intHighestHand2 = dictHand2[strHand2[i]];
+                }
+                else
+                {
+                    dictHand2.Add(strHand2[i], 1);
+                }
+            }
+
+            //right away if one have highest amount int intHighestHand we can stop here and return it.
+            if (intHighestHand1 > intHighestHand2)
+            {
+                strReturn = strHand2;
+            }
+            else if (intHighestHand1 < intHighestHand2)
+            {
+                strReturn = strHand1;
+            }
+            else
+            {
+                //more complicated next scenario
+                //now we check if they have less itteration, if they do one might have double pair or full house and win over the other one
+                if (dictHand1.Count > dictHand2.Count)
+                {
+                    strReturn = strHand1;
+                }
+                else if (dictHand1.Count < dictHand2.Count)
+                {
+                    strReturn = strHand2;
+                }
+                else
+                {
+                    //At this point they have the same hand tie breaker is by card value in order of first
+                    byte intCardValue1;
+                    byte intCardValue2;
+
+                    for (int i = 0; i < 5; i++)
+                    {
+                        intCardValue1 = btGetCardNumericValue(strHand1[i]);
+                        intCardValue2 = btGetCardNumericValue(strHand2[i]);
+
+                        if (intCardValue1 > intCardValue2)
+                        {
+                            strReturn = strHand2;
+                            break;
+                        }
+                        else if (intCardValue1 < intCardValue2)
+                        {
+                            strReturn = strHand1;
+                            break;
+                        }
+                    }
+                }
+            }
+            return strReturn;
+        }
+
+        private string CalcWeakestHandPart2(string strHand1, string strHand2)
+        {
+            // We do amoun
+            Dictionary<char, int> dictHand1 = new Dictionary<char, int>();
+            Dictionary<char, int> dictHand2 = new Dictionary<char, int>();
+            int intHighestHand1 = 0;
+            int intHighestHand2 = 0;
+            string strReturn = "";
+
+            int intHandJokerHold_1 = 0;
+            int intHandJokerHold_2 = 0;
+
+            for (int i = 0; i < 5; i++)
+            {
+                if (strHand1[i] == 'J')
+                {
+                    intHandJokerHold_1++;
+                }
+                else
+                {
+                    if (dictHand1.ContainsKey(strHand1[i]))
+                    {
+                        dictHand1[strHand1[i]] = dictHand1[strHand1[i]] + 1;
+                        if (intHighestHand1 < dictHand1[strHand1[i]]) intHighestHand1 = dictHand1[strHand1[i]];
+                    }
+                    else
+                    {
+                        dictHand1.Add(strHand1[i], 1);
+                    }
+                    if (intHighestHand1 < dictHand1[strHand1[i]]) intHighestHand1 = dictHand1[strHand1[i]];
+                }
+
+                if (strHand2[i] == 'J')
+                {
+                    intHandJokerHold_2++;
+                }
+                else
+                {
+                    if (dictHand2.ContainsKey(strHand2[i]))
+                    {
+                        dictHand2[strHand2[i]] = dictHand2[strHand2[i]] + 1;
+                    }
+                    else
+                    {
+                        dictHand2.Add(strHand2[i], 1);
+                    }
+                    if (intHighestHand2 < dictHand2[strHand2[i]]) intHighestHand2 = dictHand2[strHand2[i]];
+                }
+            }
+
+            //right away if one have highest amount int intHighestHand we can stop here and return it.
+            if ((intHighestHand1 + intHandJokerHold_1) > (intHighestHand2 + intHandJokerHold_2))
+            {
+                strReturn = strHand2;
+            }
+            else if ((intHighestHand1 + intHandJokerHold_1) < (intHighestHand2 + intHandJokerHold_2))
+            {
+                strReturn = strHand1;
+            }
+            else
+            {
+
+                if (strHand1 == "JJJJJ" || strHand2 == "JJJJJ") { int i = 3; }
+
+
+                //more complicated next scenario
+                //now we check if they have less itteration, if they do one might have double pair or full house and win over the other one
+                if ((dictHand1.Count + (Math.Floor((decimal)(intHandJokerHold_1 / 5)))) > dictHand2.Count + (Math.Floor((decimal)(intHandJokerHold_2 / 5))))
+                {
+                    strReturn = strHand1;
+                }
+                else if ((dictHand1.Count + (Math.Floor((decimal)(intHandJokerHold_1 / 5)))) < dictHand2.Count + (Math.Floor((decimal)(intHandJokerHold_2 / 5))))
+                {
+                    strReturn = strHand2;
+                }
+                else
+                {
+                    //At this point they have the same hand tie breaker is by card value in order of first
+                    byte intCardValue1;
+                    byte intCardValue2;
+
+                    for (int i = 0; i < 5; i++)
+                    {
+                        intCardValue1 = btGetCardNumericValuePart2(strHand1[i]);
+                        intCardValue2 = btGetCardNumericValuePart2(strHand2[i]);
+
+                        if (intCardValue1 > intCardValue2)
+                        {
+                            strReturn = strHand2;
+                            break;
+                        }
+                        else if (intCardValue1 < intCardValue2)
+                        {
+                            strReturn = strHand1;
+                            break;
+                        }
+                    }
+                }
+            }
+            return strReturn;
+        }
+        private byte btGetCardNumericValue(char chrCard)
+        {
+            byte btCardValue = 0;
+
+            if (char.IsDigit(chrCard))
+            {
+                btCardValue = ((byte)chrCard);
+            }
+            else
+            {
+                switch (chrCard)
+                {
+                    case 'T':
+                        btCardValue = 58;
+                        break;
+                    case 'J':
+                        btCardValue = 59;
+                        break;
+                    case 'Q':
+                        btCardValue = 60;
+                        break;
+                    case 'K':
+                        btCardValue = 61;
+                        break;
+                    case 'A':
+                        btCardValue = 62;
+                        break;
+                }
+            }
+
+            return btCardValue;
+        }
+        private byte btGetCardNumericValuePart2(char chrCard)
+        {
+            byte btCardValue = 0;
+
+            if (char.IsDigit(chrCard))
+            {
+                btCardValue = ((byte)chrCard);
+            }
+            else
+            {
+                switch (chrCard)
+                {
+                    case 'T':
+                        btCardValue = 58;
+                        break;
+                    case 'J':
+                        btCardValue = 30;
+                        break;
+                    case 'Q':
+                        btCardValue = 60;
+                        break;
+                    case 'K':
+                        btCardValue = 61;
+                        break;
+                    case 'A':
+                        btCardValue = 62;
+                        break;
+                }
+            }
+
+            return btCardValue;
+        }
+
+        private long Puzzle07_PartTwo()
+        {
+            //249628565
+            //249299962
+            //249298950
+            string strInput07 = Advent23.Properties.Settings.Default.Puzzle07_Input;
+
+            long lngGameCount = 0;
+            long lnmgTotalPoint = 0;
+            string[] allString = strInput07.Split("\r\n");
+            Dictionary<string, int> dictGamesValue = new Dictionary<string, int>();
+            List<string> lstGamesRank = new List<string>();
+
+            foreach (string strGames in allString)
+            {
+                //we read all and add on top
+                string[] strGameInfo = strGames.Split(" ");
+
+                dictGamesValue.Add(strGameInfo[0].Trim(), int.Parse(strGameInfo[1].Trim()));
+                lstGamesRank.Add(strGameInfo[0].Trim());
+            }
+            //now we got all the data, we du a quick easy bubble sort but with caveats
+            for (int a = 0; a < lstGamesRank.Count(); a++)
+            {
+
+                for (int b = a + 1; b < lstGamesRank.Count(); b++)
+                {
+                    if (a == 973 && (lstGamesRank[a] == "JJJJJ" || lstGamesRank[b] == "JJJJJ")) { int ssss = 2; }
+
+                    if (CalcWeakestHandPart2(lstGamesRank[a], lstGamesRank[b]) == lstGamesRank[b])
+                    {
+                        //we swap
+                        string strTempHand = lstGamesRank[a];
+                        lstGamesRank[a] = lstGamesRank[b];
+                        lstGamesRank[b] = strTempHand;
+                    }
+                }
+
+                //now we got the weakest in position a, we can calculate that score right away
+                lnmgTotalPoint += dictGamesValue[lstGamesRank[a]] * (a + 1);
+            }
+
+
+            return lnmgTotalPoint;
         }
 
         private void bntRun07_Click(object sender, EventArgs e)
         {
-            int intSolution07P1 = Puzzle07_PartOne();
-            txt_output07P1.Text = intSolution07P1.ToString();
+            long lngSolution07P1 = Puzzle07_PartOne();
+            txt_output07P1.Text = lngSolution07P1.ToString();
 
-            int intSolution07P2 = Puzzle07_PartTwo();
-            txt_output07P2.Text = intSolution07P2.ToString();
+            long lngSolution07P2 = Puzzle07_PartTwo();
+            txt_output07P2.Text = lngSolution07P2.ToString();
         }
 
         #endregion
 
         #region Puzzle 08
-        private int Puzzle08_PartOne()
+
+
+        private class P8_Instructions
         {
-            return 0;
+            protected string strInstruction = "LLLRRRLLRLRLLRRRLRLRRLRRLRRRLRRLLLRLRRLLRLRRRLRRRLLLRLLLLRLRRLLLRRRLRRRLRLRRRLLLLRLRLLRRLLRRRLRRLRLRRRLRRRLLLRLRRRLRRRLRRLLRRLRRRLLRLRLRLRLRLRRRLRLRRLRLRLRLRRLRRLRLRLRRLLRRLRRRLRRLRRLRRRLRRLRLLRLRLLRRLRRRLRLRLRRLLRRLRRRLRRLRRRLRLRRRLRRLRLRRLRLRRLLLRRLRRLRRRLRLRRLRRRLRLRLRRLRLLRRRR";
+            protected int intPointerCounter = 0;
+
+            public char NextInstruction()
+            {
+                if (intPointerCounter == strInstruction.Length) intPointerCounter = 0;
+                return strInstruction[intPointerCounter++];
+            }
         }
-        private int Puzzle08_PartTwo()
+
+        private long Puzzle08_PartOne()
         {
-            return 0;
+            //preparsed some of it
+            //answers
+
+            //
+            string strInput08 = Advent23.Properties.Settings.Default.Puzzle08_Input;
+            string[] allString = strInput08.Split("\n");
+            Dictionary<string, Tuple<string, string>> dictMap = new Dictionary<string, Tuple<string, string>>();
+            P8_Instructions instructions = new P8_Instructions();
+
+            Tuple<string, string> coordinate;
+
+
+            foreach (string strGames in allString)
+            {
+                //I trimmed it so its eaiser to read those instruction
+                coordinate = new Tuple<string, string>(strGames.Substring(7, 3), strGames.Substring(12, 3));
+                dictMap.Add(strGames.Substring(0, 3), coordinate);
+            }
+
+            //now we path
+            string strPosition = "AAA";
+            long lngSteps = 0;
+            do
+            {
+                //we make one step
+                lngSteps++;
+                coordinate = dictMap[strPosition];
+
+                if (instructions.NextInstruction() == 'L')
+                {
+                    strPosition = coordinate.Item1;
+                }
+                else
+                {
+                    strPosition = coordinate.Item2;
+                }
+            } while (strPosition != "ZZZ");
+
+            return lngSteps;
+        }
+        private long Puzzle08_PartTwo()
+        {
+            //this one is weird
+            //such a weird .... the puzzle seem to still have 1 path per ending A
+            //so if you got 6 ending A, you will got 6 ending Z
+            //and they are linear 100% so after you walk it twice the number stay as is
+            //The code will get those ending, then will parse the stepings on each,
+            //then the proper way would be do to LCM (Least Common Multiple) but way over complicated to code
+            //so I get the highest, then keep powering it until its mod all other number correctly
+
+            string strInput08 = Advent23.Properties.Settings.Default.Puzzle08_Input;
+            string[] allString = strInput08.Split("\n");
+            Dictionary<string, Tuple<string, string>> dictMap = new Dictionary<string, Tuple<string, string>>();
+            P8_Instructions instructions = new P8_Instructions();
+
+            Tuple<string, string> coordinate;
+
+            List<string> lstPositions = new List<string>();
+            Dictionary<string, int> dictEnding = new Dictionary<string, int>();
+            int intEnding = 0;
+
+            foreach (string strGames in allString)
+            {
+                //I trimmed it so its eaiser to read those instruction
+                coordinate = new Tuple<string, string>(strGames.Substring(7, 3), strGames.Substring(12, 3));
+                dictMap.Add(strGames.Substring(0, 3), coordinate);
+                if (strGames[2] == 'A') lstPositions.Add(strGames.Substring(0, 3));
+                if (strGames[2] == 'Z') dictEnding.Add(strGames.Substring(0, 3), intEnding++);
+            }
+
+            //now we path
+
+            List<long>[] lstEndZ = new List<long>[dictEnding.Count];
+            for (int i = 0; i < dictEnding.Count; i++)
+            {
+                lstEndZ[i] = new List<long>();
+            }
+
+            for (long a = 0; a < 1000000; a++)
+            {
+                char chDirection = instructions.NextInstruction();
+                string strPosition;
+                for (int i = 0; i < lstPositions.Count; i++)
+                {
+                    strPosition = lstPositions[i];
+
+                    //we make one step
+                    coordinate = dictMap[strPosition];
+                    if (chDirection == 'L')
+                    {
+                        strPosition = coordinate.Item1;
+                    }
+                    else
+                    {
+                        strPosition = coordinate.Item2;
+                    }
+
+                    lstPositions[i] = strPosition;
+                    if (strPosition[2] == 'Z') lstEndZ[dictEnding[strPosition]].Add(a);
+                }
+            }
+
+            //they all loop on only 1
+            long[] lngStepping = new long[dictEnding.Count];
+            long lngHighestStepping = 0;
+            for (int i = 0; i < lstPositions.Count; i++)
+            {
+                lngStepping[i] = lstEndZ[i][2] - lstEndZ[i][1];
+                if (lngStepping[i] > lngHighestStepping) lngHighestStepping = lngStepping[i];
+            }
+
+            //now we loop but at the speed the longest one to loopsteps
+            long x = 0;
+            bool valid = true;
+            long lngValue;
+            do
+            {
+                x++;
+                lngValue = lngHighestStepping * x;
+                valid = true;
+                foreach (long lngStep in lngStepping)
+                {
+                    if (lngValue % lngStep != 0)
+                    {
+                        valid = false; break;
+                    }
+                }
+
+            } while (valid == false);
+
+            return lngValue;
         }
 
         private void bntRun08_Click(object sender, EventArgs e)
         {
-            int intSolution08P1 = Puzzle08_PartOne();
-            txt_output08P1.Text = intSolution08P1.ToString();
+            long lngSolution08P1 = Puzzle08_PartOne();
+            txt_output08P1.Text = lngSolution08P1.ToString();
 
-            int intSolution08P2 = Puzzle08_PartTwo();
-            txt_output08P2.Text = intSolution08P2.ToString();
+            long lngSolution08P2 = Puzzle08_PartTwo();
+            txt_output08P2.Text = lngSolution08P2.ToString();
         }
 
         #endregion
 
         #region Puzzle 09
-        private int Puzzle09_PartOne()
+        private long Puzzle09_PartOne()
         {
-            return 0;
+            string strInput09 = Advent23.Properties.Settings.Default.Puzzle09_Input;
+            long lngSumResult = 0;
+            string[] allString = strInput09.Split("\r\n");
+
+            foreach (string strHistory in allString)
+            {
+                //Now we need to do the history
+                long[] lngHistory = Puzzle8FindAllHistory(strHistory);
+                lngSumResult += lngHistory[0];
+            }
+
+            return lngSumResult;
         }
-        private int Puzzle09_PartTwo()
+
+        private long[] Puzzle8FindAllHistory(string strLines)
         {
-            return 0;
+            /*
+             *  1   3   6  10  15  21  28
+                  2   3   4   5   6   7
+                    1   1   1   1   1
+                      0   0   0   0
+             *From exemple above it will return [28,7,1,0]
+             *I'm expecting Part B to play with those number (instead of just last)
+             */
+
+            long[] lngResult;
+            //I will simply just create an array for all (simpler/cleaner)
+
+            long[,] lngAll = new long[100,100]; //easier 100,100, won't use all
+            long stepping = 9; //to finish, this must be equal to 0
+
+            long lngLenght; //to keep lenght in the array above
+            long lngRow = 0;//keep track of how many row we have (are are at when we calculate stepping)
+
+
+            string[] allNumbers = strLines.Split(" ");
+            lngLenght = allNumbers.Length;
+            for (int i = 0; i < allNumbers.Count(); i++)
+            {
+                lngAll[lngRow, i] = long.Parse(allNumbers[i]);
+            }
+
+
+            //now this one iterate until we find stepping of 0
+            do
+            {
+                lngLenght--; //we reduce lenght by 1 for each steps
+                stepping = 0;
+
+                for (int lngCol = 0; lngCol < lngLenght; lngCol++)
+                {
+                    lngAll[lngRow + 1, lngCol] = lngAll[lngRow, lngCol + 1] - lngAll[lngRow, lngCol];
+                    stepping += lngAll[lngRow + 1, lngCol];
+                }
+
+                //we are done with the row
+                lngRow++;
+            } while (stepping != 0);
+
+            //Now we got all answer, we reverse and build the long
+
+            lngResult = new long[lngRow+1]; //lenght will be the amount of row we did, starting with the answer (but we in theory calculate reverse)
+
+            lngResult[lngRow] = 0; //we start with 0
+            for (long x = lngRow-1; x >=0; x-- )
+            {
+                lngResult[x] = lngAll[x, lngLenght] + lngResult[x+1];
+
+                lngLenght++;//as we go reverse the lenght is re-increasing
+            }
+
+
+
+            return lngResult;
+        }
+
+        private long[] Puzzle8Part2FindAllHistory(string strLines)
+        {
+            //it was just a tweak from Part1 just above, instead of calculating from the end, we calculated from the start
+
+            long[] lngResult;
+            //I will simply just create an array for all (simpler/cleaner)
+
+            long[,] lngAll = new long[100, 100]; //easier 100,100, won't use all
+            long stepping = 9; //to finish, this must be equal to 0
+
+            long lngLenght; //to keep lenght in the array above
+            long lngRow = 0;//keep track of how many row we have (are are at when we calculate stepping)
+
+
+            string[] allNumbers = strLines.Split(" ");
+            lngLenght = allNumbers.Length;
+            for (int i = 0; i < allNumbers.Count(); i++)
+            {
+                lngAll[lngRow, i] = long.Parse(allNumbers[i]);
+            }
+
+
+            //now this one iterate until we find stepping of 0
+            do
+            {
+                lngLenght--; //we reduce lenght by 1 for each steps
+                stepping = 0;
+
+                for (int lngCol = 0; lngCol < lngLenght; lngCol++)
+                {
+                    lngAll[lngRow + 1, lngCol] = lngAll[lngRow, lngCol + 1] - lngAll[lngRow, lngCol];
+                    stepping += lngAll[lngRow + 1, lngCol];
+                }
+
+                //we are done with the row
+                lngRow++;
+            } while (stepping != 0);
+
+            //Now we got all answer, we reverse and build the long
+
+            lngResult = new long[lngRow + 1]; //lenght will be the amount of row we did, starting with the answer (but we in theory calculate reverse)
+
+            lngResult[lngRow] = 0; //we start with 0
+            for (long x = lngRow - 1; x >= 0; x--)
+            {
+                lngResult[x] = lngAll[x, 0] - lngResult[x + 1];
+
+                lngLenght++;//as we go reverse the lenght is re-increasing
+            }
+
+            return lngResult;
+        }
+
+        private long Puzzle09_PartTwo()
+        {
+            string strInput09 = Advent23.Properties.Settings.Default.Puzzle09_Input;
+            long lngSumResult = 0;
+            string[] allString = strInput09.Split("\r\n");
+
+            foreach (string strHistory in allString)
+            {
+                //Now we need to do the history
+                long[] lngHistory = Puzzle8Part2FindAllHistory(strHistory);
+                lngSumResult += lngHistory[0];
+            }
+
+            return lngSumResult;
         }
 
         private void bntRun09_Click(object sender, EventArgs e)
         {
-            int intSolution09P1 = Puzzle09_PartOne();
-            txt_output09P1.Text = intSolution09P1.ToString();
+            long lngSolution09P1 = Puzzle09_PartOne();
+            txt_output09P1.Text = lngSolution09P1.ToString();
 
-            int intSolution09P2 = Puzzle09_PartTwo();
-            txt_output09P2.Text = intSolution09P2.ToString();
+            long lngSolution09P2 = Puzzle09_PartTwo();
+            txt_output09P2.Text = lngSolution09P2.ToString();
         }
 
         #endregion
 
         #region Puzzle 10
-        private int Puzzle10_PartOne()
+        private long Puzzle10_PartOne()
         {
             return 0;
         }
-        private int Puzzle10_PartTwo()
+        private long Puzzle10_PartTwo()
         {
             return 0;
         }
 
         private void bntRun10_Click(object sender, EventArgs e)
         {
-            int intSolution10P1 = Puzzle10_PartOne();
-            txt_output10P1.Text = intSolution10P1.ToString();
+            long lngSolution10P1 = Puzzle10_PartOne();
+            txt_output10P1.Text = lngSolution10P1.ToString();
 
-            int intSolution10P2 = Puzzle10_PartTwo();
-            txt_output10P2.Text = intSolution10P2.ToString();
+            long lngSolution10P2 = Puzzle10_PartTwo();
+            txt_output10P2.Text = lngSolution10P2.ToString();
         }
 
         #endregion
 
         #region Puzzle 11
-        private int Puzzle11_PartOne()
+        private long Puzzle11_PartOne()
         {
             return 0;
         }
-        private int Puzzle11_PartTwo()
+        private long Puzzle11_PartTwo()
         {
             return 0;
         }
 
         private void bntRun11_Click(object sender, EventArgs e)
         {
-            int intSolution11P1 = Puzzle11_PartOne();
-            txt_output11P1.Text = intSolution11P1.ToString();
+            long lngSolution11P1 = Puzzle11_PartOne();
+            txt_output11P1.Text = lngSolution11P1.ToString();
 
-            int intSolution11P2 = Puzzle11_PartTwo();
-            txt_output11P2.Text = intSolution11P2.ToString();
+            long lngSolution11P2 = Puzzle11_PartTwo();
+            txt_output11P2.Text = lngSolution11P2.ToString();
         }
 
         #endregion
 
         #region Puzzle 12
-        private int Puzzle12_PartOne()
+        private long Puzzle12_PartOne()
         {
             return 0;
         }
-        private int Puzzle12_PartTwo()
+        private long Puzzle12_PartTwo()
         {
             return 0;
         }
 
         private void bntRun12_Click(object sender, EventArgs e)
         {
-            int intSolution12P1 = Puzzle12_PartOne();
-            txt_output12P1.Text = intSolution12P1.ToString();
+            long lngSolution12P1 = Puzzle12_PartOne();
+            txt_output12P1.Text = lngSolution12P1.ToString();
 
-            int intSolution12P2 = Puzzle12_PartTwo();
-            txt_output12P2.Text = intSolution12P2.ToString();
+            long lngSolution12P2 = Puzzle12_PartTwo();
+            txt_output12P2.Text = lngSolution12P2.ToString();
         }
 
         #endregion
 
         #region Puzzle 13
-        private int Puzzle13_PartOne()
+        private long Puzzle13_PartOne()
         {
             return 0;
         }
-        private int Puzzle13_PartTwo()
+        private long Puzzle13_PartTwo()
         {
             return 0;
         }
 
         private void bntRun13_Click(object sender, EventArgs e)
         {
-            int intSolution13P1 = Puzzle13_PartOne();
-            txt_output13P1.Text = intSolution13P1.ToString();
+            long lngSolution13P1 = Puzzle13_PartOne();
+            txt_output13P1.Text = lngSolution13P1.ToString();
 
-            int intSolution13P2 = Puzzle13_PartTwo();
-            txt_output13P2.Text = intSolution13P2.ToString();
+            long lngSolution13P2 = Puzzle13_PartTwo();
+            txt_output13P2.Text = lngSolution13P2.ToString();
         }
 
         #endregion
 
         #region Puzzle 14
-        private int Puzzle14_PartOne()
+        private long Puzzle14_PartOne()
         {
             return 0;
         }
-        private int Puzzle14_PartTwo()
+        private long Puzzle14_PartTwo()
         {
             return 0;
         }
 
         private void bntRun14_Click(object sender, EventArgs e)
         {
-            int intSolution14P1 = Puzzle14_PartOne();
-            txt_output14P1.Text = intSolution14P1.ToString();
+            long lngSolution14P1 = Puzzle14_PartOne();
+            txt_output14P1.Text = lngSolution14P1.ToString();
 
-            int intSolution14P2 = Puzzle14_PartTwo();
-            txt_output14P2.Text = intSolution14P2.ToString();
+            long lngSolution14P2 = Puzzle14_PartTwo();
+            txt_output14P2.Text = lngSolution14P2.ToString();
         }
 
         #endregion
 
         #region Puzzle 15
-        private int Puzzle15_PartOne()
+        private long Puzzle15_PartOne()
         {
             return 0;
         }
-        private int Puzzle15_PartTwo()
+        private long Puzzle15_PartTwo()
         {
             return 0;
         }
 
         private void bntRun15_Click(object sender, EventArgs e)
         {
-            int intSolution15P1 = Puzzle15_PartOne();
-            txt_output15P1.Text = intSolution15P1.ToString();
+            long lngSolution15P1 = Puzzle15_PartOne();
+            txt_output15P1.Text = lngSolution15P1.ToString();
 
-            int intSolution15P2 = Puzzle15_PartTwo();
-            txt_output15P2.Text = intSolution15P2.ToString();
+            long lngSolution15P2 = Puzzle15_PartTwo();
+            txt_output15P2.Text = lngSolution15P2.ToString();
         }
 
         #endregion
 
         #region Puzzle 16
-        private int Puzzle16_PartOne()
+        private long Puzzle16_PartOne()
         {
             return 0;
         }
-        private int Puzzle16_PartTwo()
+        private long Puzzle16_PartTwo()
         {
             return 0;
         }
 
         private void bntRun16_Click(object sender, EventArgs e)
         {
-            int intSolution16P1 = Puzzle16_PartOne();
-            txt_output16P1.Text = intSolution16P1.ToString();
+            long lngSolution16P1 = Puzzle16_PartOne();
+            txt_output16P1.Text = lngSolution16P1.ToString();
 
-            int intSolution16P2 = Puzzle16_PartTwo();
-            txt_output16P2.Text = intSolution16P2.ToString();
+            long lngSolution16P2 = Puzzle16_PartTwo();
+            txt_output16P2.Text = lngSolution16P2.ToString();
         }
 
         #endregion
 
         #region Puzzle 17
-        private int Puzzle17_PartOne()
+        private long Puzzle17_PartOne()
         {
             return 0;
         }
-        private int Puzzle17_PartTwo()
+        private long Puzzle17_PartTwo()
         {
             return 0;
         }
 
         private void bntRun17_Click(object sender, EventArgs e)
         {
-            int intSolution17P1 = Puzzle17_PartOne();
-            txt_output17P1.Text = intSolution17P1.ToString();
+            long lngSolution17P1 = Puzzle17_PartOne();
+            txt_output17P1.Text = lngSolution17P1.ToString();
 
-            int intSolution17P2 = Puzzle17_PartTwo();
-            txt_output17P2.Text = intSolution17P2.ToString();
+            long lngSolution17P2 = Puzzle17_PartTwo();
+            txt_output17P2.Text = lngSolution17P2.ToString();
         }
 
         #endregion
 
         #region Puzzle 18
-        private int Puzzle18_PartOne()
+        private long Puzzle18_PartOne()
         {
             return 0;
         }
-        private int Puzzle18_PartTwo()
+        private long Puzzle18_PartTwo()
         {
             return 0;
         }
 
         private void bntRun18_Click(object sender, EventArgs e)
         {
-            int intSolution18P1 = Puzzle18_PartOne();
-            txt_output18P1.Text = intSolution18P1.ToString();
+            long lngSolution18P1 = Puzzle18_PartOne();
+            txt_output18P1.Text = lngSolution18P1.ToString();
 
-            int intSolution18P2 = Puzzle18_PartTwo();
-            txt_output18P2.Text = intSolution18P2.ToString();
+            long lngSolution18P2 = Puzzle18_PartTwo();
+            txt_output18P2.Text = lngSolution18P2.ToString();
         }
 
         #endregion
 
         #region Puzzle 19
-        private int Puzzle19_PartOne()
+        private long Puzzle19_PartOne()
         {
             return 0;
         }
-        private int Puzzle19_PartTwo()
+        private long Puzzle19_PartTwo()
         {
             return 0;
         }
 
         private void bntRun19_Click(object sender, EventArgs e)
         {
-            int intSolution19P1 = Puzzle19_PartOne();
-            txt_output19P1.Text = intSolution19P1.ToString();
+            long lngSolution19P1 = Puzzle19_PartOne();
+            txt_output19P1.Text = lngSolution19P1.ToString();
 
-            int intSolution19P2 = Puzzle19_PartTwo();
-            txt_output19P2.Text = intSolution19P2.ToString();
+            long lngSolution19P2 = Puzzle19_PartTwo();
+            txt_output19P2.Text = lngSolution19P2.ToString();
         }
 
         #endregion
 
         #region Puzzle 20
-        private int Puzzle20_PartOne()
+        private long Puzzle20_PartOne()
         {
             return 0;
         }
-        private int Puzzle20_PartTwo()
+        private long Puzzle20_PartTwo()
         {
             return 0;
         }
 
         private void bntRun20_Click(object sender, EventArgs e)
         {
-            int intSolution20P1 = Puzzle20_PartOne();
-            txt_output20P1.Text = intSolution20P1.ToString();
+            long lngSolution20P1 = Puzzle20_PartOne();
+            txt_output20P1.Text = lngSolution20P1.ToString();
 
-            int intSolution20P2 = Puzzle20_PartTwo();
-            txt_output20P2.Text = intSolution20P2.ToString();
+            long lngSolution20P2 = Puzzle20_PartTwo();
+            txt_output20P2.Text = lngSolution20P2.ToString();
         }
 
         #endregion
 
         #region Puzzle 21
-        private int Puzzle21_PartOne()
+        private long Puzzle21_PartOne()
         {
             return 0;
         }
-        private int Puzzle21_PartTwo()
+        private long Puzzle21_PartTwo()
         {
             return 0;
         }
 
         private void bntRun21_Click(object sender, EventArgs e)
         {
-            int intSolution21P1 = Puzzle21_PartOne();
-            txt_output21P1.Text = intSolution21P1.ToString();
+            long lngSolution21P1 = Puzzle21_PartOne();
+            txt_output21P1.Text = lngSolution21P1.ToString();
 
-            int intSolution21P2 = Puzzle21_PartTwo();
-            txt_output21P2.Text = intSolution21P2.ToString();
+            long lngSolution21P2 = Puzzle21_PartTwo();
+            txt_output21P2.Text = lngSolution21P2.ToString();
         }
 
         #endregion
 
         #region Puzzle 22
-        private int Puzzle22_PartOne()
+        private long Puzzle22_PartOne()
         {
             return 0;
         }
-        private int Puzzle22_PartTwo()
+        private long Puzzle22_PartTwo()
         {
             return 0;
         }
 
         private void bntRun22_Click(object sender, EventArgs e)
         {
-            int intSolution22P1 = Puzzle22_PartOne();
-            txt_output22P1.Text = intSolution22P1.ToString();
+            long lngSolution22P1 = Puzzle22_PartOne();
+            txt_output22P1.Text = lngSolution22P1.ToString();
 
-            int intSolution22P2 = Puzzle22_PartTwo();
-            txt_output22P2.Text = intSolution22P2.ToString();
+            long lngSolution22P2 = Puzzle22_PartTwo();
+            txt_output22P2.Text = lngSolution22P2.ToString();
         }
 
         #endregion
 
         #region Puzzle 23
-        private int Puzzle23_PartOne()
+        private long Puzzle23_PartOne()
         {
             return 0;
         }
-        private int Puzzle23_PartTwo()
+        private long Puzzle23_PartTwo()
         {
             return 0;
         }
 
         private void bntRun23_Click(object sender, EventArgs e)
         {
-            int intSolution23P1 = Puzzle23_PartOne();
-            txt_output23P1.Text = intSolution23P1.ToString();
+            long lngSolution23P1 = Puzzle23_PartOne();
+            txt_output23P1.Text = lngSolution23P1.ToString();
 
-            int intSolution23P2 = Puzzle23_PartTwo();
-            txt_output23P2.Text = intSolution23P2.ToString();
+            long lngSolution23P2 = Puzzle23_PartTwo();
+            txt_output23P2.Text = lngSolution23P2.ToString();
         }
 
         #endregion
 
         #region Puzzle 24
-        private int Puzzle24_PartOne()
+        private long Puzzle24_PartOne()
         {
             return 0;
         }
-        private int Puzzle24_PartTwo()
+        private long Puzzle24_PartTwo()
         {
             return 0;
         }
 
         private void bntRun24_Click(object sender, EventArgs e)
         {
-            int intSolution24P1 = Puzzle24_PartOne();
-            txt_output24P1.Text = intSolution24P1.ToString();
+            long lngSolution24P1 = Puzzle24_PartOne();
+            txt_output24P1.Text = lngSolution24P1.ToString();
 
-            int intSolution24P2 = Puzzle24_PartTwo();
-            txt_output24P2.Text = intSolution24P2.ToString();
+            long lngSolution24P2 = Puzzle24_PartTwo();
+            txt_output24P2.Text = lngSolution24P2.ToString();
         }
 
         #endregion
 
         #region Puzzle 25
-        private int Puzzle25_PartOne()
+        private long Puzzle25_PartOne()
         {
             return 0;
         }
-        private int Puzzle25_PartTwo()
+        private long Puzzle25_PartTwo()
         {
             return 0;
         }
 
         private void bntRun25_Click(object sender, EventArgs e)
         {
-            int intSolution25P1 = Puzzle25_PartOne();
-            txt_output25P1.Text = intSolution25P1.ToString();
+            long lngSolution25P1 = Puzzle25_PartOne();
+            txt_output25P1.Text = lngSolution25P1.ToString();
 
-            int intSolution25P2 = Puzzle25_PartTwo();
-            txt_output25P2.Text = intSolution25P2.ToString();
+            long lngSolution25P2 = Puzzle25_PartTwo();
+            txt_output25P2.Text = lngSolution25P2.ToString();
         }
 
         #endregion
