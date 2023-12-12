@@ -1,11 +1,18 @@
+using System;
+using System.Collections.Generic;
 using System.Data.SqlTypes;
+using System.Globalization;
 using System.IO;
+using System.Text;
 using System.Xml.Linq;
+using System.Diagnostics;
 
 namespace Advent23
 {
     public partial class frm_Advent2023 : Form
     {
+        public Dictionary<string, long> dictPuzzle12Cache = new Dictionary<string, long>();
+
         public frm_Advent2023()
         {
             InitializeComponent();
@@ -1468,21 +1475,21 @@ namespace Advent23
         #region Puzzle 09
         private long Puzzle09_PartOne()
         {
-            string strInput09 = Advent23.Properties.Settings.Default.Puzzle09_Input;
+            string strInput09 = Advent23.Properties.Settings.Default.Puzzle10_Input;
             long lngSumResult = 0;
             string[] allString = strInput09.Split("\r\n");
 
             foreach (string strHistory in allString)
             {
                 //Now we need to do the history
-                long[] lngHistory = Puzzle8FindAllHistory(strHistory);
+                long[] lngHistory = Puzzle9FindAllHistory(strHistory);
                 lngSumResult += lngHistory[0];
             }
 
             return lngSumResult;
         }
 
-        private long[] Puzzle8FindAllHistory(string strLines)
+        private long[] Puzzle9FindAllHistory(string strLines)
         {
             /*
              *  1   3   6  10  15  21  28
@@ -1496,7 +1503,7 @@ namespace Advent23
             long[] lngResult;
             //I will simply just create an array for all (simpler/cleaner)
 
-            long[,] lngAll = new long[100,100]; //easier 100,100, won't use all
+            long[,] lngAll = new long[100, 100]; //easier 100,100, won't use all
             long stepping = 9; //to finish, this must be equal to 0
 
             long lngLenght; //to keep lenght in the array above
@@ -1529,12 +1536,12 @@ namespace Advent23
 
             //Now we got all answer, we reverse and build the long
 
-            lngResult = new long[lngRow+1]; //lenght will be the amount of row we did, starting with the answer (but we in theory calculate reverse)
+            lngResult = new long[lngRow + 1]; //lenght will be the amount of row we did, starting with the answer (but we in theory calculate reverse)
 
             lngResult[lngRow] = 0; //we start with 0
-            for (long x = lngRow-1; x >=0; x-- )
+            for (long x = lngRow - 1; x >= 0; x--)
             {
-                lngResult[x] = lngAll[x, lngLenght] + lngResult[x+1];
+                lngResult[x] = lngAll[x, lngLenght] + lngResult[x + 1];
 
                 lngLenght++;//as we go reverse the lenght is re-increasing
             }
@@ -1599,7 +1606,7 @@ namespace Advent23
 
         private long Puzzle09_PartTwo()
         {
-            string strInput09 = Advent23.Properties.Settings.Default.Puzzle09_Input;
+            string strInput09 = Advent23.Properties.Settings.Default.Puzzle10_Input;
             long lngSumResult = 0;
             string[] allString = strInput09.Split("\r\n");
 
@@ -1627,12 +1634,569 @@ namespace Advent23
         #region Puzzle 10
         private long Puzzle10_PartOne()
         {
-            return 0;
+            //Grid is 140x140 
+            char[,] charArray = new char[142, 142]; //to make it easy we pad around
+            string strInput10 = Advent23.Properties.Settings.Default.Puzzle10_Input;
+            string[] allString = strInput10.Split("\r\n");
+
+            int intX = 0;
+            int intY = 0;
+            //we fill the array, we keep note of where we need to go in a list
+
+
+            long[] lstPath = new long[500]; //500 steps max
+            long lstStepAt = 0;
+            int[] intLocation = new int[2]; //0 = x , 1 = y
+
+            foreach (string strGames in allString)
+            {
+                intX++;
+                intY = -1;
+                foreach (char aChar in ("." + strGames + ".")) //we pad them to be easier to reference numbers
+                {
+                    intY++;
+                    charArray[intX, intY] = aChar;
+
+                    if (aChar == 'S')
+                    {
+                        intLocation[0] = intX;
+                        intLocation[1] = intY;
+                    }
+                }
+            }
+
+            //We got our map now we go around and scan
+            //I looked at my input, simpler, we will go north first (its valid)
+            char chDirection = 'N';
+            char chMapChar = 'N';
+
+            intX = intLocation[0];
+            intY = intLocation[1];
+            do
+            {
+                lstStepAt++;
+                //now we determine where we go depending of our direction and where we are
+
+                //Depend on the direction we go
+                switch (chDirection)
+                {
+                    case 'N':
+                        intX--;
+                        break;
+                    case 'E':
+                        intY++;
+                        break;
+                    case 'W':
+                        intY--;
+                        break;
+                    case 'S':
+                        intX++;
+                        break;
+                }
+                chMapChar = charArray[intX, intY];
+                chDirection = getHeading(chDirection, charArray[intX, intY]);
+            } while (chMapChar != 'S');
+
+
+
+            //now we got everything, we will
+
+            return lstStepAt / 2;
         }
+
+        private char getHeading(char currentHeading, char strPipe)
+        {
+            char newHeading = 'N';
+
+            switch (strPipe)
+            {
+                case '|':
+                    //stay as is
+                    newHeading = currentHeading;
+                    break;
+                case '-':
+                    //stay as is
+                    newHeading = currentHeading;
+                    break;
+                case 'L':
+                    if (currentHeading == 'S')
+                    {
+                        newHeading = 'E';
+                    }
+                    else
+                    {
+                        newHeading = 'N';
+                    }
+                    break;
+                case 'J':
+                    if (currentHeading == 'S')
+                    {
+                        newHeading = 'W';
+                    }
+                    else
+                    {
+                        newHeading = 'N';
+                    }
+                    break;
+                case 'F':
+                    if (currentHeading == 'N')
+                    {
+                        newHeading = 'E';
+                    }
+                    else
+                    {
+                        newHeading = 'S';
+                    }
+                    break;
+                case '7':
+                    if (currentHeading == 'N')
+                    {
+                        newHeading = 'W';
+                    }
+                    else
+                    {
+                        newHeading = 'S';
+                    }
+                    break;
+            }
+            return newHeading;
+        }
+
         private long Puzzle10_PartTwo()
         {
-            return 0;
+            //we do same as 1, but we will redraw the map clear the junk and I will take a look by hand
+            //Grid is 140x140
+            char[,] charArray = new char[142, 142]; //to make it easy we pad around
+            char[,] charCorrectedArray = new char[142, 142]; //to make it easy we pad around
+            string strInput10 = Advent23.Properties.Settings.Default.Puzzle10_Input;
+            string[] allString = strInput10.Split("\r\n");
+
+            int intX = 0;
+            int intY = 0;
+            //we fill the array, we keep note of where we need to go in a list
+
+
+            long[] lstPath = new long[500]; //500 steps max
+            long lstStepAt = 0;
+            int[] intLocation = new int[2]; //0 = x , 1 = y
+
+            foreach (string strGames in allString)
+            {
+                intX++;
+                intY = -1;
+                foreach (char aChar in ("." + strGames + ".")) //we pad them to be easier to reference numbers
+                {
+                    intY++;
+                    charArray[intX, intY] = aChar;
+
+                    if (aChar == 'S')
+                    {
+                        intLocation[0] = intX;
+                        intLocation[1] = intY;
+                    }
+                }
+            }
+
+            //We got our map now we go around and scan
+            //I looked at my input, simpler, we will go north first (its valid)
+            char chDirection = 'N';
+            char chMapChar = 'N';
+
+            intX = intLocation[0];
+            intY = intLocation[1];
+            do
+            {
+                charCorrectedArray[intX, intY] = charArray[intX, intY];
+
+                lstStepAt++;
+                //now we determine where we go depending of our direction and where we are
+
+                //Depend on the direction we go
+                switch (chDirection)
+                {
+                    case 'N':
+                        intX--;
+                        break;
+                    case 'E':
+                        intY++;
+                        break;
+                    case 'W':
+                        intY--;
+                        break;
+                    case 'S':
+                        intX++;
+                        break;
+                }
+                chMapChar = charArray[intX, intY];
+                chDirection = getHeading(chDirection, charArray[intX, intY]);
+            } while (chMapChar != 'S');
+
+            //we replace the S per the true of what it is a J
+            //This will be needed for when we do a re-run to see outside walls
+            charArray[intX, intY] = 'J';
+
+            //now we got everything, we will
+            for (int a = 0; a < 142; a++)
+            {
+                for (int b = 0; b < 142; b++)
+                {
+                    if (a == 0 || a == 141 || b == 0 || b == 141) charCorrectedArray[a, b] = '0'; //its outside
+                    if (charCorrectedArray[a, b] == '\0') charCorrectedArray[a, b] = '.'; //undertermined yet
+                }
+            }
+
+            /*I took a visual inspection of it and its tough We will need to redo the maze with an known exterior wall
+             * we will keep the general direction of where the wall outside is and pain specific possible . along the way
+             * 
+             * As an example
+             * if I hit 7 which is West<->South (I came from one of them)
+             * if I say 'RIGHT' for outside wall and I came from South , then 
+             *  all the zero are also outside (if they are dot I would repaint them Outside)
+             *  Then I continue on the maze until I'm back to my Start then we can paint extension and we should be close
+             *  000
+             *  .70
+             *  .X0
+             * 
+             */
+
+
+            //from inspection I took and F and going EAST, outside is LEFT
+            //SUPER INNEFICIENT but I don't care at this point. 
+            chDirection = 'E';
+
+            intY = 17;
+            intX = 11;
+            char chOutside = 'L';
+
+            lstStepAt = 0;
+            do
+            {
+                lstStepAt++;
+                //we got a direction
+                //now we determine where we go depending of our direction and where we are
+
+                switch (chDirection)
+                {
+                    case 'N':
+                        intX--;
+                        break;
+                    case 'E':
+                        intY++;
+                        break;
+                    case 'W':
+                        intY--;
+                        break;
+                    case 'S':
+                        intX++;
+                        break;
+                }
+                chMapChar = charArray[intX, intY];
+
+
+                switch (chDirection)
+                {
+                    case 'N':
+                        //3 possible char |, F, 7 
+                        if (chMapChar == '|')
+                        {
+                            /*  L.R
+                             *  L|R
+                             *  L.R
+                             */
+                            if (chOutside == 'L')
+                            {
+                                if (charCorrectedArray[intX - 1, intY - 1] == '.') charCorrectedArray[intX - 1, intY - 1] = '0';
+                                if (charCorrectedArray[intX, intY - 1] == '.') charCorrectedArray[intX, intY - 1] = '0';
+                                if (charCorrectedArray[intX + 1, intY - 1] == '.') charCorrectedArray[intX + 1, intY - 1] = '0';
+                            }
+                            else
+                            {
+                                if (charCorrectedArray[intX - 1, intY + 1] == '.') charCorrectedArray[intX - 1, intY + 1] = '0';
+                                if (charCorrectedArray[intX, intY + 1] == '.') charCorrectedArray[intX, intY + 1] = '0';
+                                if (charCorrectedArray[intX + 1, intY + 1] == '.') charCorrectedArray[intX + 1, intY + 1] = '0';
+                            }
+                        }
+                        else if (chMapChar == 'F')
+                        {
+                            //3 possible char - 7 and J
+                            /*  LLL
+                             *  LF.
+                             *  L.R
+                             */
+                            if (chOutside == 'L')
+                            {
+                                if (charCorrectedArray[intX - 1, intY - 1] == '.') charCorrectedArray[intX - 1, intY - 1] = '0';
+                                if (charCorrectedArray[intX - 1, intY] == '.') charCorrectedArray[intX - 1, intY] = '0';
+                                if (charCorrectedArray[intX - 1, intY + 1] == '.') charCorrectedArray[intX - 1, intY + 1] = '0';
+                                if (charCorrectedArray[intX, intY - 1] == '.') charCorrectedArray[intX, intY - 1] = '0';
+                                if (charCorrectedArray[intX + 1, intY - 1] == '.') charCorrectedArray[intX + 1, intY - 1] = '0';
+                            }
+                            else
+                            {
+                                if (charCorrectedArray[intX + 1, intY + 1] == '.') charCorrectedArray[intX + 1, intY + 1] = '0';
+                            }
+                        }
+                        else if (chMapChar == '7')
+                        {
+                            /*  RRR
+                             *  .7R
+                             *  L.R
+                             */
+                            if (chOutside == 'L')
+                            {
+                                if (charCorrectedArray[intX + 1, intY - 1] == '.') charCorrectedArray[intX + 1, intY - 1] = '0';
+                            }
+                            else
+                            {
+                                if (charCorrectedArray[intX - 1, intY - 1] == '.') charCorrectedArray[intX - 1, intY - 1] = '0';
+                                if (charCorrectedArray[intX - 1, intY] == '.') charCorrectedArray[intX - 1, intY] = '0';
+                                if (charCorrectedArray[intX - 1, intY + 1] == '.') charCorrectedArray[intX - 1, intY + 1] = '0';
+                                if (charCorrectedArray[intX, intY + 1] == '.') charCorrectedArray[intX, intY + 1] = '0';
+                                if (charCorrectedArray[intX + 1, intY + 1] == '.') charCorrectedArray[intX + 1, intY + 1] = '0';
+                            }
+                        }
+
+                        break;
+                    case 'E':
+                        //3 possible char - 7 and J
+                        if (chMapChar == '-')
+                        {
+                            /*  LLL
+                             *  .-.
+                             *  RRR
+                             */
+                            if (chOutside == 'L')
+                            {
+                                if (charCorrectedArray[intX - 1, intY - 1] == '.') charCorrectedArray[intX - 1, intY - 1] = '0';
+                                if (charCorrectedArray[intX - 1, intY] == '.') charCorrectedArray[intX - 1, intY] = '0';
+                                if (charCorrectedArray[intX - 1, intY + 1] == '.') charCorrectedArray[intX - 1, intY + 1] = '0';
+                            }
+                            else
+                            {
+                                if (charCorrectedArray[intX + 1, intY - 1] == '.') charCorrectedArray[intX + 1, intY - 1] = '0';
+                                if (charCorrectedArray[intX + 1, intY] == '.') charCorrectedArray[intX + 1, intY] = '0';
+                                if (charCorrectedArray[intX + 1, intY + 1] == '.') charCorrectedArray[intX + 1, intY + 1] = '0';
+                            }
+                        }
+                        else if (chMapChar == '7')
+                        {
+                            //3 possible char - 7 and J
+                            /*  LLL
+                             *  .7L
+                             *  R.L
+                             */
+                            if (chOutside == 'L')
+                            {
+                                if (charCorrectedArray[intX - 1, intY - 1] == '.') charCorrectedArray[intX - 1, intY - 1] = '0';
+                                if (charCorrectedArray[intX - 1, intY] == '.') charCorrectedArray[intX - 1, intY] = '0';
+                                if (charCorrectedArray[intX - 1, intY + 1] == '.') charCorrectedArray[intX - 1, intY + 1] = '0';
+                                if (charCorrectedArray[intX, intY + 1] == '.') charCorrectedArray[intX, intY + 1] = '0';
+                                if (charCorrectedArray[intX + 1, intY + 1] == '.') charCorrectedArray[intX + 1, intY + 1] = '0';
+                            }
+                            else
+                            {
+                                if (charCorrectedArray[intX + 1, intY - 1] == '.') charCorrectedArray[intX + 1, intY - 1] = '0';
+                            }
+                        }
+                        else if (chMapChar == 'J')
+                        {
+                            /*  L.R
+                             *  .JR
+                             *  RRR
+                             */
+                            if (chOutside == 'L')
+                            {
+                                if (charCorrectedArray[intX - 1, intY - 1] == '.') charCorrectedArray[intX - 1, intY - 1] = '0';
+                            }
+                            else
+                            {
+                                if (charCorrectedArray[intX - 1, intY + 1] == '.') charCorrectedArray[intX - 1, intY + 1] = '0';
+                                if (charCorrectedArray[intX, intY + 1] == '.') charCorrectedArray[intX, intY + 1] = '0';
+                                if (charCorrectedArray[intX + 1, intY - 1] == '.') charCorrectedArray[intX + 1, intY - 1] = '0';
+                                if (charCorrectedArray[intX + 1, intY] == '.') charCorrectedArray[intX + 1, intY] = '0';
+                                if (charCorrectedArray[intX + 1, intY + 1] == '.') charCorrectedArray[intX + 1, intY + 1] = '0';
+                            }
+                        }
+                        break;
+                    case 'W':
+                        //3 possible char - L and F
+                        if (chMapChar == '-')
+                        {
+                            /*  RRR
+                             *  .-.
+                             *  LLL
+                             */
+                            if (chOutside == 'L')
+                            {
+                                if (charCorrectedArray[intX + 1, intY - 1] == '.') charCorrectedArray[intX + 1, intY - 1] = '0';
+                                if (charCorrectedArray[intX + 1, intY] == '.') charCorrectedArray[intX + 1, intY] = '0';
+                                if (charCorrectedArray[intX + 1, intY + 1] == '.') charCorrectedArray[intX + 1, intY + 1] = '0';
+                            }
+                            else
+                            {
+                                if (charCorrectedArray[intX - 1, intY - 1] == '.') charCorrectedArray[intX - 1, intY - 1] = '0';
+                                if (charCorrectedArray[intX - 1, intY] == '.') charCorrectedArray[intX - 1, intY] = '0';
+                                if (charCorrectedArray[intX - 1, intY + 1] == '.') charCorrectedArray[intX - 1, intY + 1] = '0';
+                            }
+                        }
+                        else if (chMapChar == 'L')
+                        {
+                            //3 possible char - 7 and J
+                            /*  L.R
+                             *  LL.
+                             *  LLL
+                             */
+                            if (chOutside == 'L')
+                            {
+                                if (charCorrectedArray[intX - 1, intY - 1] == '.') charCorrectedArray[intX - 1, intY - 1] = '0';
+                                if (charCorrectedArray[intX, intY - 1] == '.') charCorrectedArray[intX, intY - 1] = '0';
+                                if (charCorrectedArray[intX + 1, intY - 1] == '.') charCorrectedArray[intX + 1, intY - 1] = '0';
+                                if (charCorrectedArray[intX + 1, intY] == '.') charCorrectedArray[intX + 1, intY] = '0';
+                                if (charCorrectedArray[intX + 1, intY + 1] == '.') charCorrectedArray[intX + 1, intY + 1] = '0';
+                            }
+                            else
+                            {
+                                if (charCorrectedArray[intX - 1, intY + 1] == '.') charCorrectedArray[intX - 1, intY + 1] = '0';
+                            }
+                        }
+                        else if (chMapChar == 'F')
+                        {
+                            /*  RRR
+                             *  RF.
+                             *  R.L
+                             */
+                            if (chOutside == 'L')
+                            {
+                                if (charCorrectedArray[intX + 1, intY + 1] == '.') charCorrectedArray[intX + 1, intY + 1] = '0';
+                            }
+                            else
+                            {
+                                if (charCorrectedArray[intX - 1, intY - 1] == '.') charCorrectedArray[intX - 1, intY - 1] = '0';
+                                if (charCorrectedArray[intX - 1, intY] == '.') charCorrectedArray[intX - 1, intY] = '0';
+                                if (charCorrectedArray[intX - 1, intY + 1] == '.') charCorrectedArray[intX - 1, intY + 1] = '0';
+                                if (charCorrectedArray[intX, intY - 1] == '.') charCorrectedArray[intX, intY - 1] = '0';
+                                if (charCorrectedArray[intX + 1, intY - 1] == '.') charCorrectedArray[intX + 1, intY - 1] = '0';
+                            }
+                        }
+                        break;
+                    case 'S':
+                        //3 possible char | L and J
+                        if (chMapChar == '|')
+                        {
+                            /*  R.L
+                             *  R|L
+                             *  R.L
+                             */
+                            if (chOutside == 'L')
+                            {
+                                if (charCorrectedArray[intX - 1, intY + 1] == '.') charCorrectedArray[intX - 1, intY + 1] = '0';
+                                if (charCorrectedArray[intX, intY + 1] == '.') charCorrectedArray[intX, intY + 1] = '0';
+                                if (charCorrectedArray[intX + 1, intY + 1] == '.') charCorrectedArray[intX + 1, intY + 1] = '0';
+                            }
+                            else
+                            {
+                                if (charCorrectedArray[intX - 1, intY - 1] == '.') charCorrectedArray[intX - 1, intY - 1] = '0';
+                                if (charCorrectedArray[intX, intY - 1] == '.') charCorrectedArray[intX, intY - 1] = '0';
+                                if (charCorrectedArray[intX + 1, intY - 1] == '.') charCorrectedArray[intX + 1, intY - 1] = '0';
+                            }
+                        }
+                        else if (chMapChar == 'L')
+                        {
+                            /*  R.L
+                             *  RL.
+                             *  RRR
+                             */
+                            if (chOutside == 'L')
+                            {
+                                if (charCorrectedArray[intX - 1, intY + 1] == '.') charCorrectedArray[intX - 1, intY + 1] = '0';
+                            }
+                            else
+                            {
+                                if (charCorrectedArray[intX - 1, intY - 1] == '.') charCorrectedArray[intX - 1, intY - 1] = '0';
+                                if (charCorrectedArray[intX, intY - 1] == '.') charCorrectedArray[intX, intY - 1] = '0';
+                                if (charCorrectedArray[intX + 1, intY - 1] == '.') charCorrectedArray[intX + 1, intY - 1] = '0';
+                                if (charCorrectedArray[intX + 1, intY] == '.') charCorrectedArray[intX + 1, intY] = '0';
+                                if (charCorrectedArray[intX + 1, intY + 1] == '.') charCorrectedArray[intX + 1, intY + 1] = '0';
+                            }
+                        }
+                        else if (chMapChar == 'J')
+                        {
+                            /*  R.L
+                             *  .JL
+                             *  LLL
+                             */
+                            if (chOutside == 'L')
+                            {
+                                if (charCorrectedArray[intX - 1, intY + 1] == '.') charCorrectedArray[intX - 1, intY + 1] = '0';
+                                if (charCorrectedArray[intX, intY + 1] == '.') charCorrectedArray[intX, intY + 1] = '0';
+                                if (charCorrectedArray[intX + 1, intY - 1] == '.') charCorrectedArray[intX + 1, intY - 1] = '0';
+                                if (charCorrectedArray[intX + 1, intY] == '.') charCorrectedArray[intX + 1, intY] = '0';
+                                if (charCorrectedArray[intX + 1, intY + 1] == '.') charCorrectedArray[intX + 1, intY + 1] = '0';
+                            }
+                            else
+                            {
+                                if (charCorrectedArray[intX - 1, intY - 1] == '.') charCorrectedArray[intX - 1, intY - 1] = '0';
+                            }
+                        }
+                        break;
+                }
+
+                chDirection = getHeading(chDirection, charArray[intX, intY]);
+
+            } while (intY != 17 || intX != 11);
+
+
+            //Now we do a quick re-run and if undertermined but beside a 0, we repaint it as outside
+            for (int a = 1; a < 141; a++)
+            {
+                for (int b = 1; b < 141; b++)
+                {
+                    if (charCorrectedArray[a, b] == '.')
+                    {
+                        //if there is any zero around its become O
+                        for (int c = -1; c <= 1; c++)
+                        {
+                            for (int d = -1; d <= 1; d++)
+                            {
+                                if (charCorrectedArray[a + c, b + d] == '0') charCorrectedArray[a, b] = '0';
+                            }
+                        }
+                    }
+                }
+            }
+            //we repass reverse
+            for (int a = 140; a > 0; a--)
+            {
+                for (int b = 140; b > 0; b--)
+                {
+                    if (charCorrectedArray[a, b] == '.')
+                    {
+                        //if there is any zero around its become O
+                        for (int c = -1; c <= 1; c++)
+                        {
+                            for (int d = -1; d <= 1; d++)
+                            {
+                                if (charCorrectedArray[a + c, b + d] == '0') charCorrectedArray[a, b] = '0';
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            long lngDotLeft = 0;
+            for (int a = 1; a < 141; a++)
+            {
+                for (int b = 1; b < 141; b++)
+                {
+                    if (charCorrectedArray[a, b] == '.') lngDotLeft++;
+                }
+            }
+
+
+            return lngDotLeft;
         }
+
 
         private void bntRun10_Click(object sender, EventArgs e)
         {
@@ -1648,11 +2212,175 @@ namespace Advent23
         #region Puzzle 11
         private long Puzzle11_PartOne()
         {
-            return 0;
+
+            //Grid is 200x200 
+            char[,] charArrayInit = new char[200, 200]; //to make it easy we pad around, the baseline is 140x140
+            char[,] charArrayFinal = new char[200, 200]; //to make it easy we pad around
+            string strInput10 = Advent23.Properties.Settings.Default.Puzzle11_Input;
+            string[] allString = strInput10.Split("\r\n");
+
+            long lngTotalDistance = 0;
+            //we will do 2, left right, place thing accordinglinghy in X, but then when we repass Y we will need to push them up
+            int intX = 0;
+            int intY = 0;
+
+            //we fill the array, we keep note of where we need to go in a list
+
+
+
+            int intGalaxyCount = 0; // incrementer for the dictionnary
+            Tuple<int, int>[] tpCoordinate = new Tuple<int, int>[500]; //oversized
+
+
+            bool boolHaveGalaxy = false;
+            foreach (string strGames in allString)
+            {
+                intX = -1;
+                intY++;
+
+                boolHaveGalaxy = false;
+                foreach (char aChar in (" " + strGames + " ")) //we pad them to be easier to reference numbers
+                {
+                    intX++;
+
+                    if (aChar == '#')
+                    {
+                        boolHaveGalaxy = true;
+                        charArrayInit[intY, intX] = aChar;
+                    }
+                }
+
+                if (boolHaveGalaxy == false) { intY++; } //we skip next row as expansion
+            }
+
+            //now we did the Y expansion we repass and do the X one
+            //As we repass we are going with the new value and recreate a new one
+            int intX_Inceased = 0;
+            for (intX = 0; intX < 200; intX++)
+            {
+                boolHaveGalaxy = false;
+                intX_Inceased++;
+
+                for (intY = 0; intY < 200; intY++)
+                {
+                    if (charArrayInit[intY, intX] == '#')
+                    {
+                        boolHaveGalaxy = true;
+                        charArrayFinal[intY, intX_Inceased] = charArrayInit[intY, intX_Inceased];
+                        tpCoordinate[intGalaxyCount++] = new Tuple<int, int>(intY, intX_Inceased);
+                    }
+                }
+                if (boolHaveGalaxy == false) { intX_Inceased++; } //we skip next column as expansion
+            }
+
+            //now we got the galaxy expanded and all coordinate, we need to calculate between all
+            //there might be faster way but I will just iterate
+            lngTotalDistance = 0;
+            for (int a = 0; a < intGalaxyCount; a++)
+            {
+                for (int b = a + 1; b < intGalaxyCount; b++)
+                {
+                    intY = tpCoordinate[a].Item1 - tpCoordinate[b].Item1;
+                    if (intY < 0) intY = intY * -1;
+                    intX = tpCoordinate[a].Item2 - tpCoordinate[b].Item2;
+                    if (intX < 0) intX = intX * -1;
+
+                    lngTotalDistance += (intY + intX);
+                }
+            }
+
+
+
+
+            //now we got everything, we will
+
+            return lngTotalDistance;
         }
+
         private long Puzzle11_PartTwo()
         {
-            return 0;
+            //Grid is 200x200 
+            string[,] charArrayInit = new string[200, 200]; //to make it easy we pad around, the baseline is 140x140
+            string[,] charArrayFinal = new string[200, 200]; //to make it easy we pad around
+            string strInput10 = Advent23.Properties.Settings.Default.Puzzle12_Input;
+            string[] allString = strInput10.Split("\r\n");
+
+
+            //692507918828
+            long lngGalaxyIncrease = 999999;
+
+            long lngTotalDistance = 0;
+            //we will do 2, left right, place thing accordinglinghy in X, but then when we repass Y we will need to push them up
+            long intX = 0;
+            long intY = 0;
+            //we fill the array, we keep note of where we need to go in a list
+
+            int intGalaxyCount = 0; // incrementer for the dictionnary
+            Tuple<long, long>[] tpCoordinate = new Tuple<long, long>[500]; //oversized
+
+            bool boolHaveGalaxy = false;
+            int intEmptyCount = 0;
+            foreach (string strGames in allString)
+            {
+                intX = -1;
+                intY++;
+
+                boolHaveGalaxy = false;
+                foreach (char aChar in (" " + strGames + " ")) //we pad them to be easier to reference numbers
+                {
+                    intX++;
+
+                    if (aChar == '#')
+                    {
+                        boolHaveGalaxy = true;
+                        charArrayInit[intY, intX] = (intY + (intEmptyCount * lngGalaxyIncrease)).ToString();
+                    }
+                }
+
+                if (boolHaveGalaxy == false) { intEmptyCount++; } //we skip next row as expansion
+            }
+
+            //now we did the Y expansion we repass and do the X one
+            //As we repass we are going with the new value and recreate a new one
+            int intX_Inceased = 0;
+            intEmptyCount = 0;
+            for (intX = 0; intX < 200; intX++)
+            {
+                boolHaveGalaxy = false;
+
+                for (intY = 0; intY < 200; intY++)
+                {
+                    if (charArrayInit[intY, intX] != null)
+                    {
+                        boolHaveGalaxy = true;
+                        tpCoordinate[intGalaxyCount++] = new Tuple<long, long>(long.Parse(charArrayInit[intY, intX]), (intX + (intEmptyCount * lngGalaxyIncrease)));
+                    }
+                }
+                if (boolHaveGalaxy == false) { intEmptyCount++; } //we skip next column as expansion
+            }
+
+            //now we got the galaxy expanded and all coordinate, we need to calculate between all
+            //there might be faster way but I will just iterate
+            lngTotalDistance = 0;
+            for (int a = 0; a < intGalaxyCount; a++)
+            {
+                for (int b = a + 1; b < intGalaxyCount; b++)
+                {
+                    intY = tpCoordinate[a].Item1 - tpCoordinate[b].Item1;
+                    if (intY < 0) intY = intY * -1;
+                    intX = tpCoordinate[a].Item2 - tpCoordinate[b].Item2;
+                    if (intX < 0) intX = intX * -1;
+
+                    lngTotalDistance += (intY + intX);
+                }
+            }
+
+
+
+
+            //now we got everything, we will
+
+            return lngTotalDistance;
         }
 
         private void bntRun11_Click(object sender, EventArgs e)
@@ -1669,11 +2397,221 @@ namespace Advent23
         #region Puzzle 12
         private long Puzzle12_PartOne()
         {
-            return 0;
+            string strInput12 = Advent23.Properties.Settings.Default.Puzzle12_Input;
+            string[] allString = strInput12.Split("\r\n");
+
+            long lngTotalArragements = 0;
+            foreach (string strGames in allString)
+            {
+                string[] strPuzzleLine = strGames.Split(" ");
+
+                string[] strInstruction = strPuzzleLine[1].Split(",");
+                List<long> lstInstruction = new List<long>();
+
+                string strPuzzle = strPuzzleLine[0];
+                string strInstructions = strPuzzleLine[1];
+
+                //Now we do a little cleanup optimisation (to help the cache)
+                //multiple dot together is useless
+                //starting and ending dots are useless
+                string strPuzzleOptimised = "";
+                bool boolPoints = true; //for removing duplicate  (aka .... will become .)
+                for (int i = 0; i < strPuzzle.Length; i++)
+                {
+                    if (strPuzzle[i] != '.')
+                    {
+                        strPuzzleOptimised += strPuzzle[i];
+                        boolPoints = false;
+                    }
+                    else if (boolPoints == false)
+                    {
+                        //we do keep the first instance of .
+                        strPuzzleOptimised += strPuzzle[i];
+                        boolPoints = true;
+                    }
+                }
+                strPuzzle = strPuzzleOptimised;
+                strPuzzleOptimised = "";
+
+                for (int i = strPuzzle.Length - 1; i >= 0; i--)
+                {
+                    if (strPuzzle[i] != '.')
+                    {
+                        strPuzzleOptimised = strPuzzle.Substring(0, i + 1);
+                        break;
+                    }
+                }
+
+                lngTotalArragements += P12_HowManyFit(strPuzzleOptimised + "|" + strInstructions);
+            }
+
+            return lngTotalArragements;
         }
+
+        private long P12_HowManyFit(string strInput)
+        {
+            long lngFit = 0;
+            //Refitted to use caching
+
+            //removing any . at the start
+            for (int i = 0; i < strInput.Length; i++)
+            {
+                if (strInput[i] != '.')
+                {
+                    strInput = strInput.Substring(i);
+                    break;
+                }
+            }
+
+            //if what we want isn't cached, we comput what we can
+            if (dictPuzzle12Cache.ContainsKey(strInput))
+            {
+                //that one was in the cache
+                lngFit = dictPuzzle12Cache[strInput];
+            }
+            else
+            {
+                //we compute it with recalling ourself
+                //we need to split the instruction and puzzle
+                string[] strArraySplit = strInput.Split("|");
+                string strPuzzle = strArraySplit[0];
+
+                strArraySplit = strArraySplit[1].Split(",");
+                List<long> lstInstruction = new List<long>();
+                for (int i = 0; i < strArraySplit.Length; i++)
+                {
+                    lstInstruction.Add(long.Parse(strArraySplit[i]));
+                }
+
+                //self calling function that will reduce possibility by 1 each time by sets of number etc
+                if (strPuzzle.Length >= lstInstruction.Sum() + (lstInstruction.Count - 1))
+                {
+                    //number one it might be possible
+                    //we calculate 
+
+                    //if the first char is a wild, we recall the function with less string
+                    //if the first char is # then we try to fit it direct
+                    //I already filtered any other possiblity above.
+
+                    //function is recursive and we cache sub-result for faster calculating
+
+                    if (strPuzzle[0] == '?') lngFit += P12_HowManyFit(strInput.Substring(1)); //it was a wild, so maybe if shorter we have things (we didn'T change instruction we we can use input)
+
+                    //now we check if what we have fitted, if not the subfunction above will cover for it
+                    for (int i = 0; i < strPuzzle.Length; i++)
+                    {
+                        if (strPuzzle[i] == '.') 
+                        { 
+                            break; 
+                        } //didn't fit
+
+                        if (lstInstruction[0] == (i+1))
+                        {
+                            //it went in !
+                            if (lstInstruction.Count == 1)
+                            {
+                                //that was the last number to fit, we make sure there is no more damage on the row
+                                if (strPuzzle.Substring(i+1).Contains('#') == false) lngFit++; //we are happy 
+                            }
+                            else
+                            {
+                                //If next character is an #, it doesn't fit (need a . or ? after), Do Nothing
+                                //if its does fit and its valid, we recall the function with less instruction
+
+                                if (strInput[i+1] != '#')
+                                {
+                                    //that fitting work
+                                    //let remove the instruction in the string
+                                    string strInsruction = lstInstruction[0].ToString() + ",";
+
+                                    string strLeft = strPuzzle.Substring(i+2);
+                                    strLeft += "|" + strInput.Substring(strInput.IndexOf(strInsruction, 0) + strInsruction.Length);
+
+                                    lngFit += P12_HowManyFit(strLeft);
+                                }
+                                //we now re-call this method with less space/numbers
+                            }
+                            break;
+                        }
+                    }
+                }
+
+                //we cache what we had for future easier computing
+                if (dictPuzzle12Cache.ContainsKey(strInput) == false) dictPuzzle12Cache.Add(strInput, lngFit);
+            } //was it cached
+
+            return lngFit;
+        }
+
+
         private long Puzzle12_PartTwo()
         {
-            return 0;
+            string strInput12 = Advent23.Properties.Settings.Default.Puzzle12_Input;
+            string[] allString = strInput12.Split("\r\n");
+
+            long lngTotalArragements = 0;
+
+            dictPuzzle12Cache = new Dictionary<string, long>();
+            long lngTotalLine = 0;
+            foreach (string strGames in allString)
+            {
+                lngTotalLine++;
+
+                string[] strPuzzleLine = strGames.Split(" ");
+                //0 = line to parse with good/bad/unknown
+                //right = nonogram instruction
+
+                string[] strInstruction = strPuzzleLine[1].Split(",");
+                List<long> lstInstruction = new List<long>();
+
+                string strFoldPuzzle = strPuzzleLine[0];
+                string strFoldInstruction = strPuzzleLine[1];
+                List<long> lstDefolded = new List<long>();
+
+                for (int i = 0; i < 4; i++)
+                {
+                    strFoldPuzzle += "?" + strPuzzleLine[0];
+                    strFoldInstruction += "," + strPuzzleLine[1];
+                }
+
+
+                //Now we do a little cleanup optimisation (to help the cache)
+                //multiple dot together is useless
+                //starting and ending dots are useless
+                string strPuzzleOptimised = "";
+                bool boolPoints = true; //for removing duplicate  (aka .... will become .)
+                for (int i = 0; i < strFoldPuzzle.Length; i++)
+                {
+                    if (strFoldPuzzle[i] != '.')
+                    {
+                        strPuzzleOptimised += strFoldPuzzle[i];
+                        boolPoints = false;
+                    }
+                    else if (boolPoints == false)
+                    {
+                        //we do keep the first instance of .
+                        strPuzzleOptimised += strFoldPuzzle[i];
+                        boolPoints = true;
+                    }
+                }
+                strFoldPuzzle = strPuzzleOptimised;
+                strPuzzleOptimised = "";
+
+                for (int i = strFoldPuzzle.Length-1; i >=0 ; i--)
+                {
+                    if (strFoldPuzzle[i] != '.')
+                    {
+                        strPuzzleOptimised = strFoldPuzzle.Substring(0, i+1);
+                        break;
+                    }
+                }
+
+                //doing it lazy way, we add 4 more
+                Debug.WriteLine("Line " + lngTotalLine.ToString());
+                lngTotalArragements += P12_HowManyFit(strPuzzleOptimised + "|" + strFoldInstruction);
+            }
+
+            return lngTotalArragements;
         }
 
         private void bntRun12_Click(object sender, EventArgs e)
