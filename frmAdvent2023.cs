@@ -2500,31 +2500,31 @@ namespace Advent23
                     //now we check if what we have fitted, if not the subfunction above will cover for it
                     for (int i = 0; i < strPuzzle.Length; i++)
                     {
-                        if (strPuzzle[i] == '.') 
-                        { 
-                            break; 
+                        if (strPuzzle[i] == '.')
+                        {
+                            break;
                         } //didn't fit
 
-                        if (lstInstruction[0] == (i+1))
+                        if (lstInstruction[0] == (i + 1))
                         {
                             //it went in !
                             if (lstInstruction.Count == 1)
                             {
                                 //that was the last number to fit, we make sure there is no more damage on the row
-                                if (strPuzzle.Substring(i+1).Contains('#') == false) lngFit++; //we are happy 
+                                if (strPuzzle.Substring(i + 1).Contains('#') == false) lngFit++; //we are happy 
                             }
                             else
                             {
                                 //If next character is an #, it doesn't fit (need a . or ? after), Do Nothing
                                 //if its does fit and its valid, we recall the function with less instruction
 
-                                if (strInput[i+1] != '#')
+                                if (strInput[i + 1] != '#')
                                 {
                                     //that fitting work
                                     //let remove the instruction in the string
                                     string strInsruction = lstInstruction[0].ToString() + ",";
 
-                                    string strLeft = strPuzzle.Substring(i+2);
+                                    string strLeft = strPuzzle.Substring(i + 2);
                                     strLeft += "|" + strInput.Substring(strInput.IndexOf(strInsruction, 0) + strInsruction.Length);
 
                                     lngFit += P12_HowManyFit(strLeft);
@@ -2597,11 +2597,11 @@ namespace Advent23
                 strFoldPuzzle = strPuzzleOptimised;
                 strPuzzleOptimised = "";
 
-                for (int i = strFoldPuzzle.Length-1; i >=0 ; i--)
+                for (int i = strFoldPuzzle.Length - 1; i >= 0; i--)
                 {
                     if (strFoldPuzzle[i] != '.')
                     {
-                        strPuzzleOptimised = strFoldPuzzle.Substring(0, i+1);
+                        strPuzzleOptimised = strFoldPuzzle.Substring(0, i + 1);
                         break;
                     }
                 }
@@ -2612,6 +2612,7 @@ namespace Advent23
             }
 
             return lngTotalArragements;
+
         }
 
         private void bntRun12_Click(object sender, EventArgs e)
@@ -2628,11 +2629,213 @@ namespace Advent23
         #region Puzzle 13
         private long Puzzle13_PartOne()
         {
-            return 0;
+            string strInput13 = Advent23.Properties.Settings.Default.Puzzle13_Input;
+            long lnmgTotalPoint = 0;
+
+            string[] allString = strInput13.Split("\r\n\r\n");
+
+            foreach (string strPattern in allString)
+            {
+                string[] strAllLines;
+                strAllLines = strPattern.Split("\r\n");
+                //now we read all, and we will create two array and store it differently
+
+                //we do until we match then we count where we were.
+                int intRow = -1;
+
+                bool intRowMirror = false;
+
+                char[,] chCol = new char[strAllLines[0].Length, strAllLines.Length];
+                char[,] chRow = new char[strAllLines.Length, strAllLines[0].Length];
+
+                for (int a = 0; a < strAllLines[0].Length; a++)
+                {
+                    for (int b = 0; b < strAllLines.Length; b++)
+                    {
+                        chCol[a, b] = strAllLines[b][a];
+                        chRow[b, a] = strAllLines[b][a];
+                    }
+                }
+
+                //we go simple to identify them
+                string strOldRow = "                                             "; //random high so not OOB
+                foreach (string strCurrentRow in strAllLines)
+                {
+                    intRow++;
+
+                    int intDifferent = 0;
+                    for (int i = 0; i < strCurrentRow.Length; i++)
+                    {
+                        if (strCurrentRow[i] != strOldRow[i]) intDifferent++;
+                    }
+
+                    if (intDifferent == 0)
+                    {
+                        if (Puzzle13VerifyFullMirror(chRow, intRow, strCurrentRow.Length) == true)
+                        {
+                            //we got our row symetry
+                            lnmgTotalPoint += (intRow * 100);
+                            intRowMirror = true;
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        strOldRow = strCurrentRow;
+                    }
+                }
+
+                strOldRow = "";
+                for (int a = 1; a < strAllLines[0].Length; a++)
+                {
+
+                    int intDifferent = 0;
+                    for (int b = 0; b < strAllLines.Length; b++)
+                    {
+                        if (strAllLines[b][a] != strAllLines[b][a - 1]) intDifferent++;
+                    }
+
+                    if (intDifferent == 0)
+                    {
+                        if (Puzzle13VerifyFullMirror(chCol, a, strAllLines.Length) == true)
+                        {
+                            //we got our row symetry
+                            lnmgTotalPoint += a;
+                            break;
+                        }
+                    }
+                }
+
+            }
+
+            return lnmgTotalPoint;
         }
+
+        private bool Puzzle13VerifyFullMirror(char[,] chArray, int intToCheck, int intLenght, int intRequiredError = 0)
+        {
+            //on the array [X,Y] X = 'right' matched so [X,Y] = [X-1,Y]
+
+
+            //we always want all Y to match
+            //we loop until we either get a mistmatch (return null)
+            //or we get out of bound
+
+            //we already verified the row, so we adjust
+            int intRow1 = intToCheck - 1;
+            int intRow2 = intToCheck;
+            int intMaxRow = (int)(chArray.Length / intLenght);
+
+            int intErrorCount = 0;
+            bool boolMirror = true;
+            while (intRow1 >= 0 && intRow2 < intMaxRow)
+            {
+                for (int Y = 0; Y < intLenght; Y++)
+                {
+                    if (chArray[intRow1, Y] != chArray[intRow2, Y]) intErrorCount++;                        //does not match
+
+                    if (intErrorCount > intRequiredError)
+                    {
+                        boolMirror = false; break;
+                    }
+                }
+
+                intRow1--;
+                intRow2++;
+            }
+
+            if (intErrorCount != intRequiredError) boolMirror = false; //we also need exactly X change
+
+            return boolMirror;
+
+        }
+
+
         private long Puzzle13_PartTwo()
         {
-            return 0;
+            //43054
+            //45619
+            //32854
+            string strInput13 = Advent23.Properties.Settings.Default.Puzzle13_Input;
+            long lnmgTotalPoint = 0;
+
+            string[] allString = strInput13.Split("\r\n\r\n");
+            foreach (string strPattern in allString)
+            {
+                string[] strAllLines;
+                strAllLines = strPattern.Split("\r\n");
+                //now we read all, and we will create two array and store it differently
+
+                //we do until we match then we count where we were.
+                int intRow = -1;
+
+                bool intRowMirror = false;
+
+                char[,] chCol = new char[strAllLines[0].Length, strAllLines.Length];
+                char[,] chRow = new char[strAllLines.Length, strAllLines[0].Length];
+
+                for (int a = 0; a < strAllLines[0].Length; a++)
+                {
+                    for (int b = 0; b < strAllLines.Length; b++)
+                    {
+                        chCol[a, b] = strAllLines[b][a];
+                        chRow[b, a] = strAllLines[b][a];
+                    }
+                }
+
+                //we go simple to identify them
+                string strOldRow = "                                             "; //random high so not OOB
+                foreach (string strCurrentRow in strAllLines)
+                {
+                    intRow++;
+
+                    int intDifferent = 0;
+                    for (int i = 0; i < strCurrentRow.Length; i++)
+                    {
+                        if (strCurrentRow[i] != strOldRow[i]) intDifferent++;
+                    }
+
+                    if (intDifferent <= 1)
+                    {
+                        if (Puzzle13VerifyFullMirror(chRow, intRow, strCurrentRow.Length, 1) == true)
+                        {
+                            //we got our row symetry
+                            lnmgTotalPoint += (intRow * 100);
+                            intRowMirror = true;
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        strOldRow = strCurrentRow;
+                    }
+                }
+
+                if (intRowMirror == false)
+                {
+                    strOldRow = "";
+                    for (int a = 1; a < strAllLines[0].Length; a++)
+                    {
+
+                        int intDifferent = 0;
+                        for (int b = 0; b < strAllLines.Length; b++)
+                        {
+                            if (strAllLines[b][a] != strAllLines[b][a - 1]) intDifferent++;
+                        }
+
+                        if (intDifferent <= 1)
+                        {
+                            if (Puzzle13VerifyFullMirror(chCol, a, strAllLines.Length, 1) == true)
+                            {
+                                //we got our row symetry
+                                lnmgTotalPoint += a;
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+
+            return lnmgTotalPoint;
         }
 
         private void bntRun13_Click(object sender, EventArgs e)
@@ -2649,11 +2852,203 @@ namespace Advent23
         #region Puzzle 14
         private long Puzzle14_PartOne()
         {
-            return 0;
+            //Grid is 140x140 
+            char[,] charMap = new char[100, 100]; //to make it easy we pad around
+            string strInput14 = Advent23.Properties.Settings.Default.Puzzle14_Input;
+            string[] allString = strInput14.Split("\r\n");
+
+            long lngLoad = 0;
+
+            int intX = -1;
+            int intY = 0;
+
+            foreach (string strGames in allString)
+            {
+                intX++;
+                intY = 0;
+                foreach (char chData in strGames)
+                {
+                    charMap[intX, intY++] = chData;
+                }
+            }
+
+            charMap = P14Tilt("NORTH", charMap, 100);
+
+            for (intX = 0; intX < 100; intX++)
+            {
+                for (intY = 0; intY < 100; intY++)
+                {
+                    if (charMap[intX, intY] == 'O') lngLoad += (100 - intX);
+                }
+            }
+
+            return lngLoad;
         }
+
+        public char[,] p14chMap;
         private long Puzzle14_PartTwo()
         {
-            return 0;
+            //Grid is 140x140 
+            char[,] charMap = new char[100, 100]; //to make it easy we pad around
+            string strInput14 = Advent23.Properties.Settings.Default.Puzzle14_Input;
+            string[] allString = strInput14.Split("\r\n");
+
+            long lngLoad = 0;
+
+            int intX = -1;
+            int intY = 0;
+
+            foreach (string strGames in allString)
+            {
+                intX++;
+                intY = 0;
+                foreach (char chData in strGames)
+                {
+                    charMap[intX, intY++] = chData;
+                }
+            }
+
+            long[] lngSample = new long[10000];
+            //we take a sample
+            for (int x = 0; x < 10000; x++)
+            {
+                charMap = P14Tilt("NORTH", charMap, 100);
+                charMap = P14Tilt("WEST", charMap, 100);
+                charMap = P14Tilt("SOUTH", charMap, 100);
+                charMap = P14Tilt("EAST", charMap, 100);
+
+                lngLoad = 0;
+                for (intX = 0; intX < 100; intX++)
+                {
+                    for (intY = 0; intY < 100; intY++)
+                    {
+                        if (charMap[intX, intY] == 'O') lngLoad += (100 - intX);
+                    }
+                }
+                lngSample[x] = lngLoad;
+            }
+
+            //we got our sample, and there is a pattern in the numbers, we will fake calculate the final entry at 1000000000
+            Dictionary<long, long> dictRecurrence = new Dictionary<long, long>();
+            int intReccurenceStart = 0;
+            List<long> lngReccurence = new List<long>();
+
+            for (int i = 9000; i < 10000; i++)
+            {
+                if (!dictRecurrence.ContainsKey(lngSample[i]))
+                {
+                    dictRecurrence.Add(lngSample[i], 1);
+                    lngReccurence.Add(lngSample[i]);
+                }
+                else
+                {
+                    intReccurenceStart = i;
+                    break;
+                }
+
+            }
+            lngLoad = lngReccurence[(999999999 - intReccurenceStart) % dictRecurrence.Count()];
+
+
+            return lngLoad;
+        }
+        private char[,] P14Tilt(string strDirection, char[,] chGrid, int intSize = 100)
+        {
+            //The different is when we start
+            //and the direction, but logic is the same
+            //We will treat north/south as the same and east/west as same
+            //with modifyer if we go 100 or 1
+
+            int intModX = 0;
+            int intModY = 0;
+            int intDirect = 0;
+
+            int intStartX = 0;
+            int intStartY = 0;
+
+            switch (strDirection)
+            {
+                case "NORTH":
+                    intStartX = 1;
+                    intStartY = 0;
+                    intModX = 1;
+                    intModY = 1;
+                    intDirect = -1;
+                    break;
+                case "SOUTH":
+                    intStartX = intSize - 2;
+                    intStartY = 0;
+                    intModX = -1;
+                    intModY = 1;
+                    intDirect = 1;
+                    break;
+
+                case "WEST":
+                    intStartX = 0;
+                    intStartY = 1;
+                    intModX = 1;
+                    intModY = 1;
+                    intDirect = -1;
+                    break;
+                case "EAST":
+                    intStartX = 0;
+                    intStartY = intSize - 2;
+                    intModX = 1;
+                    intModY = -1;
+                    intDirect = 1;
+                    break;
+            }
+
+
+
+            for (int x = intStartX; x < intSize && x >= 0; x = x + intModX)
+            {
+                for (int y = intStartY; y < intSize && y >= 0; y = y + intModY)
+                {
+                    //if we hit a 0, we scan above and place it on first empty spot
+                    if (chGrid[x, y] == 'O')
+                    {
+                        int z = 0;
+                        //we play on X axis depending if we go up or down (defined above)
+                        if (strDirection == "NORTH" || strDirection == "SOUTH")
+                        {
+                            for (z = x + intDirect; z >= 0 && z < intSize; z = z + intDirect)
+                            {
+                                if (chGrid[z, y] != '.') break;
+                            }
+
+                            //we hit a blocker, we stop
+                            z = z - intDirect;
+                            if (z != x)
+                            {
+                                //we swap
+                                chGrid[z, y] = 'O';
+                                chGrid[x, y] = '.';
+                            }
+                        }
+                        else if (strDirection == "WEST" || strDirection == "EAST")
+                        {
+                            for (z = y + intDirect; z >= 0 && z < intSize; z = z + intDirect)
+                            {
+                                if (chGrid[x, z] != '.') break;
+                            }
+
+                            //we hit a blocker, we stop
+                            z = z - intDirect;
+                            if (z != y)
+                            {
+                                //we swap
+                                chGrid[x, z] = 'O';
+                                chGrid[x, y] = '.';
+                            }
+                        }
+
+                    }
+                }
+            }
+            return chGrid;
+
+
         }
 
         private void bntRun14_Click(object sender, EventArgs e)
