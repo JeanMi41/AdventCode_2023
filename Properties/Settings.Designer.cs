@@ -2956,8 +2956,292 @@ namespace Advent23.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("O....#....\r\nO.OO#....#\r\n.....##...\r\nOO.#O....O\r\n.O.....O#.\r\nO.#..O.#.#\r\n..O..#O.." +
-            "O\r\n.......O..\r\n#....###..\r\n#OO..#....")]
+        [global::System.Configuration.DefaultSettingValueAttribute("hbrg-,vc-,jlls-,cvmq=5,cpm=9,hgct=4,bnblt=7,ccmd-,fs=2,cttxtn=6,bsn=5,rmj=8,rkxg-" +
+            ",ps-,xf-,gnhm=7,nbcg=7,xx-,gph-,hrc-,ppl=9,ng-,cxjsr-,jd=7,jmq-,zj=8,nnmj-,glplq" +
+            "-,zdd-,mk=6,fj-,qx=5,vj=1,jf=3,hrh-,jqc=4,dq-,nnmj=9,tvz-,xltm=5,msz=2,fnn=2,dnj" +
+            "dn=1,bkc-,lc=6,cpk=3,lmxv=8,gph-,mx-,gcfl=8,kk=5,cxfrpr=6,zpj-,lpbrxv=2,dv=8,fj-" +
+            ",fdcl-,rvvv=5,jqqkmd-,hrg-,cqg-,ljrdxk-,dhq=1,hpr=3,gsq-,zj-,ghf=1,rdt-,hrg=5,qq" +
+            "h=3,tcv-,xtm=5,drp=3,jkv-,qjgqb=6,smsh=1,zrcqs-,hgct=5,qx=1,xvd=3,rc=9,kknkjz-,c" +
+            "vq=4,sq=3,qvkv=7,prk-,ktp-,xln=3,cnm-,vct=5,xc-,cs=6,prtnpg=6,ttvl-,kknkjz=7,dgt" +
+            "n-,zv=4,ctqtk=3,mdv=6,rc-,zl=9,trq-,qfp-,pmgsxv=9,dzr-,cdzfk=3,xfvj=2,tqp-,nnmj-" +
+            ",hbrg=9,ckk=7,bjrvxh=3,khlc=5,dmq-,tclnp-,pkd=6,np=9,fnn-,kjqx-,pkd=3,jctv=3,gzm" +
+            "=2,bb-,kd-,kmnr=4,fhvv-,jqc-,mnv-,lpjl-,vqh-,zz=7,xgzzl=3,qjgqb=3,rds-,zqv-,db=7" +
+            ",xx=9,psm=2,gbfb=7,fs=9,rp-,tv-,pc-,gsq-,trq=2,mvs-,xnbx-,kh=7,kl-,rm-,nqm-,smk=" +
+            "8,pt=1,bbf-,rsgx=6,lpjl=8,tmg-,kjqx=8,kbvm=9,tj-,btl-,xs=2,bh=8,gh=8,dt=5,st-,ph" +
+            "p=8,bx-,jpksf-,pmp-,dvd-,rgxnz=8,jf-,hd-,lx-,ncm=4,jd=3,rbt=6,tj-,ds-,jkdr-,pdbh" +
+            "-,hnn=3,smk-,frrg-,pskx-,hk-,rt=3,cg-,jcp-,zst=6,qxsddj-,klj-,ph-,rsvzkj=1,rgxnz" +
+            "-,cnm-,xss=6,bh=2,jnv=8,qspjl-,bbf-,njjk-,htm=1,kjt-,tdk-,hzs=7,lxx=6,xgzzl=5,ss" +
+            "ns-,gd=9,rt-,gst=1,mdv-,crg=7,zh=1,cqg=8,lxrk-,jbd-,tmg-,nqm=6,gph-,pkd-,vr=8,cc" +
+            "md-,mvs=6,gq=9,xjkhv-,jxl-,jd-,kcgxz=4,php=3,cg-,xss=4,dk=2,tv=2,dhx-,rdh=6,tc=4" +
+            ",sp-,hnn-,fxk=2,jm-,zt-,pkd-,ftpxd=5,rp-,xjhdk=5,lq=5,lnv=3,jkv=7,rdh-,rc-,dv-,x" +
+            "zh-,tgn-,dx-,zsvjv=9,vz=9,kj=3,bh-,gf=2,fl=9,nkr=9,gzm=9,pgm-,glcx-,kmnr=2,qs=1," +
+            "tj=1,mq-,gvbrv=5,rsr=8,fhvv=5,tp-,tj=8,qlqm=1,ctml-,dvlpz-,bvx-,qspjl-,jm=3,ncdn" +
+            "z=2,qxn=5,kvcv-,szxvn=8,gnhm-,xhv-,gjcm-,lb=7,cpf=6,kqnlm-,ghq=8,sq=8,rsr=7,dgtv" +
+            "ts=9,vgfgh-,fldd=8,htm-,frlqr-,bm=7,cg=1,kk-,ccfzjq-,nbcg=8,xkh=7,lpjl=5,dj-,tc=" +
+            "8,njlmn=4,mx=1,zl-,xjhdk-,sv=9,kl-,fbk=1,rgxnz=1,cdcb=9,klj=9,lmxv-,hcgtn=7,ltlj" +
+            "r=1,xs-,br=3,sq-,qg=1,vz-,rmj-,qzg-,zrcqs-,mfgxcx-,bm-,fgq-,rsvp-,njjk=8,ldv=4,g" +
+            "knc-,gzktrh=3,vr-,dlsm-,mx-,xs-,btl-,jf=5,ljrdxk-,bnblt=4,rk=2,mk=4,kgvq-,bh=6,d" +
+            "ncb-,vh=8,mxzbj=5,cxjsr-,sdcx-,fldd-,kh-,gc-,cs-,fl=1,jrkql=7,pm-,rsvp=6,kh-,glf" +
+            "-,cvmq-,zcq=4,fmd-,ttvl=5,vdc=2,cpf-,dx-,kbvm-,gd=9,kknkjz-,zz-,zh=2,ttvl=8,pgx-" +
+            ",jcj=6,ppl=3,fmd-,zc=9,nvlff-,lnv=6,kgvq-,fdcl=4,dnjdn-,thzx-,nq-,blqv-,psn=4,mx" +
+            "zbj=8,cvq-,fzt-,rbt=9,zb=4,cg=1,jsjfs-,pl=7,pdbh-,dt-,kmnr=9,sqv-,gbfb=9,xtm-,bz" +
+            "l-,smk-,sv-,pjx-,ncm-,dj-,ctms=5,bm-,fgd-,qspjl=8,pvm-,lhc=5,ls=8,sqv=7,htv-,zt=" +
+            "5,kvsd=7,gd-,jjf=7,kd=1,cqg-,sg-,tghsj=2,bf-,nnmj-,ng-,dbcb-,dgd=9,zdd-,xkh-,gh-" +
+            ",bvm-,rb-,zmfz-,xkh-,lpjl-,sz=8,ppl-,khlc=6,cnm=4,xf=8,ljrdxk=4,dlsm-,rnt-,dr-,r" +
+            "sr-,nm-,qhtc-,tz=4,rvs-,dnh=9,nflm-,dnl=5,xhv=1,ql-,jbmd=4,gbfb=6,ps-,ltf=8,mmn-" +
+            ",frrg=8,rh-,dmq=6,ng=6,ngd-,hn-,smsh=1,cg=4,vqh-,ncm-,zd=3,sqv-,lmxv-,qlqm=8,ztg" +
+            "nkx-,nkr-,qjmx=5,cv-,lc-,pc-,zhq=5,blqv=4,ncm=8,tflb-,rsr=2,dvlpz-,mxl-,gc-,rm=1" +
+            ",zt=8,fmd=2,dncb=1,xss=4,cqh=5,dlm=5,jctv=1,gbfb-,xm-,kz-,sz=6,btl=9,pv=7,hzmp=8" +
+            ",nsjt-,mnv=4,vc-,jbd-,ccmd-,dlsm-,ldv=8,clj-,stdm=7,ct=4,xs=1,rkxg=7,np-,qgt-,hr" +
+            "v=8,pr-,bzhf=7,fbk-,xf=2,gv=2,tc=7,km-,ltljr=4,gxc-,dnh=9,pdbh=7,ltf-,ldv=4,qx-," +
+            "frrg=8,tz=2,jmq=7,tsd=7,vx=2,rmhz=2,zpt-,df=5,zdd=6,sz-,rh=6,tv=1,rvvv-,khlc-,tg" +
+            "k=3,smk=7,qgt=2,jsjfs=8,zmfz=9,nqm=3,vct=1,lc-,hd-,tljj=2,lh-,frrg=7,zk-,kjqx=5," +
+            "cvj-,qm=4,zj=4,tcv=4,xfvj-,ndfqxt-,vqq=7,fv-,hdr=7,xx=7,tnjs=5,dxb-,gjcm-,xkl=7," +
+            "ncdnz-,zd=8,ndtf-,vmhh=5,prk-,pjg-,vt-,hrc=4,pm-,qvkv=9,gst=4,rq=2,prtnpg-,jcp-," +
+            "zgms=4,sz-,vqq-,qgt=7,xfvj-,sqftz=4,cnm-,psn-,kjt=9,bzl=1,xzh=2,vqq=1,prb=3,tcv-" +
+            ",mpcvh-,lb=6,bf=5,pjx=4,lxpmn-,dx-,dz-,qfp=2,tcv=8,tx-,fj=3,tx=8,lhc-,rkh-,ttvl-" +
+            ",vc-,zdd-,jmq-,rbt-,psn-,cqh=9,gcmgdr=1,mk-,fgd-,mk=9,dr=9,dk-,sp=5,kvcv=8,xc=6," +
+            "fxk-,jpksf-,tclnp=2,lcc=2,ttvl-,kknkjz=9,hh=1,rh-,rt-,hgct-,grdp=6,qvkv-,dcz=3,j" +
+            "pksf=9,tsd-,nflm=4,glplq=4,rmd-,gddfx-,vc=7,njlmn=9,xxfz-,nflm=7,jpksf-,ssns=5,s" +
+            "px=1,rft-,fvt-,lzz-,qxn=3,ghq-,xm-,pz-,rv-,mxzbj=4,prtnpg-,xxfz=8,hbhvz-,lfp-,cq" +
+            "g=1,lcc=9,pjx-,zqv-,fldd=6,rdh-,ks-,rvs-,hzmp=5,zmx-,qs=8,zk-,xn=1,ddll=6,rmj=5," +
+            "ljrdxk-,fbk-,bvx=5,km=2,bm=1,ccmd-,fvt=5,pp=7,km-,zd-,vqh-,hrc-,sqv=8,cdcb-,qht=" +
+            "2,gb-,gzktrh=9,nb-,nflm-,fqv=5,tflb=2,ph=2,gph=8,pd=7,psn-,hnn=1,grdp=4,vmhh=8,v" +
+            "t=2,xf=6,tnc=4,cvq=2,hzs-,rkh=6,zmfz-,km=8,mz-,lvzqj-,jqhl-,rvs=8,ctm-,cvmq=3,dm" +
+            "q=5,dzqx=1,pc-,fgl=4,kvsd=8,lcc=5,vqq=7,hcv=2,lx=4,tgk=5,gph=9,dnjdn-,gg-,dnl=1," +
+            "ltljr=2,jkdr=8,tj-,cpk=7,mk=5,ssns-,kz=6,bhk-,fgq=2,pz-,pc-,zgms=7,zmx-,hvk=9,gb" +
+            "=9,crg-,mk=3,gg-,sg-,jkv-,vmhh=8,ctms=4,drp=1,gddfx=4,zrfvq=5,tv=7,pqv=5,dj-,bqg" +
+            "n-,rm=2,rmj=3,dk-,hvk=1,cvmq=4,jbmd-,xxfz-,ndfqxt=5,bbs=6,rdt-,lbf-,rsvp-,mx-,kl" +
+            "=8,tdk=6,bb=8,ds=8,nqxk-,gsq-,vt-,fkc-,xtm-,qjmx-,bzl=6,pnp=7,pz-,cdzfk=9,dx-,fr" +
+            "rg=3,pskx=5,cpf-,tc=3,lb=6,md=3,tj-,jm=2,tqp=3,cs-,jnv-,jctv=8,cgbg-,hbrg=7,pm-," +
+            "gxc=6,vz=2,gg-,kvcv=7,pkd=4,ttvl-,jjf-,gj-,md-,rsgx-,hd-,cv=3,xf-,ddgf=4,lxx-,dg" +
+            "k=8,dvlpz=1,dlm=7,kknkjz=4,nbt-,rbt=3,cv-,cdcb=9,jvx=4,cnm-,fl-,dhq-,mxzbj-,zc-," +
+            "kmnr-,fqv=1,gjcm-,fgl-,qgt=8,grx-,xpv-,km-,jbmd=3,bf=1,ttvl-,pnp=7,gh=1,xkl-,zpt" +
+            "-,gts=3,jsjfs=7,jqc=2,lxpmn-,jm-,sdcx-,rgxnz-,hzs-,nflm=5,prb=5,vz-,frlqr=9,ckk-" +
+            ",tghsj=6,vr=3,lh=1,gbfb=6,pgx=1,ls=8,mhxq-,tv-,md=8,bbf-,vqh-,rkxg-,szxvn=4,tz-," +
+            "lxrk=3,ppl=2,bm=8,kj=7,qvkv=9,bh-,lg-,vxq=2,pdbh-,gvbrv=8,drp=2,cg-,pm-,lpbrxv=9" +
+            ",kl=2,pg=3,jbmd=9,xltm=9,dncb-,lcc=3,hgct-,khlc=8,trq=2,zpj-,tljj=8,cdzfk-,qspjl" +
+            "-,lfp=1,zt-,kj-,nm=4,lxrk=4,bbf=9,glplq-,kvcv=1,dgtn=2,gknc-,vxq=6,fs-,gvbrv=3,q" +
+            "jmx=1,sz-,pv-,lhgdbs=5,sg-,lfp=9,qbc-,llkb-,zl=3,kk=5,hnn=2,msz=6,pg=2,klj-,frlq" +
+            "r=8,xnbx=2,tv-,jnv-,kgt=2,kdts-,dh-,nbcg-,trgjf=1,pgm=4,gvbrv-,rvvv-,jcj-,xjhdk-" +
+            ",lb=3,fs-,cs=5,lx=5,ct-,xkl=1,vh=5,clj=9,xjkhv=4,fbk=5,bjrvxh-,jh=6,blqv=5,jcp-," +
+            "dv-,cgbg-,sqv=3,ckk-,lh-,mx=4,kjt=2,mx-,st-,mdv=6,hk=6,mn=2,lfp-,ltljr-,rc=1,pv=" +
+            "7,hz-,gsq=1,vgfgh=1,jkf-,pgx-,jqc-,mnv=1,glb=6,bvm-,qxn=6,gg=2,mk=7,sv=4,zc-,gb=" +
+            "2,rft-,pxqj-,lg=3,blqv-,pnsqf=5,dn-,rsvp-,pgx-,prk-,cdcb=1,xhv-,qbc-,kbvm=3,msz=" +
+            "8,dg=4,clj=1,kj-,fl-,ls=5,mmn=2,blqv-,rv=7,gcmgdr-,kl-,dnjdn=7,dd-,zcq-,tt-,jqqk" +
+            "md-,jxl-,xz-,ztgnkx=6,lxrk-,kd-,kh-,fxk=5,qg=1,jbmd-,fvt-,lzskx=1,dvd=6,nh=2,jm=" +
+            "7,tgk=1,qgt=9,rj-,cpk=5,prb-,xfv-,kbvm=5,cnm=2,ssx-,gh-,pdtxl-,kdts=5,tljj-,xtm-" +
+            ",kmnr-,fl-,gbfb=4,tdk=1,vhp-,dn-,ztgnkx-,vqq-,dd-,xs-,rmj=2,grk-,pjx=1,hbrg-,dk-" +
+            ",pc=6,vj=2,gv=2,lpbrxv=6,ddgf-,pr=2,fxk-,ct=3,tcv=6,bjrvxh-,gjcm=1,kvcv=2,ndtf=8" +
+            ",khlc=5,fl-,xtm=7,lp=1,ph=9,xx-,hp-,lc=9,vt-,kdts=3,nk=8,fvt=2,xjhdk-,dxvsc=1,cx" +
+            "-,md-,lxx=9,rv-,xxfz-,vgfgh-,tljj-,xgzzl-,psn-,sqftz-,vh-,lfp-,mx-,gvbrv=7,rkh-," +
+            "sp-,hrh-,tclnp-,ssspbh=7,mlq-,jsjfs-,xfv=5,cv-,mq-,xv=6,rt=8,hpr=3,mhxq-,dq-,tgn" +
+            "-,dxc=5,cv=3,qvkv=9,jkv=8,tvz=9,cvq-,sg-,rsr-,gst-,dh=4,ssspbh=9,xjkhv=6,bzl=7,q" +
+            "bc-,jmsb-,njlmn=8,rp-,thq-,xkh=5,rj-,jvx=3,lhc-,dlm-,hrh=5,prtnpg-,mn-,md-,bsn=2" +
+            ",hgx=3,jqhl-,xs-,tdk=2,ct-,cqg-,hzt-,lq-,pm=8,gf=5,jvx=3,cttxtn-,hdr=5,dnh=1,sz-" +
+            ",pxqj=5,bjrvxh=2,jcj-,tv-,pz-,nqjk-,qspjl=7,vbcx-,km=6,pjg=2,jmq-,sp=1,cj-,mz=6," +
+            "lhgdbs-,rt-,lbf-,gddfx=3,pl-,znvf=1,rb=6,hk-,jh=7,rmj-,fbk-,frlqr=3,zgms=8,gnhm-" +
+            ",rmj-,sztqf=2,dnl=9,rj=8,tx-,fdcl=8,xpv=4,pr=9,rnq-,jd=1,kh=6,dnjdn-,qjnxd-,jbmd" +
+            "=1,hgx-,ftpxd=2,lh-,zsvjv-,cx-,cxjsr=6,jcp-,hbrg-,sqftz-,lnv-,grx=1,lh=2,rp=6,mn" +
+            "-,gzktrh=2,ckk-,gzm=1,fv-,vt-,gd-,cqg-,gbs=8,jsjfs=5,zqv-,mxl-,szv-,vdmh=7,zh-,g" +
+            "c-,fgl=1,dd-,lbf-,crg=2,tghsj=2,hqpq-,zv-,kl=4,ssspbh-,dbcb-,dzr=8,pxqj=4,gxc=9," +
+            "thbn-,hh-,rt=8,lzz-,lmxv-,xd=5,rsgx=8,rsvp=2,lmznsr-,lvzqj=3,lbf=4,tp=8,blqv-,ls" +
+            "bn=7,pbdgnl=6,vbcx=5,xkh=9,qjgqb=8,lmznsr-,hrg-,ssns-,bvx=3,kgt=3,khlc-,jmq=5,ql" +
+            "qm-,qjnxd-,dxb-,ctm=7,dcz=3,fhvv-,kcgxz=2,jlls=3,pd-,hqpq-,sn-,zpj=4,cqh-,jrr-,d" +
+            "rp-,nbt=8,ds=5,gst=9,dzr=6,btl-,tghsj-,glplq=6,dxc-,smk-,hzmp-,rdt-,bc-,fvt=8,fg" +
+            "d=1,dz-,gknc-,bf-,sqv-,qht=1,ttjk=7,fkc=2,bb-,rsgx=8,zd-,gc-,rsgx-,zt=8,dvd=5,pj" +
+            "g=6,lc=9,mxzbj=2,cvq=3,pkd=3,gq=2,bnblt=4,hnn=2,mlq-,xd-,lsbn-,dhq=9,mccg=5,kcgx" +
+            "z-,qjgqb-,pd-,sqv-,cpk-,lpjl-,hnn-,dxvsc=6,htm=3,hpr-,xfv-,dzr-,pdtxl-,bh=8,dhx=" +
+            "5,cpm-,ljrdxk-,rkxg=4,ds=9,vqq-,ctqtk-,kd=7,sp=7,hcgtn=8,qfp=5,kz=1,bc=6,mfqx-,m" +
+            "fgxcx=2,sn-,ddll-,dhq=4,ltljr-,jlls=1,hrg-,rtkb=6,sqv=6,rkh=1,qjmx-,zgms=1,gknc=" +
+            "6,mccg=6,bqgn-,xn=5,gd-,hgx=1,sz=4,rv-,dd-,hrg-,pdbh-,lb-,tqp=3,pc=4,qjgqb=8,zdd" +
+            "=1,qhs=6,ppl=1,mq=3,xnbx-,vbcx=7,prk-,nk-,dgd=6,crg-,hqpq=6,nbt=7,dz=2,smk=1,vdm" +
+            "h-,jbd-,gknc=6,pc-,cvj-,dj-,dzqx=9,dq=1,fdcl-,hrv-,hp=5,tqp-,nq=8,jnv-,nh=9,dv-," +
+            "mdv-,jm=4,nkr=4,kgvq-,ndtf-,rkh=4,rsr-,hgx-,thzx=6,mfgxcx=4,gd=7,zdd=3,bbf-,br=2" +
+            ",pdtxl-,rk=7,qht-,ckk=9,ctm-,sqv=9,llkb-,xjhdk=9,gh-,hrh-,frlqr-,ljrdxk=2,pc=1,l" +
+            "s-,bnblt=5,rkh=2,hnn-,sv=8,dd-,njjk=9,ps-,gzktrh=1,zqv=9,xfv-,sg=6,tdk-,zmx=4,pj" +
+            "g=6,dgtn=6,xm-,hbrg-,sth=3,kh=9,xnbx=6,kj-,gknc-,vxq-,blqv-,pgx=3,ql=5,dlsm=5,qx" +
+            "=7,bzl-,rk-,kdts-,zh=2,xkh-,hc-,gbs=4,bx-,cqh-,dxvsc-,hp-,zgms-,gv-,sztqf-,zmfz=" +
+            "3,sn=6,zk-,pjg-,ng=1,gts=6,tvz-,ltf-,klzc=9,lnv-,ql=9,thq=3,klj=2,xb-,vqh=1,qjmx" +
+            "-,zsvjv=8,zd=7,tgn-,jm=3,khlc=9,fkc-,rsgx=5,sz=1,sn-,vc=3,ls=4,lpbrxv-,xxfz=2,lx" +
+            "=8,gnhm=3,bf=7,lpjl-,rmj-,hh=5,lsbn=4,xhv=6,lxx-,gb-,bc-,glcx-,grx-,stdm-,jqc=5," +
+            "ndfqxt=6,bzl-,thbn-,nsjt-,pnsqf-,kx-,jbmd-,zv-,fl=5,qbc=4,tj=6,tgk=6,pskx-,njlmn" +
+            "-,ckk=6,jbd=2,hrv=5,gddfx=9,cvq=4,lg=6,kmnr=5,rft=9,df=6,lhc-,lv-,jqc-,rdh-,jkdr" +
+            "=7,xv-,sv=6,ds-,ldv=2,vh=4,gxc-,cgbg-,gsq=6,vc-,mz-,md-,zst-,ssx-,hzs=5,xln=9,db" +
+            "cb=2,gj-,psp-,br=2,fv=7,vmhh-,fgd-,lnv=9,bh=9,lhc=1,xm-,nflm=3,jqhl=3,xjhdk-,klz" +
+            "c-,cvmq=7,hdr-,kknkjz=9,np=8,zcq=4,bvx=8,hrh=7,dgk=4,ks=9,pkd-,fvt-,mfqx-,njlmn=" +
+            "4,lcc=4,jjf-,kl=2,lmxv-,zgms-,jqc=7,hrc-,tnc-,pdbh=2,clj=7,tsd-,hzs-,trgjf-,trgj" +
+            "f=4,cttxtn-,cpm=2,hc=7,lhgdbs=8,dhq-,rb=1,qhs-,rvvv-,gnhm=8,mcn-,pd-,dxvsc-,tcln" +
+            "p-,hzs-,rdt=8,tnjs=2,trq=3,lh=6,thzx-,zmx-,bh=3,kjqx=4,lv-,dzqx=6,psm-,ctml=5,lb" +
+            "=3,psp-,cpk=8,bm-,mz=7,lpbrxv=5,znvf=4,mhxq=3,rh-,qjgqb-,sdcx-,tghsj=2,qhtc=3,dc" +
+            "z-,ctml-,pgx=5,prtnpg=2,ccmd-,ctml=3,bh=3,fgd-,bb-,nbcg=6,psmsj=3,bqgn-,ctm=8,st" +
+            "dm-,lhgdbs=9,tvz-,rft-,vr-,fs=8,np-,ppl=2,qm=4,dvxvnq-,vct-,glb=5,jvx=7,hgx-,thb" +
+            "n-,sztqf-,vmhh-,rb=4,pm-,nflm=5,ktp-,gknc=1,zmpf=8,gb-,ltljr-,xxfz=8,mgp=1,vx-,f" +
+            "s-,hdr=4,rsvzkj-,xxfz=2,xm=8,rdt=5,dj=1,qspjl=2,vct=2,dbcb-,fdcl=9,zb-,rtkb-,sss" +
+            "pbh-,mfqx-,hzs-,xln-,gknc=6,gzm=4,ssns=1,ljrdxk=8,gxc-,pt-,pg-,fzt=4,mz-,hrv=5,q" +
+            "l=9,rds-,ckk-,jctv-,qjmx-,psmsj=3,tmg=6,fxk=7,vj-,kbvm-,hzs-,pgx-,xltm=6,nnmj-,m" +
+            "fqx=7,rdh-,vx-,pqv-,rc-,nflm=7,kvcv-,hgct-,fhvv=9,fkc=9,lzz=6,dvxvnq-,kgvq=6,hk=" +
+            "3,jjf=3,rkxg-,fs-,zd-,hrv=3,cpm-,jcp-,xfv-,xxfz=7,cvq-,zrfvq-,hcv=9,dxvsc-,gts-," +
+            "fkc-,sqv-,jn=1,hnn=7,kcgxz-,lzskx=8,ctqtk=2,pl-,lmxv-,kvcv-,psp=9,cqf=1,lp=5,mxz" +
+            "bj=4,ls-,gj=4,hqpq=3,lv=3,zv-,llkb-,nnmj-,kh-,dz-,fkc-,psm=4,jrkql-,tp-,gsq=3,bb" +
+            "f-,tvz=1,cttxtn=3,rt=1,bvx=2,km-,bkc-,pvm=4,jctv-,gbfb=7,ndfqxt-,gc-,rbt-,jd-,gh" +
+            "=5,zmfz-,cxjsr-,xgzzl-,xs-,pv-,stdm-,lmxv-,pd-,zmfz-,qs-,htv=5,nm-,zk=7,vx=6,tqp" +
+            "=5,dncb=2,prk-,pp=1,jmq=8,smk-,jkv-,xpv=8,xd-,jmsb-,xjkhv=1,psp=4,mn=7,lh=2,tsd=" +
+            "3,dk=9,kh-,nsjt=7,kdts=8,zk-,ttjk-,dmq-,jbd-,dhq=7,grdp-,pp=5,fl=3,hn-,fnn-,xfv=" +
+            "9,dv=7,thhvf-,cdcb=5,hp=9,cclc-,zmpf=3,xb=3,dzqx-,xb=8,tljj=8,rft-,lx-,mmn-,cj=7" +
+            ",ssns=9,bzhf-,lh=5,dhq=2,cclc-,mccg=3,gj-,kcgxz-,zz=2,lhc-,kmnr=7,bh-,kvsd-,qgt-" +
+            ",btl=9,thq=2,bzhf=5,fbk-,tdk=3,gc=2,mz=3,kcgxz-,fv-,cttxtn=2,mlq-,bsn=3,vmhh-,nh" +
+            "=4,kvsd=2,ctms=1,jmq-,nm-,kcgxz-,kh-,rsvp-,dlsm=9,bhk-,rgxnz-,jsjfs=7,bc-,tj=3,t" +
+            "p=7,ctqtk=4,jjf-,rsvp-,cxjsr=5,xzh-,pnp=1,lb-,zrfvq=8,dv-,klj-,cdcb=5,gxc-,pt=8," +
+            "rh=4,dd-,spx-,dgtvts=4,jkdr=7,gq=4,nltq=5,mmn-,rt-,mgp-,gjcm=2,dv-,lq=9,mnv-,szx" +
+            "vn=9,glf=6,ljrdxk=1,mhxq=6,dxc-,xn=3,gcfl-,pgx=3,bzhf=8,lx-,psmsj=3,dlm-,hcv-,zj" +
+            "=7,rtkb-,mhxq=3,ssspbh-,zt=9,jm=3,qht=3,nq=4,dxb-,lpbrxv=5,rft-,tc=2,fmd=2,fdcl-" +
+            ",lvzqj=7,fgd-,hzs-,ls=9,fzt-,ps-,jsjfs-,jmsb-,dhx=5,hc=4,sdcx=2,glf=7,zmpf=8,njl" +
+            "mn-,pg-,zk-,bc=7,vz-,zmx=9,trgjf=6,tvz=9,pvm=1,dxc-,tdk=6,kx=2,vmhh-,qht=2,smsh-" +
+            ",rk=8,kd-,kqnlm-,dgtn-,ttvl-,xjhdk-,xkl-,dcz=8,crg-,dxvsc-,sb=3,fkc=6,fqv=1,rmd-" +
+            ",gph=3,blqv-,kjt=1,bhk=6,mhxq-,hh-,gcmgdr=9,hpr-,dnh-,xb=1,jqc=3,df=2,mlq-,ckk=3" +
+            ",pv-,xb-,nqm=7,vt=7,hdr-,zpj=3,qs-,fzt-,glcx-,jf-,jmq=1,rvvv=3,smsh-,lx-,tcv-,zt" +
+            "=2,rh=5,vhp=2,lfp-,qvkv=1,xc-,ddgf-,rmj-,ctms-,lxpmn=4,kcgxz=6,dvd-,prb-,pz=7,xs" +
+            "-,bqgn-,sfkpbv-,trgjf-,qx-,rtkb-,fbk-,dgtvts-,pc=3,lp=3,pkd-,zdd=8,xx=8,fldd=6,d" +
+            "t=6,gbs-,hrg=1,tz-,dvlpz-,zl-,rsr=4,kbvm-,thq-,ghf-,kjqx=3,nltq=8,kvsd-,bb-,sdcx" +
+            "-,mv=5,xn=7,pmp-,tvz=2,gcfl-,gj-,ds-,ghq=9,ttvl=1,frrg=9,kk=3,mdv=8,kcgxz-,hcgtn" +
+            "=2,vqq-,ndtf-,jd-,khlc-,kfr-,dzqx=5,clj-,dgtvts-,hrh-,ndtf-,fqv-,kknkjz=8,xhv=2," +
+            "nltq-,gh=3,vr=6,gzm-,zpt-,mhxq=5,hzt-,dg-,bc-,rc-,kjt=5,hgct=8,gsq-,jm-,gsq-,xlt" +
+            "m=5,kvsd=8,bhk-,lv=8,cv=1,sth=5,lxrk-,km-,pm=3,jn-,xpv-,jnv-,tghsj=6,rsvp=1,bbs-" +
+            ",prtnpg-,db=1,pc-,zrcqs-,ppl-,tsd-,lc=7,kk-,cvj-,stdm=7,qm=7,ltljr=5,rt-,thhvf=8" +
+            ",vdmh-,thhvf=5,fqv=6,bjrvxh-,rb=3,hzmp-,lsbtm-,tnjs-,cpk-,gj-,dgk-,qxn=3,dk=4,xn" +
+            "bx=5,jrr=8,ttjk-,gts=3,btl-,prtnpg=6,rvvv=1,rvvv-,hrg=2,pc=8,sb=5,gddfx=8,ds-,fk" +
+            "c=5,fvt=3,cvq=9,lsbtm-,psp-,lpjl=6,rdh-,zcq-,vbcx-,cx=2,kvcv=3,tgn-,bbs=9,gc-,nc" +
+            "dnz=9,lq=8,ldv=8,dhq=6,cvj=6,qjnxd-,rc-,lhcsbr=6,vj=6,qjgqb=5,hcv=7,mv-,md=7,grx" +
+            "=5,gst=2,vt-,fs-,sg=9,dhq=9,mgp=5,fdcl-,pr=6,rj=2,gq-,fs=7,xjkhv=1,xv-,df=6,ddll" +
+            "-,cg=3,ghf-,smk-,psmsj=7,rh=3,hbhvz-,fdcl=4,fj=5,zst-,dgd-,xkl=2,lcc-,pc=8,tqp-," +
+            "sztqf=8,lhcsbr=3,nnmj-,lsbtm-,qqh=9,xtm=4,pl=7,jf=5,klzc-,mccg-,lpbrxv=8,tcv=6,c" +
+            "ttxtn=6,bm-,mnv=3,ttvl=2,dzr-,tnjs=9,trq=8,drp-,ncm=1,pjx-,pt-,nqxk=2,kk-,tcv-,q" +
+            "hs=5,qht=3,rmhz=3,mn-,jqqkmd-,mxl-,hcgtn-,dvd-,hzt-,lmznsr=4,kn=9,cx-,jkdr-,zmx=" +
+            "2,tt=1,jd-,zv-,htm-,zgms=2,cdcb=4,dgtvts-,zrcqs=5,cdzfk=7,gjcm-,jbmd-,jbd=7,hp-," +
+            "zhq=9,qlqm=6,dzqx=7,br-,vc=8,cvq=2,tz-,rp=6,dn-,dxc=5,grx-,pkd=8,tcv-,cnm-,jn-,p" +
+            "sn=6,btl=4,vqh=7,lmxv=5,tc-,cpk=9,dnl=6,hcgtn=7,fj-,fnn=7,pl=4,jmsb-,jrr-,qzg=2," +
+            "smsh-,fmd-,prb=5,cs-,ks-,sv-,ddll-,prk-,nnmj=5,kfr=6,bf-,xkh=8,pm-,gg=9,sn-,zhq=" +
+            "9,rp=4,jqqkmd-,vmhh=8,ctms-,jxl=6,rsvzkj-,zrcqs=4,zh=3,gddfx=7,qs=2,bvm-,hbhvz-," +
+            "glplq=3,lzskx=5,fqv=1,nqm=3,kgvq-,lc=3,nk=3,lc=4,hzt-,jkdr-,rgxnz=1,gd=4,fqv=7,p" +
+            "np=7,bh-,szv-,htv=3,rnq=3,ssns=3,ghf-,xz-,dnh-,vt-,jcj-,znvf-,lcc=6,bhk=3,vmhh-," +
+            "nk=7,dnh=1,vdmh-,njjk=3,hrc-,hrh=2,rt=8,qhs-,prtnpg-,ccfzjq=1,zcq=8,pgx-,vdmh=2," +
+            "sq-,kbvm-,ct=5,st=8,rds-,xpv-,hk-,ks=9,qqh=1,lsbtm=8,cxfrpr=8,thq-,crg-,nbcg-,ct" +
+            "ml-,hgx=6,njjk-,zpt-,hcv=7,gvbrv-,nltq=1,dgtvts-,qhs-,nbt=3,kl=6,jh=8,dzqx=1,fnn" +
+            "=3,rc=9,xzh-,kmnr=6,zh=1,nbt-,tnjs-,rgxnz=5,sn-,clj-,ndfqxt=5,zmfz=9,khlc=9,xc-," +
+            "gddfx=9,ppl-,cj=8,vdmh-,bx=5,vxq=9,bvx-,stdm=2,kcgxz-,jvx-,bb=9,cvmq=7,nqxk=1,mh" +
+            "xq-,fz-,fmd=9,lhgdbs=3,xtm=5,dcz-,jm=2,pjg=7,fvt-,qxn=6,ccmd=3,cqf-,ls=3,sp-,lv=" +
+            "6,tgk-,tqp-,rv=6,lb-,xvd-,dxb-,ljrdxk=3,rj-,pkd=4,cdcb=6,jlls=6,dlsm-,pv=6,dgk=2" +
+            ",mdv=7,pg-,lzskx=3,rv=3,prtnpg-,bbs=3,rmd=1,gj=4,rm=2,ssns-,np=6,xkh=9,hgct=1,hr" +
+            "h=9,thzx=5,rkh-,ps-,ks-,jvx-,fnn=9,br-,dvxvnq=2,hcv-,mv-,dv-,jqqkmd=1,fgd=4,nkr=" +
+            "1,vct=3,xv=1,glcx=7,br=8,ctm=5,dq-,gjcm-,ngd-,ctqtk-,tt=4,rdh-,fldd=1,cj=7,dlm-," +
+            "grdp=5,nvlff=8,qm-,klj=5,ghq-,kvcv-,fldd-,pkd-,ls-,hk=3,jnv=1,jqqkmd=4,gzm=6,tqp" +
+            "=7,prb=9,pjg-,ph-,xd=9,dx=7,mxzbj=7,hcgtn=9,hp=2,hh-,bkc-,pqv-,grk-,bx=9,clj-,sb" +
+            "-,tgk=2,mfgxcx-,zk=3,pdtxl=1,prk=1,rk=3,tghsj=5,qx-,vct-,km=1,md-,jkf-,bvx-,vz=5" +
+            ",lv=6,qx=3,bsn=4,sn-,mcn-,fgl-,lxrk=7,gknc-,lzz=2,jn-,sth=6,dxc=3,sn=3,glf-,lpjl" +
+            "=4,gknc=7,dnl=7,cvmq-,pm-,bzhf=6,gcfl=8,hvk-,ctm=9,cvj-,dzr=2,dvxvnq=5,llkb=4,jx" +
+            "l=2,bc=7,qht-,rdt-,gsq=5,zmpf-,lhgdbs-,xzh=3,ppl-,vc-,cdzfk-,jqhl-,rv-,xtm=3,hn-" +
+            ",nltq=5,bkc=5,fldd-,jlls=3,pg-,cqf-,nqjk-,sdcx-,ndfqxt=1,nbcg-,gnhm-,hgct=4,thbn" +
+            "-,hz-,xn-,qxsddj-,mhxq-,bbf=6,nq-,klzc-,pskx=6,pnsqf-,klj-,hbrg-,fgq=6,ds-,pd=8," +
+            "bc=8,ncdnz=7,mpcvh-,cqg-,dxvsc-,cpk=9,qspjl-,cdcb=4,dj=2,df=5,trq-,ssx=6,psm=8,s" +
+            "t-,vxq=7,hrg-,pnsqf=9,br=6,njlmn=4,ttjk-,ttjk-,dh-,vc-,drp-,jctv=5,kjt=1,dnh-,lm" +
+            "xv=1,kvcv-,xc-,rkh-,hgx-,gsq=6,cqh-,cvq=2,hd=8,hp-,cqg=8,jpksf-,lx-,pjg=7,zl-,qg" +
+            "-,dxvsc-,gj-,dnh=8,dk-,ptdf-,cdzfk=5,grx=1,nqxk-,ghq-,lx-,jsjfs=9,dhx=9,kfr-,gb=" +
+            "6,cqh-,tc=4,ph=5,thzx=1,kk=1,rsgx-,gd-,nsjt-,ccfzjq=3,ndfqxt=7,bvm=6,clj=3,ncm=2" +
+            ",ckk=4,dgk=1,jqc-,rtkb-,xltm-,ppl-,qxsddj=8,rmd=7,rh-,mk=8,rb=2,gg-,dx-,vc-,xs=8" +
+            ",lpbrxv=9,ftpxd-,hgct-,hrc-,hrv-,rgxnz-,bzhf=2,xkh=2,fbk-,dnh-,cxfrpr=8,xhv-,bsn" +
+            "-,trq=4,ghf-,nqjk-,bjrvxh-,cvq=9,rmj=4,tclnp-,ghq-,fgl=5,gb-,sth-,dgk-,pjg-,stdm" +
+            "=5,mhxq=5,cttxtn-,lmznsr=8,lg-,hrg-,lh-,tclnp-,mv=8,fhvv-,ks-,nvlff=2,psmsj=2,zt" +
+            "gnkx=3,jrkql=6,kn=4,cdcb=8,grdp=1,xzh-,vmhh-,gzm=8,ps-,rbt-,mnv=7,pv-,xxfz-,bh-," +
+            "hgx=3,lp-,pc-,hrv=1,rsr-,blqv=5,fkc-,fdcl-,tj-,bkc-,jnv-,gst-,hgct-,xhv-,nb-,gf-" +
+            ",lxx-,thbn=3,xss-,dz-,hdr-,ctml-,pxqj=9,tt=1,bzhf=5,dgtn-,bb=6,fxk=3,rmj-,qfp=2," +
+            "rgxnz=7,fzt-,sz=3,jbd-,pc=7,kl=5,rtkb=6,htv=4,tcv=5,bbf-,cvq-,fv=4,gsq=8,qs-,ncm" +
+            "=3,gbfb-,dh-,dcz=5,lxpmn-,dv=9,lq-,dgtn=1,ng=5,jkf=6,jlls-,lvzqj-,mxzbj-,rsvp=6," +
+            "ctms=2,bx=4,jcj=2,qhs-,hgct=9,gddfx=1,cv-,trq=5,qm-,dnl-,sqftz-,cclc=5,bf-,klj-," +
+            "br-,jctv-,nk-,dhq=7,cxfrpr=2,ckk=2,bzl-,mxl=7,ghf=1,hqpq=1,rmd=2,jh=4,dncb-,xf-," +
+            "gts-,gbs-,dxc=6,xss=6,tcv=4,xd-,rsvzkj=3,jctv=3,cvj=6,pp-,mlq=3,dgd-,jmq-,pjg=2," +
+            "dxvsc-,prb-,zk-,bhk=3,qgt=8,hc=6,qlqm=2,nqjk=4,xnbx=6,pskx=5,grk=5,jm-,xb=6,fbk=" +
+            "4,thbn-,sv=5,fxk-,zd=6,nvlff-,xltm-,fs-,sdcx-,xxfz-,ljrdxk=2,ls=1,bf=1,nltq-,rb-" +
+            ",rh-,szv-,hp-,kjqx-,cg-,ltf-,ssspbh-,vdmh-,lhcsbr-,hgx-,lxpmn=9,hzmp=8,htv-,rh=1" +
+            ",kh=6,klzc=4,hk=6,dx-,nbcg-,thhvf=5,jlls-,vdmh=8,sqftz-,rv-,pjg-,gj-,khlc-,sth-," +
+            "drp-,kgt=5,vz=2,sth-,qvkv=9,qhtc-,kcgxz=6,zpt=2,sdcx=3,thzx=7,dlsm-,glf-,bzl-,hb" +
+            "rg=1,glf-,nflm=5,rbt-,nh-,tclnp-,km-,rc=9,km-,pdtxl=4,dn=7,pdtxl-,gb-,jbmd-,ztgn" +
+            "kx-,dxb=8,cs-,lpjl=7,fz=5,ssx=6,bvm=9,bc=3,xfvj=7,prb-,mq=5,jcp-,xv-,kgt-,gh-,xv" +
+            "d-,zb=8,xml-,zj=1,gb-,mpcvh-,dlm=4,ssns=1,cxjsr-,mxl=9,nbcg-,tc-,tmg=5,gts-,lsbn" +
+            "=1,jf=7,df-,hz=2,grx-,kgvq-,dhq-,qhs=9,lzskx=1,gst-,qs-,lq-,thhvf=7,hh=8,qjgqb=9" +
+            ",qvkv=2,gcmgdr-,blqv-,xv=7,mhxq-,psn=6,mdv=6,rft=1,pbdgnl=9,bqgn-,klj=7,fdcl=5,s" +
+            "zxvn-,tsd-,fgq-,gbfb-,pxqj=3,lq=6,gh-,qht-,fqv=4,fdcl=3,mccg-,cdzfk-,mxzbj-,grx=" +
+            "5,spx=6,cx=8,tvz=5,zst-,ssns=3,dcz-,njlmn-,jpksf=2,fz=6,nbcg=2,kj=6,kd=5,zmpf=2," +
+            "zmx-,kk-,dcz-,klzc=3,kk=9,cnm-,rb=3,smsh=3,pxqj-,kmnr-,zv=9,qspjl-,rc-,kh=5,sth=" +
+            "8,trq=3,ddll-,rnt-,gcfl-,cj-,jrr=3,qlqm-,ds=6,tnc=3,zcq-,gcfl=6,rk=2,fdcl=3,hvk-" +
+            ",sztqf=9,grdp-,pd-,ndfqxt-,xtm=3,pkd-,cclc-,rvs=9,rsr=1,sdcx-,kgt-,jvx-,psm-,khl" +
+            "c=9,nqxk=2,thq=2,cxjsr=9,xzh=7,cs-,rm-,njlmn=8,rv-,xm-,mn-,gbfb-,bbf-,ct=3,gb-,j" +
+            "f=7,sztqf=6,bf=7,tsd-,lfp-,clj-,mmn-,jnv-,ddgf=1,tz=7,gf=2,cpm-,kj-,dxb=9,xd-,hn" +
+            "n-,psm=2,hcv-,st-,cqf-,kjqx-,jbmd=6,ckk=3,tmg-,dvlpz=5,br-,glcx-,hvk-,jqc-,dg-,f" +
+            "dcl=6,lc=4,dmq=5,lpjl=2,gj=3,zz-,mmn=8,hdr-,kl=7,rmj=9,mcn=7,vhp=2,bzhf-,sqv-,dn" +
+            "h-,xpv-,rmd=6,mnv=7,rkh-,nsjt-,zhq=2,frrg-,cqf-,fj-,zhq-,mdv=9,hrv-,tnc=3,gcmgdr" +
+            "=9,tv=5,fzt=6,mfqx-,lzskx=8,bvx-,nqjk=2,rnt=8,zcq=9,sfkpbv=2,xvd-,hrg=2,zqv-,xln" +
+            "=4,zk=5,pl-,tljj=1,tclnp=9,pp-,rvs-,hdr=4,prk=8,psmsj-,jrkql-,zpt=7,mlq-,dnl-,hr" +
+            "g=6,thbn=1,nm=6,fgd-,gbfb-,ndfqxt-,smsh-,sz-,pc=7,lxx=4,kvsd=1,kmnr=1,bzhf=6,gb=" +
+            "1,qjgqb-,bf-,qqh=2,kd=1,zj=2,pskx=5,cdzfk=9,mfgxcx-,xml=9,ph-,zz-,qqh=5,tt=1,xpv" +
+            "-,jqhl-,hbhvz-,thbn-,jxl=7,lnv=8,mxl=9,kcgxz-,mk=8,qqh-,pjx-,qzg=7,lmznsr-,sq=3," +
+            "ncm-,dg-,cxfrpr=1,vgfgh=5,grx-,hqpq=1,sn=3,sqftz=6,dzqx-,jkv=3,tdk=8,pvm-,tqp=4," +
+            "xml=1,gvbrv-,fzt-,msz-,thhvf=2,vj-,glplq=1,mfqx=2,bvx=5,ps-,mk=5,gst=5,kqnlm-,rs" +
+            "vp=6,rtkb=6,pnsqf=3,zc-,vdc-,szv-,sqv-,fz-,thbn=4,ccfzjq=5,hbrg-,bqgn=3,fl-,nk-," +
+            "rbt=8,pz-,hh=1,bzl-,rgxnz=3,lx-,ssns=5,gnhm=8,dxb=5,jqhl=2,mmn=4,ztgnkx-,khlc-,t" +
+            "hq-,rsgx-,ltf-,gxc-,lpjl=1,bbs-,nflm=3,lpbrxv=7,zdd=8,lsbn-,dlsm-,xfvj=5,glcx=2," +
+            "jbd-,bx-,bf-,jnv-,ppl-,xc=2,tgk=8,fj=9,cdzfk-,db=1,trq=7,xkh=4,xc-,hpr-,glcx=3,g" +
+            "ddfx-,gzktrh=2,hrc=5,mgp=7,dnh=8,zpt-,rsr=1,smsh-,mpcvh=9,xc-,crg-,kk-,gd-,ndtf=" +
+            "2,lfp=8,sqv-,mk=1,lfp=9,llkb=5,ctqtk-,gzktrh=4,vxq-,gnhm-,jqc=6,lnv-,fnn=3,fvt=5" +
+            ",rp=4,ddll-,rsr=5,tz-,nqm=2,sb=2,fj=3,kz-,lbf-,rp=1,pkd=2,ctml=8,mcn=4,ds-,gq=1," +
+            "pc-,cttxtn-,lzz-,vx=9,xs=3,qfp=3,qgt-,pg=9,ctm-,tghsj=6,clj=3,ktp-,cvq=3,ptdf=7," +
+            "qg-,bhk=9,kgvq-,lmxv=5,xxfz=2,pskx-,lmznsr=9,dvxvnq=9,xhv-,cnm=7,xm=9,bzl-,rkxg=" +
+            "5,cvmq-,bvm=9,ttjk-,sztqf-,cclc=4,hnn-,dhx-,cdzfk-,rv=8,mk=7,tp=9,cdzfk=5,kknkjz" +
+            "=2,cpm-,ddgf-,rdh-,gc-,vqq-,xtm-,lnv-,fj=7,tsd-,ckk=5,vct=3,rsr=2,zgms-,bx-,gnhm" +
+            "=1,xss-,rh-,hz-,pgm-,kx=3,vhp=7,zhq-,rsvp=2,dlm=7,jkdr-,hgx-,dvlpz=4,fldd-,dgd=8" +
+            ",dj-,bzhf-,kfr-,xx-,vgfgh-,gzktrh-,gh=2,jpksf=2,vhp-,lxpmn-,mdv-,ljrdxk=6,xc-,gl" +
+            "plq-,szxvn-,sn=5,qgt=5,mhxq-,tmg-,lx-,klzc=6,rvs=7,rgxnz=4,lh-,prb-,rsgx=2,pgm-," +
+            "grk-,tgn=8,crg=7,nflm-,ng-,xxfz=9,nvlff=3,gjcm-,bkc-,hvk-,mxl=6,bh-,rsvp-,sg=4,h" +
+            "p-,hcgtn=6,cnm-,xtm-,sb-,zmpf=9,kgvq-,kz=5,tgn-,hzmp=7,jm=3,rkxg-,pvm-,rvs=8,tj=" +
+            "1,nqxk-,sq-,sv-,cttxtn=1,cvmq=3,kk-,fnn-,vhp=7,kk=6,mgp=6,br=9,kcgxz=7,cnm=7,vh-" +
+            ",nm-,sdcx=2,prtnpg-,mv=1,lsbn=2,cclc-,qg=3,kjqx-,kjt-,gd-,cvq-,kvcv=8,nqm-,rmj=5" +
+            ",vz-,kvsd=5,msz=8,nvlff-,jn-,lq=7,vr-,fzt-,hpr=6,zhq=8,dmq-,pdtxl=7,lhc-,bnblt-," +
+            "zv=8,kfr=4,clj=3,xn=8,dd=8,qx-,khlc=1,ssns-,kknkjz-,xpv-,cpm-,dcz-,rnq-,trq-,fvt" +
+            "-,sth=9,nnmj-,mk=1,mvs-,ztgnkx=2,dh=9,jcp=9,dvxvnq=4,bx-,dlm-,jkdr=4,zrfvq=6,lsb" +
+            "tm-,rsvp-,zmx=7,gj-,rds=4,gst=7,jcj-,thq-,hc=1,frrg=1,pjg=5,df=1,zk-,hd-,lhgdbs=" +
+            "2,ndtf-,hd=7,khlc-,hrg=9,xvd=1,mnv-,fnn-,rvs=9,dr-,hvk=2,zd-,dbcb=3,hqpq=9,hgx-," +
+            "np=3,vct=8,zz=3,vc=4,smk-,mgp=5,ppl=8,bvm=9,vh-,nflm-,jbmd-,crg=8,dh-,jbmd=2,jjf" +
+            "-,ghq-,vdmh=4,nflm=5,hcv=6,jqhl-,gvbrv=2,lxx=9,gjcm=9,prk-,xjhdk=7,gh-,pmgsxv-,j" +
+            "d-,xfv=7,xjhdk=4,hgct=7,pm=1,kx-,ds=5,cttxtn-,fhvv-,gcmgdr=3,nkr-,htm-,fqv-,hrh=" +
+            "4,nbt=4,jcj-,lxrk=1,kmnr-,lb=8,zhq=5,nb=3,nbcg=8,glf=6,lhcsbr=9,gcfl=9,bm-,vdc=9" +
+            ",gc=3,qspjl-,jjf-,cpk-,mccg-,tclnp-,lfp=3,vhp=3,ppl-,trgjf=9,sv=2,md=2,gst=7,dls" +
+            "m=5,qgt-,cg=9,sb=7,ghq=8,gst-,drp-,sdcx-,cxjsr=9,ccfzjq=6,cxfrpr-,vt=3,grk-,jqc-" +
+            ",tgk-,zj=8,ttvl=1,thzx=5,gts=4,zrfvq=4,dt-,dk-,sdcx=3,qhs-,rsvp=5,hzt-,vr=6,sssp" +
+            "bh=7,gc=7,bnblt-,rds-,klj=9,xvd=2,hc-,ndfqxt=2,gzm-,trq=6,br=1,mccg=3,trq-,psp=5" +
+            ",pgx-,mk-,vj=9,xhv=2,jrr=1,dmq-,cvmq=4,zpt=5,dzr-,nsjt-,vbcx-,pdbh-,dk=2,mfgxcx-" +
+            ",qzg-,dvlpz=7,hcv=4,ps-,mmn=8,ckk-,nbt-,xml=8,ql-,tgn-,ssspbh-,cdcb=9,pm-,db-,nb" +
+            "=7,mhxq-,kfr=4,bjrvxh=5,mnv=5,lmxv=2,nltq=2,thbn=6,ctms=3,jsjfs-,lh=2,stdm=2,rsg" +
+            "x-,vmhh-,kgvq=3,jrkql=1,htv=4,bc-,gq-,qjgqb=5,tgn-,hrv-,mfgxcx=8,fqv=9,zk-,pdtxl" +
+            "-,tc-,ljrdxk=9,rb-,psn=1,dvxvnq=3,dx-,sq=2,fldd=6,sq=2,jqhl-,pjg=9,glcx=3,trq-,d" +
+            "gd-,xln-,psn-,qspjl=5,zpt-,jqhl=8,sztqf-,cnm=6,sfkpbv=9,bvx=9,tflb=2,bvm=2,tclnp" +
+            "-,zd=7,xkh-,fzt-,vdmh-,rnt-,ppl-,llkb=2,jkv-,gddfx-,pr=3,dvxvnq-,ljrdxk-,zsvjv-," +
+            "bm=8,dvd-,xf=6,lhgdbs=9,zcq-,kfr=4,np=2,bx-,zd=2,bx=4,tc-,jm=6,xf-,tqp=6,np=4,qf" +
+            "p-,lxrk-,njlmn-,dzr-,cv-,rbt-,pnsqf=6,sg-,xx=8,hvk=5,md-,lc=9,jnv=9,kbvm=4,qjgqb" +
+            "=1,xss-,xb-,dg=5,zj-,vhp-,mpcvh=5,nm=8,mq-,zd-,mhxq=2,gf=8,dvlpz=5,dx-,nqjk-,qhs" +
+            "-,qvkv=3,drp-,hrv=1,xvd-,lsbn=6,dz=3,fdcl=8,vj=5,xb=7,nq-,ccmd=5,vhp-,bhk=9,dq=2" +
+            ",hbhvz=8,hzmp-,ccfzjq-,zmfz-,blqv=9,nqjk=5,psmsj-,dd=1,dq-,bkc=5,dr-,tcv-,pp-,bb" +
+            "f=5,dvlpz=5,sp=1,glcx-,rds=5,tv=6,gf=6,zd-,gf=1,qx=9,ltljr=6,mnv-,rdt=6,msz-,ccm" +
+            "d-,mlq=8,tx=9,fvt=5,frrg=4,rk-,st-,pl=6,lx=7,zc=1,vxq-,dnjdn=2,pnsqf=9,cgbg-,mfq" +
+            "x-,fxk-,drp-,cdzfk=9,nqxk=7,zmx-,dnjdn=1,dr=5,frrg-,ssns=2,kgvq-,lxx-,kj=8,zgms=" +
+            "9,pkd-,lhc=6,zz=5,drp-,kj=8,htv-,sb-,tj=1,pnsqf=8,klzc=5,bm=9,sqv=3,tt-,qhs-,xlt" +
+            "m=9,rft=1,lfp=8,nqxk=2,xfv-,vz=7,zh-,spx=5,qxn-,bzl-,qx=9,lvzqj=4,vmhh-,jcp-,znv" +
+            "f-,mccg-,gknc-,xhv-,mv-,lhc=3,lnv=5,ktp-,pmgsxv-,nqjk=1,sg-,gjcm-,sb=3,ncdnz-,zg" +
+            "ms-,st=3,cv-,qs=7,xf=1,nltq-,fbk=6,mx-,glb=6,dj-,hp-,rh-,cvmq=3,pmp=5,dmq=7,gvbr" +
+            "v-,ncm-,fgl=8,xfv-,bzhf-,jrkql=6,fl=3,dnh=9,grdp-,gnhm=3,mnv-,ddgf-,mgp=5,pt-,zh" +
+            "=5,pmp-,gh=5,ps=7,ndfqxt-,tdk=6,gd-,sg=2,qgt=4,qlqm=2,grdp-,smsh=9,lv-,vj=4,pmgs" +
+            "xv-,psn=2,vx-,ctm=8,prtnpg-,mhxq-,hcgtn-,dr=8,jm-,cvmq=6,xx=6,rp-,lx-,psp-,cqg-," +
+            "bqgn=3,rmhz=3,lb-,dzr-,zcq=8,km=5,gddfx-,tdk-,dhx-,gzm-,tljj-,xn-,vt-,lv-,xb-,fb" +
+            "k-,lhcsbr-,cpf-,cs=8,cxb-,xb-,bkc-,mmn=7,zj=7,bf-")]
         public string Puzzle15_Input {
             get {
                 return ((string)(this["Puzzle15_Input"]));
@@ -2969,7 +3253,160 @@ namespace Advent23.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("\\../....|.-........|.................|...\\....../...............\\...............|" +
+            "..................\\........|.\r\n.-...../.......-.......|./.........-.....-......." +
+            "\\...|.-...........-.......\\.................-....-...........\r\n.\\....-\\..|...\\.." +
+            "...\\...................................................................../......" +
+            "..........-..\r\n.....|.............-.\\....../......|.....\\......................|" +
+            "...-.....-.........|.-......\\................\r\n........./......................." +
+            ".....-.|..|.........|.....|..................................................\r\n." +
+            "................/.................|.................\\...............\\..........." +
+            ".......|.../.....././........\r\n...-..|.........-.............\\..|..-......./...." +
+            "........\\.-....|..|........\\...-......\\....../...\\\\..........\r\n..............\\.." +
+            "|............/..............|..........................................|........" +
+            "....\\........\r\n.|...........................-.-.........-..\\|...|.......|\\......" +
+            "......\\|.....................................\r\n..........-./.\\.....|............" +
+            ".......|./............./.-..............|........../.....-/..................\r\n." +
+            "...../.....\\/..........\\.........|\\...........|....--................/.........." +
+            "......../......-..........-..\r\n-.|.......|...................../................" +
+            "\\..................-\\........-.....\\.........................\r\n...-|............" +
+            "....................................\\...........-.........\\/.-......-..........." +
+            "..|..........\r\n.......\\../....\\..............|..........|.....\\............|...." +
+            ".........|......./................./....../\\.\r\n.....|..................|...|...." +
+            "..-.....|..-....|\\\\.........\\\\........|....................|............-....\r\n." +
+            "....../........./...-..-|................../...|....................|-.......\\-." +
+            "............................/\r\n................../......-...........|...|......." +
+            "../.....\\..|......../..../.......|...|.................-.....\r\n................." +
+            "................../.|..........|...............\\..........|...............-....." +
+            "........|/...\r\n.......\\.-......-................................/......|..\\...\\." +
+            "........../........|......\\.........-..-....\\\r\n....................|./.....-...." +
+            "/.............|...............-.../.\\........-..-............/....|.......-..\r\n." +
+            "..........\\...........................\\.|.................-...............|....." +
+            "...-....................|..|.\r\n..|.-.....\\.......|................-.........../." +
+            "............................................|....//.\\........\r\n..-.............." +
+            ".\\......../..||.....|.....\\.|.........................\\.....|....-.........../.." +
+            "../..........\r\n..|......../.../.............|..........-...................-...." +
+            "............\\...\\..\\......-..................\r\n...../...........-..../...|..\\..." +
+            "././..\\.|............\\....................-|......../........................\r\n/" +
+            "..|............-\\..|.................../.../..................../...-........|.." +
+            ".............-../......|-....\r\n................/................................" +
+            "..............|.|......-...................|.................\r\n....\\..../.../..." +
+            "..............\\\\............................................\\........\\.........." +
+            "......../..|.\r\n../.-.............|......|.........\\.........-\\........../......." +
+            "...|.\\.......................................\r\n................./..............." +
+            "../\\......./........-.........................../........-..........|....\\.\\.\r\n." +
+            ".\\...../............/.............................................-.......--...|" +
+            ".................|...../...-.\r\n..\\......................-......................." +
+            "-......-.\\.-/../......./...........................-../......\r\n...............-." +
+            "................../................../.................-........................" +
+            ".|....\\....|.\r\n..../.\\|..............-...../...|...../................\\-....\\..\\" +
+            "........|....................-...............\r\n.........................\\...-..." +
+            "-|...................\\....../........|...............-....../.../......./....\r\n." +
+            "...\\......../.-....-........-...../.....-.......-.\\...............\\.........\\..." +
+            "........../.....\\-...|-..-|..\r\n.../\\................-....\\.......|..-..........." +
+            ".-.\\.............\\..\\........-............/......./......../.\r\n..\\.....|........" +
+            ".......|..\\......|..................................|......./.....\\...|..|....\\." +
+            "./......./...\r\n......|.....././.....-..\\..........................-\\............" +
+            ".|..../.................................-/...\r\n................|\\.......|...|.|." +
+            "...................\\..............\\........................\\.-...||..........\r\n." +
+            "-.......\\...........-...../............/--....-..\\-......................./...-." +
+            "....|..........\\/.....-......\r\n...-............-.........\\.....................|" +
+            ".........../.........../............|.-.|.....\\.../...\\-.....\r\n................." +
+            "......|...........\\................./...................\\......................." +
+            ".....|.......\r\n......................|..|.\\...............-.../................/" +
+            ".../.../...........................-.|.......\r\n.\\.|..........-.|................" +
+            "................../................................/.........-.\\....\\../.....\r\n." +
+            "/............\\..\\............................|....../........\\.................." +
+            ".......\\.......\\..../.\\.....-\r\n....................../.....................|...." +
+            ".../....../............................\\....................|\r\n................." +
+            ".............||....\\........-..............................\\..........\\\\........" +
+            "./.../.......\r\n....\\....../....................................-..-............." +
+            "...........-................-....|.........\\.\r\n.......-......\\.-\\.|............." +
+            ".............................../......-......../.......\\.....................\r\n." +
+            "...../...................|........-....-........./...........-.-........./....\\." +
+            ".............................\r\n..-/..............\\............|........../......" +
+            "..............\\........-.\\...................................\r\n...-......\\......" +
+            "....../\\...........\\.........................-.......\\.-./......................" +
+            ".............\r\n..........-.\\.//......................--............\\....../....." +
+            "....../-./...................................\r\n.......\\-.-..-.....\\............." +
+            "|............\\....../........\\......../...............-..............|....-..\r\n." +
+            "......../.-.............\\.........................-....|\\..........|..../...-..." +
+            "......................\\.\\...\\\r\n.........|..\\.|.........-...-........-./........." +
+            "...|......|....................|.........../...|.............\r\n................." +
+            "/....-..../\\..............|../-................|.../..............-./|..-......." +
+            ".||..........\r\n...../.......-.............|.........-.....|....................." +
+            "........\\........\\.........\\.................\r\n.............|...../............." +
+            "......../.................\\\\.....................|\\..........-....././......-\r\n." +
+            "............../..../..../....................../...\\.......-...................." +
+            "......\\\\...-|.........../....\r\n...........|........|........../..-........../..." +
+            "...\\...........-.......-.......-.......................-..|..\r\n................." +
+            ".......\\...../.........-.........\\.....|...|.........-.....-................-|.." +
+            "./...........\r\n..-...............|...-...........\\|.\\.......\\..................." +
+            "...........\\./......./..........-............\r\n........................../......" +
+            "/....................................|................................../....\r\n/" +
+            ".......\\.................................\\./............................|...\\..." +
+            "...........|...-............|\r\n.....-.....................|.........|..........." +
+            ".....-.\\.....-..../..../...............-.........|...........\r\n...|............." +
+            "...\\../..|.................|............/.....-......../.........-...\\-.-......." +
+            "\\............\r\n........................\\....-..........|..-....../.............." +
+            "-..........-..|.........\\.-...........\\......\r\n................................\\" +
+            "\\......./...................-...........|..................\\....|...|../.....\r\n." +
+            ".....-.-.|...\\.........|.........|....\\........................................." +
+            ".............................\r\n...................-/....\\......../...........|.." +
+            "............../......|.-........\\|./..|......../.....|..\\....\r\n....../........-." +
+            "..\\../../..........|...\\.....\\.............................../......-........-.." +
+            ".............\r\n............\\...-....|...................\\............-.........." +
+            "...|..-......|..../-.........................\r\n...........././.-......./........" +
+            "....../.....\\...-..-.-|.....\\../............-..|..|..................--..././\r\n." +
+            "..................-......-...././............./.......\\\\...../|................." +
+            "\\..............\\..|..........\r\n.|.|.../..\\|..-../..............................." +
+            ".........................-...................................\r\n...............-." +
+            "..../.....|...|....\\........|......|.............\\..........................-..." +
+            "\\............\r\n..\\.......................-..............\\..-...........-........" +
+            ".......\\.\\-....-.............................\r\n..............-............/..-.." +
+            ".....|....-/............../........|............../......|..................-\r\n." +
+            "......|..........|..-..../...................................|-......-..\\......." +
+            "/........................\\...\r\n.........................................-......." +
+            "/..........|.....\\../.../......|./.........................\\\\\r\n...-.-..........." +
+            "/......./.-........//..|...................|.........-..........|..............." +
+            ".........-...\r\n........./...../.........\\.......\\..............-........../-./.." +
+            "|.\\...............|....................../...\r\n........-.......\\\\.........-...\\." +
+            ".//...-.........\\\\....../.-................\\.......\\...\\............/...\\....\r\n." +
+            "...............-...|......-.....-..|...../....../...-./.............-..........." +
+            "................-|...........\r\n....-..-...........|.................../..\\.....|" +
+            "......|...............-.-.|.........../.........../..|....../\r\n....\\............" +
+            "..........................\\................../..|...........-.\\.....\\.........||" +
+            "...........|.\r\n.........................\\.................-...............\\....." +
+            "\\.-......................\\.......-\\.-........\r\n...............-..\\.............." +
+            "..\\.................../.............-...................................../..\r\n." +
+            ".-|../.-..|....\\............-.......\\.../....../...-...../|.........\\..\\..-..../" +
+            ".-..\\....|........\\..........\r\n.........................../............|........" +
+            "............-......................................|.........\r\n...../..........." +
+            "|.../........./............./......../.........-.............|..............-..." +
+            "....-|..-...|\r\n..\\/......./.\\................/.......-............\\..\\.........." +
+            "..................................\\..........\r\n.......\\.\\.\\......../|......\\...." +
+            "................|..\\..........-............./.........-...\\....|../\\......|..\r\n." +
+            "..........\\......././.........\\......../...............................|........" +
+            "./...|.......................\r\n............|.......|......./.............-..-..." +
+            "......\\.....\\....................../................./.......\r\n................." +
+            "..................................../...../...............\\........-............" +
+            ".............\r\n.|...............-.............-........................|........" +
+            ".......................-..|................/.\r\n..............\\....../../........" +
+            "...-.-..\\........../...........-.....-......................|..../..|.|......\r\n." +
+            "..................../...-.-........................../.........................|" +
+            ".....\\.......................\r\n.........\\............\\..............|.....//...." +
+            "....-..\\.../..................-.......//..........|......|..\\\r\n...../\\.........\\" +
+            ".......|....|....\\...|..........\\..............//........-..-.......-..........." +
+            ".-.-./.......\r\n.........|.........................\\............................." +
+            "..|/..........\\..\\...-..|..................\\.\r\n........................\\........" +
+            "..|........./..-......\\..../..|............\\......./......................./|\r\n." +
+            "...............\\.-...................|.......|/.-|....-.-.../......-.-...-......" +
+            ".-.........../.....-..|......\r\n..........-.\\......-.-....-............\\..-......" +
+            ".\\....-.../\\..................|............/...|..../.....-..\r\n|................" +
+            ".....|..\\...................||............\\...\\......./........................-" +
+            ".....|..../..\r\n.|..../.......|.................................................." +
+            "........|....../.....|.....|.....-...........\r\n.......................|..-..\\../" +
+            ".....|.........\\.................-...........................................")]
         public string Puzzle16_Input {
             get {
                 return ((string)(this["Puzzle16_Input"]));
@@ -2981,7 +3418,259 @@ namespace Advent23.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("121325426323542412134412222563763214173242535453232325612225164551127635723772145" +
+            "575536566417713247311545541175727733552452212441523653523523\r\n231216223351264655" +
+            "14155263213214647316135737426473236677121215662543666264336473743152176321314531" +
+            "1617777525575176251125412656265156636352432\r\n25543562453621524245525527412715175" +
+            "24754732573134266544157613175684253522648464533676732572274776734214536563662376" +
+            "31536651114522326245456615\r\n3443314335551125525325524412467211615247252371321721" +
+            "62473256673465755557232328644654572412153231541264466241774431162777355546362533" +
+            "344542421\r\n525434363526162414614511663416111745537123243145613227283763543465788" +
+            "327456326856852866874124527274332336777363327232541433222231612255241612\r\n352235" +
+            "34425214263123212735726537667625461513513324272783344776538232448743877865625547" +
+            "8645828762521474722353742357252641751351141543313223632\r\n23536555456464214221325" +
+            "22631323723774255446365535428334562735564767588483774282878387466475274257111172" +
+            "52167121757242425125161251113264443626\r\n1654256325525551653726132661663275232226" +
+            "55423886342562537544327574724656766642523836564685768736434166164652735551562516" +
+            "455571412531311465335\r\n121531436312116267461622426412334716376556665774834833357" +
+            "38334467666732332274847583555836642587832433121213556615443567451315423561621616" +
+            "3653\r\n45434432151541544564767254316151255421238773675446437285782378687525266787" +
+            "5673864352686688388833573228427444421467132524723143512135562244526\r\n61322624211" +
+            "46231363136635455431523177537786524422755438684358234555844887736437827342682334" +
+            "28646834523476537544571432233243333612245253454624\r\n1613343233654677552557225132" +
+            "57555111247447826333235664636475334363246553548854742324663775673776676673782743" +
+            "363512746613324113561464351562433\r\n551242656566236736277377461266667667558658874" +
+            "28856574637654623658735377877437378247528258484842667667837332324272621244354631" +
+            "6455635653155436\r\n33621461661332545717221562173416486528283324574357845454464426" +
+            "8255423686363442453522542852382684442285543288741155321351577752531474223533221\r" +
+            "\n1443441235316375144343121275525632575225577748743446448543647276687438554855363" +
+            "25723282665758742642538662557482455224675736631163331511422142\r\n3363516265241316" +
+            "41554261754317638358738826684428323377423622538523375362228223672787457562836347" +
+            "625764576734457587474766475747516372652566231\r\n612513241543725162327454351625436" +
+            "33266866885623375846437628278435668558465787434644427746746658886573666774864658" +
+            "8425753462255337344555365446\r\n36642412676322231674516112352267737464573358427546" +
+            "27353346443445545933658853878475665285474476644248746854552683672233117613641656" +
+            "27461121446\r\n3563111424474746553644573725638876746345755683834263678983596937687" +
+            "89377693745759643487776846625334828753572877373875176522444431252331224422\r\n4254" +
+            "24324567624576122615622276325327742576743837356844644479575844967796477573537793" +
+            "985633434477625458353733673643674141773331632656722223463\r\n621254765663163614457" +
+            "63566233384465543823427842484474738863385999358658757479956853873774385332527566" +
+            "5367223662268284723456517574235121566532\r\n34613666125675124512421788365446785778" +
+            "68664484567565889494495535848655468348496857775979458439343388442754624626875746" +
+            "43747327175345551677341\r\n5121612744551542346336637648725746438277826255945397936" +
+            "43858755895385735748634556745699898587755353587587723883526358273613757213626117" +
+            "456351\r\n242731413511512266452636286277758466337866238495734956789456574346779889" +
+            "855734834547488794979387533645746648268686345257861622423451374215452\r\n335166447" +
+            "43342265734643238856252828782636635589496377877779943876847448559736694473854976" +
+            "8335885458468334823545752547338662336527435117713141\r\n46762613776261443325348486" +
+            "78726267428336885865957499795975997744997746738843896994679659858594359656734757" +
+            "66884854322677558417322416245624424\r\n3625372212314636661855555372342343674246533" +
+            "94783455736956669948353874555695643679646653874769856983843747377878554684536665" +
+            "271422645536163465\r\n133355763452411133324864436452373446723747645337555838367656" +
+            "55584944456933837698764497488589665855395536528485687545444334734176512721231423" +
+            "5\r\n27373363345573165674745257866277242787835383783575444853479474449645556774479" +
+            "3635667536654485665395867777686268265783288365376655434725534212\r\n64443256516263" +
+            "23585725763254483872864486554894584486468785598873949653468637758335748673496388" +
+            "47993747537897627374726526787353826366471147427\r\n5565632262553617652473234324558" +
+            "27446998387988646647354863939867997796476864447747863757865435947479368486357455" +
+            "638582345324573276657463726452\r\n422174721337717272857442783737733588559683868677" +
+            "96448636634848695487858785957448779964779383859498768557648993486687678827437277" +
+            "7733371375462\r\n75216121743142838856872335866673555454938343644489937695945596486" +
+            "4579887656579945799978683739849675335789896499465323833665742253126552775633\r\n33" +
+            "47775526455547488684284574766644346346757648648655436854589788988648765584746646" +
+            "94897655745493969333484579837446532837445274685762554716161\r\n7244537645256825522" +
+            "23737538638788799838463689663938997999599644955584644944666486769977558437979677" +
+            "676968864676332477642454568332343114571744\r\n213256326653433462676273747733678457" +
+            "98968487868388375998846489464878976797954577799969789994574568898465345454459646" +
+            "4233258876486522145636625\r\n62254734537128874724222623229959888487878987498857697" +
+            "68668997995579869848644984855658674667686836579697564433639795234628637625728452" +
+            "34676635\r\n2343617542185243658667765533595556573957456465886548696778664597547996" +
+            "89555984978488549799664865378557996867934367767582226253674525436273146\r\n7254612" +
+            "75282432446636623863496659574533869994344994554678994979849444579956788647885986" +
+            "946777759437979877497458947546734253247487568744323637\r\n451674534427263687826283" +
+            "53468565555338945747794589684584548574879798586984479487555884774588959644366975" +
+            "4948599988389626634674458567321776321\r\n52744323258828857484256388473765873393875" +
+            "96588456889454996779966644699578994688887895966758976878947994334788347559457486" +
+            "25523764426571277355\r\n4133276257838386843854346646453963938469387785556985546979" +
+            "76684485889764479788894599998486675548676967374995747584798774345774636638842337" +
+            "547\r\n471133737455724564378552487657498857869649566999646599658645479889944766658" +
+            "974484766974987844749775663784496675488669996856248664457636666541\r\n275416538678" +
+            "37277587456288366968435454477958578486885654589474544577476786668649575549845658" +
+            "6574457998373563947896936962264246255743634117613\r\n72672155878525522442848585633" +
+            "89858958958949785955998448766659575856876899769966786664779844897487776775374966" +
+            "73536495688572254767267565753354\r\n1654546458367365544463797484378596355584758496" +
+            "66585546645876767665578986998755788646694984986889757879745845969867369593646727" +
+            "663427388575222\r\n545564574242538573572376863754559656356465466486479647875567798" +
+            "978667779999669867579857885489774759685868473443845595986484243686386845232123\r\n" +
+            "43772774777744764545454694486685498554485984959745748976575675958856997669568668" +
+            "7788957988898546467564687698949544396437553666527732437472742\r\n36711567378572574" +
+            "48227785394378675589776686656564876666577796769765758768686869987766885647558449" +
+            "88755885877848444837435345735334744868863713\r\n1542313843788454354363333468796656" +
+            "34955475645964765798775679956855965897685888755559795895595848747558677976637945" +
+            "799636698472268863723876726\r\n732116326453732742743679844346868563797849585888688" +
+            "88969576965757789866776666859588968778885579596877879478785684478937673426858676" +
+            "7366425347\r\n53746653475645233288994498559436356757946498685478666967599695699596" +
+            "5899986655798776657877789875695549446985973333996746879848863454378735736\r\n23243" +
+            "78238883375276994793756739335556445969449649768788967999777895797996959898696765" +
+            "89996796869744446547678676463794365385975287866545836574\r\n6273678276386322578334" +
+            "87968756599579495479858799946669799879959696778576997576959575999998569965575954" +
+            "984785939447896769653826228432882822237\r\n223537546632535267374938566547335549454" +
+            "87997575898867879897787957677685998695676665859569898695895857884846676656458999" +
+            "6785372572347788857526\r\n76746255436544586245357968558547884648754685599699977877" +
+            "99598765758967798996899756566765895978974766587776876873995688989499732258383575" +
+            "25515\r\n4271583543264583354597768696687754685467985669696889587598757979688876998" +
+            "77587768877566566558867988697474796948855943549359532535762286826444\r\n7274736245" +
+            "63678642598359846353469567445754654956968558787858589668598687966787868765869896" +
+            "595777745489945767987559549666694333748526728572737\r\n675332588577675777498537776" +
+            "66598478475497467844776999678896696955697698798889865999897796877659957484649954" +
+            "9569674367939497675674842682562526\r\n61663373446232476698955947956887785594999474" +
+            "49995686556977899997977996979688677595986799669897999469879494974888635497789935" +
+            "53857468428786465\r\n2258638488342546847634373334553649847898964944886857785575869" +
+            "96769779996899968987666856968655795984845945877744837377765878864334237263333723" +
+            "\r\n656466528235852463579894579393696645964769474989668989579977858686887779986767" +
+            "768976559996685679595565698476975476954977873333826573723863487\r\n255377484435828" +
+            "27979688587883595866566985545669969556589659989768766899878977896699759987767568" +
+            "9664586785676558889696674646653286472743646875\r\n74544727347573648398868546494677" +
+            "57668555558665897755867858796878866888769687697888796756797858958957488494868999" +
+            "85939983646375375862755662541\r\n7624632656527867953946769999879566446595589866966" +
+            "69597859659787796698667679989796665975869779889769976974586697493437763853976627" +
+            "878473653573\r\n256524446848833848698473648697699998944687948877697765798699666897" +
+            "987786789876896977575795657859568594484658654548968947846598568788363663682\r\n124" +
+            "27335524825764664336846983444457985864964797588677998578798889778779666888678869" +
+            "6668976986676778659554758488757543877995469576243468567668\r\n77424845483525245834" +
+            "84676363689869548449779687578565777796877996868777869697679969886557665898695567" +
+            "76945784574649978593834693325552643458878\r\n2326747848864372988463453486498774988" +
+            "95646569958997577557978788889798796797988688799985987877996885589594688587558473" +
+            "446776677535484267273538\r\n622855828833226287376494589438459699676465566569776865" +
+            "67968868676988788776669987899675566585756759586647899485894484634468589967483238" +
+            "7238486\r\n47588224763735766875349844458684989854995969557599999568568998778769789" +
+            "8877966668797667566556975896997947448558847969979384533976846745844343\r\n62855363" +
+            "75254372397934635986365748959794598766977679968558869678969697896998776796666585" +
+            "86967969896946958999455763855736695738783434346388384\r\n5185548884564336638368776" +
+            "39893476956648785697979589986675796699666798876967667776699976758589676988654445" +
+            "467847997658795639478328724567572487\r\n535422734272548767894674876955676979978477" +
+            "97868786769855779998996878697697889998789776698587698676866747855864849776769838" +
+            "5476654324656636552\r\n35548577737222473659989966753588479884679769877968569569759" +
+            "68668876777678967788697779697765599787964789464568995775735537357444533523858354" +
+            "87\r\n5385387343626267396384887669446989445658868598695977555986769968966868688969" +
+            "98879867689857975587957586969554754956698894797754553367526467337\r\n4785626642236" +
+            "88544996659356367449569755777768898876577758766669786796797687986799997879899797" +
+            "999576767464565984484889833347359765524734584657\r\n318566285878825468736366765944" +
+            "66849848687847699588667656695798989677699968889798799665555686866978695455599976" +
+            "5597989948899875384867383462764\r\n55687362733322623447333888374655456696966695656" +
+            "67855766775667766788679969899677897659555866598697948794668598547565999485877398" +
+            "57475427775475\r\n3165284288323867274983748898363988665479498446696789995579677977" +
+            "67769767886697869985976687598995568488456957946484798454465934786677665445645\r\n7" +
+            "11827865826258229863653693974765548565997545599897898567776699688698778668896876" +
+            "858798586689988877549975444555969443577373969472462426845757\r\n255846247547426838" +
+            "46798634756489465859454478576698756987675998889887868877666696776877795588787675" +
+            "5954569689449759468453648573374385234882371\r\n54532757462783475733536496449758899" +
+            "78445844788797697756958785899899897689899668665977888767677599644666966977947544" +
+            "97896668476473764828776235\r\n6235422686756775289867834765485649857587549758769687" +
+            "87758559856966968769776767698558659957857797887886578848666545849385549633346427" +
+            "676782852\r\n523272367852473835358866377589458545685684767446977955655597859886587" +
+            "999798778858698599666986557877556985899597978638396767487262255282388574\r\n526464" +
+            "53722623225377679935734763879955554555649857966688866967767769566798888669899975" +
+            "7896875978958494665989786554456677447786438745867346675\r\n57714753452445546544788" +
+            "79484873934497754784859647596796555558898788777859657976889696587755979794699577" +
+            "95684846655587459935354488683868574475\r\n4765737443884474235848647937937386879794" +
+            "74964546458656856879977957556596965858776655689965565748458956447677994987584759" +
+            "763968528588724355852\r\n765627353433228375456947843836564677968978758967949997668" +
+            "65789867567989697969856667588969598584767577588544968369679468757793784273758664" +
+            "3352\r\n47713458764268572826578448384477646679549779454786879868889595597759879576" +
+            "9868757799777956565588895786697794859357379544975528765367763856877\r\n26674248232" +
+            "66856775994673745968885465756459896984846997788868866769587995955888777998898587" +
+            "69697674975978644639787996485495458256842325574757\r\n5112676435667675338886463336" +
+            "95644346658549984489574685876757869677598886768978755777579757556565598854947664" +
+            "464687733388759522627253848472425\r\n132453735523256254676859739435649744646577849" +
+            "74597857676575557689858557859988989797658776967469869976755998745393855343557668" +
+            "2258522368863515\r\n26127132633444456237438764668663847747967598965586996876588685" +
+            "7887965969957587656785975744778879468965897886648985574487796442545668557435536\r" +
+            "\n3333116525558252725566578548835653785755776579744477795599668859986869897699987" +
+            "95598665749487475768967567457967743633499368744726368236564332\r\n5561528546643625" +
+            "67274585587564687735875744594447495957669459795589859798976687768967775954876475" +
+            "944764975646959949897977782647535248678877511\r\n264133385533255388732773947884977" +
+            "35979966895998789657564598597775888698779698995799769567669875544497548766675434" +
+            "5698738652872868786345766727\r\n46311317644768358233526539339846685855958688449947" +
+            "96979454776466699985777795756767854994758779844887864835494787568453665765373328" +
+            "25275321127\r\n2347542174232678474374286937549955796878889879864668658747447558978" +
+            "75878857888866699946656657556949796739636534655639763833526784427583553515\r\n3371" +
+            "21135364426334726223568894688765456965954877664774697659467465988684846796557679" +
+            "575457484794849866738548668674443592734238636282848564115\r\n525432728768642268423" +
+            "83764747665996653786488484557794865654669454889756457857457645684764447987598949" +
+            "9696347558694977835763227444757773677217\r\n15622446335848572847336384375466363893" +
+            "35749495667896795657467588496764556988446679886979959976657854997358859876579746" +
+            "28433833555435685515136\r\n6265642318264257472846565383846738547667573495559749585" +
+            "76685795986849894964885544468857766986988954378558377779889746387372527537437461" +
+            "725142\r\n445163665587553553444628539497589763898673745545857459746478755669495459" +
+            "878987475776945787945847867374858357636869769677723374876456457165757\r\n153366452" +
+            "64764547687832456786943989634467694766485999546586598746575489564948697975587999" +
+            "6566986669779646658347698956867866267276436816151113\r\n12735224437328743845843324" +
+            "78697959497878759645979574976776998676586946889774845886796997868474489373895363" +
+            "64384838565247866454845226161175723\r\n7217416437164733726887656453496546534333465" +
+            "74449588877957544676696994485668588556677898759864946868874958453937933688673454" +
+            "722748466623411652\r\n675736624326228287826836766533748773384344658798746846455458" +
+            "79856467454865656978848879984855598566754948383334957476273837327663383647613462" +
+            "7\r\n55435572433435824226226867383253785379594949375373549955455756459887654569788" +
+            "5759964464675653735897674734494347967552322786248748773433173756\r\n52424553154263" +
+            "55444526887782738645378846577484339498894445744684457874749798675684947986866735" +
+            "39667457488746444566645782734865724373616263236\r\n7772672156212258235874567282283" +
+            "59948654376758834949464465549786465778584948998557789887889986394343869834563568" +
+            "453768426825343888227144173166\r\n265564113372672575653724842356682744669898357534" +
+            "93334766678956578458794757646644994467858733959974474355748837284363834357277682" +
+            "3277543723375\r\n21235252361733425426764457386775368363369646633679967844689943438" +
+            "6687976777687834333934593465633459583756789768242338755872352375532647466227\r\n11" +
+            "16277417256563323666743332588278268554356455587958574877968868543368633479748737" +
+            "45348869899349886695545664884662678638564436537433222736161\r\n7514712637516341146" +
+            "35565276285257754964789786366464984543765398497679333354587347363945366373587745" +
+            "497886436426273645853646845641277744323514\r\n574717513615323754464466666322864236" +
+            "45947873864845883448766993733385488674553889584354584566693458887684822868835337" +
+            "8737476634263752771276145\r\n17424465532363247478543773238658426265877958575899336" +
+            "46338488665396937574689685486734656987483655688944582636567536226363774141426732" +
+            "21243322\r\n1661565714472651743285442828736346443778946479864375553767856534489375" +
+            "66995375636838633878868784898647883365447845536654375453222174632441251\r\n6541645" +
+            "57172147564374256368627264444728622377779976798455698345746878373973896765973759" +
+            "947985693879832342646232772324282424464437275452463655\r\n565652532553113233523827" +
+            "88484863348362584484693778674767386736846799333845994634597758948757768433466827" +
+            "5362857356337875843212172615654352251\r\n13644412455163742141746845666637888485478" +
+            "85833838376737745433395464564537548474363358938369599457737385273756876467368862" +
+            "67674326212777763716\r\n4443537423463772243412323344252626574687368735385674595678" +
+            "45689556548746446388464869648779758459726854267866576453566472167257475341222456" +
+            "531\r\n462614525614355533772434583462633832257557638644285865794369797694698863536" +
+            "458549967639547734687288467428853288846886287715632366341631561115\r\n455441432435" +
+            "71432661674743835725322233258242586728844588946783594477959958636776557669339894" +
+            "3366488578555332622463247655161333226323675352455\r\n33344452642762745634626525327" +
+            "56873274325342446572348648533998465958866797744659985766537873636446272688886577" +
+            "45482657213341134333232217251546\r\n4154425243467723677157673463626337785536237362" +
+            "62777663675623548378554545379769474853854558442457463745628676765348376112111266" +
+            "562354717415164\r\n365316216737244653574726463346527547664757422635463777366444786" +
+            "753568754993555528747645573364237467476834244465353114662241533135343526443354\r\n" +
+            "64215653533226615615452763147272463364346333227532265426368753676455543388448487" +
+            "2223523578455236337253773846583442363553451141565376121563123\r\n24452363142132235" +
+            "51534257132634486236746733644632838342526224748244747654354276836354763823636643" +
+            "38348634362582717422471426736454651564455316\r\n2536252365245473717736743344434742" +
+            "28222284888542835387542755752672824826663388384838663866487244658742645257677716" +
+            "551235417613351512356344533\r\n611332423251345151727574654411316523644243288763383" +
+            "78523252774337227533878648844243335362328553855737668274571544432716275254266253" +
+            "2463466641\r\n42456122323251251222543525756147651764784626744768273785853845462476" +
+            "2665424754623672526763552335854437625663167326414777711372475411244253315\r\n11344" +
+            "52342254555757164337562646211147685757463833443326888675453656882873644733866684" +
+            "62857253452527847752367227434333453645536274433363351456\r\n3116454433225324256324" +
+            "37732576611256323424536473675555622587885685256723826767245854644433734667687468" +
+            "571222263523247771752351754265251214136\r\n512416342312651622176655526243467562223" +
+            "24558837287663724343457822243657254767224557476384736767323458133171361117333632" +
+            "1113414556131451125355\r\n54412613433545431277212447777657137215131272238272868226" +
+            "64622857482333586587523278467868375242832762453745151536517765643542466431633512" +
+            "54245\r\n1614651633121323563255435324574531377411376746435885433723246487687366723" +
+            "72454445822678234873823421761535355522321756266276365333544564112263\r\n5353221432" +
+            "26134621342247743331746616277725262674766583564888573648676748678685644867364857" +
+            "557762545355635147457167542233551416562236121661612\r\n166513621125514212452452465" +
+            "65333767115571563315541573543863252322582275345662847286646678336544376637374753" +
+            "3377762526471263564366145253153246\r\n24125612415232632255414266725745452226555475" +
+            "72734533742137775773567878342278422422272647157747376651322677165423671353215421" +
+            "34465324433441643\r\n5254562523412645331665161637447572747262234646165575431365776" +
+            "47326736286542837871744411672175662567555261523634677477436662463555523615556434" +
+            "")]
         public string Puzzle17_Input {
             get {
                 return ((string)(this["Puzzle17_Input"]));
@@ -2993,7 +3682,123 @@ namespace Advent23.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("L 2 (#274630)\r\nU 7 (#742433)\r\nR 7 (#274632)\r\nD 12 (#5a1523)\r\nR 2 (#552252)\r\nU 12 " +
+            "(#989093)\r\nR 7 (#39f342)\r\nU 8 (#989091)\r\nL 6 (#1dae62)\r\nU 4 (#10bf93)\r\nL 7 (#32c" +
+            "3f2)\r\nD 4 (#0892e3)\r\nL 3 (#380422)\r\nU 4 (#29e1f3)\r\nL 3 (#3527b0)\r\nD 3 (#32d823)\r" +
+            "\nL 5 (#3527b2)\r\nD 5 (#4f8123)\r\nL 4 (#642cc0)\r\nD 4 (#4f7e63)\r\nL 6 (#209f50)\r\nD 6 " +
+            "(#387f13)\r\nL 5 (#821880)\r\nD 5 (#4d80b3)\r\nL 9 (#5e6d30)\r\nD 9 (#553aa1)\r\nL 4 (#0d0" +
+            "cf0)\r\nU 10 (#5737f1)\r\nL 9 (#0d0cf2)\r\nU 3 (#2c51d1)\r\nL 8 (#24d6f0)\r\nU 7 (#957a93)" +
+            "\r\nR 6 (#4a8310)\r\nU 6 (#4349d3)\r\nR 2 (#31af40)\r\nU 6 (#5484a3)\r\nL 8 (#377a52)\r\nD 2" +
+            " (#1edf01)\r\nL 8 (#693b42)\r\nD 3 (#1edf03)\r\nL 10 (#5ec0e2)\r\nD 3 (#656003)\r\nL 8 (#1" +
+            "0a770)\r\nD 7 (#32bf93)\r\nR 7 (#664850)\r\nD 2 (#32db91)\r\nR 8 (#1c7270)\r\nD 10 (#9ccd4" +
+            "3)\r\nR 3 (#6ad5c0)\r\nD 8 (#2e50e3)\r\nL 8 (#451b80)\r\nD 3 (#72d673)\r\nL 6 (#606ad0)\r\nU" +
+            " 4 (#1dc933)\r\nL 4 (#7d4960)\r\nD 4 (#425df3)\r\nL 7 (#6c14a2)\r\nD 4 (#193c93)\r\nL 10 (" +
+            "#891d42)\r\nD 4 (#5997a3)\r\nL 4 (#185672)\r\nD 5 (#2b10b3)\r\nL 8 (#837e22)\r\nU 7 (#3712" +
+            "61)\r\nL 5 (#3da452)\r\nU 8 (#0b1d61)\r\nL 6 (#5714f2)\r\nD 4 (#2be861)\r\nL 11 (#3e18a2)\r" +
+            "\nD 7 (#6d9df1)\r\nL 4 (#4f3a42)\r\nD 4 (#269ae1)\r\nL 3 (#330b12)\r\nD 3 (#04d001)\r\nL 6 " +
+            "(#020b02)\r\nD 5 (#0ae901)\r\nL 2 (#5eac70)\r\nD 7 (#749f41)\r\nL 6 (#5eac72)\r\nD 4 (#39a" +
+            "091)\r\nR 5 (#25e982)\r\nD 5 (#29ed03)\r\nR 4 (#46aac2)\r\nU 5 (#33e203)\r\nR 5 (#638592)\r" +
+            "\nD 2 (#334443)\r\nR 6 (#729482)\r\nU 5 (#30c003)\r\nR 4 (#554c32)\r\nD 5 (#1487b3)\r\nR 5 " +
+            "(#636080)\r\nD 5 (#9945d3)\r\nL 4 (#27d310)\r\nD 9 (#39a143)\r\nL 8 (#268500)\r\nU 9 (#00f" +
+            "b73)\r\nL 3 (#75c380)\r\nD 4 (#00fb71)\r\nL 7 (#4a94f0)\r\nD 7 (#1707c3)\r\nL 3 (#1a0352)\r" +
+            "\nD 5 (#112b93)\r\nL 4 (#47ff40)\r\nD 3 (#5d5563)\r\nR 10 (#7fabd0)\r\nD 5 (#0054e3)\r\nL 1" +
+            "0 (#1ca5d2)\r\nD 6 (#1811d3)\r\nL 6 (#0e9a62)\r\nU 5 (#301813)\r\nL 3 (#471be2)\r\nU 9 (#3" +
+            "01811)\r\nL 5 (#554f02)\r\nU 12 (#56a913)\r\nL 5 (#70b630)\r\nU 2 (#3c7d03)\r\nL 3 (#5334b" +
+            "0)\r\nU 3 (#88eca3)\r\nL 3 (#5e5ec0)\r\nU 5 (#190663)\r\nL 5 (#0727f0)\r\nD 5 (#4bd611)\r\nL" +
+            " 6 (#729bf0)\r\nU 2 (#4519c3)\r\nL 4 (#14a4b0)\r\nU 2 (#5e96f3)\r\nL 7 (#264850)\r\nU 9 (#" +
+            "2e2441)\r\nL 6 (#683450)\r\nU 6 (#2e2443)\r\nR 8 (#1cc7d0)\r\nU 8 (#141153)\r\nR 7 (#15b9c" +
+            "2)\r\nU 6 (#59df73)\r\nR 7 (#565bb2)\r\nU 4 (#59df71)\r\nR 4 (#53d3b2)\r\nU 8 (#2ff203)\r\nR" +
+            " 8 (#387260)\r\nU 2 (#3f7fb3)\r\nR 7 (#32edb0)\r\nU 8 (#2f7463)\r\nR 6 (#67d5b0)\r\nU 6 (#" +
+            "5b3001)\r\nL 4 (#2a24f0)\r\nU 5 (#629821)\r\nL 9 (#2a24f2)\r\nD 5 (#683411)\r\nL 3 (#18f51" +
+            "0)\r\nU 8 (#30abe1)\r\nR 3 (#06a2c0)\r\nU 2 (#4bd613)\r\nR 13 (#60ee30)\r\nU 5 (#6fadf3)\r\n" +
+            "L 9 (#384c30)\r\nU 6 (#30a8f3)\r\nL 4 (#579dc0)\r\nU 8 (#19d963)\r\nL 4 (#3c7ce0)\r\nU 8 (" +
+            "#316373)\r\nL 9 (#25ca00)\r\nU 4 (#429873)\r\nL 9 (#59be70)\r\nD 5 (#5b46e3)\r\nL 5 (#59be" +
+            "72)\r\nD 5 (#18e4b3)\r\nL 6 (#5e1d50)\r\nD 10 (#3e9e63)\r\nL 3 (#459ec0)\r\nD 11 (#44b1c1)" +
+            "\r\nL 8 (#324152)\r\nD 3 (#4c2b31)\r\nL 5 (#324150)\r\nD 8 (#22cf21)\r\nL 7 (#36aeb0)\r\nU 7" +
+            " (#3b6a11)\r\nL 7 (#1a7740)\r\nU 5 (#518911)\r\nL 9 (#61d4a0)\r\nU 9 (#323d91)\r\nL 3 (#5d" +
+            "5b40)\r\nU 7 (#661041)\r\nL 5 (#484a82)\r\nU 8 (#087991)\r\nL 4 (#38e512)\r\nU 6 (#5fd7f1)" +
+            "\r\nL 5 (#806972)\r\nU 7 (#685183)\r\nL 4 (#6671e2)\r\nU 10 (#8f0d81)\r\nL 6 (#2feae0)\r\nD " +
+            "10 (#201181)\r\nL 6 (#507ba2)\r\nU 8 (#62d101)\r\nL 3 (#19af52)\r\nU 11 (#4d1871)\r\nL 8 (" +
+            "#6a2af0)\r\nU 4 (#135721)\r\nR 4 (#4260e0)\r\nU 4 (#443a41)\r\nR 6 (#107d40)\r\nU 8 (#0aac" +
+            "b1)\r\nR 5 (#5df350)\r\nU 7 (#30bf53)\r\nR 6 (#51ce90)\r\nU 10 (#30bf51)\r\nL 3 (#18bb20)\r" +
+            "\nU 6 (#0aacb3)\r\nL 5 (#06f190)\r\nU 4 (#03dc91)\r\nL 4 (#71bcb0)\r\nU 9 (#4ce7b1)\r\nR 7 " +
+            "(#81ff02)\r\nU 3 (#6b0b11)\r\nR 5 (#864392)\r\nU 3 (#4bd3e3)\r\nR 5 (#a07392)\r\nD 6 (#369" +
+            "4a3)\r\nL 7 (#16a222)\r\nD 5 (#826881)\r\nR 7 (#049c02)\r\nD 3 (#2813e1)\r\nR 5 (#7c6110)\r" +
+            "\nU 14 (#40a881)\r\nR 4 (#333260)\r\nD 6 (#062261)\r\nR 9 (#51ee00)\r\nD 5 (#64b4e1)\r\nR 2" +
+            " (#2da420)\r\nD 5 (#a4ab31)\r\nR 10 (#38e550)\r\nD 7 (#156261)\r\nR 2 (#0b3aa0)\r\nD 6 (#7" +
+            "8a263)\r\nR 7 (#926d10)\r\nD 5 (#4e8ce3)\r\nL 11 (#136420)\r\nD 8 (#5e2713)\r\nR 11 (#58d8" +
+            "72)\r\nD 4 (#772153)\r\nR 4 (#58d870)\r\nD 6 (#3f8e33)\r\nR 7 (#136422)\r\nU 6 (#2f6493)\r\n" +
+            "R 4 (#851de0)\r\nU 3 (#4b0281)\r\nR 10 (#79ea40)\r\nU 9 (#366871)\r\nR 6 (#3a4780)\r\nU 4 " +
+            "(#7fdd21)\r\nR 3 (#54ed42)\r\nU 6 (#11cd91)\r\nR 7 (#4fae92)\r\nU 9 (#6b0051)\r\nR 2 (#4fa" +
+            "e90)\r\nU 10 (#4616d1)\r\nR 4 (#54ed40)\r\nU 5 (#473da1)\r\nR 4 (#39cba0)\r\nU 10 (#32db93" +
+            ")\r\nR 5 (#7edab0)\r\nU 2 (#1c7dc1)\r\nR 4 (#2a7570)\r\nD 8 (#5d0fd1)\r\nR 7 (#5588b0)\r\nU " +
+            "5 (#48a261)\r\nR 5 (#1bb440)\r\nU 6 (#187c71)\r\nL 6 (#32c080)\r\nU 5 (#29f291)\r\nR 6 (#1" +
+            "aa790)\r\nU 5 (#54cf81)\r\nR 3 (#7265a0)\r\nU 5 (#4d8a91)\r\nL 8 (#204d90)\r\nU 7 (#4d8a93" +
+            ")\r\nL 3 (#834a30)\r\nU 3 (#09c801)\r\nR 11 (#26e812)\r\nU 6 (#7a9971)\r\nR 6 (#3755c2)\r\nD" +
+            " 9 (#21dba1)\r\nR 7 (#3e8ea2)\r\nD 8 (#2bb851)\r\nR 6 (#345db0)\r\nD 3 (#0c8f41)\r\nL 3 (#" +
+            "28b9b2)\r\nD 5 (#9280c1)\r\nL 5 (#28b9b0)\r\nD 3 (#228ac1)\r\nL 7 (#0df740)\r\nD 5 (#875d7" +
+            "1)\r\nR 11 (#4a5390)\r\nD 5 (#8c7ac3)\r\nR 4 (#417ff0)\r\nD 4 (#12dc63)\r\nR 11 (#5a6802)\r" +
+            "\nU 8 (#616af3)\r\nR 3 (#5a6800)\r\nU 5 (#64b733)\r\nR 3 (#99d5b0)\r\nU 6 (#028b31)\r\nR 9 " +
+            "(#0faf30)\r\nD 4 (#6d4e01)\r\nR 2 (#3a2e20)\r\nD 5 (#510df1)\r\nR 3 (#3a2e22)\r\nU 3 (#436" +
+            "be1)\r\nR 8 (#0faf32)\r\nU 7 (#612641)\r\nL 8 (#53daf0)\r\nU 9 (#4e71a1)\r\nR 5 (#303c32)\r" +
+            "\nU 5 (#3f3233)\r\nR 8 (#883082)\r\nD 11 (#6551a1)\r\nR 3 (#2bd002)\r\nD 8 (#0827a1)\r\nR 2" +
+            " (#41c340)\r\nD 5 (#6f0651)\r\nR 7 (#53d550)\r\nD 4 (#33aa31)\r\nR 7 (#959892)\r\nD 7 (#1a" +
+            "9fb1)\r\nR 3 (#530212)\r\nD 7 (#21c6e1)\r\nL 7 (#2cccb2)\r\nD 8 (#3904a3)\r\nL 3 (#55d040)" +
+            "\r\nU 8 (#2571f3)\r\nL 6 (#1cd6f2)\r\nD 2 (#a6b293)\r\nL 5 (#1cd6f0)\r\nD 9 (#25fc03)\r\nR 8" +
+            " (#55d042)\r\nD 4 (#216b33)\r\nR 3 (#4b8c82)\r\nU 4 (#3f3231)\r\nR 7 (#0c4122)\r\nD 6 (#2e" +
+            "8ab1)\r\nR 3 (#456be2)\r\nD 7 (#7e5b83)\r\nR 4 (#4c7d22)\r\nD 2 (#7e5b81)\r\nR 8 (#653352)" +
+            "\r\nU 7 (#5fbd33)\r\nL 3 (#045090)\r\nU 8 (#084453)\r\nL 3 (#5ac5f0)\r\nU 6 (#191693)\r\nR 6" +
+            " (#0266c0)\r\nU 5 (#2aa953)\r\nR 4 (#849b60)\r\nU 7 (#710533)\r\nR 11 (#870222)\r\nD 4 (#1" +
+            "a6bb3)\r\nR 2 (#6c7bd0)\r\nD 11 (#070a93)\r\nR 2 (#18f422)\r\nD 4 (#23a2c3)\r\nR 11 (#6d87" +
+            "42)\r\nD 5 (#23a2c1)\r\nR 9 (#40c662)\r\nD 6 (#5e1ff3)\r\nL 6 (#045092)\r\nD 3 (#555013)\r\n" +
+            "L 5 (#1b7a52)\r\nD 7 (#1223b3)\r\nR 9 (#88fb52)\r\nD 4 (#1223b1)\r\nR 2 (#081112)\r\nD 5 (" +
+            "#021341)\r\nR 8 (#15ace2)\r\nU 8 (#9fcf21)\r\nR 4 (#3c2d32)\r\nU 7 (#1d7ea1)\r\nL 4 (#8012" +
+            "82)\r\nU 3 (#6e9741)\r\nR 5 (#920a22)\r\nU 5 (#346411)\r\nR 9 (#565a92)\r\nU 4 (#6835d1)\r\n" +
+            "R 7 (#1beb32)\r\nU 10 (#274661)\r\nR 7 (#837f12)\r\nU 6 (#151c81)\r\nR 11 (#2e8672)\r\nD 6" +
+            " (#045641)\r\nR 3 (#6bd070)\r\nU 2 (#8c36f1)\r\nR 5 (#188a00)\r\nU 11 (#3f41b1)\r\nL 5 (#4" +
+            "38682)\r\nU 4 (#811531)\r\nL 9 (#464c82)\r\nU 3 (#41f311)\r\nL 7 (#89d300)\r\nU 4 (#07c411" +
+            ")\r\nL 5 (#71f5b0)\r\nU 6 (#3c3e01)\r\nL 5 (#824660)\r\nD 10 (#40e461)\r\nL 8 (#005ef0)\r\nU" +
+            " 6 (#2f3c93)\r\nL 8 (#541d20)\r\nU 6 (#7291b1)\r\nR 4 (#176280)\r\nU 11 (#7291b3)\r\nR 3 (" +
+            "#4c0380)\r\nU 4 (#2f3c91)\r\nR 13 (#447a00)\r\nD 4 (#40e463)\r\nR 12 (#134f60)\r\nU 7 (#08" +
+            "ebc1)\r\nR 5 (#000250)\r\nU 4 (#2ec1e1)\r\nR 7 (#08c350)\r\nU 6 (#6b24b3)\r\nR 4 (#137870)" +
+            "\r\nU 6 (#0e1503)\r\nR 11 (#96d010)\r\nD 3 (#410e73)\r\nR 2 (#0cfb40)\r\nD 4 (#433481)\r\nR " +
+            "3 (#159fe0)\r\nD 7 (#2e33d1)\r\nR 5 (#159fe2)\r\nD 6 (#48dfd1)\r\nR 5 (#105850)\r\nD 4 (#5" +
+            "f6db1)\r\nL 8 (#1f2742)\r\nD 8 (#421cc1)\r\nL 5 (#2f0ce2)\r\nD 5 (#24b4d3)\r\nL 7 (#701502" +
+            ")\r\nD 6 (#24b4d1)\r\nL 4 (#121892)\r\nD 5 (#038801)\r\nR 3 (#055ce2)\r\nD 3 (#0197b1)\r\nR " +
+            "5 (#09cfa2)\r\nD 6 (#2ef9b3)\r\nR 6 (#86b022)\r\nD 4 (#2ef9b1)\r\nR 2 (#18b6d2)\r\nD 11 (#" +
+            "1b0c63)\r\nR 5 (#208782)\r\nD 3 (#377051)\r\nR 3 (#767142)\r\nD 13 (#377053)\r\nL 5 (#31fb" +
+            "a2)\r\nD 6 (#1b0c61)\r\nR 4 (#0b0542)\r\nD 9 (#0197b3)\r\nR 2 (#516d92)\r\nD 2 (#26a151)\r\n" +
+            "R 9 (#590c20)\r\nD 8 (#59d3f1)\r\nL 11 (#64b270)\r\nD 8 (#9a2131)\r\nR 10 (#34a6c0)\r\nU 5" +
+            " (#3300e1)\r\nR 5 (#943c80)\r\nU 2 (#45c371)\r\nR 11 (#2904a0)\r\nU 3 (#4f4011)\r\nR 5 (#1" +
+            "045f2)\r\nU 9 (#9f9df1)\r\nL 5 (#1045f0)\r\nU 5 (#03ff31)\r\nR 7 (#48cc20)\r\nU 3 (#174d21" +
+            ")\r\nL 2 (#65e6b0)\r\nU 9 (#360483)\r\nL 6 (#42a0b0)\r\nU 3 (#89d053)\r\nL 9 (#3f0d10)\r\nU " +
+            "10 (#744613)\r\nL 5 (#503e00)\r\nU 3 (#9f85a3)\r\nL 5 (#156fd0)\r\nU 3 (#3a3a03)\r\nL 4 (#" +
+            "7aa2a0)\r\nU 8 (#690943)\r\nL 6 (#5412a0)\r\nU 5 (#262f51)\r\nR 4 (#03c872)\r\nU 6 (#521ed" +
+            "1)\r\nR 6 (#193322)\r\nU 4 (#674f11)\r\nR 3 (#6f2462)\r\nU 10 (#5131a1)\r\nR 2 (#1155f2)\r\n" +
+            "U 6 (#525651)\r\nR 11 (#033872)\r\nU 4 (#995501)\r\nR 11 (#182650)\r\nU 7 (#475891)\r\nR 6" +
+            " (#24df30)\r\nD 9 (#33eb31)\r\nR 4 (#24df32)\r\nU 9 (#465211)\r\nR 7 (#182652)\r\nU 9 (#3a" +
+            "a201)\r\nR 9 (#033870)\r\nU 3 (#1a0ae1)\r\nR 5 (#22b482)\r\nD 6 (#56b2f1)\r\nR 11 (#623122" +
+            ")\r\nU 6 (#817c81)\r\nR 9 (#623120)\r\nU 4 (#38f971)\r\nR 5 (#626642)\r\nD 5 (#63e353)\r\nR " +
+            "2 (#0d8b02)\r\nD 8 (#4fe853)\r\nR 5 (#4789f2)\r\nD 12 (#2cb943)\r\nR 6 (#4f8292)\r\nD 3 (#" +
+            "3ea3f3)\r\nR 6 (#533a72)\r\nD 3 (#78a803)\r\nR 5 (#52bd42)\r\nD 11 (#78a801)\r\nR 3 (#0753" +
+            "32)\r\nD 5 (#201683)\r\nR 6 (#1da752)\r\nD 6 (#41e543)\r\nR 3 (#995702)\r\nD 5 (#0a2153)\r\n" +
+            "R 6 (#4d9f32)\r\nD 10 (#534cd3)\r\nL 8 (#3f7340)\r\nD 2 (#3892a3)\r\nL 5 (#3f7342)\r\nD 10" +
+            " (#35d9a3)\r\nL 7 (#0ee870)\r\nU 10 (#5e8cb3)\r\nL 7 (#0aed10)\r\nD 9 (#5ea061)\r\nL 6 (#3" +
+            "88af0)\r\nD 8 (#690071)\r\nL 11 (#50f1b0)\r\nD 3 (#24d793)\r\nL 5 (#0c6f42)\r\nD 6 (#75d57" +
+            "3)\r\nL 2 (#0c6f40)\r\nD 2 (#2cf3d3)\r\nL 10 (#43a410)\r\nD 3 (#260e33)\r\nR 12 (#1c47d2)\r" +
+            "\nD 6 (#417d13)\r\nL 6 (#61c132)\r\nD 8 (#5496b1)\r\nL 3 (#532302)\r\nD 8 (#5496b3)\r\nL 7 " +
+            "(#422062)\r\nD 4 (#1f66c1)\r\nL 7 (#527132)\r\nD 9 (#393951)\r\nL 6 (#293122)\r\nU 4 (#58c" +
+            "f41)\r\nL 6 (#2124e2)\r\nU 9 (#49f2f1)\r\nL 4 (#966df2)\r\nD 9 (#033483)\r\nL 3 (#3276c2)\r" +
+            "\nD 3 (#71e053)\r\nL 3 (#5912a2)\r\nD 8 (#647a43)\r\nL 8 (#58caf2)\r\nD 5 (#74f4e3)\r\nL 3 " +
+            "(#5033a2)\r\nU 3 (#345423)\r\nL 3 (#14f432)\r\nU 7 (#44c9c3)\r\nL 4 (#8c0842)\r\nU 6 (#6cd" +
+            "493)\r\nL 6 (#0ca462)\r\nD 5 (#2dd8d3)\r\nL 11 (#6ae062)\r\nD 5 (#561703)\r\nR 11 (#510c02" +
+            ")\r\nD 5 (#55d0c3)\r\nL 5 (#510c00)\r\nD 5 (#227663)\r\nL 4 (#26ebc2)\r\nU 6 (#37ff33)\r\nL " +
+            "11 (#546b60)\r\nD 4 (#3bcd93)\r\nL 7 (#56a5b0)\r\nD 2 (#3bcd91)\r\nL 7 (#105310)\r\nD 4 (#" +
+            "4fcbf3)\r\nL 8 (#23b2a2)\r\nD 5 (#a78353)\r\nR 8 (#378f32)\r\nD 3 (#0083b3)\r\nR 8 (#33e38" +
+            "2)\r\nD 6 (#a80701)\r\nL 3 (#2c3ed2)\r\nD 9 (#4b8ea3)\r\nL 6 (#7d4c12)\r\nU 9 (#05b6a1)\r\nL" +
+            " 7 (#53a692)\r\nD 7 (#2c9d93)\r\nL 7 (#9fd9b2)\r\nD 4 (#2c9d91)\r\nL 3 (#376372)\r\nD 8 (#" +
+            "05b6a3)\r\nL 6 (#15c4e2)\r\nD 7 (#2eb9b3)\r\nL 8 (#75eb42)\r\nD 4 (#653fc3)\r\nL 12 (#75eb" +
+            "40)\r\nU 2 (#7f4873)\r\nL 4 (#0286d2)\r\nU 12 (#9fd9f3)")]
         public string Puzzle18_Input {
             get {
                 return ((string)(this["Puzzle18_Input"]));
@@ -3084,6 +3889,20 @@ namespace Advent23.Properties {
             }
             set {
                 this["Puzzle25_Input"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("R 6 (#70c710)\r\nD 5 (#0dc571)\r\nL 2 (#5713f0)\r\nD 2 (#d2c081)\r\nR 2 (#59c680)\r\nD 2 (#" +
+            "411b91)\r\nL 5 (#8ceee2)\r\nU 2 (#caa173)\r\nL 1 (#1b58a2)\r\nU 2 (#caa171)\r\nR 2 (#7807d" +
+            "2)\r\nU 3 (#a77fa3)\r\nL 2 (#015232)\r\nU 2 (#7a21e3)")]
+        public string Puzzle_Example {
+            get {
+                return ((string)(this["Puzzle_Example"]));
+            }
+            set {
+                this["Puzzle_Example"] = value;
             }
         }
     }

@@ -6,6 +6,7 @@ using System.IO;
 using System.Text;
 using System.Xml.Linq;
 using System.Diagnostics;
+using System.Collections;
 
 namespace Advent23
 {
@@ -3065,11 +3066,139 @@ namespace Advent23
         #region Puzzle 15
         private long Puzzle15_PartOne()
         {
-            return 0;
+
+
+            //
+            string strInput15 = Advent23.Properties.Settings.Default.Puzzle15_Input;
+
+
+
+            string[] allString = strInput15.Split(",");
+
+            long lnmgTotalPoint = 0;
+            long lngCurrentHash = 0;
+            foreach (string strInstruction in allString)
+            {
+                lngCurrentHash = 0;
+                long asciValue = 0;
+                foreach (char chChar in strInstruction)
+                {
+                    asciValue = ((byte)chChar);
+
+                    lngCurrentHash += asciValue;
+                    lngCurrentHash *= 17;
+                    lngCurrentHash = lngCurrentHash % 256;
+                }
+                lnmgTotalPoint += lngCurrentHash;
+
+
+            }
+
+
+            return lnmgTotalPoint;
         }
         private long Puzzle15_PartTwo()
         {
-            return 0;
+
+            string strInput15 = Advent23.Properties.Settings.Default.Puzzle15_Input;
+
+            long lngFinalPower = 0;
+            List<string>[] lstBoxes = new List<string>[256];
+            List<int>[] lstNums = new List<int>[256];
+
+            //init all the list
+            for (int i = 0; i < 256; i++)
+            {
+                lstBoxes[i] = new List<string>();
+                lstNums[i] = new List<int>();
+            }
+
+            string[] allString = strInput15.Split(",");
+
+            long lngBoxNum = 0;
+            string strHASH = "";
+            string strNumber = "";
+            char chCommand = '\0';
+            int intSpot = 0;
+
+            foreach (string strInstruction in allString)
+            {
+                if (strInstruction.Contains('-') == true)
+                {
+                    chCommand = '-';
+                    strHASH = strInstruction.Substring(0, strInstruction.IndexOf('-'));
+                }
+                if (strInstruction.Contains('=') == true)
+                {
+                    chCommand = '=';
+                    strHASH = strInstruction.Substring(0, strInstruction.IndexOf('='));
+                    strNumber = strInstruction.Substring(strInstruction.IndexOf('=') + 1);
+                }
+
+                lngBoxNum = P15_Hash(strHASH);
+
+
+                switch (chCommand)
+                {
+                    case '-':
+                        if (lstBoxes[lngBoxNum].Contains(strHASH) == true)
+                        {
+                            //we remove it (and the number) on their 'spot'
+                            intSpot = lstBoxes[lngBoxNum].IndexOf(strHASH);
+                            lstBoxes[lngBoxNum].RemoveAt(intSpot);
+                            lstNums[lngBoxNum].RemoveAt(intSpot);
+                        }
+                        break;
+
+                    case '=':
+                        if (lstBoxes[lngBoxNum].Contains(strHASH) == true)
+                        {
+                            //we remove it (and the number) on their 'spot'
+                            intSpot = lstBoxes[lngBoxNum].IndexOf(strHASH);
+                            lstNums[lngBoxNum][intSpot] = int.Parse(strNumber);
+                        }
+                        else
+                        {
+                            lstBoxes[lngBoxNum].Add(strHASH);
+                            lstNums[lngBoxNum].Add(int.Parse(strNumber));
+                        }
+                        break;
+
+                }
+            }
+
+
+            lngFinalPower = 0;
+            int intPosition = 0;
+            //for each boxes
+            for (int i = 0; i < 256; i++)
+            {
+                intPosition = 0;
+                foreach (long lngFocal in lstNums[i])
+                {
+                    intPosition++;
+                    lngFinalPower += ((i + 1) * intPosition * lngFocal);
+                }
+            }
+
+            return lngFinalPower;
+        }
+
+        private long P15_Hash(string strHASH)
+        {
+            long lngCurrentHash = 0;
+
+            lngCurrentHash = 0;
+            long asciValue = 0;
+            foreach (char chChar in strHASH)
+            {
+                asciValue = ((byte)chChar);
+
+                lngCurrentHash += asciValue;
+                lngCurrentHash *= 17;
+                lngCurrentHash = lngCurrentHash % 256;
+            }
+            return lngCurrentHash;
         }
 
         private void bntRun15_Click(object sender, EventArgs e)
@@ -3086,11 +3215,379 @@ namespace Advent23
         #region Puzzle 16
         private long Puzzle16_PartOne()
         {
-            return 0;
+
+            //Grid side X,Y
+            int intGridSize = 110;
+            char[,] chrGrid = new char[intGridSize, intGridSize]; //to make it easy we pad around
+            string strInput14 = Advent23.Properties.Settings.Default.Puzzle16_Input;
+            string[] allString = strInput14.Split("\r\n");
+
+            long lngLoad = 0;
+
+            int intX = -1;
+            int intY = 0;
+
+            foreach (string strGames in allString)
+            {
+                intX++;
+                intY = 0;
+                foreach (char chData in strGames)
+                {
+                    chrGrid[intX, intY++] = chData;
+                }
+            }
+
+            char[,] chrGridEnergised = new char[intGridSize, intGridSize]; //to make it easy we pad around
+            Queue<Tuple<int, int, char>> quCoordinate = new Queue<Tuple<int, int, char>>();
+
+
+            Tuple<int, int, char> tpNewData = new Tuple<int, int, char>(0, -1, 'R');
+            Tuple<int, int, char> tpCurrent = new Tuple<int, int, char>(0, -1, 'R');
+
+
+            quCoordinate.Enqueue(tpNewData);
+            Dictionary<string, string> dictCached = new Dictionary<string, string>();
+            string strChacheID = "0,-1,R";
+            dictCached.Add(strChacheID, strChacheID);
+
+            char charDirection = 'R';
+            char charCurrentPos = '.';
+
+            int intDirectionX = 0;
+            int intDirectionY = 0;
+
+            while (quCoordinate.Count > 0)
+            {
+                tpCurrent = quCoordinate.Dequeue();
+                //we now do the full of this coordinate, if we split we check if it was already done (if not) then we add it in queue and 'done'
+                intX = tpCurrent.Item1;
+                intY = tpCurrent.Item2;
+                charDirection = tpCurrent.Item3;
+
+
+                while (true)
+                {
+                    //we are in the grid, we continue until we get 'off' the grid
+                    switch (charDirection)
+                    {
+                        case 'U': //up
+                            intDirectionX = -1;
+                            intDirectionY = 0;
+                            break;
+                        case 'D': //down
+                            intDirectionX = 1;
+                            intDirectionY = 0;
+                            break;
+                        case 'L': //left
+                            intDirectionX = 0;
+                            intDirectionY = -1;
+                            break;
+                        case 'R': //right
+                            intDirectionX = 0;
+                            intDirectionY = 1;
+                            break;
+                    }
+
+                    intX += intDirectionX;
+                    intY += intDirectionY;
+
+                    if (intX < 0 || intY < 0 || intX >= intGridSize || intY >= intGridSize) break; // we are now OOB
+
+                    //we energise that grid (maybe already done, don'T carE)
+                    chrGridEnergised[intX, intY] = '1';
+                    charCurrentPos = chrGrid[intX, intY];
+
+                    strChacheID = (intX).ToString() + "," + (intY).ToString() + "," + charDirection;
+                    if (dictCached.ContainsKey(strChacheID) == false)
+                    {
+                        dictCached.Add(strChacheID, strChacheID);
+                    }
+                    else
+                    {
+                        //we have been here, we breach out 
+                        break;
+                    }
+
+                    if (charCurrentPos != '.')
+                    {
+                        if (charCurrentPos == '-' && (charDirection == 'U' || charDirection == 'D'))
+                        {
+                            //we split it, current thread go left, and we queue right
+                            tpNewData = new Tuple<int, int, char>(intX, intY, 'R');
+                            quCoordinate.Enqueue(tpNewData);
+                            strChacheID = (intX).ToString() + "," + (intY).ToString() + ",R";
+                            if (dictCached.ContainsKey(strChacheID) == false) dictCached.Add(strChacheID, strChacheID);
+
+                            //now we change our direction to down
+                            charDirection = 'L';
+                        }
+                        else if (charCurrentPos == '|' && (charDirection == 'L' || charDirection == 'R'))
+                        {
+                            //we split it, and we go up, and continu this one right
+                            tpNewData = new Tuple<int, int, char>(intX, intY, 'U');
+                            quCoordinate.Enqueue(tpNewData);
+                            strChacheID = (intX).ToString() + "," + intY.ToString() + ",U";
+                            if (dictCached.ContainsKey(strChacheID) == false) dictCached.Add(strChacheID, strChacheID);
+
+                            //now we change our direction to down
+                            charDirection = 'D';
+                        }
+                        else if (charCurrentPos == '\\')
+                        {
+                            //no split but we are changing direction depending on our current direction
+                            switch (charDirection)
+                            {
+                                case 'U': //up
+                                    charDirection = 'L';
+                                    break;
+                                case 'D': //down
+                                    charDirection = 'R';
+                                    break;
+                                case 'L': //left
+                                    charDirection = 'U';
+                                    break;
+                                case 'R': //right
+                                    charDirection = 'D';
+                                    break;
+                            }
+                        }
+                        else if (charCurrentPos == '/')
+                        {
+                            //no split but we are changing direction depending on our current direction
+                            switch (charDirection)
+                            {
+                                case 'U': //up
+                                    charDirection = 'R';
+                                    break;
+                                case 'D': //down
+                                    charDirection = 'L';
+                                    break;
+                                case 'L': //left
+                                    charDirection = 'D';
+                                    break;
+                                case 'R': //right
+                                    charDirection = 'U';
+                                    break;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            lngLoad = 0;
+            for (int a = 0; a < intGridSize; a++)
+            {
+                for (int b = 0; b < intGridSize; b++)
+                {
+                    if (chrGridEnergised[a, b] == '1') lngLoad++;
+                }
+            }
+
+            return lngLoad;
+
         }
         private long Puzzle16_PartTwo()
         {
-            return 0;
+            //I'm 'cheezing' this one, just re-use the code I did for P1 and instead queue a different start, for all possible ways
+
+            //Grid side X,Y
+            int intGridSize = 110;
+            char[,] chrGrid = new char[intGridSize, intGridSize]; //to make it easy we pad around
+            string strInput14 = Advent23.Properties.Settings.Default.Puzzle16_Input;
+            string[] allString = strInput14.Split("\r\n");
+
+            long lngLoad = 0;
+
+            int intX = -1;
+            int intY = 0;
+
+            foreach (string strGames in allString)
+            {
+                intX++;
+                intY = 0;
+                foreach (char chData in strGames)
+                {
+                    chrGrid[intX, intY++] = chData;
+                }
+            }
+
+            Tuple<int, int, char> tpNewData = new Tuple<int, int, char>(0, -1, 'R');
+            Tuple<int, int, char> tpCurrent = new Tuple<int, int, char>(0, -1, 'R');
+
+            for (int x = 0; x < 4; x++)
+            {
+                for (int y = 0; y < intGridSize; y++)
+                {
+                    char[,] chrGridEnergised = new char[intGridSize, intGridSize]; //to make it easy we pad around
+
+                    Queue<Tuple<int, int, char>> quCoordinate = new Queue<Tuple<int, int, char>>();
+
+                    //if X = 0 , then we change on X, otherwise we start on Y
+                    string strChacheID = "";
+                    char charDirection = 'R';
+                    char charCurrentPos = '.';
+
+                    int intDirectionX = 0;
+                    int intDirectionY = 0;
+
+                    switch (x)
+                    {
+                        case 0: //up
+                            strChacheID = "-1," + y.ToString() + ",D";
+                            tpNewData = new Tuple<int, int, char>(-1, y, 'D');
+                            break;
+                        case 1: //down
+                            strChacheID = intGridSize.ToString() + y.ToString() + "," + ",U";
+                            tpNewData = new Tuple<int, int, char>(intGridSize, y, 'U');
+                            break;
+                        case 2: //left
+                            strChacheID = y.ToString() + ",-1" + ",R";
+                            tpNewData = new Tuple<int, int, char>(y, -1, 'R');
+                            break;
+                        case 3: //right
+                            strChacheID = y.ToString() + "," + intGridSize.ToString() + ",L";
+                            tpNewData = new Tuple<int, int, char>(y, intGridSize, 'L');
+                            break;
+                    }
+
+                    quCoordinate.Enqueue(tpNewData);
+                    Dictionary<string, string> dictCached = new Dictionary<string, string>();
+                    dictCached.Add(strChacheID, strChacheID);
+
+                    while (quCoordinate.Count > 0)
+                    {
+                        tpCurrent = quCoordinate.Dequeue();
+                        //we now do the full of this coordinate, if we split we check if it was already done (if not) then we add it in queue and 'done'
+                        intX = tpCurrent.Item1;
+                        intY = tpCurrent.Item2;
+                        charDirection = tpCurrent.Item3;
+
+
+                        while (true)
+                        {
+                            //we are in the grid, we continue until we get 'off' the grid
+                            switch (charDirection)
+                            {
+                                case 'U': //up
+                                    intDirectionX = -1;
+                                    intDirectionY = 0;
+                                    break;
+                                case 'D': //down
+                                    intDirectionX = 1;
+                                    intDirectionY = 0;
+                                    break;
+                                case 'L': //left
+                                    intDirectionX = 0;
+                                    intDirectionY = -1;
+                                    break;
+                                case 'R': //right
+                                    intDirectionX = 0;
+                                    intDirectionY = 1;
+                                    break;
+                            }
+
+                            intX += intDirectionX;
+                            intY += intDirectionY;
+
+                            if (intX < 0 || intY < 0 || intX >= intGridSize || intY >= intGridSize) break; // we are now OOB
+
+                            //we energise that grid (maybe already done, don'T carE)
+                            chrGridEnergised[intX, intY] = '1';
+                            charCurrentPos = chrGrid[intX, intY];
+
+                            strChacheID = (intX).ToString() + "," + (intY).ToString() + "," + charDirection;
+                            if (dictCached.ContainsKey(strChacheID) == false)
+                            {
+                                dictCached.Add(strChacheID, strChacheID);
+                            }
+                            else
+                            {
+                                //we have been here, we breach out 
+                                break;
+                            }
+
+                            if (charCurrentPos != '.')
+                            {
+                                if (charCurrentPos == '-' && (charDirection == 'U' || charDirection == 'D'))
+                                {
+                                    //we split it, current thread go left, and we queue right
+                                    tpNewData = new Tuple<int, int, char>(intX, intY, 'R');
+                                    quCoordinate.Enqueue(tpNewData);
+                                    strChacheID = (intX).ToString() + "," + (intY).ToString() + ",R";
+                                    if (dictCached.ContainsKey(strChacheID) == false) dictCached.Add(strChacheID, strChacheID);
+
+                                    //now we change our direction to down
+                                    charDirection = 'L';
+                                }
+                                else if (charCurrentPos == '|' && (charDirection == 'L' || charDirection == 'R'))
+                                {
+                                    //we split it, and we go up, and continu this one right
+                                    tpNewData = new Tuple<int, int, char>(intX, intY, 'U');
+                                    quCoordinate.Enqueue(tpNewData);
+                                    strChacheID = (intX).ToString() + "," + intY.ToString() + ",U";
+                                    if (dictCached.ContainsKey(strChacheID) == false) dictCached.Add(strChacheID, strChacheID);
+
+                                    //now we change our direction to down
+                                    charDirection = 'D';
+                                }
+                                else if (charCurrentPos == '\\')
+                                {
+                                    //no split but we are changing direction depending on our current direction
+                                    switch (charDirection)
+                                    {
+                                        case 'U': //up
+                                            charDirection = 'L';
+                                            break;
+                                        case 'D': //down
+                                            charDirection = 'R';
+                                            break;
+                                        case 'L': //left
+                                            charDirection = 'U';
+                                            break;
+                                        case 'R': //right
+                                            charDirection = 'D';
+                                            break;
+                                    }
+                                }
+                                else if (charCurrentPos == '/')
+                                {
+                                    //no split but we are changing direction depending on our current direction
+                                    switch (charDirection)
+                                    {
+                                        case 'U': //up
+                                            charDirection = 'R';
+                                            break;
+                                        case 'D': //down
+                                            charDirection = 'L';
+                                            break;
+                                        case 'L': //left
+                                            charDirection = 'D';
+                                            break;
+                                        case 'R': //right
+                                            charDirection = 'U';
+                                            break;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+
+                    long lngTemp = 0;
+                    for (int a = 0; a < intGridSize; a++)
+                    {
+                        for (int b = 0; b < intGridSize; b++)
+                        {
+                            if (chrGridEnergised[a, b] == '1') lngTemp++;
+                        }
+                    }
+
+                    if (lngLoad < lngTemp) lngLoad = lngTemp;
+                }
+            }
+
+            return lngLoad;
         }
 
         private void bntRun16_Click(object sender, EventArgs e)
@@ -3108,10 +3605,298 @@ namespace Advent23
         private long Puzzle17_PartOne()
         {
             return 0;
+            string strInput17 = Advent23.Properties.Settings.Default.Puzzle17_Input;
+            string[] allString = strInput17.Split("\r\n");
+            long lngAnswer = 1023;
+
+            //If Array
+            //1331
+            //1028
+            //1036
+            //1023
+            //1018
+            //1013
+
+            int intGridSize = 141;
+            int inxMaxHeat = 1050;
+            int intX = -1;
+            int intY = 0;
+            Dictionary<string, int> dictOptimisedCache = new Dictionary<string, int>();
+            int[,] intGrid = new int[intGridSize, intGridSize]; //to make it easy we pad around
+            foreach (string strGames in allString)
+            {
+                intX++;
+                intY = 0;
+                foreach (char chData in strGames)
+                {
+                    dictOptimisedCache.Add(intX.ToString() + "," + intY.ToString() + ",V", inxMaxHeat);
+                    dictOptimisedCache.Add(intX.ToString() + "," + intY.ToString() + ",H", inxMaxHeat);
+                    intGrid[intX, intY++] = int.Parse(chData.ToString());
+
+                }
+            }
+
+
+            lngAnswer = 99999999999999; //way too long/big, we will go with 'lowest' valid path
+            //this is a weird puzzle
+
+            //all 4 below are 'linked' by logic, we add/remove on same position
+            //it will contain multiple paths
+
+
+
+
+            Stack<int> quHeat = new Stack<int>();
+            Stack<char> quHeading = new Stack<char>();
+            Stack<int> quPathX = new Stack<int>();
+            Stack<int> quPathY = new Stack<int>();
+
+            //starting possibilities branch
+            quHeat.Push(0);
+            quHeading.Push('V'); //if you go right, then you can only go down or up
+            quPathX.Push(0);
+            quPathY.Push(0);
+
+            quHeat.Push(0);
+            quHeading.Push('H'); //if you go down, then you can only go left or right
+            quPathX.Push(0);
+            quPathY.Push(0);
+
+            while (quHeat.Count > 0)
+            {
+                int intCurrentHeat = quHeat.Pop();
+                char aHeading = quHeading.Pop();
+                int X = quPathX.Pop();
+                int Y = quPathY.Pop();
+
+                if (lngAnswer > intCurrentHeat) //useless to continue this one we already have a faster solution
+                {
+                    //now we got what was on top of the list
+                    //if we are at the bottom right, we done
+                    if (X == (intGridSize - 1) && Y == (intGridSize - 1))
+                    {
+                        lngAnswer = intCurrentHeat;
+                        inxMaxHeat = intCurrentHeat;
+                    }
+                    else
+                    {
+                        //Now for this path, we will create multiple possibility
+                        //we need to go left or right (2) and move , 1 , 2 or 3 , so 6 possibilities
+                        //we execute them and queue them in the list, and we loop,
+                        if (aHeading == 'V')
+                        {
+                            //we can go LEFT or RIGHT
+                            char chGoingHeading = 'H';
+                            for (int b = -1; b < 2; b = b + 2)
+                            {
+                                int intNewHeat = intCurrentHeat;
+                                int intModY = 0;
+
+                                for (int i = 1; i < 4; i++)
+                                {
+                                    intModY = (i * b) + Y;
+
+                                    if (intModY < 0 || intModY >= intGridSize) break; //OOB
+                                    string strGoingLocation = X.ToString() + "," + intModY.ToString() + "," + chGoingHeading;
+
+                                    intNewHeat += intGrid[X, intModY];
+                                    if (dictOptimisedCache[strGoingLocation] > intNewHeat)
+                                    {
+                                        dictOptimisedCache[strGoingLocation] = intNewHeat;
+                                        quHeat.Push(intNewHeat);
+                                        quPathX.Push(X);
+                                        quPathY.Push(intModY);
+                                        quHeading.Push(chGoingHeading);
+                                    }
+                                }
+                            }
+                        }
+                        else
+                        {
+                            //we can go UP or DOWN
+                            char chGoingHeading = 'V';
+                            for (int b = -1; b < 2; b = b + 2)
+                            {
+                                int intNewHeat = intCurrentHeat;
+                                int intModX = 0;
+
+                                for (int i = 1; i < 4; i++)
+                                {
+                                    intModX = (i * b) + X;
+
+                                    if (intModX < 0 || intModX >= intGridSize) break; //OOB
+                                    string strGoingLocation = intModX.ToString() + "," + Y.ToString() + "," + chGoingHeading;
+
+                                    intNewHeat += intGrid[intModX, Y];
+                                    if (dictOptimisedCache[strGoingLocation] > intNewHeat)
+                                    {
+                                        //this seem shorted path to go there 'so far'
+                                        dictOptimisedCache[strGoingLocation] = intNewHeat;
+                                        quHeat.Push(intNewHeat);
+                                        quPathX.Push(intModX);
+                                        quPathY.Push(Y);
+                                        quHeading.Push(chGoingHeading);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+
+
+
+            return lngAnswer;
         }
+
+
         private long Puzzle17_PartTwo()
         {
-            return 0;
+            string strInput17 = Advent23.Properties.Settings.Default.Puzzle17_Input;
+            string[] allString = strInput17.Split("\r\n");
+            long lngAnswer = 0;
+
+            //If Array
+
+
+            int intGridSize = 141;
+            int inxMaxHeat = intGridSize * 50;
+            int intX = -1;
+            int intY = 0;
+            Dictionary<string, int> dictOptimisedCache = new Dictionary<string, int>();
+            int[,] intGrid = new int[intGridSize, intGridSize]; //to make it easy we pad around
+            foreach (string strGames in allString)
+            {
+                intX++;
+                intY = 0;
+                foreach (char chData in strGames)
+                {
+                    dictOptimisedCache.Add(intX.ToString() + "," + intY.ToString() + ",V", inxMaxHeat);
+                    dictOptimisedCache.Add(intX.ToString() + "," + intY.ToString() + ",H", inxMaxHeat);
+                    intGrid[intX, intY++] = int.Parse(chData.ToString());
+
+                }
+            }
+
+
+            lngAnswer = 99999999999999; //way too long/big, we will go with 'lowest' valid path
+            //this is a weird puzzle
+
+            //all 4 below are 'linked' by logic, we add/remove on same position
+            //it will contain multiple paths
+
+
+
+
+            Stack<int> quHeat = new Stack<int>();
+            Stack<char> quHeading = new Stack<char>();
+            Stack<int> quPathX = new Stack<int>();
+            Stack<int> quPathY = new Stack<int>();
+
+            //starting possibilities branch
+            quHeat.Push(0);
+            quHeading.Push('V'); //if you go right, then you can only go down or up
+            quPathX.Push(0);
+            quPathY.Push(0);
+
+            quHeat.Push(0);
+            quHeading.Push('H'); //if you go down, then you can only go left or right
+            quPathX.Push(0);
+            quPathY.Push(0);
+
+            while (quHeat.Count > 0)
+            {
+                int intCurrentHeat = quHeat.Pop();
+                char aHeading = quHeading.Pop();
+                int X = quPathX.Pop();
+                int Y = quPathY.Pop();
+
+                if (lngAnswer > intCurrentHeat) //useless to continue this one we already have a faster solution
+                {
+                    //now we got what was on top of the list
+                    //if we are at the bottom right, we done
+                    if (X == (intGridSize - 1) && Y == (intGridSize - 1))
+                    {
+                        lngAnswer = intCurrentHeat;
+                        inxMaxHeat = intCurrentHeat;
+                    }
+                    else
+                    {
+                        //Now for this path, we will create multiple possibility
+                        //we need to go left or right (2) and move , 1 , 2 or 3 , so 6 possibilities
+                        //we execute them and queue them in the list, and we loop,
+                        if (aHeading == 'V')
+                        {
+                            //we can go LEFT or RIGHT
+                            char chGoingHeading = 'H';
+                            for (int b = -1; b < 2; b = b + 2)
+                            {
+                                int intNewHeat = intCurrentHeat;
+                                int intModY = 0;
+
+                                for (int i = 1; i < 11; i++)
+                                {
+                                    intModY = (i * b) + Y;
+                                    if (intModY < 0 || intModY >= intGridSize) break; //OOB
+                                    intNewHeat += intGrid[X, intModY];
+
+                                    if (i > 3) //we can only start to turn at 4
+                                    {
+                                        string strGoingLocation = X.ToString() + "," + intModY.ToString() + "," + chGoingHeading;
+
+
+                                        if (dictOptimisedCache[strGoingLocation] > intNewHeat)
+                                        {
+                                            dictOptimisedCache[strGoingLocation] = intNewHeat;
+                                            quHeat.Push(intNewHeat);
+                                            quPathX.Push(X);
+                                            quPathY.Push(intModY);
+                                            quHeading.Push(chGoingHeading);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        else
+                        {
+                            //we can go UP or DOWN
+                            char chGoingHeading = 'V';
+                            for (int b = -1; b < 2; b = b + 2)
+                            {
+                                int intNewHeat = intCurrentHeat;
+                                int intModX = 0;
+
+                                for (int i = 1; i < 11; i++)
+                                {
+                                    intModX = (i * b) + X;
+                                    if (intModX < 0 || intModX >= intGridSize) break; //OOB
+                                    intNewHeat += intGrid[intModX, Y];
+
+                                    if (i > 3) //we can only start to turn at 4
+                                    {
+                                        string strGoingLocation = intModX.ToString() + "," + Y.ToString() + "," + chGoingHeading;
+                                        if (dictOptimisedCache[strGoingLocation] > intNewHeat)
+                                        {
+                                            //this seem shorted path to go there 'so far'
+                                            dictOptimisedCache[strGoingLocation] = intNewHeat;
+                                            quHeat.Push(intNewHeat);
+                                            quPathX.Push(intModX);
+                                            quPathY.Push(Y);
+                                            quHeading.Push(chGoingHeading);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+
+
+
+            return lngAnswer;
         }
 
         private void bntRun17_Click(object sender, EventArgs e)
@@ -3128,11 +3913,204 @@ namespace Advent23
         #region Puzzle 18
         private long Puzzle18_PartOne()
         {
-            return 0;
+            //string strInput18 = Advent23.Properties.Settings.Default.Puzzle_Example; int intGridSize = 100;
+            string strInput18 = Advent23.Properties.Settings.Default.Puzzle18_Input; int intGridSize = 1000;
+            string[] allString = strInput18.Split("\r\n");
+            long lngAnswer = 0;
+
+
+            //If Array
+
+            int intX = -1;
+            int intY = 0;
+
+            int startX = (int)Math.Floor((decimal)(intGridSize / 2));
+            int startY = startX;
+
+            char[,] chrGrid = new char[intGridSize, intGridSize]; //to make it easy we pad around
+            for (int a = 0; a < intGridSize; a++)
+            {
+                for (int b = 0; b < intGridSize; b++)
+                {
+                    chrGrid[a, b] = ' ';
+                }
+            }
+            chrGrid[startX, startY] = '#';
+
+
+            char chDirection = ' ';
+            int intDistance = 0;
+            string strColor = "";
+            int intModX = 0;
+            int intModY = 0;
+            int intCurrentPosX = startX;
+            int intCurrentPosY = startY;
+
+            int intLowestX = intGridSize;
+            int intLowestY = intGridSize;
+            int intHighestX = 0;
+            int intHighestY = 0;
+
+            Dictionary<string, string> dictColored = new Dictionary<string, string>();
+            foreach (string strGames in allString)
+            {
+                string[] strInstruct = strGames.Split(" ");
+                chDirection = strInstruct[0][0];
+                intDistance = int.Parse(strInstruct[1]);
+                strColor = strInstruct[2]; strColor = strColor.Substring(1, strColor.Length - 1);
+
+                intModX = 0;
+                intModY = 0;
+                switch (chDirection)
+                {
+                    case 'U':
+                        intModX = -1;
+                        break;
+                    case 'D':
+                        intModX = 1;
+                        break;
+                    case 'L':
+                        intModY = -1;
+                        break;
+                    case 'R':
+                        intModY = 1;
+                        break;
+                }
+
+                for (int i = 1; i < intDistance + 1; i++)
+                {
+                    intCurrentPosX += intModX;
+                    intCurrentPosY += intModY;
+                    dictColored.Add(intCurrentPosX.ToString() + "," + intCurrentPosY.ToString(), strColor);
+                    chrGrid[intCurrentPosX, intCurrentPosY] = '#';
+                }
+                //we remember the grid size for later to check trench size
+                if (intLowestX > intCurrentPosX) intLowestX = intCurrentPosX;
+                if (intLowestY > intCurrentPosY) intLowestY = intCurrentPosY;
+                if (intHighestX < intCurrentPosX) intHighestX = intCurrentPosX;
+                if (intHighestY < intCurrentPosY) intHighestY = intCurrentPosY;
+            }
+
+            //now we floor from all the edge
+            for (int a = intLowestX; a <= intHighestX; a++)
+            {
+                if (chrGrid[a, intHighestY] == ' ') chrGrid[a, intHighestY] = '0';
+                if (chrGrid[a, intLowestY] == ' ') chrGrid[a, intLowestY] = '0';
+            }
+            for (int b = intLowestY; b <= intHighestY; b++)
+            {
+                if (chrGrid[intLowestX, b] == ' ') chrGrid[intLowestX, b] = '0';
+                if (chrGrid[intHighestX, b] == ' ') chrGrid[intHighestX, b] = '0';
+            }
+
+            for (int i = 0; i < 5; i++)
+            {
+                for (int a = intLowestX; a <= intHighestX; a++)
+                {
+                    for (int b = intLowestY; b <= intHighestY; b++)
+                    {
+                        if (chrGrid[a, b] == ' ')
+                        {
+                            for (int c = -1; c <= 1; c++)
+                            {
+                                for (int d = -1; d <= 1; d++)
+                                {
+                                    if (chrGrid[a + c, b + d] == '0') chrGrid[a, b] = '0';
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+                for (int b = intHighestY; b >= intLowestY; b--)
+                {
+                    for (int a = intHighestX; a >= intLowestX; a--)
+                    {
+                        if (chrGrid[a, b] != '#' && chrGrid[a, b] != '0')
+                        {
+                            for (int c = -1; c <= 1; c++)
+                            {
+                                for (int d = -1; d <= 1; d++)
+                                {
+                                    if (chrGrid[a + c, b + d] == '0') chrGrid[a, b] = '0';
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+
+
+            lngAnswer = 0;
+
+            for (int a = intLowestX; a <= intHighestX; a++)
+            {
+                for (int b = intLowestY; b <= intHighestY; b++)
+                {
+                    if (chrGrid[a, b] != '0') lngAnswer++;
+                }
+            }
+
+
+            return lngAnswer;
         }
-        private long Puzzle18_PartTwo()
+        private string Puzzle18_PartTwo()
         {
-            return 0;
+            string strInput18 = Advent23.Properties.Settings.Default.Puzzle18_Input;
+            string[] allString = strInput18.Split("\r\n");
+            long lngAnswer = 0;
+            //this one is ridiculous
+            //Looking at math formulas... ahh Shoelace algo, there is a way... very simple I should have done that in Part1... oh well
+
+            long intCurrentPosX = 0; long intNewPosX = 0;
+            long intCurrentPosY = 0; long intNewPosY = 0; //I lost easily 1h because the PosX/PosY was integer (too small)
+            char chDirection = ' ';
+            string strHEX = "";
+            long intNumDig = 0;
+
+            foreach (string strGames in allString)
+            {
+                //let get the HEX instruction
+                string[] strInstruct = strGames.Split(" ");
+                strHEX = strInstruct[2];
+                chDirection = strHEX[strHEX.Length - 2];
+                strHEX = strHEX.Substring(2, strHEX.Length - 4);
+                intNumDig = int.Parse(strHEX, System.Globalization.NumberStyles.HexNumber);
+
+                switch (chDirection)
+                {
+                    case '3': //UP
+                        intNewPosX = intCurrentPosX - intNumDig;
+                        break;
+                    case '1': //DOWN
+                        intNewPosX = intCurrentPosX + intNumDig;
+                        break;
+                    case '2': //LEFT
+                        intNewPosY = intCurrentPosY - intNumDig;
+                        break;
+                    case '0': //RIGHT
+                        intNewPosY = intCurrentPosY + intNumDig;
+                        break;
+                }
+
+                lngAnswer += ((intCurrentPosX + intNewPosX) * (intCurrentPosY - intNewPosY)) + intNumDig;
+
+                //now we move move as we kept the line in memory
+                intCurrentPosX = intNewPosX;
+                intCurrentPosY = intNewPosY;
+            }
+
+            //Now we did all the Left<-->Right Lane and their height
+            //We will go back and sort them by height and we traverse through them
+
+            lngAnswer = (lngAnswer / 2);
+            if (lngAnswer < 0) lngAnswer *= -1;
+            lngAnswer += 1;
+
+            return lngAnswer.ToString();
         }
 
         private void bntRun18_Click(object sender, EventArgs e)
@@ -3140,8 +4118,7 @@ namespace Advent23
             long lngSolution18P1 = Puzzle18_PartOne();
             txt_output18P1.Text = lngSolution18P1.ToString();
 
-            long lngSolution18P2 = Puzzle18_PartTwo();
-            txt_output18P2.Text = lngSolution18P2.ToString();
+            txt_output18P2.Text = Puzzle18_PartTwo();
         }
 
         #endregion
@@ -3149,7 +4126,39 @@ namespace Advent23
         #region Puzzle 19
         private long Puzzle19_PartOne()
         {
-            return 0;
+            string strInput17 = Advent23.Properties.Settings.Default.Puzzle_Example;
+            string[] allString = strInput17.Split("\r\n");
+            long lngAnswer = 0;
+
+
+            //If Array
+            int intGridSize = 100;
+            int intX = -1;
+            int intY = 0;
+            char[,] chrGrid = new char[intGridSize, intGridSize]; //to make it easy we pad around
+            foreach (string strGames in allString)
+            {
+                intX++;
+                intY = 0;
+                foreach (char chData in strGames)
+                {
+                    chrGrid[intX, intY++] = chData;
+                }
+            }
+
+
+
+            //If String type
+            foreach (string strGames in allString)
+            {
+                //hold the max shown in that game
+                int intGameNum = int.Parse(strGames.Substring(4, strGames.IndexOf(":") - 4).Trim());
+                Dictionary<int, int> dictGamesResults = new Dictionary<int, int>();
+            }
+
+
+
+            return lngAnswer;
         }
         private long Puzzle19_PartTwo()
         {
@@ -3170,7 +4179,39 @@ namespace Advent23
         #region Puzzle 20
         private long Puzzle20_PartOne()
         {
-            return 0;
+            string strInput17 = Advent23.Properties.Settings.Default.Puzzle_Example;
+            string[] allString = strInput17.Split("\r\n");
+            long lngAnswer = 0;
+
+
+            //If Array
+            int intGridSize = 100;
+            int intX = -1;
+            int intY = 0;
+            char[,] chrGrid = new char[intGridSize, intGridSize]; //to make it easy we pad around
+            foreach (string strGames in allString)
+            {
+                intX++;
+                intY = 0;
+                foreach (char chData in strGames)
+                {
+                    chrGrid[intX, intY++] = chData;
+                }
+            }
+
+
+
+            //If String type
+            foreach (string strGames in allString)
+            {
+                //hold the max shown in that game
+                int intGameNum = int.Parse(strGames.Substring(4, strGames.IndexOf(":") - 4).Trim());
+                Dictionary<int, int> dictGamesResults = new Dictionary<int, int>();
+            }
+
+
+
+            return lngAnswer;
         }
         private long Puzzle20_PartTwo()
         {
@@ -3191,7 +4232,39 @@ namespace Advent23
         #region Puzzle 21
         private long Puzzle21_PartOne()
         {
-            return 0;
+            string strInput17 = Advent23.Properties.Settings.Default.Puzzle_Example;
+            string[] allString = strInput17.Split("\r\n");
+            long lngAnswer = 0;
+
+
+            //If Array
+            int intGridSize = 100;
+            int intX = -1;
+            int intY = 0;
+            char[,] chrGrid = new char[intGridSize, intGridSize]; //to make it easy we pad around
+            foreach (string strGames in allString)
+            {
+                intX++;
+                intY = 0;
+                foreach (char chData in strGames)
+                {
+                    chrGrid[intX, intY++] = chData;
+                }
+            }
+
+
+
+            //If String type
+            foreach (string strGames in allString)
+            {
+                //hold the max shown in that game
+                int intGameNum = int.Parse(strGames.Substring(4, strGames.IndexOf(":") - 4).Trim());
+                Dictionary<int, int> dictGamesResults = new Dictionary<int, int>();
+            }
+
+
+
+            return lngAnswer;
         }
         private long Puzzle21_PartTwo()
         {
@@ -3212,7 +4285,39 @@ namespace Advent23
         #region Puzzle 22
         private long Puzzle22_PartOne()
         {
-            return 0;
+            string strInput17 = Advent23.Properties.Settings.Default.Puzzle_Example;
+            string[] allString = strInput17.Split("\r\n");
+            long lngAnswer = 0;
+
+
+            //If Array
+            int intGridSize = 100;
+            int intX = -1;
+            int intY = 0;
+            char[,] chrGrid = new char[intGridSize, intGridSize]; //to make it easy we pad around
+            foreach (string strGames in allString)
+            {
+                intX++;
+                intY = 0;
+                foreach (char chData in strGames)
+                {
+                    chrGrid[intX, intY++] = chData;
+                }
+            }
+
+
+
+            //If String type
+            foreach (string strGames in allString)
+            {
+                //hold the max shown in that game
+                int intGameNum = int.Parse(strGames.Substring(4, strGames.IndexOf(":") - 4).Trim());
+                Dictionary<int, int> dictGamesResults = new Dictionary<int, int>();
+            }
+
+
+
+            return lngAnswer;
         }
         private long Puzzle22_PartTwo()
         {
@@ -3233,7 +4338,39 @@ namespace Advent23
         #region Puzzle 23
         private long Puzzle23_PartOne()
         {
-            return 0;
+            string strInput17 = Advent23.Properties.Settings.Default.Puzzle_Example;
+            string[] allString = strInput17.Split("\r\n");
+            long lngAnswer = 0;
+
+
+            //If Array
+            int intGridSize = 100;
+            int intX = -1;
+            int intY = 0;
+            char[,] chrGrid = new char[intGridSize, intGridSize]; //to make it easy we pad around
+            foreach (string strGames in allString)
+            {
+                intX++;
+                intY = 0;
+                foreach (char chData in strGames)
+                {
+                    chrGrid[intX, intY++] = chData;
+                }
+            }
+
+
+
+            //If String type
+            foreach (string strGames in allString)
+            {
+                //hold the max shown in that game
+                int intGameNum = int.Parse(strGames.Substring(4, strGames.IndexOf(":") - 4).Trim());
+                Dictionary<int, int> dictGamesResults = new Dictionary<int, int>();
+            }
+
+
+
+            return lngAnswer;
         }
         private long Puzzle23_PartTwo()
         {
@@ -3254,7 +4391,39 @@ namespace Advent23
         #region Puzzle 24
         private long Puzzle24_PartOne()
         {
-            return 0;
+            string strInput17 = Advent23.Properties.Settings.Default.Puzzle_Example;
+            string[] allString = strInput17.Split("\r\n");
+            long lngAnswer = 0;
+
+
+            //If Array
+            int intGridSize = 100;
+            int intX = -1;
+            int intY = 0;
+            char[,] chrGrid = new char[intGridSize, intGridSize]; //to make it easy we pad around
+            foreach (string strGames in allString)
+            {
+                intX++;
+                intY = 0;
+                foreach (char chData in strGames)
+                {
+                    chrGrid[intX, intY++] = chData;
+                }
+            }
+
+
+
+            //If String type
+            foreach (string strGames in allString)
+            {
+                //hold the max shown in that game
+                int intGameNum = int.Parse(strGames.Substring(4, strGames.IndexOf(":") - 4).Trim());
+                Dictionary<int, int> dictGamesResults = new Dictionary<int, int>();
+            }
+
+
+
+            return lngAnswer;
         }
         private long Puzzle24_PartTwo()
         {
@@ -3275,7 +4444,39 @@ namespace Advent23
         #region Puzzle 25
         private long Puzzle25_PartOne()
         {
-            return 0;
+            string strInput17 = Advent23.Properties.Settings.Default.Puzzle_Example;
+            string[] allString = strInput17.Split("\r\n");
+            long lngAnswer = 0;
+
+
+            //If Array
+            int intGridSize = 100;
+            int intX = -1;
+            int intY = 0;
+            char[,] chrGrid = new char[intGridSize, intGridSize]; //to make it easy we pad around
+            foreach (string strGames in allString)
+            {
+                intX++;
+                intY = 0;
+                foreach (char chData in strGames)
+                {
+                    chrGrid[intX, intY++] = chData;
+                }
+            }
+
+
+
+            //If String type
+            foreach (string strGames in allString)
+            {
+                //hold the max shown in that game
+                int intGameNum = int.Parse(strGames.Substring(4, strGames.IndexOf(":") - 4).Trim());
+                Dictionary<int, int> dictGamesResults = new Dictionary<int, int>();
+            }
+
+
+
+            return lngAnswer;
         }
         private long Puzzle25_PartTwo()
         {
