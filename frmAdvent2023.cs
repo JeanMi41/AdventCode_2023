@@ -7,6 +7,12 @@ using System.Text;
 using System.Xml.Linq;
 using System.Diagnostics;
 using System.Collections;
+using System.Drawing.Text;
+using static Advent23.frm_Advent2023;
+using System.Windows.Forms.Design;
+using System.Drawing;
+using static System.Windows.Forms.LinkLabel;
+using System.Linq;
 
 namespace Advent23
 {
@@ -32,7 +38,7 @@ namespace Advent23
         #region Puzzle 01
         private long Puzzle01_PartOne()
         {
-            string strInput01 = Advent23.Properties.Settings.Default.Puzzle01_Input;
+            string strInput01 = Advent23.Properties.Settings.Default.Puzzle_Input;
             string intDigit = "";
             int intSum = 0;
             string[] allString = strInput01.Split("\r\n");
@@ -60,7 +66,7 @@ namespace Advent23
         }
         private long Puzzle01_PartTwo()
         {
-            string strInput01 = Advent23.Properties.Settings.Default.Puzzle01_Input;
+            string strInput01 = Advent23.Properties.Settings.Default.Puzzle_Input;
             string intDigit = "";
             int intSum = 0;
             string[] allString = strInput01.Split("\r\n");
@@ -157,7 +163,7 @@ namespace Advent23
         #region Puzzle 02
         private long Puzzle02_PartOne(int intMaxRed, int intMaxGreen, int intMaxBlue)
         {
-            string strInput02 = Advent23.Properties.Settings.Default.Puzzle02_Input;
+            string strInput02 = Advent23.Properties.Settings.Default.Puzzle_Input;
             int intSum = 0;
             string[] allString = strInput02.Split("\r\n");
 
@@ -216,7 +222,7 @@ namespace Advent23
         }
         private long Puzzle02_PartTwo()
         {
-            string strInput02 = Advent23.Properties.Settings.Default.Puzzle02_Input;
+            string strInput02 = Advent23.Properties.Settings.Default.Puzzle_Input;
             long lngSum = 0;
             string[] allString = strInput02.Split("\r\n");
 
@@ -288,7 +294,7 @@ namespace Advent23
         {
             //Grid is 140x140
             string[,] strArray = new string[142, 142]; //to make it easy we pad around
-            string strInput03 = Advent23.Properties.Settings.Default.Puzzle03_Input;
+            string strInput03 = Advent23.Properties.Settings.Default.Puzzle_Input;
             string[] allString = strInput03.Split("\r\n");
             long lngSum = 0;
 
@@ -374,7 +380,7 @@ namespace Advent23
         {
             //Grid is 140x140
             string[,] strArray = new string[142, 142]; //to make it easy we pad around
-            string strInput03 = Advent23.Properties.Settings.Default.Puzzle03_Input;
+            string strInput03 = Advent23.Properties.Settings.Default.Puzzle_Input;
             string[] allString = strInput03.Split("\r\n");
             long lngSum = 0;
 
@@ -477,7 +483,7 @@ namespace Advent23
         #region Puzzle 04
         private long Puzzle04_PartOne()
         {
-            string strInput04 = Advent23.Properties.Settings.Default.Puzzle04_Input;
+            string strInput04 = Advent23.Properties.Settings.Default.Puzzle_Input;
             long lnmgTotalPoint = 0;
             string[] allString = strInput04.Split("\r\n");
 
@@ -525,7 +531,7 @@ namespace Advent23
         private long Puzzle04_PartTwo()
         {
 
-            string strInput04 = Advent23.Properties.Settings.Default.Puzzle04_Input;
+            string strInput04 = Advent23.Properties.Settings.Default.Puzzle_Input;
             long lngTotalScratched = 0;
 
             string[] allString = strInput04.Split("\r\n");
@@ -612,7 +618,7 @@ namespace Advent23
             //now we got the array of seed that we will convert 7 time
             long[,,] lngConverter = new long[33, 3, 7]; //array is oversized, but we will have limited when determined
 
-            string strInputTransfo = Advent23.Properties.Settings.Default.Puzzle05_Input;
+            string strInputTransfo = Advent23.Properties.Settings.Default.Puzzle_Input;
 
 
             string[] allString = strInputTransfo.Split("\r\n\r\n");
@@ -701,7 +707,7 @@ namespace Advent23
             //B = the line B[0] = X1 of the line, B[1] = X2 of the line, B[2] = new converted value of X1
             //C = Step of the convertion, as this is a 7 steps conversion mapping. [0]= seed->soil , [1]= soil->fertilizer ......
 
-            string strInputTransfo = Advent23.Properties.Settings.Default.Puzzle05_Input; //let get the simplified input of convertion (I just removed the text and made them in 7 block
+            string strInputTransfo = Advent23.Properties.Settings.Default.Puzzle_Input; //let get the simplified input of convertion (I just removed the text and made them in 7 block
 
             string[] allString = strInputTransfo.Split("\r\n\r\n");
 
@@ -971,7 +977,7 @@ namespace Advent23
         #region Puzzle 07
         private long Puzzle07_PartOne()
         {
-            string strInput07 = Advent23.Properties.Settings.Default.Puzzle07_Input;
+            string strInput07 = Advent23.Properties.Settings.Default.Puzzle_Input;
 
             long lngGameCount = 0;
             long lnmgTotalPoint = 0;
@@ -1260,7 +1266,7 @@ namespace Advent23
             //249628565
             //249299962
             //249298950
-            string strInput07 = Advent23.Properties.Settings.Default.Puzzle07_Input;
+            string strInput07 = Advent23.Properties.Settings.Default.Puzzle_Input;
 
             long lngGameCount = 0;
             long lnmgTotalPoint = 0;
@@ -1333,7 +1339,7 @@ namespace Advent23
             //answers
 
             //
-            string strInput08 = Advent23.Properties.Settings.Default.Puzzle08_Input;
+            string strInput08 = Advent23.Properties.Settings.Default.Puzzle_Input;
             string[] allString = strInput08.Split("\n");
             Dictionary<string, Tuple<string, string>> dictMap = new Dictionary<string, Tuple<string, string>>();
             P8_Instructions instructions = new P8_Instructions();
@@ -1379,7 +1385,7 @@ namespace Advent23
             //then the proper way would be do to LCM (Least Common Multiple) but way over complicated to code
             //so I get the highest, then keep powering it until its mod all other number correctly
 
-            string strInput08 = Advent23.Properties.Settings.Default.Puzzle08_Input;
+            string strInput08 = Advent23.Properties.Settings.Default.Puzzle_Input;
             string[] allString = strInput08.Split("\n");
             Dictionary<string, Tuple<string, string>> dictMap = new Dictionary<string, Tuple<string, string>>();
             P8_Instructions instructions = new P8_Instructions();
@@ -1431,33 +1437,13 @@ namespace Advent23
                 }
             }
 
-            //they all loop on only 1
-            long[] lngStepping = new long[dictEnding.Count];
-            long lngHighestStepping = 0;
+
+            List<long> lstInterval = new List<long>();
             for (int i = 0; i < lstPositions.Count; i++)
             {
-                lngStepping[i] = lstEndZ[i][2] - lstEndZ[i][1];
-                if (lngStepping[i] > lngHighestStepping) lngHighestStepping = lngStepping[i];
+                lstInterval.Add(lstEndZ[i][2] - lstEndZ[i][1]);
             }
-
-            //now we loop but at the speed the longest one to loopsteps
-            long x = 0;
-            bool valid = true;
-            long lngValue;
-            do
-            {
-                x++;
-                lngValue = lngHighestStepping * x;
-                valid = true;
-                foreach (long lngStep in lngStepping)
-                {
-                    if (lngValue % lngStep != 0)
-                    {
-                        valid = false; break;
-                    }
-                }
-
-            } while (valid == false);
+            long lngValue = LCM(lstInterval);
 
             return lngValue;
         }
@@ -1476,7 +1462,7 @@ namespace Advent23
         #region Puzzle 09
         private long Puzzle09_PartOne()
         {
-            string strInput09 = Advent23.Properties.Settings.Default.Puzzle10_Input;
+            string strInput09 = Advent23.Properties.Settings.Default.Puzzle_Input;
             long lngSumResult = 0;
             string[] allString = strInput09.Split("\r\n");
 
@@ -1607,7 +1593,7 @@ namespace Advent23
 
         private long Puzzle09_PartTwo()
         {
-            string strInput09 = Advent23.Properties.Settings.Default.Puzzle10_Input;
+            string strInput09 = Advent23.Properties.Settings.Default.Puzzle_Input;
             long lngSumResult = 0;
             string[] allString = strInput09.Split("\r\n");
 
@@ -1637,7 +1623,7 @@ namespace Advent23
         {
             //Grid is 140x140 
             char[,] charArray = new char[142, 142]; //to make it easy we pad around
-            string strInput10 = Advent23.Properties.Settings.Default.Puzzle10_Input;
+            string strInput10 = Advent23.Properties.Settings.Default.Puzzle_Input;
             string[] allString = strInput10.Split("\r\n");
 
             int intX = 0;
@@ -1769,7 +1755,7 @@ namespace Advent23
             //Grid is 140x140
             char[,] charArray = new char[142, 142]; //to make it easy we pad around
             char[,] charCorrectedArray = new char[142, 142]; //to make it easy we pad around
-            string strInput10 = Advent23.Properties.Settings.Default.Puzzle10_Input;
+            string strInput10 = Advent23.Properties.Settings.Default.Puzzle_Input;
             string[] allString = strInput10.Split("\r\n");
 
             int intX = 0;
@@ -2217,7 +2203,7 @@ namespace Advent23
             //Grid is 200x200 
             char[,] charArrayInit = new char[200, 200]; //to make it easy we pad around, the baseline is 140x140
             char[,] charArrayFinal = new char[200, 200]; //to make it easy we pad around
-            string strInput10 = Advent23.Properties.Settings.Default.Puzzle11_Input;
+            string strInput10 = Advent23.Properties.Settings.Default.Puzzle_Input;
             string[] allString = strInput10.Split("\r\n");
 
             long lngTotalDistance = 0;
@@ -2303,7 +2289,7 @@ namespace Advent23
             //Grid is 200x200 
             string[,] charArrayInit = new string[200, 200]; //to make it easy we pad around, the baseline is 140x140
             string[,] charArrayFinal = new string[200, 200]; //to make it easy we pad around
-            string strInput10 = Advent23.Properties.Settings.Default.Puzzle12_Input;
+            string strInput10 = Advent23.Properties.Settings.Default.Puzzle_Input;
             string[] allString = strInput10.Split("\r\n");
 
 
@@ -2398,7 +2384,7 @@ namespace Advent23
         #region Puzzle 12
         private long Puzzle12_PartOne()
         {
-            string strInput12 = Advent23.Properties.Settings.Default.Puzzle12_Input;
+            string strInput12 = Advent23.Properties.Settings.Default.Puzzle_Input;
             string[] allString = strInput12.Split("\r\n");
 
             long lngTotalArragements = 0;
@@ -2547,7 +2533,7 @@ namespace Advent23
 
         private long Puzzle12_PartTwo()
         {
-            string strInput12 = Advent23.Properties.Settings.Default.Puzzle12_Input;
+            string strInput12 = Advent23.Properties.Settings.Default.Puzzle_Input;
             string[] allString = strInput12.Split("\r\n");
 
             long lngTotalArragements = 0;
@@ -2630,7 +2616,7 @@ namespace Advent23
         #region Puzzle 13
         private long Puzzle13_PartOne()
         {
-            string strInput13 = Advent23.Properties.Settings.Default.Puzzle13_Input;
+            string strInput13 = Advent23.Properties.Settings.Default.Puzzle_Input;
             long lnmgTotalPoint = 0;
 
             string[] allString = strInput13.Split("\r\n\r\n");
@@ -2756,7 +2742,7 @@ namespace Advent23
             //43054
             //45619
             //32854
-            string strInput13 = Advent23.Properties.Settings.Default.Puzzle13_Input;
+            string strInput13 = Advent23.Properties.Settings.Default.Puzzle_Input;
             long lnmgTotalPoint = 0;
 
             string[] allString = strInput13.Split("\r\n\r\n");
@@ -2855,7 +2841,7 @@ namespace Advent23
         {
             //Grid is 140x140 
             char[,] charMap = new char[100, 100]; //to make it easy we pad around
-            string strInput14 = Advent23.Properties.Settings.Default.Puzzle14_Input;
+            string strInput14 = Advent23.Properties.Settings.Default.Puzzle_Input;
             string[] allString = strInput14.Split("\r\n");
 
             long lngLoad = 0;
@@ -2891,7 +2877,7 @@ namespace Advent23
         {
             //Grid is 140x140 
             char[,] charMap = new char[100, 100]; //to make it easy we pad around
-            string strInput14 = Advent23.Properties.Settings.Default.Puzzle14_Input;
+            string strInput14 = Advent23.Properties.Settings.Default.Puzzle_Input;
             string[] allString = strInput14.Split("\r\n");
 
             long lngLoad = 0;
@@ -3069,7 +3055,7 @@ namespace Advent23
 
 
             //
-            string strInput15 = Advent23.Properties.Settings.Default.Puzzle15_Input;
+            string strInput15 = Advent23.Properties.Settings.Default.Puzzle_Input;
 
 
 
@@ -3100,7 +3086,7 @@ namespace Advent23
         private long Puzzle15_PartTwo()
         {
 
-            string strInput15 = Advent23.Properties.Settings.Default.Puzzle15_Input;
+            string strInput15 = Advent23.Properties.Settings.Default.Puzzle_Input;
 
             long lngFinalPower = 0;
             List<string>[] lstBoxes = new List<string>[256];
@@ -3219,7 +3205,7 @@ namespace Advent23
             //Grid side X,Y
             int intGridSize = 110;
             char[,] chrGrid = new char[intGridSize, intGridSize]; //to make it easy we pad around
-            string strInput14 = Advent23.Properties.Settings.Default.Puzzle16_Input;
+            string strInput14 = Advent23.Properties.Settings.Default.Puzzle_Input;
             string[] allString = strInput14.Split("\r\n");
 
             long lngLoad = 0;
@@ -3394,7 +3380,7 @@ namespace Advent23
             //Grid side X,Y
             int intGridSize = 110;
             char[,] chrGrid = new char[intGridSize, intGridSize]; //to make it easy we pad around
-            string strInput14 = Advent23.Properties.Settings.Default.Puzzle16_Input;
+            string strInput14 = Advent23.Properties.Settings.Default.Puzzle_Input;
             string[] allString = strInput14.Split("\r\n");
 
             long lngLoad = 0;
@@ -3605,7 +3591,7 @@ namespace Advent23
         private long Puzzle17_PartOne()
         {
             return 0;
-            string strInput17 = Advent23.Properties.Settings.Default.Puzzle17_Input;
+            string strInput17 = Advent23.Properties.Settings.Default.Puzzle_Input;
             string[] allString = strInput17.Split("\r\n");
             long lngAnswer = 1023;
 
@@ -3753,7 +3739,7 @@ namespace Advent23
 
         private long Puzzle17_PartTwo()
         {
-            string strInput17 = Advent23.Properties.Settings.Default.Puzzle17_Input;
+            string strInput17 = Advent23.Properties.Settings.Default.Puzzle_Input;
             string[] allString = strInput17.Split("\r\n");
             long lngAnswer = 0;
 
@@ -3914,7 +3900,7 @@ namespace Advent23
         private long Puzzle18_PartOne()
         {
             //string strInput18 = Advent23.Properties.Settings.Default.Puzzle_Example; int intGridSize = 100;
-            string strInput18 = Advent23.Properties.Settings.Default.Puzzle18_Input; int intGridSize = 1000;
+            string strInput18 = Advent23.Properties.Settings.Default.Puzzle_Input; int intGridSize = 1000;
             string[] allString = strInput18.Split("\r\n");
             long lngAnswer = 0;
 
@@ -4059,7 +4045,7 @@ namespace Advent23
         }
         private string Puzzle18_PartTwo()
         {
-            string strInput18 = Advent23.Properties.Settings.Default.Puzzle18_Input;
+            string strInput18 = Advent23.Properties.Settings.Default.Puzzle_Input;
             string[] allString = strInput18.Split("\r\n");
             long lngAnswer = 0;
             //this one is ridiculous
@@ -4126,43 +4112,290 @@ namespace Advent23
         #region Puzzle 19
         private long Puzzle19_PartOne()
         {
-            string strInput17 = Advent23.Properties.Settings.Default.Puzzle_Example;
-            string[] allString = strInput17.Split("\r\n");
+            string strInput19 = Advent23.Properties.Settings.Default.Puzzle_Input;
+            //string strInput19 = Advent23.Properties.Settings.Default.Puzzle_Example;
+
+            string[] allString = strInput19.Split("\r\n\r\n");
             long lngAnswer = 0;
 
+            //we split the workflow first then instruction
 
-            //If Array
-            int intGridSize = 100;
-            int intX = -1;
-            int intY = 0;
-            char[,] chrGrid = new char[intGridSize, intGridSize]; //to make it easy we pad around
-            foreach (string strGames in allString)
+            string[] strWorkflow = allString[0].Split("\r\n");
+            string[] strInputs = allString[1].Split("\r\n");
+
+            Dictionary<string, List<string>> dictFlows = new Dictionary<string, List<string>>();
+
+
+
+
+
+            foreach (string aFlow in strWorkflow)
             {
-                intX++;
-                intY = 0;
-                foreach (char chData in strGames)
+                //first we get the caption of the workflow
+                //then we split all instruction in bite size and we save them
+                //we will call a function to determine Y/N on each instruction later
+
+                string strFlowCaption = "";
+                List<string> lstInstructions = new List<string>();
+                string strInstructions = "";
+
+                strFlowCaption = aFlow.Substring(0, aFlow.IndexOf("{"));
+                strInstructions = aFlow.Substring(aFlow.IndexOf("{") + 1); strInstructions = strInstructions.Substring(0, strInstructions.Length - 1);
+
+                string[] strInstSplit = strInstructions.Split(",");
+                foreach (string strInst in strInstSplit)
                 {
-                    chrGrid[intX, intY++] = chData;
+                    lstInstructions.Add(strInst);
+                }
+                dictFlows.Add(strFlowCaption, lstInstructions);
+            }
+
+
+            foreach (string strInput in strInputs)
+            {
+                //remove parenthesis, split then we have them
+                string strInClean = strInput.Substring(1, strInput.Length - 2);
+                string[] aInputClean = strInClean.Split(",");
+                p19_Input aInput = new p19_Input();
+
+                aInput.X = long.Parse(aInputClean[0].Substring(2));
+                aInput.M = long.Parse(aInputClean[1].Substring(2));
+                aInput.A = long.Parse(aInputClean[2].Substring(2));
+                aInput.S = long.Parse(aInputClean[3].Substring(2));
+
+                string strResponse = "in";
+                List<string> lstInstructions;
+                while (strResponse != "R" && strResponse != "A")
+                {
+                    // from the function we get either an A, R or another instruction set
+                    lstInstructions = dictFlows[strResponse];
+                    strResponse = P19_Validate(lstInstructions, aInput);
+                }
+
+                if (strResponse == "A") lngAnswer += aInput.sum();
+            }
+
+            return lngAnswer;
+        }
+
+        private string P19_Validate(List<string> lstInstructions, p19_Input pInput)
+        {
+            string strReturn = "R";
+            string[] strEvaluate;
+            bool boolEvaluate = false;
+
+            //we go through each instruction and check if its pass/fail
+            foreach (string strInstruction in lstInstructions)
+            {
+                //multiple things
+
+                //direct to another flow or Accept/Refuse
+                if (strInstruction == "A" || strInstruction == "R" || strInstruction.Contains(":") == false)
+                {
+                    strReturn = strInstruction;
+                    break;
+                }
+
+                //then we evaluate a variable
+                boolEvaluate = false;
+                strEvaluate = strInstruction.Split(":");
+                char chLetter = strEvaluate[0].ToUpper()[0];
+                char chSign = strEvaluate[0][1];
+                long lngValue = long.Parse(strEvaluate[0].Substring(2));
+
+                //easier to check all 8 as one ligner
+                if (boolEvaluate == false && chLetter == 'X' && chSign == '>' && pInput.X > lngValue) boolEvaluate = true;
+                if (boolEvaluate == false && chLetter == 'X' && chSign == '<' && pInput.X < lngValue) boolEvaluate = true;
+                if (boolEvaluate == false && chLetter == 'M' && chSign == '>' && pInput.M > lngValue) boolEvaluate = true;
+                if (boolEvaluate == false && chLetter == 'M' && chSign == '<' && pInput.M < lngValue) boolEvaluate = true;
+                if (boolEvaluate == false && chLetter == 'A' && chSign == '>' && pInput.A > lngValue) boolEvaluate = true;
+                if (boolEvaluate == false && chLetter == 'A' && chSign == '<' && pInput.A < lngValue) boolEvaluate = true;
+                if (boolEvaluate == false && chLetter == 'S' && chSign == '>' && pInput.S > lngValue) boolEvaluate = true;
+                if (boolEvaluate == false && chLetter == 'S' && chSign == '<' && pInput.S < lngValue) boolEvaluate = true;
+
+
+
+                if (boolEvaluate)
+                {
+                    strReturn = strEvaluate[1];
+                    break;
                 }
             }
 
 
 
-            //If String type
-            foreach (string strGames in allString)
+
+            return strReturn;
+        }
+
+
+
+        public class p19_Input
+        {
+            public long X = 0;
+            public long M = 0;
+            public long A = 0;
+            public long S = 0;
+
+            public long sum()
             {
-                //hold the max shown in that game
-                int intGameNum = int.Parse(strGames.Substring(4, strGames.IndexOf(":") - 4).Trim());
-                Dictionary<int, int> dictGamesResults = new Dictionary<int, int>();
+                return (X + M + A + S);
+            }
+        }
+
+        private long Puzzle19_PartTwo()
+        {
+            //string strInput19 = Advent23.Properties.Settings.Default.Puzzle19_Input;
+            string strInput19 = Advent23.Properties.Settings.Default.Puzzle_Example;
+
+            string[] allString = strInput19.Split("\r\n\r\n");
+            long lngAnswer = 0;
+
+            //we split the workflow first then instruction
+            string[] strWorkflow = allString[0].Split("\r\n");
+            Dictionary<string, List<string>> dictFlows = new Dictionary<string, List<string>>();
+
+            //let add them all up first
+            foreach (string aFlow in strWorkflow)
+            {
+                //first we get the caption of the workflow
+                //then we split all instruction in bite size and we save them
+                //we will call a function to determine Y/N on each instruction later
+
+                string strFlowCaption = "";
+                List<string> lstInstructions = new List<string>();
+                string strInstructions = "";
+
+                strFlowCaption = aFlow.Substring(0, aFlow.IndexOf("{"));
+                strInstructions = aFlow.Substring(aFlow.IndexOf("{") + 1); strInstructions = strInstructions.Substring(0, strInstructions.Length - 1);
+
+                string[] strInstSplit = strInstructions.Split(",");
+                foreach (string strInst in strInstSplit)
+                {
+                    lstInstructions.Add(strInst);
+                }
+                dictFlows.Add(strFlowCaption, lstInstructions);
+            }
+
+            //now we got a dictionary with all flows
+            //let add IN in the queue and loop until we mapped all A flows
+
+            List<string> lstHappyPaths = new List<string>();
+            Queue<Tuple<string, string>> quWork = new Queue<Tuple<string, string>>();
+            Tuple<string, string> tpNewItem = new Tuple<string, string>("in", ""); //Item1 = flow to go to, Item2 = what we accumulated
+            Tuple<string, string> tpToDo = new Tuple<string, string>("", "");
+            quWork.Enqueue(tpNewItem);
+
+            while (quWork.Count > 0)
+            {
+                tpToDo = quWork.Dequeue();
+
+                string strAccumulatedInstruction = tpToDo.Item2;
+                //
+                foreach (string strInst in dictFlows[tpToDo.Item1])
+                {
+                    //for each instruction we do all possiblities and queue extra works
+
+
+                    if (strInst == "A")
+                    {
+                        lstHappyPaths.Add(strAccumulatedInstruction);
+                    }
+                    else if (strInst == "R")
+                    {
+                        break; //rejected do nothing, and there nothing after its always last on instruction set
+                    }
+                    else if (strInst.Contains(":") == false)
+                    {
+                        //direct go somewhere else, we queue that as another work item
+                        tpNewItem = new Tuple<string, string>(strInst, strAccumulatedInstruction);
+                        quWork.Enqueue(tpNewItem);
+                    }
+                    else
+                    {
+                        //this is now a formula of > or <
+                        //we will add on the queue the 'if valid' and if not valid we add the reverse and continue on each instruction
+
+
+                        //then we evaluate a variable
+                        string[] strEvaluate = strInst.Split(":");
+
+
+                        if (strEvaluate[1] == "A")
+                        {
+                            //this was an happy path
+                            lstHappyPaths.Add(strAccumulatedInstruction + "|" + strEvaluate[0]);
+                        }
+                        else if (strEvaluate[1] != "R") //Reject we ignore
+                        {
+                            //we got redirected
+                            tpNewItem = new Tuple<string, string>(strEvaluate[1], strAccumulatedInstruction + "|" + strEvaluate[0]); //Item1 = flow to go to, Item2 = what we accumulated
+                            quWork.Enqueue(tpNewItem);
+                        }
+
+                        //now we need to reverse the statement and continue
+                        //default >
+                        char chSign = '>';
+                        long lngValue = lngValue = long.Parse(strEvaluate[0].Substring(2)) - 1;
+                        if (strEvaluate[0][1] == '>')
+                        {
+                            //oh well was the other sign we offset
+                            chSign = '<';
+                            lngValue += 2;
+                        }
+                        strAccumulatedInstruction += "|" + strEvaluate[0][0] + chSign + lngValue.ToString();
+                    }
+                }
+            }
+            lngAnswer = 0;
+
+
+            foreach (string strSet in lstHappyPaths)
+            {
+
+                long lng_X_Min = 1; long lng_X_Max = 4000;
+                long lng_M_Min = 1; long lng_M_Max = 4000;
+                long lng_A_Min = 1; long lng_A_Max = 4000;
+                long lng_S_Min = 1; long lng_S_Max = 4000;
+                long lngSetAnswer = 0;
+
+                string[] strValidation = strSet.Substring(1).Split('|');
+
+                foreach (string strCond in strValidation)
+                {
+                    char chLetter = strCond.ToUpper()[0];
+                    char chSign = strCond[1];
+                    long lngValue = long.Parse(strCond.Substring(2));
+
+                    //easier to check all 8 as one line
+                    if (chLetter == 'X' && chSign == '>' && lng_X_Min < lngValue) lng_X_Min = lngValue + 1;
+                    if (chLetter == 'X' && chSign == '<' && lng_X_Max > lngValue) lng_X_Max = lngValue - 1;
+                    if (chLetter == 'M' && chSign == '>' && lng_M_Min < lngValue) lng_M_Min = lngValue + 1;
+                    if (chLetter == 'M' && chSign == '<' && lng_M_Max > lngValue) lng_M_Max = lngValue - 1;
+                    if (chLetter == 'A' && chSign == '>' && lng_A_Min < lngValue) lng_A_Min = lngValue + 1;
+                    if (chLetter == 'A' && chSign == '<' && lng_A_Max > lngValue) lng_A_Max = lngValue - 1;
+                    if (chLetter == 'S' && chSign == '>' && lng_S_Min < lngValue) lng_S_Min = lngValue + 1;
+                    if (chLetter == 'S' && chSign == '<' && lng_S_Max > lngValue) lng_S_Max = lngValue - 1;
+                }
+
+                if (((lng_X_Max - lng_X_Min) + 1) > 0 &&
+                    ((lng_M_Max - lng_M_Min) + 1) > 0 &&
+                    ((lng_A_Max - lng_A_Min) + 1) > 0 &&
+                    ((lng_S_Max - lng_S_Min) + 1) > 0)
+                {
+                    lngSetAnswer = ((lng_X_Max - lng_X_Min) + 1);
+                    lngSetAnswer *= ((lng_M_Max - lng_M_Min) + 1);
+                    lngSetAnswer *= ((lng_A_Max - lng_A_Min) + 1);
+                    lngSetAnswer *= ((lng_S_Max - lng_S_Min) + 1);
+                    lngAnswer += lngSetAnswer;
+                }
+
+
             }
 
 
 
             return lngAnswer;
-        }
-        private long Puzzle19_PartTwo()
-        {
-            return 0;
         }
 
         private void bntRun19_Click(object sender, EventArgs e)
@@ -4176,48 +4409,334 @@ namespace Advent23
 
         #endregion
 
+
         #region Puzzle 20
+        public static Queue<Tuple<string, int, bool>> p20_QuPressed = new Queue<Tuple<string, int, bool>>();
+        public static List<p20Module> p20_Modules = new List<p20Module>();
+        public static Dictionary<string, int> p20_DictModule = new Dictionary<string, int>();
+
         private long Puzzle20_PartOne()
         {
-            string strInput17 = Advent23.Properties.Settings.Default.Puzzle_Example;
-            string[] allString = strInput17.Split("\r\n");
-            long lngAnswer = 0;
+            //string strInput20 = Advent23.Properties.Settings.Default.Puzzle_Example;
+            string strInput20 = Advent23.Properties.Settings.Default.Puzzle_Input;
 
-
-            //If Array
-            int intGridSize = 100;
-            int intX = -1;
-            int intY = 0;
-            char[,] chrGrid = new char[intGridSize, intGridSize]; //to make it easy we pad around
-            foreach (string strGames in allString)
-            {
-                intX++;
-                intY = 0;
-                foreach (char chData in strGames)
-                {
-                    chrGrid[intX, intY++] = chData;
-                }
-            }
-
+            string[] allString = strInput20.Split("\r\n");
+            long p20_lngAnswers = 0;
+            long lngLowSignalCount = 0;
+            long lnngHighSignalCount = 0;
 
 
             //If String type
-            foreach (string strGames in allString)
+            for (int i = 0; i < allString.Length; i++)
             {
-                //hold the max shown in that game
-                int intGameNum = int.Parse(strGames.Substring(4, strGames.IndexOf(":") - 4).Trim());
-                Dictionary<int, int> dictGamesResults = new Dictionary<int, int>();
+                //we will create all Module
+
+                //format goes like this: %rk -> gk, sb
+                //we check if first character is & (for Conjunction)
+                //Otherwise we consider it a flip
+                //I did change the input to have broadcaster start with %
+
+                string[] strInput = allString[i].Split(" -> ");
+
+                bool boolConj = false;
+                if (strInput[0][0] == '&') boolConj = true;
+
+                p20Module aModule = new p20Module(strInput[0].Substring(1), strInput[1].Split(","), boolConj, i);
+                p20_DictModule.Add(strInput[0].Substring(1), i);
+                p20_Modules.Add(aModule);
             }
 
+            int pBroadcast = 0;
+            //now all module are started let initialize them
+            for (int i = 0; i < p20_Modules.Count; i++)
+            {
+                p20_Modules[i].Initialize();
+                if (p20_Modules[i].Label == "broadcaster") pBroadcast = i;
+            }
+
+            Tuple<string, int, bool> p20_Signal; //Item1 = from, Item2= indexTo, High/Low
+            for (int i = 0; i < 1000; i++)
+            {
+                p20_Signal = new Tuple<string, int, bool>("", pBroadcast, false);
+                p20_QuPressed.Enqueue(p20_Signal);
+
+                while (p20_QuPressed.Count > 0)
+                {
+                    //we dequeue and send the signal (while counting)
+                    p20_Signal = p20_QuPressed.Dequeue();
+
+                    //we count signal H/L
+                    if (p20_Signal.Item3)
+                    {
+                        lnngHighSignalCount++;
+                    }
+                    else
+                    {
+                        lngLowSignalCount++;
+                    }
+
+                    //now we send signal to the module which will queue what's needed
+                    if (p20_Signal.Item2 != -1) p20_Modules[p20_Signal.Item2].ReceiveSignal(p20_Signal.Item1, p20_Signal.Item3);
+                }
+            }
+
+            p20_lngAnswers = lnngHighSignalCount * lngLowSignalCount;
+            return p20_lngAnswers;
+        }
+
+        public class p20Module
+        {
+            private bool boolState = false; //off by default
+            private string strMyLabel = "";
+            private int int_MyIndex = 0;
+            private bool boolConjuction = false;
+            private string[] strChildsLabel;
+            private int[] int_Childs;
+            private Dictionary<string, bool> dictParentState = new Dictionary<string, bool>();
+            Tuple<string, int, bool> p20_Signal; //Item1 = from, Item2= indexTo, High/Low
 
 
-            return lngAnswer;
+            public string Label
+            {
+                get { return strMyLabel; }   // get method
+            }
+            public int IndexNum
+            {
+                get { return int_MyIndex; }   // get method
+            }
+
+            public p20Module(string strMyLabel, string[] strChildsLabel, bool boolConjuction, int int_MyIndex)
+            {
+                this.strMyLabel = strMyLabel.Trim();
+                this.int_MyIndex = int_MyIndex;
+                this.boolConjuction = boolConjuction;
+                this.strChildsLabel = strChildsLabel;
+
+
+                int_Childs = new int[strChildsLabel.Length];
+            } //used to initialize a flop and a Conjunction
+
+
+            public void ReceiveSignal(string strFrom, bool boolSignal)
+            {
+                //we got a signal either Low or High
+                //if we are a flip, we just flip our signal and send a message (of our new signal) to all our child
+                //if we are a Conjuction, we need to check the signal of all our childs (need to be high) and we become high if they all are
+                if (boolConjuction == false && boolSignal == false)
+                {
+                    //we flip the state
+                    boolState = !boolState;
+                    if (strMyLabel == "broadcaster") boolState = false;
+
+                    foreach (int intChild in int_Childs)
+                    {
+                        p20_Signal = new Tuple<string, int, bool>(strMyLabel, intChild, boolState);
+                        p20_QuPressed.Enqueue(p20_Signal);
+                    }
+                }
+                else if (boolConjuction == true)
+                {
+                    //first let update the status of this child to the status we just got
+                    dictParentState[strFrom] = boolSignal;
+
+                    //now we check all childs if all high its change itself to low otherwise its high
+                    //default we will send low
+                    boolState = false;
+                    foreach (bool boolChild in dictParentState.Values)
+                    {
+                        if (boolChild == false)
+                        {
+                            boolState = true;
+                            break;
+                        }
+                    }
+
+                    foreach (int intChild in int_Childs)
+                    {
+                        p20_Signal = new Tuple<string, int, bool>(strMyLabel, intChild, boolState);
+                        p20_QuPressed.Enqueue(p20_Signal);
+                    }
+                }
+            }
+
+            public void Initialize()
+            {
+                p20Module aModule;
+                //we go throught the global list to find the child
+                for (int i = 0; i < strChildsLabel.Length; i++)
+                {
+                    //let get the child, then save its index in our array, and send him a message to monitor for us (for Conj)
+                    if (p20_DictModule.ContainsKey(strChildsLabel[i].Trim()))
+                    {
+                        aModule = p20_Modules[p20_DictModule[strChildsLabel[i].Trim()]];
+                        int_Childs[i] = aModule.int_MyIndex;
+
+                        aModule.init_Child(strMyLabel);
+                    }
+                    else
+                    {
+                        int_Childs[i] = -1;
+                    }
+                }
+            }
+
+            public void init_Child(string strParent)
+            {
+                //we received a message that we might have a children
+                if (boolConjuction == true) dictParentState.Add(strParent, false); //lowSignal By Default
+            }
         }
         private long Puzzle20_PartTwo()
         {
-            return 0;
+            //This is another one of those LCM ....
+
+            //string strInput20 = Advent23.Properties.Settings.Default.Puzzle_Example;
+            string strInput20 = Advent23.Properties.Settings.Default.Puzzle_Input;
+
+            string[] allString = strInput20.Split("\r\n");
+            long p20_lngAnswers = 0;
+
+            p20_QuPressed = new Queue<Tuple<string, int, bool>>();
+            p20_Modules = new List<p20Module>();
+            p20_DictModule = new Dictionary<string, int>();
+
+            //If String type
+            for (int i = 0; i < allString.Length; i++)
+            {
+                //we will create all Module
+
+                //format goes like this: %rk -> gk, sb
+                //we check if first character is & (for Conjunction)
+                //Otherwise we consider it a flip
+                //I did change the input to have broadcaster start with %
+
+                string[] strInput = allString[i].Split(" -> ");
+
+                bool boolConj = false;
+                if (strInput[0][0] == '&') boolConj = true;
+
+                p20Module aModule = new p20Module(strInput[0].Substring(1), strInput[1].Split(","), boolConj, i);
+                p20_DictModule.Add(strInput[0].Substring(1), i);
+                p20_Modules.Add(aModule);
+            }
+
+            int pBroadcast = 0;
+            //now all module are started let initialize them
+            for (int i = 0; i < p20_Modules.Count; i++)
+            {
+                p20_Modules[i].Initialize();
+                if (p20_Modules[i].Label == "broadcaster") pBroadcast = i;
+            }
+
+            Tuple<string, int, bool> p20_Signal; //Item1 = from, Item2= indexTo, High/Low
+
+            //I looked at the input its another one of those LCM
+            /*RX need to be sent a low, and there is 4 that send to HJ
+             * 
+             * &hj -> rx
+                &ks -> hj   0
+                &jf -> hj   1
+                &qs -> hj   2
+                &zk -> hj   3
+             * 
+             * They are like electronic sending pulse, and switching
+             * So let keep their 'latest' status in a table and register when they 'flip' and look at the pattern and LCM it out
+             */
+
+            List<int>[] lstSwitched = new List<int>[4]; //I checked their status they change the same cycle they are put on
+            lstSwitched[0] = new List<int> { 0 };
+            lstSwitched[1] = new List<int> { 0 };
+            lstSwitched[2] = new List<int> { 0 };
+            lstSwitched[3] = new List<int> { 0 };
+
+            for (int i = 0; i < 50000; i++) //sample
+            {
+                p20_lngAnswers++;
+                p20_Signal = new Tuple<string, int, bool>("", pBroadcast, false);
+                p20_QuPressed.Enqueue(p20_Signal);
+
+                while (p20_QuPressed.Count > 0)
+                {
+                    //we dequeue and send the signal (while counting)
+                    p20_Signal = p20_QuPressed.Dequeue();
+
+                    //now we send signal to the module which will queue what's needed
+                    if (p20_Signal.Item2 != -1)
+                    {
+                        p20_Modules[p20_Signal.Item2].ReceiveSignal(p20_Signal.Item1, p20_Signal.Item3);
+                    }
+
+                    if (p20_Signal.Item1 == "ks" && p20_Signal.Item3) lstSwitched[0].Add(i);
+                    if (p20_Signal.Item1 == "jf" && p20_Signal.Item3) lstSwitched[1].Add(i);
+                    if (p20_Signal.Item1 == "qs" && p20_Signal.Item3) lstSwitched[2].Add(i);
+                    if (p20_Signal.Item1 == "zk" && p20_Signal.Item3) lstSwitched[3].Add(i);
+                }
+            }
+
+            //they all loop on only 1
+            List<long> lstInterval = new List<long>();
+            for (int i = 0; i < 4; i++)
+            {
+                lstInterval.Add(lstSwitched[i][4] - lstSwitched[i][3]);
+            }
+
+            p20_lngAnswers = LCM(lstInterval);
+            return p20_lngAnswers;
+
+
         }
 
+        private long LCM(List<long> lstLongs)
+        {
+            //When trying to determine the LCM of more than two numbers, for example LCM(a, b, c) find the LCM of a and b where the result will be q.
+            //Then find the LCM of c and q. The result will be the LCM of all three numbers. Using the previous example:
+
+            long lngReturn = 0;
+
+            if (lstLongs.Count == 1)
+            {
+                lngReturn = lstLongs[0];
+            }
+            else if (lstLongs.Count > 2)
+            {
+                long aGCF = 0;
+                long c = lstLongs[0];
+
+                for (int i = 1; i < lstLongs.Count; i++)
+                {
+                    aGCF = GCF(c, lstLongs[i]);
+                    c = (c * lstLongs[i]) / aGCF;
+                }
+
+                lngReturn = c;
+            }
+            return lngReturn;
+        }
+
+        private long GCF(long a, long b)
+        {
+            long Num1 = a;
+            long Num2 = b;
+            long lngReturn = 1;
+
+            //GCF(a, a) = a
+            //GCF(a, b) = GCF(a-b, b), when a > b
+            //GCF(a, b) = GCF(a, b-a), when b > a
+            while (Num1 != Num2)
+            {
+                if (Num1 > Num2)
+                {
+                    Num1 -= Num2;
+                }
+                else
+                {
+                    Num2 -= Num1;
+                }
+            }
+
+            lngReturn = Num1;
+            return lngReturn;
+        }
         private void bntRun20_Click(object sender, EventArgs e)
         {
             long lngSolution20P1 = Puzzle20_PartOne();
@@ -4235,12 +4754,17 @@ namespace Advent23
             string strInput17 = Advent23.Properties.Settings.Default.Puzzle_Example;
             string[] allString = strInput17.Split("\r\n");
             long lngAnswer = 0;
-
-
             //If Array
-            int intGridSize = 100;
+            int intGridSize = 11;
+            int intStep = 6;
+
+
             int intX = -1;
             int intY = 0;
+
+            Dictionary<string, Point> dictCoordinate = new Dictionary<string, Point>();
+            Dictionary<string, Point> dictNewCoordinate = new Dictionary<string, Point>();
+
             char[,] chrGrid = new char[intGridSize, intGridSize]; //to make it easy we pad around
             foreach (string strGames in allString)
             {
@@ -4248,31 +4772,233 @@ namespace Advent23
                 intY = 0;
                 foreach (char chData in strGames)
                 {
-                    chrGrid[intX, intY++] = chData;
+                    if (chData == 'S')
+                    {
+                        dictCoordinate.Add(intX.ToString() + "," + intY.ToString(), new Point(intX, intY));
+                        chrGrid[intX, intY++] = '.';
+                    }
+                    else
+                    {
+                        chrGrid[intX, intY++] = chData;
+                    }
+
                 }
             }
 
-
-
-            //If String type
-            foreach (string strGames in allString)
+            for (int a = 0; a < intStep; a++)
             {
-                //hold the max shown in that game
-                int intGameNum = int.Parse(strGames.Substring(4, strGames.IndexOf(":") - 4).Trim());
-                Dictionary<int, int> dictGamesResults = new Dictionary<int, int>();
+                dictNewCoordinate = new Dictionary<string, Point>(); // we reset new location
+                foreach (Point anElf in dictCoordinate.Values)
+                {
+
+
+                    //for each elf we take his X/Y, and move him on all possible 1 around
+                    intX = anElf.X;
+                    intY = anElf.Y;
+
+                    for (int c = -1; c < 2; c = c + 2)
+                    {
+                        if (intX + c >= 0 && intX + c < intGridSize)
+                        {
+                            if (chrGrid[intX + c, intY] == '.' && dictNewCoordinate.ContainsKey((intX + c).ToString() + "," + intY.ToString()) == false)
+                            {
+                                dictNewCoordinate.Add((intX + c).ToString() + "," + intY.ToString(), new Point(intX + c, intY));
+                            }
+
+                        }
+                        if (intY + c >= 0 && intY + c < intGridSize)
+                        {
+                            if (chrGrid[intX, intY + c] == '.' && dictNewCoordinate.ContainsKey(intX.ToString() + "," + (intY + c).ToString()) == false)
+                            {
+                                dictNewCoordinate.Add(intX.ToString() + "," + (intY + c).ToString(), new Point(intX, intY + c));
+                            }
+                        }
+                    }
+                }
+                dictCoordinate = dictNewCoordinate;
             }
 
 
 
+            //now we need to move the elf
+            lngAnswer = dictCoordinate.Count;
+
             return lngAnswer;
         }
+
         private long Puzzle21_PartTwo()
         {
-            return 0;
+            //Shamefully took that from solution/internet
+            //I am not very strong with quadratic
+            //I found 2n^2 - 2n +1 , but I am not sure how to split Even and Odd spread etc
+
+
+            var input = Advent23.Properties.Settings.Default.Puzzle_Input.Split("\r\n").ToList();
+            var gridSize = input.Count == input[0].Length ? input.Count : throw new ArgumentOutOfRangeException();
+
+            var start = Enumerable.Range(0, gridSize)
+                .SelectMany(i => Enumerable.Range(0, gridSize)
+                    .Where(j => input[i][j] == 'S')
+                    .Select(j => new Coord(i, j)))
+                .Single();
+
+            var grids = 26501365 / gridSize;
+            var rem = 26501365 % gridSize;
+
+            var sequence = new List<int>();
+            var work = new HashSet<Coord> { start };
+            var steps = 0;
+            for (var n = 0; n < 3; n++)
+            {
+                for (; steps < n * gridSize + rem; steps++)
+                {
+                    work = new HashSet<Coord>(work
+                        .SelectMany(it => new[] { Dir.N, Dir.S, Dir.E, Dir.W }.Select(dir => it.Move(dir)))
+                        .Where(dest => input[((dest.X % 131) + 131) % 131][((dest.Y % 131) + 131) % 131] != '#'));
+                }
+
+                sequence.Add(work.Count);
+            }
+
+            var c = sequence[0];
+            var aPlusB = sequence[1] - c;
+            var fourAPlusTwoB = sequence[2] - c;
+            var twoA = fourAPlusTwoB - (2 * aPlusB);
+            var a = twoA / 2;
+            var b = aPlusB - a;
+
+            long F(long n)
+            {
+                return a * (n * n) + b * n + c;
+            }
+
+            for (var i = 0; i < sequence.Count; i++)
+            {
+                Console.WriteLine($"{sequence[i]} : {F(i)}");
+            }
+
+            return (F(grids));
+
+        }
+        public record Coord(int X, int Y)
+        {
+            public Coord Move(Dir dir, int dist = 1)
+            {
+                return dir switch
+                {
+                    Dir.N => new Coord(this.X - dist, this.Y),
+                    Dir.S => new Coord(this.X + dist, this.Y),
+                    Dir.E => new Coord(this.X, this.Y + dist),
+                    Dir.W => new Coord(this.X, this.Y - dist),
+                };
+            }
+        }
+        public enum Dir
+        {
+            N, S, E, W
         }
 
+
+        public long[] P21_Spread(Point ptStart, int intStep)
+        {
+            long[] lstSpreadCount = new long[2]; //0 = even , 1 = odd
+
+
+            string strInput21 = Advent23.Properties.Settings.Default.Puzzle_Input;
+            string[] allString = strInput21.Split("\r\n");
+            int intGridSize = 131;
+
+            long lngX = -1;
+            long lngY = 0;
+            List<long> lstAnswerCount = new List<long>();
+
+            Dictionary<string, Point> dictCoordinateGlobal = new Dictionary<string, Point>();
+            Dictionary<string, Point> dictCoordinateEven = new Dictionary<string, Point>();
+            Dictionary<string, Point> dictCoordinateOdd = new Dictionary<string, Point>();
+
+            Dictionary<string, Point> dictNewCoordinate = new Dictionary<string, Point>();
+            Dictionary<string, Point> dictToCheck = new Dictionary<string, Point>();
+
+            char[,] chrGrid = new char[intGridSize, intGridSize]; //to make it easy we pad around
+            foreach (string strGames in allString)
+            {
+                lngX++;
+                lngY = 0;
+                foreach (char chData in strGames)
+                {
+                    if (chData == 'S')
+                    {
+                        chrGrid[lngX, lngY++] = '.';
+                    }
+                    else
+                    {
+                        chrGrid[lngX, lngY++] = chData;
+                    }
+
+                }
+            }
+
+            //starting location
+            dictToCheck.Add(ptStart.X.ToString() + "," + ptStart.Y.ToString(), ptStart);
+            Point newLoc;
+            for (int a = 0; a < intStep; a++)
+            {
+                dictNewCoordinate = new Dictionary<string, Point>(); // we reset new location
+
+                foreach (Point anElf in dictToCheck.Values)
+                {
+                    //for each elf we take his X/Y, and move him on all possible 1 around
+                    for (int c = -1; c < 2; c = c + 2)
+                    {
+                        newLoc = new Point(anElf.X + c, anElf.Y);
+                        if (newLoc.X >= 0 && newLoc.X < intGridSize && chrGrid[newLoc.X, newLoc.Y] == '.' && dictCoordinateGlobal.ContainsKey(newLoc.X.ToString() + "," + newLoc.Y.ToString()) == false)
+                        {
+                            //Then we add in all Dictionnary
+                            dictCoordinateGlobal.Add(newLoc.X.ToString() + "," + newLoc.Y.ToString(), newLoc);
+                            dictNewCoordinate.Add(newLoc.X.ToString() + "," + newLoc.Y.ToString(), newLoc);
+                            if (a % 2 == 0)
+                            {
+                                dictCoordinateOdd.Add(newLoc.X.ToString() + "," + newLoc.Y.ToString(), newLoc);
+                            }
+                            else
+                            {
+                                dictCoordinateEven.Add(newLoc.X.ToString() + "," + newLoc.Y.ToString(), newLoc);
+                            }
+                        }
+
+                        newLoc = new Point(anElf.X, anElf.Y + c);
+                        if (newLoc.Y >= 0 && newLoc.Y < intGridSize && chrGrid[newLoc.X, newLoc.Y] == '.' && dictCoordinateGlobal.ContainsKey(newLoc.X.ToString() + "," + newLoc.Y.ToString()) == false)
+                        {
+                            //Then we add in all Dictionnary
+                            dictCoordinateGlobal.Add(newLoc.X.ToString() + "," + newLoc.Y.ToString(), newLoc);
+                            dictNewCoordinate.Add(newLoc.X.ToString() + "," + newLoc.Y.ToString(), newLoc);
+                            if (a % 2 == 0)
+                            {
+                                dictCoordinateOdd.Add(newLoc.X.ToString() + "," + newLoc.Y.ToString(), newLoc);
+                            }
+                            else
+                            {
+                                dictCoordinateEven.Add(newLoc.X.ToString() + "," + newLoc.Y.ToString(), newLoc);
+                            }
+                        }
+                    }
+                }
+
+                dictToCheck = dictNewCoordinate;
+            }
+
+            lstSpreadCount[0] = dictCoordinateEven.Count();
+            lstSpreadCount[1] = dictCoordinateOdd.Count();
+
+
+            return lstSpreadCount;
+        }
         private void bntRun21_Click(object sender, EventArgs e)
         {
+            int i = 13;
+
+
+
             long lngSolution21P1 = Puzzle21_PartOne();
             txt_output21P1.Text = lngSolution21P1.ToString();
 
@@ -4285,43 +5011,333 @@ namespace Advent23
         #region Puzzle 22
         private long Puzzle22_PartOne()
         {
-            string strInput17 = Advent23.Properties.Settings.Default.Puzzle_Example;
-            string[] allString = strInput17.Split("\r\n");
+            //505
+            string strInput22 = Advent23.Properties.Settings.Default.Puzzle_Input;
+            string[] allString = strInput22.Split("\r\n");
             long lngAnswer = 0;
 
-
             //If Array
-            int intGridSize = 100;
-            int intX = -1;
-            int intY = 0;
-            char[,] chrGrid = new char[intGridSize, intGridSize]; //to make it easy we pad around
-            foreach (string strGames in allString)
+            int intGridSize = 999;
+
+            List<string> list = new List<string>();
+            int[,,] GridBlock = new int[intGridSize, intGridSize, intGridSize];
+
+            int intHighestBlock = 0;
+
+            int intBlockNum = 1;
+
+            int[,,] aBlock;
+            //we set the floor with 1
+            for (int a = 0; a < intGridSize; a++)
             {
-                intX++;
-                intY = 0;
-                foreach (char chData in strGames)
+                for (int b = 0; b < intGridSize; b++)
                 {
-                    chrGrid[intX, intY++] = chData;
+                    GridBlock[a, b, 0] = 1;
                 }
             }
 
+            Dictionary<int, int> dictSingleDependencies = new Dictionary<int, int>();
+            dictSingleDependencies.Add(1, 2);//block 1 (the ground) is fake so we eliminate  it
 
+            PriorityQueue<string, int> quBlock = new PriorityQueue<string, int>();
 
-            //If String type
             foreach (string strGames in allString)
             {
-                //hold the max shown in that game
-                int intGameNum = int.Parse(strGames.Substring(4, strGames.IndexOf(":") - 4).Trim());
-                Dictionary<int, int> dictGamesResults = new Dictionary<int, int>();
+                //we just parse then put them in the Queue depending on their current heigh
+                quBlock.Enqueue(strGames, int.Parse(strGames.Split("~")[0].Split(",")[2])); //first number of where the Z start
             }
 
 
+            //If String type
+            while (quBlock.Count > 0)
+            {
+                //hold the max shown in that game
+                intBlockNum++;
+                string strGames = quBlock.Dequeue();
+
+                string[] Dimension = strGames.Split("~");
+                string[] dmFrom = Dimension[0].Split(",");
+                string[] dmTo = Dimension[1].Split(",");
+
+
+                //We get the coordinate of that block and we drop it so Z go down
+                int intLenghtX;
+                int intLenghtY;
+                int intLenghtZ;
+
+
+                int[] intBlock_X = new int[2] { int.Parse(dmFrom[0]), int.Parse(dmTo[0]) };
+                int[] intBlock_Y = new int[2] { int.Parse(dmFrom[1]), int.Parse(dmTo[1]) };
+                int[] intBlock_Z = new int[2] { int.Parse(dmFrom[2]), int.Parse(dmTo[2]) };
+
+                intLenghtX = intBlock_X[1] - intBlock_X[0] + 1;
+                intLenghtY = intBlock_Y[1] - intBlock_Y[0] + 1;
+                intLenghtZ = intBlock_Z[1] - intBlock_Z[0] + 1;
+
+
+                bool dropped = false;
+                int intCurrentZ = intHighestBlock;
+                //Now we just need to 'drop' it to level where highest block is, then compare X/Y until we hit something
+
+                List<int> lstSupportNum = new List<int>();
+
+                while (dropped == false && intCurrentZ >= 0)
+                {
+                    //
+                    for (int x = intBlock_X[0]; x <= intBlock_X[1]; x++)
+                    {
+                        for (int y = intBlock_Y[0]; y <= intBlock_Y[1]; y++)
+                        {
+                            if (GridBlock[x, y, intCurrentZ] > 0)
+                            {
+                                if (lstSupportNum.Contains(GridBlock[x, y, intCurrentZ]) == false) lstSupportNum.Add(GridBlock[x, y, intCurrentZ]); //we hit a support
+                            }
+                        }
+                    }
+
+                    if (lstSupportNum.Count > 0)
+                    {
+                        dropped = true;
+                        if (lstSupportNum.Count == 1)
+                        {
+                            //now if we got just 1 supportNum we note it as he's dependent on us
+                            dictSingleDependencies[lstSupportNum[0]] = dictSingleDependencies[lstSupportNum[0]] + 1;
+                        }
+
+                        //we draw this diagram with his corresponding number and add him with 'zero' dependencies for now
+                        dictSingleDependencies.Add(intBlockNum, 0);
+
+                        intBlock_Z[0] = intCurrentZ + 1; //we drop him at one level above where we just checked
+                        intBlock_Z[1] = intBlock_Z[0] + (intLenghtZ - 1);
+
+                        if (intHighestBlock < intBlock_Z[1]) intHighestBlock = intBlock_Z[1]; //we check new highest level block
+
+                        //we draw
+                        for (int x = intBlock_X[0]; x <= intBlock_X[1]; x++)
+                        {
+                            for (int y = intBlock_Y[0]; y <= intBlock_Y[1]; y++)
+                            {
+                                for (int z = intBlock_Z[0]; z <= intBlock_Z[1]; z++)
+                                {
+                                    GridBlock[x, y, z] = intBlockNum;
+                                }
+                            }
+
+                        }
+                    }
+                    else
+                    {
+                        intCurrentZ--; //we go down one and recheck
+                    }
+                }
+            }
+
+            lngAnswer = 0;
+            foreach (int intDependencies in dictSingleDependencies.Values)
+            {
+                if (intDependencies == 0) lngAnswer++;
+            }
 
             return lngAnswer;
         }
         private long Puzzle22_PartTwo()
         {
-            return 0;
+            //1455
+            //152680
+            //1455
+            //950
+            //71002
+
+            string strInput22 = Advent23.Properties.Settings.Default.Puzzle_Input;
+            string[] allString = strInput22.Split("\r\n");
+            long lngAnswer = 0;
+
+            //If Array
+            int intGridSize = 999;
+
+            List<string> list = new List<string>();
+            int[,,] GridBlock = new int[intGridSize, intGridSize, intGridSize];
+
+            int intHighestBlock = 0;
+
+            int intBlockNum = 1;
+
+            int[,,] aBlock;
+            //we set the floor with 1
+            for (int a = 0; a < intGridSize; a++)
+            {
+                for (int b = 0; b < intGridSize; b++)
+                {
+                    GridBlock[a, b, 0] = 1;
+                }
+            }
+
+            Dictionary<int, bool> dictSingleDependencies = new Dictionary<int, bool>();
+            Dictionary<int, int> dictBlockLowestZ = new Dictionary<int, int>();
+            Dictionary<int, List<int>> dictAllDependencies = new Dictionary<int, List<int>>();
+            Dictionary<int, List<int>> dictSupportedBy = new Dictionary<int, List<int>>();
+
+            //we create bedrock, we will delete before we check later
+            dictSingleDependencies.Add(1, false);
+            dictAllDependencies.Add(1, new List<int>());
+
+
+            PriorityQueue<string, int> quBlock = new PriorityQueue<string, int>();
+
+            foreach (string strGames in allString)
+            {
+                //we just parse then put them in the Queue depending on their current heigh
+                quBlock.Enqueue(strGames, int.Parse(strGames.Split("~")[0].Split(",")[2])); //first number of where the Z start
+            }
+
+
+            //If String type
+            while (quBlock.Count > 0)
+            {
+                //hold the max shown in that game
+                intBlockNum++;
+                string strGames = quBlock.Dequeue();
+
+                string[] Dimension = strGames.Split("~");
+                string[] dmFrom = Dimension[0].Split(",");
+                string[] dmTo = Dimension[1].Split(",");
+
+
+                //We get the coordinate of that block and we drop it so Z go down
+                int intLenghtX;
+                int intLenghtY;
+                int intLenghtZ;
+
+
+                int[] intBlock_X = new int[2] { int.Parse(dmFrom[0]), int.Parse(dmTo[0]) };
+                int[] intBlock_Y = new int[2] { int.Parse(dmFrom[1]), int.Parse(dmTo[1]) };
+                int[] intBlock_Z = new int[2] { int.Parse(dmFrom[2]), int.Parse(dmTo[2]) };
+
+                intLenghtX = intBlock_X[1] - intBlock_X[0] + 1;
+                intLenghtY = intBlock_Y[1] - intBlock_Y[0] + 1;
+                intLenghtZ = intBlock_Z[1] - intBlock_Z[0] + 1;
+
+
+                bool dropped = false;
+                int intCurrentZ = intHighestBlock;
+                //Now we just need to 'drop' it to level where highest block is, then compare X/Y until we hit something
+
+                List<int> lstSupportNum = new List<int>();
+
+                while (dropped == false && intCurrentZ >= 0)
+                {
+                    //
+                    for (int x = intBlock_X[0]; x <= intBlock_X[1]; x++)
+                    {
+                        for (int y = intBlock_Y[0]; y <= intBlock_Y[1]; y++)
+                        {
+                            if (GridBlock[x, y, intCurrentZ] > 0)
+                            {
+                                if (lstSupportNum.Contains(GridBlock[x, y, intCurrentZ]) == false) lstSupportNum.Add(GridBlock[x, y, intCurrentZ]); //we hit a support
+                            }
+                        }
+                    }
+
+                    if (lstSupportNum.Count > 0)
+                    {
+                        dropped = true;
+                        dictSingleDependencies.Add(intBlockNum, false);
+                        dictAllDependencies.Add(intBlockNum, new List<int>());
+                        dictSupportedBy.Add(intBlockNum, new List<int>());
+
+                        if (lstSupportNum.Count == 1)
+                        {
+                            //now if we got just 1 supportNum we note it as he's dependent on us, we will target it for at minimum 1 chain
+                            dictSingleDependencies[lstSupportNum[0]] = true;
+                        }
+                        foreach (int intSupport in lstSupportNum)
+                        {
+                            dictAllDependencies[intSupport].Add(intBlockNum);
+                            dictSupportedBy[intBlockNum].Add(intSupport);
+                        }
+                        //this one have no block depending on it yet
+
+                        intBlock_Z[0] = intCurrentZ + 1; //we drop him at one level above where we just checked
+                        intBlock_Z[1] = intBlock_Z[0] + (intLenghtZ - 1);
+                        dictBlockLowestZ.Add(intBlockNum, intBlock_Z[0]);
+
+                        if (intHighestBlock < intBlock_Z[1]) intHighestBlock = intBlock_Z[1]; //we check new highest level block
+
+                        //we draw
+                        for (int x = intBlock_X[0]; x <= intBlock_X[1]; x++)
+                        {
+                            for (int y = intBlock_Y[0]; y <= intBlock_Y[1]; y++)
+                            {
+                                for (int z = intBlock_Z[0]; z <= intBlock_Z[1]; z++)
+                                {
+                                    GridBlock[x, y, z] = intBlockNum;
+                                }
+                            }
+
+                        }
+                    }
+                    else
+                    {
+                        intCurrentZ--; //we go down one and recheck
+                    }
+                }
+            }
+
+            //now we 
+            dictSingleDependencies.Remove(1); //we remove our bedrock
+            dictAllDependencies.Remove(1);
+
+            PriorityQueue<int, int> quNeedFall = new PriorityQueue<int, int>();
+            List<int> intBlockGone = new List<int>();
+            lngAnswer = 0;
+            for (int i = 2; i <= intBlockNum; i++)
+            {
+                if (dictSingleDependencies[i] == true) //can this block drop at least one
+                {
+                    intBlockGone = new List<int>();
+                    intBlockGone.Add(i);
+
+                    foreach (int intChild in dictAllDependencies[i])
+                    {
+                        quNeedFall.Enqueue(intChild, dictBlockLowestZ[intChild]);
+                    }
+
+                    while (quNeedFall.Count > 0)
+                    {
+                        int intFalling = quNeedFall.Dequeue();
+
+                        if (intBlockGone.Contains(intFalling) == false)
+                        {
+                            //block not gone, let check if all its supporter are gone
+                            bool boolSupported = false;
+                            foreach (int intSupport in dictSupportedBy[intFalling])
+                            {
+                                if (intBlockGone.Contains(intSupport) == false)
+                                {
+                                    boolSupported = true;
+                                    break;
+                                }
+                            }
+
+                            if (boolSupported == false)
+                            {
+                                lngAnswer++; //pouf
+                                intBlockGone.Add(intFalling); //we don't want to double count it
+
+                                foreach (int intChild in dictAllDependencies[intFalling])
+                                {
+                                    quNeedFall.Enqueue(intChild, dictBlockLowestZ[intChild]);
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+
+
+            return lngAnswer;
         }
 
         private void bntRun22_Click(object sender, EventArgs e)
@@ -4338,43 +5354,389 @@ namespace Advent23
         #region Puzzle 23
         private long Puzzle23_PartOne()
         {
-            string strInput17 = Advent23.Properties.Settings.Default.Puzzle_Example;
-            string[] allString = strInput17.Split("\r\n");
-            long lngAnswer = 0;
+            string strInput23 = Advent23.Properties.Settings.Default.Puzzle_Example; int intGridSize = 23;
+            //string strInput23 = Advent23.Properties.Settings.Default.Puzzle_Input; int intGridSize = 141;
+            string[] allString = strInput23.Split("\r\n");
+            ;
 
 
             //If Array
-            int intGridSize = 100;
-            int intX = -1;
-            int intY = 0;
+            Point ptPosition = new Point(-1, 0);
             char[,] chrGrid = new char[intGridSize, intGridSize]; //to make it easy we pad around
             foreach (string strGames in allString)
             {
-                intX++;
-                intY = 0;
-                foreach (char chData in strGames)
+                ptPosition.X++;
+                ptPosition.Y = 0;
+                foreach (char chData in (strGames))
                 {
-                    chrGrid[intX, intY++] = chData;
+                    chrGrid[ptPosition.X, ptPosition.Y++] = chData;
+                }
+            }
+
+            Point ptStart = new Point(0, 1);
+            Point ptEnding = new Point(intGridSize - 1, intGridSize - 2);
+
+            List<string> lstCaching = new List<string>();
+
+
+            Queue<Tuple<List<string>, Point, long>> quFork = new Queue<Tuple<List<string>, Point, long>>();
+            Tuple<List<string>, Point, long> tpData = new Tuple<List<string>, Point, long>(lstCaching, ptStart, 0);
+
+
+            quFork.Enqueue(tpData);
+            long lngAnswer = 0;
+            long lngSteps = 0;
+
+            //Now we start, when we find a fork we just queue it we keep maximum reached
+            while (quFork.Count > 0)
+            {
+                tpData = quFork.Dequeue();
+                lstCaching = tpData.Item1;
+                ptPosition = tpData.Item2;
+                lngSteps = tpData.Item3;
+
+                //Now we just continue to move until we are out of option
+                Point ptNewPosition;
+                bool boolEnd = false;
+
+                while (boolEnd == false)
+                {
+                    lstCaching.Add(ptPosition.X + "," + ptPosition.Y); //we cache where we just went.
+                    char look = chrGrid[ptPosition.X, ptPosition.Y];
+
+                    while (look != '.')
+                    {
+                        ptNewPosition = ptPosition;
+
+                        //we are slipping
+                        switch (look)
+                        {
+                            case '^':
+                                ptNewPosition.X--;
+                                break;
+                            case '>':
+                                ptNewPosition.Y++;
+                                break;
+                            case '<':
+                                ptNewPosition.Y--;
+                                break;
+                            case 'v':
+                                ptNewPosition.X++;
+                                break;
+                        }
+
+
+                        if (lstCaching.Contains(ptNewPosition.X + "," + ptNewPosition.Y) == false)
+                        {
+                            //we slided, we are good
+                            //we write we moved
+                            lngSteps++;
+                            lstCaching.Add(ptNewPosition.X + "," + ptNewPosition.Y);
+                        }
+                        else
+                        {
+                            boolEnd = true; //we slided in a position we can't go.... so this thread is gone
+                        }
+
+                        ptPosition = ptNewPosition;
+                        look = chrGrid[ptNewPosition.X, ptNewPosition.Y];
+                    }
+
+
+                    if (boolEnd == true || (ptPosition.X == ptEnding.X && ptPosition.Y == ptEnding.Y))
+                    {
+                        if (ptPosition.X == ptEnding.X && ptPosition.Y == ptEnding.Y)
+                        {
+                            if (lngAnswer < lngSteps) lngAnswer = lngSteps;
+                        }
+                        break;
+                    }
+                    else
+                    {
+                        //we move (if we can) and if we moved, we will create Queue for forks
+                        bool boolMoved = false;
+                        Point ptMovedFinal = ptPosition;
+
+                        for (int c = -1; c < 2; c = c + 2)
+                        {
+                            ptNewPosition = ptPosition;
+                            ptNewPosition.X += c;
+
+                            if (ptNewPosition.X >= 0 && ptPosition.X < intGridSize)
+                            {
+                                look = chrGrid[ptNewPosition.X, ptNewPosition.Y];
+
+                                if (lstCaching.Contains((ptNewPosition.X).ToString() + "," + ptNewPosition.Y.ToString()) == false &&
+                                    ((look == '^' && c == -1) || (look == 'v' && c == 1) || (look == '<' || look == '>' || look == '.')))
+                                {
+                                    if (boolMoved)
+                                    {
+                                        tpData = new Tuple<List<string>, Point, long>(new List<string>(lstCaching), ptNewPosition, lngSteps + 1);
+                                        quFork.Enqueue(tpData);
+                                    }
+                                    else
+                                    {
+                                        ptMovedFinal = ptNewPosition; boolMoved = true;
+                                    }
+                                }
+                            }
+
+                            ptNewPosition = ptPosition;
+                            ptNewPosition.Y += c;
+                            if (ptNewPosition.Y >= 0 && ptPosition.Y < intGridSize)
+                            {
+                                look = chrGrid[ptNewPosition.X, ptNewPosition.Y];
+
+                                if (lstCaching.Contains((ptNewPosition.X).ToString() + "," + ptNewPosition.Y.ToString()) == false &&
+                                    ((look == '<' && c == -1) || (look == '>' && c == 1) || (look == '^' || look == 'v' || look == '.')))
+                                {
+                                    if (boolMoved)
+                                    {
+                                        tpData = new Tuple<List<string>, Point, long>(new List<string>(lstCaching), ptNewPosition, lngSteps + 1);
+                                        quFork.Enqueue(tpData);
+                                    }
+                                    else
+                                    {
+                                        ptMovedFinal = ptNewPosition; boolMoved = true;
+                                    }
+                                }
+                            }
+                        }
+
+                        //for the 4 points, we check if we moved, and we continue
+                        if (boolMoved)
+                        {
+                            ptPosition = ptMovedFinal;
+                            lngSteps++;
+                        }
+                        else
+                        {
+                            //we didn't move
+                            boolEnd = true;
+                        }
+                    }
+                }
+            }
+
+            return lngAnswer;
+        }
+
+        private long Puzzle23_PartTwo()
+        {
+            //Convoluted not most efficient, but heh... its work :P
+            //We convert the maze in a branching path
+            //then we calculate each steps to maximum path
+
+            //memory of each lines
+            List<List<Tuple<int, int>>> lstPathLink = new List<List<Tuple<int, int>>>();
+            List<string> lstPathForkDone = new List<string>();
+            int intPointCounter = 1; //where we are in the List counter
+            int intPointEnding = 0;
+            long lngAnswer = 0;
+
+            Stack<Tuple<Point, Point, int>> quPointCompute = new Stack<Tuple<Point, Point, int>>();
+            Tuple<Point, Point, int> tpPoint = new Tuple<Point, Point, int>(new Point(0, 1), new Point(0, 1), 0);
+
+            //string strInput23 = Advent23.Properties.Settings.Default.Puzzle_Example; int intGridSize = 23;
+            string strInput23 = Advent23.Properties.Settings.Default.Puzzle_Input; int intGridSize = 141;
+            string[] allString = strInput23.Split("\r\n");
+
+            //If Array
+            Point ptPosition = new Point(-1, 0);
+            char[,] chrGrid = new char[intGridSize, intGridSize]; //to make it easy we pad around
+            foreach (string strGames in allString)
+            {
+                ptPosition.X++;
+                ptPosition.Y = 0;
+                foreach (char chData in (strGames))
+                {
+                    if (chData == '#')
+                    {
+                        chrGrid[ptPosition.X, ptPosition.Y] = chData;
+                    }
+                    else
+                    {
+                        chrGrid[ptPosition.X, ptPosition.Y] = '.';
+
+                    }
+
+                    ptPosition.Y++;
+                }
+            }
+
+            Point ptNewPosition;
+            Point ptEnding = new Point(intGridSize - 1, intGridSize - 2);
+
+            //initial path of nothing, but we need to link to the starting zone.
+            lstPathLink.Add(new List<Tuple<int, int>>());
+            lstPathForkDone.Add("0,0");
+
+            quPointCompute.Push(tpPoint); //we will need to remove 1 at the end as we compute the start point as 1 step.
+
+
+            //Now we start, when we find a fork we just queue it we keep maximum reached
+            while (quPointCompute.Count > 0)
+            {
+                int intPathing = 1;
+                tpPoint = quPointCompute.Pop();
+                ptPosition = tpPoint.Item1;
+                Point ptPrevious = tpPoint.Item2;
+                int intIDFrom = tpPoint.Item3;
+                char look;
+
+                bool boolEnd = false;
+                while (boolEnd == false)
+                {
+                    {
+                        //we move (if we can) and if we moved, we will create Queue for forks
+                        int intPath = 0;
+                        List<Point> lstMovePoint = new List<Point>();
+                        for (int c = -1; c < 2; c = c + 2)
+                        {
+                            ptNewPosition = ptPosition;
+                            ptNewPosition.X += c;
+
+                            if (ptNewPosition.X >= 0 && ptNewPosition.X < intGridSize)
+                            {
+                                look = chrGrid[ptNewPosition.X, ptNewPosition.Y];
+                                if ((ptNewPosition.X != ptPrevious.X || ptNewPosition.Y != ptPrevious.Y) && look == '.')
+                                {
+                                    intPath++;
+                                    lstMovePoint.Add(ptNewPosition);
+                                }
+                            }
+
+                            ptNewPosition = ptPosition;
+                            ptNewPosition.Y += c;
+                            if (ptNewPosition.Y >= 0 && ptNewPosition.Y < intGridSize)
+                            {
+                                look = chrGrid[ptNewPosition.X, ptNewPosition.Y];
+                                if ((ptNewPosition.X != ptPrevious.X || ptNewPosition.Y != ptPrevious.Y) && look == '.')
+                                {
+                                    intPath++;
+                                    lstMovePoint.Add(ptNewPosition);
+                                }
+                            }
+                        }
+
+                        if (intPath == 1)
+                        {
+                            //no fork, we continue on the path
+                            intPathing++;
+                            ptPrevious = ptPosition;
+                            ptPosition = lstMovePoint[0];
+                        }
+                        else if ((ptPosition.X == ptEnding.X && ptPosition.Y == ptEnding.Y) || intPath > 0)
+                        {
+                            int intCurrentID;
+                            bool boolNewPoint = false;
+                            if (lstPathForkDone.Contains(ptPosition.X.ToString() + "," + ptPosition.Y.ToString()) == true)
+                            {
+                                //this point was already discovered
+                                intCurrentID = lstPathForkDone.IndexOf(ptPosition.X.ToString() + "," + ptPosition.Y.ToString());
+                            }
+                            else
+                            {
+                                //new point 
+                                intCurrentID = intPointCounter++;
+                                boolNewPoint = true;
+                                lstPathLink.Add(new List<Tuple<int, int>>());
+                                lstPathForkDone.Add(ptPosition.X.ToString() + "," + ptPosition.Y.ToString());
+                            }
+
+                            //we are at the end or we forked
+                            if (ptPosition.X == ptEnding.X && ptPosition.Y == ptEnding.Y) intPointEnding = intCurrentID;
+
+                            //now we add this one with previous
+                            Tuple<int, int> tpLink = new Tuple<int, int>(intCurrentID, intPathing);
+                            if (lstPathLink[intIDFrom].Contains(tpLink) == false) lstPathLink[intIDFrom].Add(tpLink);
+
+                            //and reverse
+                            tpLink = new Tuple<int, int>(intIDFrom, intPathing);
+                            if (lstPathLink[intCurrentID].Contains(tpLink) == false) lstPathLink[intCurrentID].Add(tpLink);
+
+
+                            boolEnd = true;
+                            //now we create his, if not already created
+                            if (boolNewPoint)
+                            {
+                                //for each children in lstMovePoint we queu
+                                foreach (Point ptGo in lstMovePoint)
+                                {
+                                    tpPoint = new Tuple<Point, Point, int>(ptGo, ptPosition, intCurrentID);
+                                    quPointCompute.Push(tpPoint);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // minor optimisation to remove last node as its going to the end
+            int intLinkEnding = lstPathLink[intPointEnding][0].Item1;
+            for (int i = lstPathLink[intLinkEnding].Count - 1; i >= 0; i--)
+            {
+                if (lstPathLink[intLinkEnding][i].Item1 != intPointEnding) lstPathLink[intLinkEnding].RemoveAt(i);
+            }
+
+
+            //now we have List of all path branching out etc
+            //we start at 0 and  try all paths
+
+
+            List<List<int>>[] lstFullPath = new List<List<int>>[lstPathLink.Count+1]; lstFullPath[0] = new List<List<int>>();
+            List<int>[] lstPathStep = new List<int>[lstPathLink.Count+1]; lstPathStep[0] = new List<int>();
+            List<int>[] lstLastStep = new List<int>[lstPathLink.Count+1]; lstLastStep[0] = new List<int>();
+
+            lstFullPath[0].Add(new List<int>(0));
+            lstPathStep[0].Add(0);
+            lstLastStep[0].Add(0);
+
+            for (int a = 0; a < lstPathLink.Count; a++) //maximum step
+            {
+                lstFullPath[a + 1] = new List<List<int>>();
+                lstPathStep[a + 1] = new List<int>();
+                lstLastStep[a + 1] = new List<int>();
+
+                for (int b = 0; b < lstFullPath[a].Count; b++) //For each steps we did previously
+                {
+                    //Did it reach the ending
+                    if (lstLastStep[a][b] == intPointEnding)
+                    {
+                        //we did rea
+                        if (lngAnswer < lstPathStep[a][b]) lngAnswer = lstPathStep[a][b];
+                    }
+                    else
+                    {
+                        //we continue walking if there is valid path
+                        foreach (var aPoint in lstPathLink[lstLastStep[a][b]])
+                        {
+                            if (lstFullPath[a][b].Contains(aPoint.Item1) == false)
+                            {
+                                //we add this point
+                                List<int> lstNew = new List<int>(lstFullPath[a][b]);
+                                lstNew.Add(aPoint.Item1);
+
+
+
+                                lstFullPath[a + 1].Add(lstNew);
+                                lstPathStep[a + 1].Add(aPoint.Item2 + lstPathStep[a][b]);
+                                lstLastStep[a + 1].Add(aPoint.Item1);
+                            }
+
+                        }
+                    }
                 }
             }
 
 
 
-            //If String type
-            foreach (string strGames in allString)
-            {
-                //hold the max shown in that game
-                int intGameNum = int.Parse(strGames.Substring(4, strGames.IndexOf(":") - 4).Trim());
-                Dictionary<int, int> dictGamesResults = new Dictionary<int, int>();
-            }
 
 
 
-            return lngAnswer;
-        }
-        private long Puzzle23_PartTwo()
-        {
-            return 0;
+
+
+            return lngAnswer -1;
         }
 
         private void bntRun23_Click(object sender, EventArgs e)
